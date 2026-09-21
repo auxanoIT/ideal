@@ -34,7 +34,10 @@ export function CaseStudyCard({
       </div>
       <div className="flex h-full flex-col p-6">
         <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#ED6B37]">
-          {caseStudy.client || "Client outcome"}
+          {caseStudy.clientDisplayName ||
+            caseStudy.client ||
+            caseStudy.industry ||
+            "Infrastructure project"}
         </p>
         <h2 className="mt-3 text-2xl font-semibold leading-tight text-[var(--color-ink)]">
           {caseStudy.title}
@@ -59,7 +62,7 @@ export function CaseStudyCard({
           variant="ghost"
           className="mt-auto justify-start px-0 pt-8 text-[var(--color-electric)] hover:bg-transparent"
         >
-          View case study
+          View Case Study
           <ArrowUpRight className="ml-2 h-4 w-4" />
         </ButtonLink>
       </div>

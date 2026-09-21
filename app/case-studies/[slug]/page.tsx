@@ -54,7 +54,7 @@ export async function generateMetadata({
       caseStudy.industry,
       caseStudy.location,
       ...(caseStudy.relatedServices ?? []),
-    ].filter(Boolean),
+    ].filter((keyword): keyword is string => Boolean(keyword)),
   });
 }
 
@@ -64,7 +64,7 @@ function buildCaseStudySeoDescription(caseStudy: CaseStudy) {
     ? serviceFocus.replaceAll("-", " ")
     : "IT and ELV infrastructure";
 
-  return `See how Auxano delivered ${focus} for ${caseStudy.client} in ${caseStudy.location}, improving security, reliability, documentation, and handover.`;
+  return `See how Ideal Solutions delivered ${focus} for ${caseStudy.clientDisplayName ?? caseStudy.client ?? "an infrastructure environment"}${caseStudy.location ? ` in ${caseStudy.location}` : ""}, supporting clearer execution, verification, and handover.`;
 }
 
 export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
@@ -100,7 +100,7 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
             locationCreated: caseStudy.location,
             publisher: {
               "@type": "Organization",
-              name: "Auxano Solutions Technology Limited",
+              name: "Ideal Solutions",
             },
           },
           {
@@ -209,7 +209,7 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
 
             <section>
               <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#ED6B37]">
-                Auxano Response
+                Ideal Solutions Response
               </p>
               <h2 className="mt-4 text-4xl font-semibold leading-tight text-[var(--color-ink)]">
                 A structured rollout from assessment to handover
@@ -231,9 +231,10 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
                   ))
                 ) : (
                   <p className="rounded-[1.25rem] bg-[var(--color-cloud)] p-5 text-sm leading-7 text-[var(--color-muted)]">
-                    Auxano begins with site context, confirms the technical
-                    scope, coordinates delivery, tests the installed systems,
-                    and hands over documentation for ongoing support.
+                    Ideal Solutions begins with site context, confirms the
+                    technical scope, coordinates delivery, verifies the
+                    installed systems, and hands over documentation for ongoing
+                    support.
                   </p>
                 )}
               </div>
@@ -348,8 +349,9 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
               Need this kind of result in your own environment?
             </h2>
             <p className="mt-5 max-w-2xl text-base leading-8 text-[var(--color-muted)]">
-              Share the site, system, or operational challenge and Auxano can
-              shape the right assessment, rollout, and support plan.
+              Share the site, system, or operational challenge and Ideal
+              Solutions can shape the right assessment, rollout, and support
+              plan.
             </p>
           </div>
           <ButtonLink href="/book-consultation">

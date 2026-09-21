@@ -1,71 +1,22 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { notFound } from "next/navigation";
-import {
-  ArrowDown,
-  ArrowRight,
-  ClipboardCheck,
-  Network,
-  ShieldCheck,
-} from "lucide-react";
+import { notFound, permanentRedirect } from "next/navigation";
+import { ArrowDown, ArrowRight, ShieldCheck } from "lucide-react";
 
 import { LeadForm } from "@/components/forms/lead-form";
 import { IndustryChallengeTabs } from "@/components/sections/industry-challenge-tabs";
 import { Container } from "@/components/ui/container";
 import { JsonLd } from "@/components/ui/json-ld";
 import { SectionHeading } from "@/components/ui/section-heading";
-import { getIndustryBySlug, getIndustries, getServices } from "@/lib/content";
+import { getIndustryBySlug, getIndustries } from "@/lib/content";
 import { buildMetadata } from "@/lib/seo";
 import { absoluteUrl } from "@/lib/utils";
-import type { Service, ServiceNavMedia } from "@/lib/types";
-
 type IndustryPageProps = {
   params: Promise<{ slug: string }>;
 };
 
 export const revalidate = false;
-
-function getMappedServices(serviceSlugs: string[], services: Service[]) {
-  return serviceSlugs
-    .map((slug) => services.find((service) => service.slug === slug))
-    .filter((service): service is Service => Boolean(service));
-}
-
-const industrySolutionCardImages: Partial<Record<string, ServiceNavMedia>> = {
-  "it-managed-services-staff-outsourcing": {
-    src: "/image/service_section/Operational_support.jpg",
-    alt: "Managed IT support engineer reviewing infrastructure operations in a data room",
-  },
-  "it-consultancy-audit-services": {
-    src: "/image/It_management.jpg",
-    alt: "IT consultant reviewing operational technology requirements on a tablet",
-  },
-  "it-technical-services": {
-    src: "/image/service_section/Operational_support.jpg",
-    alt: "Technical services engineer supporting business infrastructure operations",
-  },
-  "firewall-sales-licenses": {
-    src: "/image/service_section/Licensed.jpg",
-    alt: "Cybersecurity and firewall licensing concept for protected business systems",
-  },
-  "server-operating-system-licenses": {
-    src: "/image/software_and_licenses.jpg",
-    alt: "Server and software licensing workspace for compliant infrastructure deployment",
-  },
-  "applications-licenses": {
-    src: "/image/software_and_licenses.jpg",
-    alt: "Business application licensing workspace with secure software management",
-  },
-};
-
-function getServiceCardImage(service: Service): ServiceNavMedia {
-  return (
-    service.capabilitySections?.[0]?.image ??
-    industrySolutionCardImages[service.slug] ??
-    service.navImage
-  );
-}
 
 export async function generateStaticParams() {
   const industries = await getIndustries();
@@ -81,6 +32,10 @@ export async function generateMetadata({
   const { slug } = await params;
   const industry = await getIndustryBySlug(slug);
 
+  if (slug === "multi-site-smes") {
+    permanentRedirect("/industries/multi-site-businesses");
+  }
+
   if (!industry) {
     return buildMetadata({
       title: "Industry not found",
@@ -91,16 +46,14 @@ export async function generateMetadata({
   }
 
   return buildMetadata({
-    title: `IT Infrastructure for ${industry.title} in Nigeria`,
-    description: `IT infrastructure for ${industry.title.toLowerCase()} in Nigeria, covering CCTV, access control, networking, managed support, and reliable site operations.`,
+    title: industry.seoTitle,
+    description: industry.metaDescription,
     path: industry.href,
     imagePath: industry.heroImage.src,
     imageAlt: industry.heroImage.alt,
     keywords: [
-      industry.title,
-      `${industry.title} IT infrastructure Nigeria`,
-      `${industry.title} security systems Lagos`,
-      `${industry.title} CCTV access control Nigeria`,
+      industry.primaryKeyword,
+      ...industry.longTailKeywords,
       ...industry.environmentExamples,
       ...industry.primaryServiceSlugs,
     ],
@@ -109,37 +62,13 @@ export async function generateMetadata({
 
 export default async function IndustryPage({ params }: IndustryPageProps) {
   const { slug } = await params;
-  const [industry, services] = await Promise.all([
-    getIndustryBySlug(slug),
-    getServices(),
-  ]);
+  const industry = await getIndustryBySlug(slug);
 
   if (!industry) {
     notFound();
   }
 
-  const mappedServices = getMappedServices(industry.primaryServiceSlugs, services);
-  const featuredServices = mappedServices.slice(0, 3);
-  const featureItems = [
-    {
-      icon: ShieldCheck,
-      title: "Security and access planned together",
-      description:
-        "Access control, surveillance, and site workflows are scoped as one operating environment instead of isolated purchases.",
-    },
-    {
-      icon: Network,
-      title: "Infrastructure that supports the security layer",
-      description:
-        "Cabling, switching, wireless, and endpoint readiness are considered before the environment depends on the rollout.",
-    },
-    {
-      icon: ClipboardCheck,
-      title: "Documented handover and support clarity",
-      description:
-        "The result is easier to operate because scope, configuration, diagrams, and support expectations are left clear.",
-    },
-  ];
+  const featureItems = industry.whyReasons;
 
   return (
     <>
@@ -148,14 +77,14 @@ export default async function IndustryPage({ params }: IndustryPageProps) {
           {
             "@context": "https://schema.org",
             "@type": "WebPage",
-            name: `Infrastructure for ${industry.title}`,
+            name: industry.seoTitle,
             description: industry.heroDescription,
             url: absoluteUrl(industry.href),
             image: absoluteUrl(industry.heroImage.src),
             about: industry.environmentExamples,
             provider: {
               "@type": "Organization",
-              name: "Auxano Solutions Technology Limited",
+              name: "Ideal Solutions",
             },
           },
           {
@@ -195,7 +124,7 @@ export default async function IndustryPage({ params }: IndustryPageProps) {
           <Container className="relative flex min-h-[35rem] items-center">
             <div className="max-w-[34rem]">
               <p className="max-w-[30rem] text-balance text-[2.65rem] font-semibold leading-[1.06] tracking-[-0.04em] text-[var(--color-ink)] lg:text-[3.2rem]">
-                Infrastructure for {industry.title}
+                {industry.heroTitle}
               </p>
               <p className="mt-5 max-w-xl text-base leading-7 text-[var(--color-muted)]">
                 {industry.shortDescription}
@@ -234,7 +163,7 @@ export default async function IndustryPage({ params }: IndustryPageProps) {
 
           <Container className="bg-[#f4f6f8] py-10">
             <p className="text-balance text-[2.1rem] font-semibold leading-[1.08] tracking-[-0.04em] text-[var(--color-ink)]">
-              Infrastructure for {industry.title}
+              {industry.heroTitle}
             </p>
             <p className="mt-5 text-base leading-7 text-[var(--color-muted)]">
               {industry.shortDescription}
@@ -259,7 +188,7 @@ export default async function IndustryPage({ params }: IndustryPageProps) {
       </section>
 
       <div id="industry-challenges">
-        <IndustryChallengeTabs industry={industry} services={featuredServices} />
+        <IndustryChallengeTabs industry={industry} />
       </div>
 
       <section className="bg-[#f6f8fb] py-16 sm:py-24">
@@ -277,21 +206,18 @@ export default async function IndustryPage({ params }: IndustryPageProps) {
 
           <div>
             <h2 className="text-balance text-4xl font-semibold tracking-[-0.05em] text-[var(--color-ink)] sm:text-5xl">
-              Why choose Auxano for {industry.title.toLowerCase()}
+              {industry.whyTitle}
             </h2>
             <p className="mt-5 text-base leading-8 text-[var(--color-muted)]">
-              We connect practical technology choices with the way the site is
-              expected to run: movement, visibility, uptime, and post-launch support.
+              {industry.whyDescription}
             </p>
 
             <div className="mt-8 grid gap-6">
               {featureItems.map((item) => {
-                const Icon = item.icon;
-
                 return (
                   <div key={item.title} className="flex gap-4">
                     <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-white text-[var(--color-electric)] shadow-[0_12px_32px_rgba(11,18,32,0.07)]">
-                      <Icon className="h-5 w-5" strokeWidth={1.8} />
+                      <ShieldCheck className="h-5 w-5" strokeWidth={1.8} />
                     </div>
                     <div>
                       <h3 className="text-base font-semibold text-[var(--color-ink)]">
@@ -312,24 +238,22 @@ export default async function IndustryPage({ params }: IndustryPageProps) {
       <section className="bg-white py-16 sm:py-24">
         <Container>
           <SectionHeading
-            title={`Solutions for ${industry.title.toLowerCase()}`}
-            description="Smart, secure, and scalable IT solutions designed for modern operating environments."
+            title={industry.solutionsTitle}
+            description={industry.solutionsDescription}
             align="center"
           />
 
           <div className="mt-10 grid gap-6 lg:grid-cols-3">
-            {featuredServices.map((service) => {
-              const image = getServiceCardImage(service);
-
+            {industry.solutions.map((service) => {
               return (
                 <article
-                  key={service.slug}
+                  key={service.href}
                   className="overflow-hidden rounded-lg border border-[color:rgba(11,18,32,0.08)] bg-white shadow-[0_18px_50px_rgba(11,18,32,0.06)]"
                 >
                   <div className="relative min-h-[13.5rem] bg-[var(--color-cloud)]">
                     <Image
-                      src={image.src}
-                      alt={image.alt}
+                      src={industry.heroImage.src}
+                      alt={industry.heroImage.alt}
                       fill
                       className="object-cover"
                       sizes="(min-width: 1024px) 31vw, 100vw"
@@ -340,13 +264,13 @@ export default async function IndustryPage({ params }: IndustryPageProps) {
                       {service.title}
                     </h3>
                     <p className="mt-4 text-sm leading-7 text-[var(--color-muted)]">
-                      {service.summary}
+                      {service.description}
                     </p>
                     <Link
-                      href={`/services/${service.slug}`}
+                      href={service.href}
                       className="mt-6 inline-flex items-center text-sm font-semibold text-[var(--color-electric)]"
                     >
-                      View solution
+                      {service.linkLabel}
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </Link>
                   </div>
@@ -361,11 +285,12 @@ export default async function IndustryPage({ params }: IndustryPageProps) {
         <Container>
           <LeadForm
             context="consultation"
-            title="Plan a stronger environment"
-            description={`Share the project goal, support requirement, or risk inside your ${industry.title.toLowerCase()} environment. Auxano will review the brief and recommend the right next step.`}
+            title={industry.formTitle}
+            description={industry.formDescription}
             className="mx-auto max-w-5xl rounded-lg"
             headingAlign="center"
             showEyebrow={false}
+            submitLabel={industry.formCta}
           />
         </Container>
       </section>

@@ -6,9 +6,8 @@ import Script from "next/script";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
-const CONSENT_KEY = "auxano_cookie_consent";
+const CONSENT_KEY = "ideal_solutions_cookie_consent";
 const CONSENT_MAX_AGE = 60 * 60 * 24 * 365;
-
 type CookieConsent = "accepted";
 
 function persistConsent(value: CookieConsent) {
@@ -18,16 +17,12 @@ function persistConsent(value: CookieConsent) {
 
 function readConsent(): CookieConsent | null {
   const stored = window.localStorage.getItem(CONSENT_KEY);
-
-  if (stored === "accepted") {
-    return stored;
-  }
+  if (stored === "accepted") return stored;
 
   const cookieValue = document.cookie
     .split("; ")
     .find((cookie) => cookie.startsWith(`${CONSENT_KEY}=`))
     ?.split("=")[1];
-
   return cookieValue === "accepted" ? cookieValue : null;
 }
 
@@ -40,10 +35,7 @@ function TrackingScripts() {
     <>
       {gaId ? (
         <>
-          <Script
-            src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}
-            strategy="lazyOnload"
-          />
+          <Script src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`} strategy="lazyOnload" />
           <Script id="ga4" strategy="lazyOnload">
             {`window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', '${gaId}');`}
           </Script>
@@ -55,23 +47,8 @@ function TrackingScripts() {
         </Script>
       ) : null}
       {hubspotTrackingId ? (
-        <Script
-          id="hubspot-tracking"
-          strategy="lazyOnload"
-          src={`https://js.hs-scripts.com/${hubspotTrackingId}.js`}
-        />
+        <Script id="hubspot-tracking" strategy="lazyOnload" src={`https://js.hs-scripts.com/${hubspotTrackingId}.js`} />
       ) : null}
-      <Script id="tawk-chat" strategy="afterInteractive">
-        {`var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/6a08ce95f0ad271c34b2ee54/1jop6dujt';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();`}
-      </Script>
       <Analytics />
       <SpeedInsights />
     </>
@@ -79,15 +56,11 @@ s0.parentNode.insertBefore(s1,s0);
 }
 
 export function CookieConsentManager() {
-  const [consent, setConsent] = useState<CookieConsent | null | undefined>(
-    undefined,
-  );
+  const [consent, setConsent] = useState<CookieConsent | null | undefined>();
   const [dismissed, setDismissed] = useState(false);
 
   useEffect(() => {
-    queueMicrotask(() => {
-      setConsent(readConsent());
-    });
+    queueMicrotask(() => setConsent(readConsent()));
   }, []);
 
   function handleAccept() {
@@ -95,38 +68,25 @@ export function CookieConsentManager() {
     setConsent("accepted");
   }
 
-  if (consent === "accepted") {
-    return <TrackingScripts />;
-  }
-
-  if (consent === undefined || dismissed) {
-    return null;
-  }
+  if (consent === "accepted") return <TrackingScripts />;
+  if (consent === undefined || dismissed) return null;
 
   return (
     <div className="fixed inset-x-0 bottom-0 z-50 px-4 pb-4 sm:px-6 sm:pb-6">
-      <div className="mx-auto flex max-w-5xl flex-col gap-4 rounded-lg border border-white/12 bg-[var(--color-ink)] p-5 text-white shadow-[0_24px_80px_rgba(11,18,32,0.28)] sm:flex-row sm:items-center sm:justify-between">
+      <div className="mx-auto flex max-w-5xl flex-col gap-4 rounded-lg border border-white/12 bg-[#252B33] p-5 text-white shadow-[0_24px_80px_rgba(11,18,32,0.28)] sm:flex-row sm:items-center sm:justify-between">
         <div className="max-w-3xl">
           <p className="text-sm font-semibold">Cookie privacy</p>
           <p className="mt-2 text-sm leading-6 text-white/72">
-            We use cookies to improve your experience, help our website work
-            better, support live chat, and respond to enquiries. You can choose
-            to accept or decline, and we’ll remember your choice on this device.
+            We use cookies to improve your experience and help our website work
+            better. You can choose to accept or decline, and we will remember
+            your choice on this device.
           </p>
         </div>
         <div className="flex shrink-0 gap-3">
-          <button
-            type="button"
-            onClick={() => setDismissed(true)}
-            className="inline-flex min-h-11 items-center justify-center rounded-md border border-white/16 px-5 text-sm font-semibold text-white transition hover:border-white/34 hover:bg-white/8"
-          >
+          <button type="button" onClick={() => setDismissed(true)} className="inline-flex min-h-11 items-center justify-center rounded-md border border-white/16 px-5 text-sm font-semibold text-white transition hover:border-white/34 hover:bg-white/8">
             Decline
           </button>
-          <button
-            type="button"
-            onClick={handleAccept}
-            className="inline-flex min-h-11 items-center justify-center rounded-md bg-[var(--color-electric)] px-5 text-sm font-semibold text-white transition hover:bg-[#2557d8]"
-          >
+          <button type="button" onClick={handleAccept} className="inline-flex min-h-11 items-center justify-center rounded-md bg-[#F2A900] px-5 text-sm font-semibold text-[#252B33] transition hover:bg-[#ffc23d]">
             Accept
           </button>
         </div>

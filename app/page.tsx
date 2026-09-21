@@ -1,41 +1,38 @@
+import { IdealSolutionsHome } from "@/components/pages/ideal-solutions-home";
+import { homeServicePillars } from "@/data/home-service-pillars";
+import { operationalAdvantage } from "@/data/operational-advantage";
+import { homeProjectCta } from "@/data/home-project-cta";
 import { notFound } from "next/navigation";
-
 import { SectionRenderer } from "@/components/sections/section-renderer";
+import { HeroMetricStrip } from "@/components/sections/hero-metric-strip";
+import { PartnerLogoMarquee } from "@/components/sections/partner-logo-marquee";
+import { getMarketingPage, getServices, getCaseStudies, getTestimonials, getFaqs } from "@/lib/content";
 import { JsonLd } from "@/components/ui/json-ld";
-import { getCaseStudies, getFaqs, getMarketingPage, getServices, getTestimonials } from "@/lib/content";
 import { buildMetadata } from "@/lib/seo";
 import { absoluteUrl } from "@/lib/utils";
 
 export const revalidate = false;
 
 export const metadata = buildMetadata({
-  title: "IT Solutions Company in Nigeria for CCTV, Fire Alarm, and Networks",
+  title: "Data Centre Infrastructure Services in Nigeria",
   description:
-    "Auxano Solutions delivers managed IT, CCTV, access control, fire alarm, network cabling, hardware, and software licensing services in Nigeria.",
+    "Ideal Solutions provides data centre deployment, Smart Hands, structured cabling, infrastructure audits, security and lifecycle support across Nigeria.",
   path: "/",
   keywords: [
-    "IT company in Lagos Nigeria",
-    "managed IT support Nigeria",
-    "CCTV installation company Lagos",
-    "fire alarm installation Nigeria",
-    "access control systems Nigeria",
-    "network cabling company Lagos",
-    "ELV contractor Nigeria",
+    "data centre infrastructure services Nigeria",
+    "data centre technical support Nigeria",
+    "Smart Hands services Nigeria",
+    "data centre installation services",
+    "data centre engineers Lagos",
   ],
 });
 
 export default async function HomePage() {
   const [page, services, caseStudies, testimonials, faqs] = await Promise.all([
-    getMarketingPage("home"),
-    getServices(),
-    getCaseStudies(),
-    getTestimonials(),
-    getFaqs(),
+    getMarketingPage("home"), getServices(), getCaseStudies(), getTestimonials(), getFaqs(),
   ]);
-
-  if (!page) {
-    notFound();
-  }
+  if (!page) notFound();
+  const originalHero = page.sections.find((section) => section._type === "hero");
 
   return (
     <>
@@ -45,20 +42,17 @@ export default async function HomePage() {
             "@context": "https://schema.org",
             "@type": "WebPage",
             "@id": absoluteUrl("/"),
-            name: "Auxano Solutions Technology Limited",
+            name: "Ideal Solutions",
             url: absoluteUrl("/"),
             description:
-              "IT infrastructure, CCTV, access control, fire alarm, network cabling, hardware, software licensing, and managed IT support for Nigerian organizations.",
+              "Data centre infrastructure deployment, Smart Hands, networking, security, assessment and lifecycle support across Nigeria.",
             about: [
-              "Managed IT Support",
-              "CCTV Installation",
-              "Door Access Control",
-              "Fire Alarm System Installation",
-              "Network Infrastructure",
-              "Structured LAN Cabling",
+              "Data Centre Deployment",
+              "Smart Hands Services",
+              "Structured Copper and Fibre Cabling",
               "Server and Storage Deployment",
-              "Software Licensing",
-              "IT Audit and Compliance",
+              "Data Centre Security",
+              "Infrastructure Audits",
             ],
             provider: {
               "@id": `${absoluteUrl("/")}#organization`,
@@ -66,8 +60,15 @@ export default async function HomePage() {
           },
         ]}
       />
+      <IdealSolutionsHome />
+      {originalHero?.metrics.length ? <HeroMetricStrip metrics={originalHero.metrics} /> : null}
+      <PartnerLogoMarquee />
       <SectionRenderer
-        sections={page.sections}
+        homeOperationTeams
+        homeIdealStandard
+        sections={page.sections
+          .filter((section) => section._type !== "hero")
+          .map((section) => section._type === "serviceShowcase" ? homeServicePillars : section._type === "categoryShowcase" ? operationalAdvantage(section) : section._type === "ctaBand" ? homeProjectCta : section)}
         services={services}
         caseStudies={caseStudies}
         testimonials={testimonials}

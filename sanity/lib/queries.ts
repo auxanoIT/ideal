@@ -95,7 +95,7 @@ export const serviceQuery = groq`
 `;
 
 export const caseStudiesQuery = groq`
-  *[_type == "caseStudy"] | order(title asc) {
+  *[_type == "caseStudy" && published == true] | order(title asc) {
     title,
     client,
     industry,
@@ -112,16 +112,21 @@ export const caseStudiesQuery = groq`
     result,
     metrics,
     relatedServices,
+    published,
+    featured,
+    projectDate,
+    outcome,
+    quote,
     "slug": slug.current
   }
 `;
 
 export const caseStudySlugsQuery = groq`
-  *[_type == "caseStudy" && defined(slug.current)].slug.current
+  *[_type == "caseStudy" && published == true && defined(slug.current)].slug.current
 `;
 
 export const caseStudyQuery = groq`
-  *[_type == "caseStudy" && slug.current == $slug][0]{
+  *[_type == "caseStudy" && slug.current == $slug && published == true][0]{
     title,
     client,
     industry,
@@ -138,6 +143,11 @@ export const caseStudyQuery = groq`
     result,
     metrics,
     relatedServices,
+    published,
+    featured,
+    projectDate,
+    outcome,
+    quote,
     "slug": slug.current
   }
 `;

@@ -10,8 +10,7 @@ import {
 } from "sanity";
 
 const createKey = () =>
-  Math.random().toString(36).slice(2, 10) +
-  Date.now().toString(36).slice(-4);
+  Math.random().toString(36).slice(2, 10) + Date.now().toString(36).slice(-4);
 
 type PasteInsertBlock = {
   _type: string;
@@ -114,11 +113,14 @@ function nodeToPasteBlocks(node: ChildNode): PasteInsertBlock[] {
   return Array.from(node.childNodes).flatMap(nodeToPasteBlocks);
 }
 
-function createTablePasteBlock(table: HTMLTableElement): PasteInsertBlock | null {
+function createTablePasteBlock(
+  table: HTMLTableElement,
+): PasteInsertBlock | null {
   const parsedRows = Array.from(table.querySelectorAll("tr"))
     .map((row) => {
-      const cells = Array.from(row.querySelectorAll("th,td"))
-        .map((cell) => normalizePastedText(cell.textContent ?? ""));
+      const cells = Array.from(row.querySelectorAll("th,td")).map((cell) =>
+        normalizePastedText(cell.textContent ?? ""),
+      );
 
       return {
         cells,
@@ -169,11 +171,13 @@ function listElementToPasteBlocks(element: HTMLElement): PasteInsertBlock[] {
       level: 1,
     });
     const nestedBlocks = Array.from(child.children)
-      .filter((nestedChild) => ["UL", "OL", "TABLE"].includes(nestedChild.tagName))
+      .filter((nestedChild) =>
+        ["UL", "OL", "TABLE"].includes(nestedChild.tagName),
+      )
       .flatMap((nestedChild) => nodeToPasteBlocks(nestedChild));
 
-    return [block, ...nestedBlocks].filter(
-      (item): item is PasteInsertBlock => Boolean(item),
+    return [block, ...nestedBlocks].filter((item): item is PasteInsertBlock =>
+      Boolean(item),
     );
   });
 }
@@ -320,7 +324,11 @@ function trimSpans(spans: PasteSpan[]) {
 }
 
 function canUseElementAsTextBlock(element: HTMLElement) {
-  if (["P", "DIV", "SECTION", "ARTICLE", "ASIDE", "FIGURE", "LI"].includes(element.tagName)) {
+  if (
+    ["P", "DIV", "SECTION", "ARTICLE", "ASIDE", "FIGURE", "LI"].includes(
+      element.tagName,
+    )
+  ) {
     return !Array.from(element.children).some((child) =>
       blockPasteElements.has(child.tagName),
     );
@@ -391,8 +399,16 @@ const seo = defineType({
   type: "object",
   fields: [
     defineField({ name: "metaTitle", title: "Meta Title", type: "string" }),
-    defineField({ name: "metaDescription", title: "Meta Description", type: "text" }),
-    defineField({ name: "canonicalPath", title: "Canonical Path", type: "string" }),
+    defineField({
+      name: "metaDescription",
+      title: "Meta Description",
+      type: "text",
+    }),
+    defineField({
+      name: "canonicalPath",
+      title: "Canonical Path",
+      type: "string",
+    }),
   ],
 });
 
@@ -702,6 +718,20 @@ const caseStudy = defineType({
       validation: (rule) => rule.required(),
     }),
     defineField({ name: "client", title: "Client", type: "string" }),
+    defineField({
+      name: "published",
+      title: "Published",
+      type: "boolean",
+      description: "Only explicitly approved case studies appear publicly.",
+      initialValue: false,
+    }),
+    defineField({
+      name: "featured",
+      title: "Featured",
+      type: "boolean",
+      initialValue: false,
+    }),
+    defineField({ name: "projectDate", title: "Project Date", type: "date" }),
     defineField({ name: "industry", title: "Industry", type: "string" }),
     defineField({ name: "location", title: "Location", type: "string" }),
     defineField({
@@ -716,7 +746,8 @@ const caseStudy = defineType({
           name: "alt",
           title: "Alt Text",
           type: "string",
-          description: "Describe the image for accessibility and search engines.",
+          description:
+            "Describe the image for accessibility and search engines.",
         }),
       ],
     }),
@@ -729,6 +760,7 @@ const caseStudy = defineType({
       of: [defineArrayMember({ type: "string" })],
     }),
     defineField({ name: "result", title: "Result", type: "text" }),
+    defineField({ name: "outcome", title: "Outcome", type: "text" }),
     defineField({
       name: "metrics",
       title: "Metrics",
@@ -764,7 +796,11 @@ const post = defineType({
       validation: (rule) => rule.required(),
     }),
     defineField({ name: "category", title: "Category", type: "string" }),
-    defineField({ name: "publishedAt", title: "Published At", type: "datetime" }),
+    defineField({
+      name: "publishedAt",
+      title: "Published At",
+      type: "datetime",
+    }),
     defineField({ name: "readingTime", title: "Reading Time", type: "string" }),
     defineField({ name: "author", title: "Author", type: "string" }),
     defineField({

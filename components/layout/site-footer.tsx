@@ -4,14 +4,13 @@ import Link from "next/link";
 import { ButtonLink } from "@/components/ui/button-link";
 import { Container } from "@/components/ui/container";
 import type { FooterColumn, SiteSettings } from "@/lib/types";
-import { createWhatsappLink } from "@/lib/utils";
 
 type SiteFooterProps = {
   columns: FooterColumn[];
   settings: SiteSettings;
 };
 
-export function SiteFooter({ columns, settings }: SiteFooterProps) {
+export function SiteFooter({ columns }: SiteFooterProps) {
   const visibleColumns = columns
     .map((column) => ({
       ...column,
@@ -27,37 +26,23 @@ export function SiteFooter({ columns, settings }: SiteFooterProps) {
     <footer className="border-t border-white/6 bg-[var(--color-ink)] text-white">
       <Container className="grid gap-12 py-16 lg:grid-cols-[1.3fr_2fr]">
         <div className="space-y-6">
-          <Link href="/" aria-label="Auxano Solutions home" className="inline-flex h-16 items-center">
+          <Link href="/" aria-label="Ideal Solutions home" className="inline-flex items-center gap-3">
             <Image
-              src="/image/AUxano.webp"
-              alt="Auxano Solutions"
-              width={100}
-              height={500}
-              className="h-14 w-auto object-contain"
+              src="/idealsolutions-logo.svg"
+              alt="Ideal Solutions"
+              width={58}
+              height={56}
+              className="!h-14 !w-auto object-contain brightness-0 invert"
             />
+            <span className="text-sm font-semibold uppercase tracking-[0.18em]">Ideal Solutions</span>
           </Link>
           <p className="max-w-xl text-sm leading-7 text-white/68">
-            {settings.address}, {settings.city}, {settings.country}. Call{" "}
-            <a href={`tel:${settings.phone}`} className="text-white">
-              {settings.phone}
-            </a>{" "}
-            or email{" "}
-            <a href={`mailto:${settings.email}`} className="text-white">
-              {settings.email}
-            </a>
-            .
+            Onsite technical execution and infrastructure support for teams
+            deploying, changing and maintaining IT equipment in Nigeria.
           </p>
           <div className="flex flex-wrap gap-3">
-            <ButtonLink href="/book-consultation">Book Consultation</ButtonLink>
-            <ButtonLink
-              href={createWhatsappLink(
-                settings.whatsappSales,
-                "Hello Auxano, I want to discuss an infrastructure or security project.",
-              )}
-              variant="secondary"
-              className="border-white/12 bg-white/6 text-white hover:border-white/28 hover:text-white"
-            >
-              WhatsApp Sales
+            <ButtonLink href="/book-consultation" className="rounded-none bg-[#F2A900] text-[#252B33] shadow-none">
+              Discuss Your Requirements
             </ButtonLink>
           </div>
         </div>

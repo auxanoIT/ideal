@@ -48,72 +48,74 @@ const metrics = [
 const values = [
   {
     icon: UserCheck,
-    title: "Customer-centric",
+    title: "Execution with Care",
     description:
-      "Every solution is shaped around the client environment, budget, operating pressure, and long-term support need.",
+      "Work carefully around live infrastructure and existing operations.",
   },
   {
     icon: TrendingUp,
-    title: "Results-driven",
+    title: "Operational Discipline",
     description:
-      "We focus on measurable outcomes: lower operating cost, better uptime, clearer controls, and simpler vendor management.",
+      "Follow agreed scope, site procedures and structured delivery methods.",
   },
   {
     icon: Lightbulb,
-    title: "Innovative",
+    title: "Technical Accountability",
     description:
-      "Auxano blends proven infrastructure with modern IP-based, cloud, security, and hybrid technology where it makes business sense.",
+      "Leave completed work clearer, documented and easier to manage.",
   },
   {
     icon: Handshake,
-    title: "Trusted teamwork",
-    description:
-      "Our engineers, project leads, and client teams work with open communication from discovery through handover and support.",
+    title: "Practical Problem Solving",
+    description: "Focus on actions that help infrastructure move forward.",
   },
   {
     icon: ClipboardCheck,
-    title: "Transparent",
-    description:
-      "Scope, risk, documentation, commercial decisions, and post-deployment ownership stay visible throughout the engagement.",
+    title: "Partnership Mindset",
+    description: "Extend client teams without taking control away from them.",
+  },
+  {
+    icon: Network,
+    title: "Clarity & Communication",
+    description: "Keep requirements, progress and handover easy to understand.",
   },
 ];
 
 const services = [
   {
     icon: ShieldCheck,
-    title: "Surveillance & Access Control",
+    title: "Data Centre Deployment",
     description:
-      "Design, installation, remediation, door access, and operator-ready security environments.",
+      "Rack-and-stack, equipment installation, server deployment, testing and infrastructure changes.",
   },
   {
     icon: Network,
-    title: "Network Infrastructure",
+    title: "Smart Hands & Technical Support",
     description:
-      "Structured LAN cabling, wireless, switching, routing, IP telephony, and documentation.",
+      "Onsite execution for remote teams and infrastructure requiring physical attention.",
   },
   {
     icon: LifeBuoy,
-    title: "Managed IT Support",
-    description:
-      "Helpdesk, vendor management, staff augmentation, monitoring, and strategic planning.",
+    title: "Server, Storage & Hardware",
+    description: "Server, storage, hardware procurement and lifecycle support.",
   },
   {
     icon: Server,
-    title: "Data Centre & Servers",
+    title: "Network & Connectivity",
     description:
-      "Server build-out, virtualization, HVAC readiness, storage, and resource migration.",
+      "Network equipment, structured cabling, configuration, routing and documentation.",
   },
   {
     icon: KeyRound,
-    title: "Cybersecurity",
+    title: "Security & Safety Systems",
     description:
-      "Security reviews, threat mitigation, incident response, audits, and compliance support.",
+      "Access control, CCTV, fire alarm, mantrap and automated entry systems.",
   },
   {
     icon: DatabaseBackup,
-    title: "Backup & Recovery",
+    title: "Assessment & Lifecycle Support",
     description:
-      "Proactive data protection, recovery planning, post-crash retrieval, and continuity support.",
+      "Audits, remediation, project management, handover and ongoing support.",
   },
 ];
 
@@ -279,11 +281,13 @@ export function AboutGeneaInspired() {
   return (
     <div className="overflow-hidden bg-[#f7faff] text-[var(--color-ink)]">
       <section className="overflow-hidden bg-white">
-        <h1 className="sr-only">Reliable ICT support since 2012.</h1>
+        <h1 className="sr-only">
+          Reliable Data Centre Infrastructure Support for Critical Environments.
+        </h1>
         <div className="relative hidden min-h-[35rem] md:block">
           <Image
             src="/image/It_management.jpg"
-            alt="Auxano ICT support specialist reviewing a mobile work order"
+            alt="Ideal Solutions technical specialist reviewing an infrastructure work order"
             fill
             priority
             className="object-cover object-[center_36%]"
@@ -300,12 +304,14 @@ export function AboutGeneaInspired() {
               transition={{ duration: 0.72, ease: [0.22, 1, 0.36, 1] }}
             >
               <p className="mt-4 max-w-[30rem] text-balance text-[2.65rem] font-semibold leading-[1.06] tracking-[-0.04em] text-[var(--color-ink)] lg:text-[3.2rem]">
-                Reliable ICT support since 2012.
+                Reliable Data Centre Infrastructure Support for Critical
+                Environments.
               </p>
               <p className="mt-5 max-w-xl text-base leading-7 text-[var(--color-muted)]">
-                Auxano Solutions Technology Limited delivers specialized and
-                cost-effective ICT services that help organizations streamline
-                operations, secure assets, and scale efficiently.
+                Ideal Solutions provides onsite technical execution and
+                infrastructure support for data centres, enterprise IT
+                environments and organisations that need dependable hands on the
+                ground in Nigeria.
               </p>
               <div className="mt-8 flex items-center gap-5">
                 <Link
@@ -330,7 +336,7 @@ export function AboutGeneaInspired() {
           <div className="relative min-h-[19rem] bg-[var(--color-cloud)]">
             <Image
               src="/image/It_management.jpg"
-              alt="Auxano ICT support specialist reviewing a mobile work order"
+              alt="Ideal Solutions technical specialist reviewing an infrastructure work order"
               fill
               priority
               className="object-cover object-[center_32%]"
@@ -341,12 +347,14 @@ export function AboutGeneaInspired() {
 
           <Container className="overflow-hidden bg-[#f4f6f8] py-10">
             <p className="mt-4 max-w-[20rem] text-[1.65rem] font-semibold leading-[1.12] tracking-[-0.04em] text-[var(--color-ink)]">
-              Reliable ICT support since 2012.
+              Reliable Data Centre Infrastructure Support for Critical
+              Environments.
             </p>
             <p className="mt-5 max-w-[20rem] text-sm leading-7 text-[var(--color-muted)]">
-              Auxano delivers cost-effective ICT services that help
-              organizations streamline operations, secure assets, and scale
-              efficiently.
+              Ideal Solutions provides onsite technical execution and
+              infrastructure support for data centres, enterprise IT
+              environments and organisations that need dependable hands on the
+              ground in Nigeria.
             </p>
             <div className="mt-7 flex items-center gap-4">
               <Link
@@ -400,9 +408,14 @@ export function AboutGeneaInspired() {
               Our Purpose
             </p>
             <h2 className="mt-5 text-balance text-3xl font-semibold leading-tight text-[var(--color-ink)] sm:text-5xl lg:text-6xl">
-              Enhancing productivity, reducing operating costs, and helping
-              organizations grow through dependable ICT systems.
+              Helping organisations operate with more reliable, supportable
+              infrastructure.
             </h2>
+            <p className="mx-auto mt-5 max-w-3xl text-base leading-8 text-[var(--color-muted)] sm:text-lg">
+              We close the gap between infrastructure planning and onsite
+              execution — helping teams deploy, support and maintain critical
+              environments with greater confidence.
+            </p>
           </Reveal>
         </Container>
       </section>
@@ -413,7 +426,7 @@ export function AboutGeneaInspired() {
             <div className="relative h-96 overflow-hidden rounded-lg bg-[#0A3047]">
               <Image
                 src="/image/IT Infrastructure.png"
-                alt="Secure infrastructure access system representing Auxano enterprise ICT delivery"
+                alt="Ideal Solutions engineer working with enterprise IT infrastructure"
                 fill
                 className="object-cover"
                 sizes="(min-width: 1024px) 45vw, 100vw"
@@ -424,21 +437,26 @@ export function AboutGeneaInspired() {
             </div>
           </Reveal>
           <Reveal delay={0.1}>
+            <p className="text-sm font-semibold uppercase tracking-[0.22em] text-[#ed6a39]">
+              Local Execution. Enterprise Standards.
+            </p>
             <h2 className="mt-4 text-balance text-3xl font-semibold leading-tight text-[var(--color-ink)] sm:text-5xl">
-              Specialized, cost-effective ICT services across Nigeria and North
-              Africa.
+              Specialised data centre and IT infrastructure support in Nigeria.
             </h2>
             <div className="mt-6 space-y-5 text-base leading-8 text-[var(--color-muted)] sm:text-lg">
               <p>
-                Auxano Solutions Technology Limited delivers ICT services that
-                help businesses streamline operations, secure assets, and scale
-                efficiently.
+                Ideal Solutions supports data centre operators, enterprise IT
+                teams, system integrators, OEMs and managed service providers
+                that need skilled onsite execution.
               </p>
               <p>
-                Since 2012, our team has deployed enterprise-grade IT
-                infrastructure, surveillance, access control, networks,
-                software, hardware, and managed support for organizations across
-                telecoms, finance, energy, manufacturing, and services.
+                Our capabilities span deployment, Smart Hands, networking,
+                servers and hardware, security systems, infrastructure audits
+                and lifecycle support.
+              </p>
+              <p>
+                We help clients move projects forward while keeping operational
+                control.
               </p>
             </div>
           </Reveal>
@@ -450,12 +468,12 @@ export function AboutGeneaInspired() {
       <section className="bg-white py-16 sm:py-24">
         <Container>
           <SectionIntro
-            eyebrow="Company Values"
-            title="The working standards behind every Auxano engagement."
-            description="These principles guide how our engineers, technical leads, and project teams make decisions before, during, and after delivery."
+            eyebrow="How We Work"
+            title="The standards behind every Ideal Solutions engagement."
+            description="How we plan, execute and hand over infrastructure work."
             center
           />
-          <div className="mt-11 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
+          <div className="mt-11 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {values.map((value, index) => {
               const Icon = value.icon;
 
@@ -485,9 +503,9 @@ export function AboutGeneaInspired() {
         <Container className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr]">
           <div className="lg:sticky lg:top-28 lg:self-start">
             <SectionIntro
-              eyebrow="The Auxano Promise"
-              title="Dependable technology is only one part of the result."
-              description="Auxano stays committed to outstanding support, clear handover, and continuous ownership after deployment."
+              eyebrow="What We Deliver"
+              title="Technical execution across the infrastructure lifecycle."
+              description="From deployment and connectivity to support, optimisation and future change."
               inverse
             />
           </div>
@@ -518,8 +536,9 @@ export function AboutGeneaInspired() {
       <section className="bg-[#eef4ff] py-16 sm:py-24">
         <Container>
           <SectionIntro
-            eyebrow="Leadership"
-            title="Office and technical leads for client success."
+            eyebrow="Our Team"
+            title="The people behind Ideal Solutions execution."
+            description="Technical, operational and leadership professionals helping clients move infrastructure projects forward."
             center
           />
           <div className="mt-11 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
@@ -563,8 +582,9 @@ export function AboutGeneaInspired() {
       <section className="bg-white py-16 sm:py-24">
         <Container>
           <SectionIntro
-            eyebrow="Our Offices"
-            title="Local presence for projects across Nigeria and North Africa."
+            eyebrow="Our Presence"
+            title="Local presence for onsite infrastructure support."
+            description="Our teams support infrastructure projects, technical interventions and ongoing requirements across Nigeria."
             center
           />
           <div className="mt-11 grid gap-5 lg:grid-cols-3">
@@ -602,16 +622,16 @@ export function AboutGeneaInspired() {
         <Container className="grid items-center gap-8 lg:grid-cols-[1fr_auto]">
           <Reveal>
             <h2 className="mt-4 max-w-3xl text-balance text-3xl font-semibold leading-tight sm:text-5xl">
-              Let&apos;s design the right ICT solution for your business.
+              Let&apos;s discuss the right infrastructure support for your
+              environment.
             </h2>
             <p className="mt-5 max-w-2xl text-base leading-8 text-white/72">
-              Talk to Auxano about infrastructure, networking, security, managed
-              support, audits, relocation, procurement, or a phased technical
-              rollout.
+              From deployment and Smart Hands to networking, hardware, security
+              and lifecycle support, bring us the requirement.
             </p>
           </Reveal>
           <Reveal delay={0.08} className="flex flex-wrap gap-3 lg:justify-end">
-            <CtaLink href="/book-consultation">Talk to Sales</CtaLink>
+            <CtaLink href="/book-consultation">Book Consultation</CtaLink>
           </Reveal>
         </Container>
       </section>

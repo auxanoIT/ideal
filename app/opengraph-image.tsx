@@ -1,6 +1,6 @@
 import { ImageResponse } from "next/og";
 
-export const alt = "Auxano Solutions";
+export const alt = "Ideal Solutions data centre infrastructure services";
 export const size = {
   width: 1200,
   height: 630,
@@ -16,7 +16,7 @@ export default function OpenGraphImage() {
           height: "100%",
           width: "100%",
           background:
-            "linear-gradient(145deg, rgba(11,18,32,1) 0%, rgba(24,37,67,1) 50%, rgba(47,107,255,0.85) 100%)",
+            "linear-gradient(145deg, #252B33 0%, #171B20 66%, #443717 100%)",
           color: "white",
           padding: "64px",
           position: "relative",
@@ -27,8 +27,8 @@ export default function OpenGraphImage() {
           style={{
             position: "absolute",
             inset: 0,
-            background:
-              "radial-gradient(circle at top left, rgba(25,213,255,0.35), transparent 28%), radial-gradient(circle at 80% 20%, rgba(47,107,255,0.28), transparent 24%)",
+          background:
+              "radial-gradient(circle at top left, rgba(242,169,0,0.24), transparent 32%)",
           }}
         />
         <div
@@ -52,29 +52,29 @@ export default function OpenGraphImage() {
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
-                borderRadius: "24px",
-                background: "linear-gradient(145deg, #2F6BFF, #19D5FF)",
+                background: "#F2A900",
+                color: "#252B33",
                 fontSize: "32px",
                 fontWeight: 700,
               }}
             >
-              A
+              IS
             </div>
             <div style={{ display: "flex", flexDirection: "column" }}>
-              <span style={{ fontSize: "22px", letterSpacing: "0.32em", textTransform: "uppercase", color: "#19D5FF" }}>
-                Auxano Solutions
+              <span style={{ fontSize: "22px", letterSpacing: "0.32em", textTransform: "uppercase", color: "#F2A900" }}>
+                Ideal Solutions
               </span>
               <span style={{ fontSize: "22px", color: "rgba(255,255,255,0.72)" }}>
-                IT, Security, and Infrastructure
+                Local Execution. Enterprise Standards.
               </span>
             </div>
           </div>
           <div style={{ display: "flex", flexDirection: "column", gap: "18px", maxWidth: "780px" }}>
-            <span style={{ fontSize: "20px", letterSpacing: "0.28em", textTransform: "uppercase", color: "#19D5FF" }}>
-              Enterprise Digital Platform
+            <span style={{ fontSize: "20px", letterSpacing: "0.28em", textTransform: "uppercase", color: "#F2A900" }}>
+              Data Centre Infrastructure Services in Nigeria
             </span>
             <h1 style={{ margin: 0, fontSize: "68px", lineHeight: 1, letterSpacing: "-0.06em" }}>
-              Managed IT, CCTV, and network visibility that feel production-grade.
+              The technical execution behind reliable data centres.
             </h1>
           </div>
         </div>

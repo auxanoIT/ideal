@@ -1,0 +1,83 @@
+import type { ServiceShowcaseSection } from "@/lib/types";
+
+// Keep homepage messaging independent of the service pages being migrated next.
+// These links resolve to existing category overviews until dedicated pages are built.
+export const homeServicePillars: ServiceShowcaseSection = {
+  _type: "serviceShowcase",
+  eyebrow: "Our expertise",
+  title: "Data Centre Infrastructure Services Built for Uptime",
+  description:
+    "From deployment and Smart Hands to network infrastructure, security, audits and lifecycle support, Ideal Solutions provides the technical expertise needed to deploy, maintain and improve mission-critical data centre infrastructure across Nigeria.",
+  items: [
+    {
+      id: "data-centre-deployment",
+      title: "Data Centre Deployment",
+      lead: "Deploy Critical Infrastructure with Confidence",
+      description: "Rack-and-stack, equipment installation, server deployment, moves, adds and changes, and deployment verification—executed with the precision required in live data centre environments.",
+      imageSrc: "/image/service-pillars/data-centre-rack-and-stack-deployment-nigeria.webp",
+      imageAlt: "Two technicians installing a rackmount server into a data centre cabinet",
+      ctaLabel: "Explore Data Centre Deployment",
+      ctaHref: "/services/data-centre-deployment",
+    },
+    {
+      id: "smart-hands",
+      title: "Smart Hands & Technical Support",
+      lead: "Skilled Hands. Right Where Your Infrastructure Needs Them.",
+      description: "Extend your engineering team with experienced onsite technicians for troubleshooting, equipment intervention, remote-team support and ongoing data centre technical assistance across Nigeria.",
+      imageSrc: "/image/service-pillars/smart-hands-data-centre-technical-support-nigeria.webp",
+      imageAlt: "Onsite technician checking server equipment with a diagnostic tablet",
+      ctaLabel: "Explore Smart Hands Support",
+      ctaHref: "/services/smart-hands-technical-support",
+    },
+    {
+      id: "network-infrastructure",
+      title: "Network & Structured Cabling",
+      lead: "Build Connectivity That Stays Under Control",
+      description: "From network equipment installation and configuration to structured copper and fibre cabling, routing, labelling and port mapping, we build infrastructure that is reliable, organised and easier to maintain.",
+      imageSrc: "/image/service-details/network-cabling-rack.webp",
+      imageAlt: "Organised blue and yellow patch cables connecting network switches in a server rack",
+      ctaLabel: "Explore Network & Cabling",
+      ctaHref: "/services/network-infrastructure-connectivity",
+    },
+    {
+      id: "server-storage-hardware",
+      title: "Server, Storage & Hardware",
+      lead: "The Infrastructure Behind Your Workloads",
+      description: "Source, install, configure and support enterprise servers, storage systems and data centre hardware with technical expertise before deployment and dependable support afterwards.",
+      imageSrc: "/image/service-details/server-new-supply.webp",
+      imageAlt: "Enterprise rackmount servers, installation rails and storage drives prepared for deployment",
+      ctaLabel: "Explore Server & Hardware Services",
+      ctaHref: "/services/server-storage-hardware",
+    },
+    {
+      id: "security-access",
+      title: "Security & Access Infrastructure",
+      lead: "Protect Critical Infrastructure Beyond the Network",
+      description: "Strengthen physical and digital protection with firewall solutions, access control, CCTV, mantrap systems, automated entry and fire-safety infrastructure for mission-critical facilities.",
+      imageSrc: "/image/service-pillars/data-centre-security-access-control-nigeria.webp",
+      imageAlt: "Engineer using an access card at a data centre security vestibule with CCTV",
+      ctaLabel: "Explore Security Infrastructure",
+      ctaHref: "/services/data-centre-security-safety",
+    },
+    {
+      id: "assessment-optimisation",
+      title: "Infrastructure Audit & Remediation",
+      lead: "Find Infrastructure Risks Before They Become Problems",
+      description: "Assess racks, cabling, equipment, connectivity and documentation to uncover hidden risks, correct infrastructure disorder and create a cleaner, more supportable data centre environment.",
+      imageSrc: "/image/service-pillars/data-centre-infrastructure-audit-inspection-nigeria.webp",
+      imageAlt: "Engineer visually inspecting organised network patch panels with a cable tester on the rack shelf",
+      ctaLabel: "Explore Audit & Remediation",
+      ctaHref: "/services/infrastructure-audit-optimisation",
+    },
+    {
+      id: "projects-lifecycle",
+      title: "Project & Lifecycle Support",
+      lead: "Keep Infrastructure Projects Under Control",
+      description: "From project coordination and equipment changes to documentation, handover and planned technical support, we help maintain accountability from deployment through ongoing operation.",
+      imageSrc: "/image/service-details/managed-project-management.webp",
+      imageAlt: "Infrastructure project team reviewing a delivery schedule and network diagrams beside server racks",
+      ctaLabel: "Explore Lifecycle Support",
+      ctaHref: "/services/data-centre-project-lifecycle-management",
+    },
+  ],
+};

@@ -9,7 +9,6 @@ import "@fontsource/poppins/800.css";
 import "./globals.css";
 
 import { CookieConsentManager } from "@/components/layout/cookie-consent-manager";
-import { ChecklistLeadMagnetPopup } from "@/components/layout/checklist-lead-magnet-popup";
 import { CrawlableNav } from "@/components/layout/crawlable-nav";
 import { SiteFooter } from "@/components/layout/site-footer";
 import { SiteHeader } from "@/components/layout/site-header";
@@ -32,24 +31,24 @@ export const metadata: Metadata = {
   metadataBase: new URL(absoluteUrl("/")),
   title: {
     default:
-      "Auxano Solutions | IT, CCTV, Fire Alarm, and Network Services Nigeria",
-    template: "%s | Auxano Solutions",
+      "Ideal Solutions | Data Centre Infrastructure Services Nigeria",
+    template: "%s | Ideal Solutions",
   },
   description:
-    "Auxano Solutions is a Lagos-based IT solutions company serving Nigeria with CCTV, access control, fire alarm, network cabling, hardware, software licensing, and managed IT support.",
-  applicationName: "Auxano Solutions",
-  authors: [{ name: "Auxano Solutions Technology Limited" }],
-  creator: "Auxano Solutions Technology Limited",
-  publisher: "Auxano Solutions Technology Limited",
+    "Ideal Solutions provides technical execution, Smart Hands, deployment, connectivity, security and lifecycle support for data centres across Nigeria.",
+  applicationName: "Ideal Solutions",
+  authors: [{ name: "Ideal Solutions" }],
+  creator: "Ideal Solutions",
+  publisher: "Ideal Solutions",
   alternates: {
     canonical: absoluteUrl("/"),
   },
   openGraph: {
-    title: "Auxano Solutions | IT, CCTV, Fire Alarm, and Network Services Nigeria",
+    title: "Ideal Solutions | Data Centre Infrastructure Services Nigeria",
     description:
-      "IT infrastructure, CCTV, access control, fire alarm, network cabling, hardware, software licensing, and managed IT support for Nigerian organizations.",
+      "Technical execution, Smart Hands, deployment, connectivity, security and lifecycle support for data centres across Nigeria.",
     url: absoluteUrl("/"),
-    siteName: "Auxano Solutions",
+    siteName: "Ideal Solutions",
     locale: "en_NG",
     type: "website",
     images: [
@@ -57,16 +56,16 @@ export const metadata: Metadata = {
         url: absoluteUrl("/opengraph-image"),
         width: 1200,
         height: 630,
-        alt: "Auxano Solutions",
+        alt: "Ideal Solutions",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Auxano Solutions | IT, CCTV, Fire Alarm, and Network Services Nigeria",
+    title: "Ideal Solutions | Data Centre Infrastructure Services Nigeria",
     description:
-      "Lagos-based IT solutions company serving Nigerian organizations with infrastructure, ELV, security, safety, and managed support.",
-    images: [{ url: absoluteUrl("/opengraph-image"), alt: "Auxano Solutions" }],
+      "Data centre infrastructure services and local technical support across Nigeria.",
+    images: [{ url: absoluteUrl("/opengraph-image"), alt: "Ideal Solutions" }],
   },
   robots: {
     index: true,
@@ -108,7 +107,7 @@ function buildOfferCatalog(services: Service[]) {
 
   return {
     "@type": "OfferCatalog",
-    name: "Auxano IT, ELV, Security, Safety, Network, Software, and Managed Support Services",
+    name: "Ideal Solutions Data Centre Infrastructure Services",
     itemListElement: offers.map((offer, index) => ({
       "@type": "ListItem",
       position: index + 1,
@@ -146,30 +145,9 @@ function buildSiteJsonLd(settings: SiteSettings, services: Service[]) {
         name: settings.name,
         alternateName: settings.shortName,
         url: absoluteUrl("/"),
-        logo: absoluteUrl("/image/AUxano.webp"),
+        logo: absoluteUrl("/idealsolutions-logo.svg"),
         image: absoluteUrl("/opengraph-image"),
         description: settings.description,
-        email: settings.email,
-        telephone: settings.phone,
-        address: {
-          "@type": "PostalAddress",
-          streetAddress: settings.address,
-          addressLocality: settings.city,
-          addressCountry: {
-            "@type": "Country",
-            name: settings.country,
-          },
-        },
-        contactPoint: [
-          {
-            "@type": "ContactPoint",
-            telephone: settings.phone,
-            email: settings.email,
-            contactType: "sales and technical consultation",
-            areaServed: "NG",
-            availableLanguage: ["English"],
-          },
-        ],
         knowsAbout: [
           "Managed IT support",
           "CCTV installation",
@@ -194,21 +172,10 @@ function buildSiteJsonLd(settings: SiteSettings, services: Service[]) {
         name: settings.name,
         url: absoluteUrl("/"),
         image: absoluteUrl("/opengraph-image"),
-        logo: absoluteUrl("/image/AUxano.webp"),
+        logo: absoluteUrl("/idealsolutions-logo.svg"),
         description: settings.description,
-        email: settings.email,
-        telephone: settings.phone,
         parentOrganization: {
           "@id": organizationId,
-        },
-        address: {
-          "@type": "PostalAddress",
-          streetAddress: settings.address,
-          addressLocality: settings.city,
-          addressCountry: {
-            "@type": "Country",
-            name: settings.country,
-          },
         },
         areaServed: [
           {
@@ -228,14 +195,6 @@ function buildSiteJsonLd(settings: SiteSettings, services: Service[]) {
             name: "Port Harcourt",
           },
         ],
-        contactPoint: {
-          "@type": "ContactPoint",
-          telephone: settings.phone,
-          email: settings.email,
-          contactType: "customer service",
-          areaServed: "NG",
-          availableLanguage: ["English"],
-        },
       },
       {
         "@type": "WebSite",
@@ -303,7 +262,6 @@ export default async function RootLayout({
         </div>
         <JsonLd data={buildSiteJsonLd(siteSettings, services)} />
         <CookieConsentManager />
-        <ChecklistLeadMagnetPopup />
       </body>
     </html>
   );

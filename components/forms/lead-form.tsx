@@ -19,26 +19,35 @@ type LeadFormProps = {
   showEyebrow?: boolean;
   submitLabel?: string;
   fullWidthSubmit?: boolean;
+  initialService?: string;
+  initialSection?: string;
+  serviceOptions?: string[];
 };
 
 const serviceInterests = [
-  "Managed IT Support",
-  "CCTV & Surveillance",
-  "Network Infrastructure",
-  "Access Control",
-  "IT Audit & Compliance",
-  "Business Continuity & DR",
+  "Select the service you need",
+  "Data Centre Deployment & Infrastructure",
+  "Smart Hands & Technical Support",
+  "Server, Storage & Hardware",
+  "Network Infrastructure & Connectivity",
+  "Data Centre Security & Safety",
+  "Infrastructure Assessment & Optimisation",
+  "Data Centre Project & Lifecycle Management",
+  "Multiple Services / Not Sure Yet",
 ];
 
 export function LeadForm({
   context,
   title = "Start the conversation",
-  description = "Share the environment, issue, or project goal. Auxano will review the brief and recommend the right next step.",
+  description = "Share the environment, issue, or project goal. Ideal Solutions will review the brief and recommend the right next step.",
   className,
   headingAlign = "left",
   showEyebrow = true,
   submitLabel,
   fullWidthSubmit = false,
+  initialService,
+  initialSection,
+  serviceOptions,
 }: LeadFormProps) {
   const [status, setStatus] = useState<"idle" | "success" | "error">("idle");
   const [message, setMessage] = useState("");
@@ -102,7 +111,9 @@ export function LeadForm({
     });
 
     if (!response.ok) {
-      const data = (await response.json().catch(() => null)) as { error?: string } | null;
+      const data = (await response.json().catch(() => null)) as {
+        error?: string;
+      } | null;
       setStatus("error");
       setMessage(data?.error ?? "Something went wrong. Please try again.");
       setTurnstileResetKey((current) => current + 1);
@@ -113,7 +124,7 @@ export function LeadForm({
     setMessage(
       context === "consultation"
         ? "Consultation request received. The team can now coordinate the next discussion."
-        : "Message received. Auxano can now review the brief and respond.",
+        : "Message received. Ideal Solutions can now review the brief and respond.",
     );
     setTurnstileResetKey((current) => current + 1);
   }
@@ -133,7 +144,9 @@ export function LeadForm({
       >
         {showEyebrow ? (
           <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[var(--color-electric)]">
-            {context === "consultation" ? "Book Consultation" : "Contact Auxano"}
+            {context === "consultation"
+              ? "Book Consultation"
+              : "Contact Ideal Solutions"}
           </p>
         ) : null}
         <h3
@@ -144,11 +157,15 @@ export function LeadForm({
         >
           {title}
         </h3>
-        <p className="mt-4 text-sm leading-7 text-[var(--color-muted)]">{description}</p>
+        <p className="mt-4 text-sm leading-7 text-[var(--color-muted)]">
+          {description}
+        </p>
       </div>
 
       <form
-        action={(formData) => startTransition(() => void handleSubmit(formData))}
+        action={(formData) =>
+          startTransition(() => void handleSubmit(formData))
+        }
         className="mt-8 grid gap-4 md:grid-cols-2"
       >
         <label className="grid gap-2 text-sm font-medium text-[var(--color-ink)]">
@@ -217,10 +234,14 @@ export function LeadForm({
           Service focus
           <select
             name="serviceInterest"
-            defaultValue="Managed IT Support"
+            defaultValue={
+              initialService ??
+              serviceOptions?.[0] ??
+              "Select the service you need"
+            }
             className="h-12 rounded-2xl border border-[color:rgba(11,18,32,0.1)] bg-[var(--color-cloud)] px-4 outline-none transition focus:border-[var(--color-electric)]"
           >
-            {serviceInterests.map((item) => (
+            {(serviceOptions ?? serviceInterests).map((item) => (
               <option key={item} value={item}>
                 {item}
               </option>
@@ -231,9 +252,14 @@ export function LeadForm({
           Project brief
           <textarea
             name="message"
+            defaultValue={
+              initialSection
+                ? `I would like to discuss ${initialSection.toLowerCase()}.\n\nSite location:\nProject requirements:\nPreferred work window:\n`
+                : undefined
+            }
             rows={6}
             required
-            placeholder="Example: Access control installation for a 3-floor office building, network upgrade, CCTV deployment, managed IT support, etc."
+            placeholder="Example: Rack-and-stack deployment for new equipment, fibre and copper cabling remediation, Smart Hands support for a remote team, server installation, access control upgrade, or an infrastructure assessment."
             className="rounded-[1.5rem] border border-[color:rgba(11,18,32,0.1)] bg-[var(--color-cloud)] px-4 py-4 outline-none transition focus:border-[var(--color-electric)]"
           />
         </label>
@@ -261,9 +287,9 @@ export function LeadForm({
             className="mt-1 h-4 w-4 shrink-0 rounded border-[color:rgba(11,18,32,0.18)] accent-[var(--color-electric)]"
           />
           <span>
-            I agree to receive email communication from Auxano Solutions about
-            my request and allow Auxano Solutions to store and process my
-            personal data to respond to this submission.
+            I agree to receive email communication from Ideal Solutions about my
+            request and allow Ideal Solutions to store and process my personal
+            data to respond to this submission.
           </span>
         </label>
         {consentError ? (
@@ -279,7 +305,9 @@ export function LeadForm({
             onVerify={setTurnstileToken}
             onError={() => {
               setStatus("error");
-              setMessage("Verification could not load. Please refresh and try again.");
+              setMessage(
+                "Verification could not load. Please refresh and try again.",
+              );
             }}
             resetKey={turnstileResetKey}
           />
@@ -293,10 +321,15 @@ export function LeadForm({
               fullWidthSubmit && "w-full",
             )}
           >
-            {context === "consultation" ? <CalendarDays className="mr-2 h-4 w-4" /> : null}
+            {context === "consultation" ? (
+              <CalendarDays className="mr-2 h-4 w-4" />
+            ) : null}
             {isPending
               ? "Sending..."
-              : submitLabel ?? (context === "consultation" ? "Request Consultation" : "Send Message")}
+              : (submitLabel ??
+                (context === "consultation"
+                  ? "Request Consultation"
+                  : "Send Message"))}
           </button>
         </div>
       </form>

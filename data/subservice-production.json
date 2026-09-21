@@ -1,0 +1,3736 @@
+[
+  {
+    "proposedHref": "/services/data-centre-deployment/rack-and-stack",
+    "parentTitle": "Data Centre Deployment & Infrastructure Services",
+    "parentHref": "/services/data-centre-deployment",
+    "seoTitle": "Data Centre Rack and Stack Services Nigeria | Ideal Solutions",
+    "description": "Professional rack-and-stack services for servers, storage and network equipment. Plan rack positions, mounting, organisation and handover with Ideal Solutions.",
+    "hero": {
+      "title": "Data Centre Rack-and-Stack Services",
+      "description": "Turn an approved rack layout into an organised physical installation with servers, storage and network equipment positioned, mounted and prepared for the next stage of deployment.",
+      "cta": "Discuss Your Rack-and-Stack Project"
+    },
+    "intro": {
+      "title": "Bring Your Rack Layout to Life with Greater Control.",
+      "cards": [
+        {
+          "title": "Right Position",
+          "body": "Install equipment according to the approved rack layout and device requirements."
+        },
+        {
+          "title": "Secure Mounting",
+          "body": "Use the appropriate rails, brackets and mounting arrangements for each device."
+        },
+        {
+          "title": "Clear Identification",
+          "body": "Keep equipment positions and identification easier for technical teams to understand."
+        },
+        {
+          "title": "Structured Handover",
+          "body": "Review the completed physical installation before connection, configuration or verification begins."
+        }
+      ]
+    },
+    "sections": [
+      {
+        "id": "rack-planning",
+        "navLabel": "Rack Planning",
+        "title": "Start with a Rack Plan That Can Be Executed Onsite.",
+        "lead": "Good rack-and-stack work begins before equipment reaches its final position.",
+        "body": [
+          "Ideal Solutions reviews the equipment list, rack positions and available installation information before physical work begins.",
+          "Server depth, mounting requirements, rack-unit allocation, equipment weight, available rails and surrounding infrastructure can all influence how the installation should be approached.",
+          "The purpose is to identify issues before the installation window rather than discovering them while equipment is already being moved.",
+          "Your technical team defines the intended layout.",
+          "Ideal Solutions turns that approved arrangement into a practical onsite execution plan."
+        ],
+        "cta": "Discuss Your Rack Layout"
+      },
+      {
+        "id": "physical-installation",
+        "navLabel": "Physical Installation",
+        "title": "Mount Equipment According to the Approved Rack Arrangement.",
+        "lead": "Physical installation should be controlled, repeatable and aligned with the equipment requirements.",
+        "body": [
+          "Ideal Solutions supports the mounting of servers, storage systems, switches, firewalls and other suitable rack-mounted infrastructure.",
+          "Equipment is positioned according to the agreed rack layout and installed using the mounting hardware appropriate to the device.",
+          "For larger deployments, installation sequencing can also help reduce unnecessary movement and make dependencies between devices easier to manage.",
+          "The objective is not simply to fill rack space.",
+          "It is to create an installation that supports the connectivity, configuration and operational work that follows."
+        ],
+        "cta": "Plan Your Equipment Racking"
+      },
+      {
+        "id": "rack-organisation",
+        "navLabel": "Rack Organisation",
+        "title": "Make the Finished Rack Easier to Understand and Support.",
+        "lead": "A well-organised rack should help the next technician understand what has been installed.",
+        "body": [
+          "Physical placement, equipment identification and installation records can be aligned with the project requirements so devices remain easier to locate and reference after deployment.",
+          "Where installation continues into network, power or server setup, clear organisation also reduces confusion between the physical installation and the work that follows.",
+          "For server setup beyond mounting, explore our Server Installation & Configuration Services."
+        ],
+        "cta": "Discuss Your Installation Requirements"
+      },
+      {
+        "id": "checks-and-handover",
+        "navLabel": "Checks & Handover",
+        "title": "Know What Is Complete Before the Project Moves Forward.",
+        "lead": "Rack-and-stack should end with a clear understanding of what has been installed and what remains.",
+        "body": [
+          "Ideal Solutions reviews completed physical work against the agreed scope.",
+          "Where required, installation records, equipment-position information and permitted photographs can be included as part of the handover.",
+          "Any remaining connection, configuration or verification work should be clearly separated from the completed mounting scope.",
+          "For deeper post-installation checks, explore our Equipment Testing & Deployment Verification Services.",
+          "For wider project requirements, return to our Data Centre Deployment Services."
+        ],
+        "cta": "Define Your Rack-and-Stack Scope"
+      }
+    ],
+    "faq": {
+      "title": "Rack-and-Stack Questions, Answered",
+      "items": [
+        {
+          "title": "What is included in data centre rack-and-stack services?",
+          "body": [
+            "Rack-and-stack generally covers the physical positioning and mounting of servers, storage systems, switches and other rack-mounted equipment. Additional work such as cabling, configuration, labelling or testing should be defined within the project scope."
+          ]
+        },
+        {
+          "title": "Is rack-and-stack the same as server installation?",
+          "body": [
+            "Not exactly. Rack-and-stack focuses primarily on physical mounting and equipment placement. Server installation may continue into power, network connectivity, storage preparation and configuration."
+          ]
+        },
+        {
+          "title": "Can equipment be installed in an existing operational rack?",
+          "body": [
+            "Yes, depending on the available rack space, mounting requirements, access conditions and existing infrastructure. The environment should be reviewed before work begins."
+          ]
+        },
+        {
+          "title": "Can our engineers provide the rack layout remotely?",
+          "body": [
+            "Yes. Your technical team can provide the approved layout and installation direction while Ideal Solutions performs the agreed onsite work."
+          ]
+        },
+        {
+          "title": "What information is needed before rack-and-stack work begins?",
+          "body": [
+            "Useful information includes equipment models, quantities, rack positions, mounting hardware, site requirements and the intended work window."
+          ]
+        }
+      ]
+    },
+    "closing": {
+      "title": "Your technical direction. Our onsite execution.",
+      "body": "Based in Ikeja, Lagos, supporting infrastructure projects across Nigeria.",
+      "cta": "Discuss Your Requirements"
+    }
+  },
+  {
+    "proposedHref": "/services/data-centre-deployment/equipment-installation",
+    "parentTitle": "Data Centre Deployment & Infrastructure Services",
+    "parentHref": "/services/data-centre-deployment",
+    "seoTitle": "Data Centre Equipment Installation Services Nigeria | Ideal Solutions",
+    "description": "Professional installation of servers, storage, networking and data centre equipment, including positioning, connections, identification and project handover.",
+    "hero": {
+      "title": "Data Centre Equipment Installation",
+      "description": "Move enterprise hardware from delivery into a structured installation with clear placement, agreed connections and a defined path toward operational readiness.",
+      "cta": "Discuss Your Equipment Installation"
+    },
+    "intro": {
+      "title": "Move Equipment from Delivery to a Controlled Installation.",
+      "cards": [
+        {
+          "title": "Equipment Clarity",
+          "body": "Know what is being installed and what each device requires."
+        },
+        {
+          "title": "Site Readiness",
+          "body": "Confirm placement, access and infrastructure dependencies before execution."
+        },
+        {
+          "title": "Coordinated Installation",
+          "body": "Bring mounting and agreed connection activities into one controlled scope."
+        },
+        {
+          "title": "Clear Next Steps",
+          "body": "Know what has been installed, what remains and who owns the next stage."
+        }
+      ]
+    },
+    "sections": [
+      {
+        "id": "installation-planning",
+        "navLabel": "Installation Planning",
+        "title": "Plan Around the Equipment Before the Equipment Reaches the Rack.",
+        "lead": "Different devices create different installation requirements.",
+        "body": [
+          "Ideal Solutions reviews the proposed equipment, intended placement and available site information before installation begins.",
+          "Server hardware, storage systems, network appliances and other infrastructure may require different mounting components, access arrangements and connection dependencies.",
+          "Identifying those requirements early helps reduce delays caused by missing information or unsuitable installation conditions.",
+          "Where equipment supply, site access and technical ownership belong to different teams, we help define how those responsibilities come together during onsite execution."
+        ],
+        "cta": "Define Your Installation Scope"
+      },
+      {
+        "id": "equipment-placement",
+        "navLabel": "Equipment Placement",
+        "title": "Put Every Device Where the Wider Deployment Needs It.",
+        "lead": "Physical placement affects everything that comes afterwards.",
+        "body": [
+          "Ideal Solutions installs suitable data centre equipment according to the approved project requirements and available installation instructions.",
+          "That can include servers, storage platforms, switches, appliances and related enterprise infrastructure.",
+          "For projects concentrated mainly on mounting devices inside racks, our Data Centre Rack-and-Stack Services provide a more specific service path.",
+          "Equipment installation extends the scope to the wider physical requirements surrounding the device."
+        ],
+        "cta": "Discuss the Equipment to Be Installed"
+      },
+      {
+        "id": "connections",
+        "navLabel": "Connections",
+        "title": "Connect Equipment with Clear Ownership of What Happens Next.",
+        "lead": "Installed equipment should not depend on assumptions about power, network or downstream technical work.",
+        "body": [
+          "Where included within the agreed scope, Ideal Solutions supports specified power and network connections using the available project information and site requirements.",
+          "Labelling and physical organisation can also be included where needed.",
+          "Configuration, application setup and acceptance testing remain distinct activities and should have clearly assigned responsibility.",
+          "This keeps the installation scope understandable for everyone involved."
+        ],
+        "cta": "Plan Your Connection Requirements"
+      },
+      {
+        "id": "installation-handover",
+        "navLabel": "Installation Handover",
+        "title": "Give the Next Team a Clear Starting Point.",
+        "lead": "A good installation handover explains what has been completed and what still needs attention.",
+        "body": [
+          "Ideal Solutions reviews the installed equipment against the agreed work scope.",
+          "Where required, the handover can identify installed devices, outstanding actions and relevant project records.",
+          "This allows engineering, operations or project teams to continue with configuration, testing or operational acceptance without having to reconstruct what happened during physical installation.",
+          "For formal post-installation checks, explore Equipment Testing & Deployment Verification."
+        ],
+        "cta": "Discuss Your Installation and Handover"
+      }
+    ],
+    "faq": {
+      "title": "Data Centre Equipment Installation Questions, Answered",
+      "items": [
+        {
+          "title": "What equipment can Ideal Solutions install?",
+          "body": [
+            "Typical projects may involve enterprise servers, storage systems, network devices, firewalls, appliances and related data centre hardware."
+          ]
+        },
+        {
+          "title": "How is equipment installation different from rack-and-stack?",
+          "body": [
+            "Rack-and-stack primarily concerns rack placement and mounting. Equipment installation can include a broader set of physical installation requirements and agreed connections."
+          ]
+        },
+        {
+          "title": "Can you install equipment supplied by another vendor?",
+          "body": [
+            "Yes. The equipment details, installation requirements and required components should be provided before work begins."
+          ]
+        },
+        {
+          "title": "Does equipment installation include configuration?",
+          "body": [
+            "Configuration should not be assumed automatically. Where configuration is required, it should be included explicitly in the agreed scope."
+          ]
+        },
+        {
+          "title": "What should we provide before an installation project?",
+          "body": [
+            "Share the equipment schedule, installation location, intended positions, available project documentation and relevant site requirements."
+          ]
+        }
+      ]
+    },
+    "closing": {
+      "title": "Your technical direction. Our onsite execution.",
+      "body": "Based in Ikeja, Lagos, supporting infrastructure projects across Nigeria.",
+      "cta": "Discuss Your Requirements"
+    }
+  },
+  {
+    "proposedHref": "/services/data-centre-deployment/server-installation-configuration",
+    "parentTitle": "Data Centre Deployment & Infrastructure Services",
+    "parentHref": "/services/data-centre-deployment",
+    "seoTitle": "Server Installation & Configuration Services Nigeria | Ideal Solutions",
+    "description": "Deploy enterprise servers with professional physical installation, connectivity and agreed configuration support for data centre environments in Nigeria.",
+    "hero": {
+      "title": "Server Installation & Configuration",
+      "description": "Move enterprise servers from rack space toward operational readiness with physical installation, connectivity and agreed setup performed around your technical requirements.",
+      "cta": "Discuss Your Server Deployment"
+    },
+    "intro": {
+      "title": "Give Every Server a Clear Path from Rack to Readiness.",
+      "cards": [
+        {
+          "title": "Defined Requirements",
+          "body": "Establish what the server needs to do before installation begins."
+        },
+        {
+          "title": "Physical Readiness",
+          "body": "Mount and connect equipment according to the approved deployment requirements."
+        },
+        {
+          "title": "Controlled Configuration",
+          "body": "Apply agreed setup tasks under your team's technical direction."
+        },
+        {
+          "title": "Reviewed Handover",
+          "body": "Confirm completed work and identify remaining operational tasks."
+        }
+      ]
+    },
+    "sections": [
+      {
+        "id": "physical-setup",
+        "navLabel": "Physical Setup",
+        "title": "Build the Physical Foundation Before Configuration Begins.",
+        "lead": "A server cannot be configured properly if the physical installation is incomplete.",
+        "body": [
+          "Ideal Solutions supports the mounting, placement and specified power and network connections required for the server deployment.",
+          "The physical work follows the available project requirements and site conditions.",
+          "Where a project only requires equipment mounting, our Rack-and-Stack Services provide a focused installation option.",
+          "Where the project continues into configuration, we help connect the physical and technical stages into one clearer workflow."
+        ],
+        "cta": "Plan Your Server Installation"
+      },
+      {
+        "id": "configuration",
+        "navLabel": "Configuration",
+        "title": "Apply the Agreed Setup for the Server's Intended Role.",
+        "lead": "Configuration should follow defined technical requirements rather than assumptions made onsite.",
+        "body": [
+          "Ideal Solutions supports agreed initial configuration activities based on the project scope supplied by your technical team.",
+          "Depending on the requirement, this may involve specified platform, storage or other setup activities that have been confirmed before execution.",
+          "Required software, licensing, credentials and technical approvals should be available through the customer's approved process.",
+          "The objective is to complete the agreed configuration while keeping technical ownership clear."
+        ],
+        "cta": "Discuss Your Configuration Requirements"
+      },
+      {
+        "id": "remote-coordination",
+        "navLabel": "Remote Coordination",
+        "title": "Keep Your Server Engineers in Control from Wherever They Work.",
+        "lead": "The engineer making the technical decisions does not always need to be standing beside the rack.",
+        "body": [
+          "Ideal Solutions can provide the onsite execution required by remote infrastructure teams.",
+          "Your engineers retain technical direction while our onsite team performs the physical and agreed configuration activities assigned to the project.",
+          "Communication channels, approval points and escalation responsibilities should be defined before work begins.",
+          "This model is particularly useful where specialised engineering knowledge sits outside the facility but physical execution is required in Nigeria."
+        ],
+        "cta": "Arrange Onsite Server Support"
+      },
+      {
+        "id": "review-and-handover",
+        "navLabel": "Review & Handover",
+        "title": "Know What Has Been Configured Before the Server Moves Forward.",
+        "lead": "Powering on a server is not the same as completing the deployment.",
+        "body": [
+          "Ideal Solutions reviews the agreed installation and configuration tasks with the responsible technical team.",
+          "Outstanding actions or exceptions can be identified before handover.",
+          "Where additional deployment checks are required, our Equipment Testing & Deployment Verification Services can provide a defined review stage.",
+          "For wider multi-device deployments, explore our complete Data Centre Deployment Services."
+        ],
+        "cta": "Define Your Server Handover Requirements"
+      }
+    ],
+    "faq": {
+      "title": "Server Installation & Configuration Questions, Answered",
+      "items": [
+        {
+          "title": "What is included in server installation and configuration?",
+          "body": [
+            "The service can combine physical installation with agreed server setup tasks. The exact configuration activities should be defined before the project begins."
+          ]
+        },
+        {
+          "title": "Can Ideal Solutions follow configuration instructions from our engineers?",
+          "body": [
+            "Yes. Your engineering team can provide the approved configuration requirements while Ideal Solutions performs the agreed onsite activities."
+          ]
+        },
+        {
+          "title": "Can operating systems or virtualisation platforms be installed?",
+          "body": [
+            "Where required, the exact platform, version, licensing and task scope should be confirmed before execution."
+          ]
+        },
+        {
+          "title": "Does server configuration include application migration?",
+          "body": [
+            "Application and data migration are separate technical requirements and should not be assumed to be included in standard server installation."
+          ]
+        },
+        {
+          "title": "What information should be provided before server deployment?",
+          "body": [
+            "Provide the server models, intended rack location, connection requirements, configuration scope and authorised technical contacts."
+          ]
+        }
+      ]
+    },
+    "closing": {
+      "title": "Your technical direction. Our onsite execution.",
+      "body": "Based in Ikeja, Lagos, supporting infrastructure projects across Nigeria.",
+      "cta": "Discuss Your Requirements"
+    }
+  },
+  {
+    "proposedHref": "/services/data-centre-deployment/equipment-testing-verification",
+    "parentTitle": "Data Centre Deployment & Infrastructure Services",
+    "parentHref": "/services/data-centre-deployment",
+    "seoTitle": "Equipment Testing & Deployment Verification Nigeria | Ideal Solutions",
+    "description": "Verify installed data centre equipment against agreed deployment requirements with structured checks, issue reporting and technical handover support.",
+    "hero": {
+      "title": "Equipment Testing & Deployment Verification",
+      "description": "Check completed infrastructure against agreed deployment requirements and make the results clear before the project moves into operational use.",
+      "cta": "Discuss Your Verification Requirements"
+    },
+    "intro": {
+      "title": "Give Deployment Handover a Clear Basis for Review.",
+      "cards": [
+        {
+          "title": "Defined Checks",
+          "body": "Know what must be reviewed before testing begins."
+        },
+        {
+          "title": "Agreed Methods",
+          "body": "Use checks appropriate to the equipment and deployment scope."
+        },
+        {
+          "title": "Visible Exceptions",
+          "body": "Record issues that require correction or technical decisions."
+        },
+        {
+          "title": "Clear Evidence",
+          "body": "Give the responsible team useful information for handover."
+        }
+      ]
+    },
+    "sections": [
+      {
+        "id": "acceptance-criteria",
+        "navLabel": "Acceptance Criteria",
+        "title": "Decide What Successful Deployment Looks Like Before Testing Begins.",
+        "lead": "Verification becomes meaningful when the team agrees what is being checked.",
+        "body": [
+          "Ideal Solutions helps structure the review around the supplied project requirements.",
+          "The equipment, expected condition and required checks should be understood before the verification activity begins.",
+          "Physical installation, connectivity, device state and application readiness are different areas of validation.",
+          "The scope should therefore make clear exactly what the review is expected to establish."
+        ],
+        "cta": "Define Your Required Checks"
+      },
+      {
+        "id": "installation-checks",
+        "navLabel": "Installation Checks",
+        "title": "Compare What Was Installed with What Was Expected.",
+        "lead": "Verification should connect the physical environment to the approved deployment requirement.",
+        "body": [
+          "Checks can cover agreed elements such as equipment position, mounting, identification, visible organisation and specified connectivity.",
+          "The procedures used depend on the equipment, available access and agreed scope.",
+          "Where equipment still needs to be installed, our Data Centre Equipment Installation Services should be completed before the verification stage."
+        ],
+        "cta": "Discuss Installation Verification"
+      },
+      {
+        "id": "issue-review",
+        "navLabel": "Issue Review",
+        "title": "Turn Deployment Exceptions into Clear Actions.",
+        "lead": "Finding a problem is only useful when the responsible team understands what needs to happen next.",
+        "body": [
+          "Ideal Solutions records relevant exceptions within the agreed review scope.",
+          "The issue record should make clear what was observed, which item is affected and what additional information or corrective action may be required.",
+          "Where remediation falls outside the original verification scope, the required work should be agreed separately before execution.",
+          "This avoids turning verification into uncontrolled project expansion."
+        ],
+        "cta": "Plan Your Review and Follow-Up"
+      },
+      {
+        "id": "verification-handover",
+        "navLabel": "Verification Handover",
+        "title": "Hand Over Evidence, Not Assumptions.",
+        "lead": "A useful verification record shows what was checked, what passed and what remains unresolved.",
+        "body": [
+          "The agreed handover may include completed checklists, observed results, permitted photographs and issue records.",
+          "The responsible system owner can then review the evidence and decide whether additional work is needed before operational acceptance.",
+          "For post-change verification, see our Moves, Adds & Changes Services.",
+          "For the broader service family, explore Data Centre Deployment Services."
+        ],
+        "cta": "Discuss Your Verification Handover"
+      }
+    ],
+    "faq": {
+      "title": "Deployment Verification Questions, Answered",
+      "items": [
+        {
+          "title": "What is equipment deployment verification?",
+          "body": [
+            "It is a structured review of installed equipment against agreed project requirements or acceptance checks."
+          ]
+        },
+        {
+          "title": "Is deployment verification the same as full data centre commissioning?",
+          "body": [
+            "No. Equipment-level deployment verification is narrower than facility-wide commissioning."
+          ]
+        },
+        {
+          "title": "Can Ideal Solutions verify equipment installed by another provider?",
+          "body": [
+            "Yes, provided the required installation records, access arrangements and verification scope are available."
+          ]
+        },
+        {
+          "title": "Can verification be performed in a live environment?",
+          "body": [
+            "Potential impact should be assessed before any check is performed. Activities that could affect production services should follow the customer's approved procedures."
+          ]
+        },
+        {
+          "title": "Does successful verification automatically mean the equipment is production-ready?",
+          "body": [
+            "Not necessarily. Verification confirms the agreed checks. Additional application, security or business acceptance may still be required."
+          ]
+        }
+      ]
+    },
+    "closing": {
+      "title": "Your technical direction. Our onsite execution.",
+      "body": "Based in Ikeja, Lagos, supporting infrastructure projects across Nigeria.",
+      "cta": "Discuss Your Requirements"
+    }
+  },
+  {
+    "proposedHref": "/services/data-centre-deployment/moves-adds-changes",
+    "parentTitle": "Data Centre Deployment & Infrastructure Services",
+    "parentHref": "/services/data-centre-deployment",
+    "seoTitle": "Data Centre Moves, Adds & Changes Services Nigeria | Ideal Solutions",
+    "description": "Plan and execute data centre equipment moves, additions and physical infrastructure changes with structured onsite support and clear handover.",
+    "hero": {
+      "title": "Data Centre Moves, Adds & Changes",
+      "description": "Modify existing infrastructure with a clear plan for what is moving, what is being added and what needs to change around the live environment.",
+      "cta": "Discuss Your Planned Change"
+    },
+    "intro": {
+      "title": "Make Infrastructure Changes Without Losing Sight of the Existing Environment.",
+      "cards": [
+        {
+          "title": "Know the Starting Point",
+          "body": "Understand what is installed before the change begins."
+        },
+        {
+          "title": "Define the Change",
+          "body": "Agree what needs to move, be added or be modified."
+        },
+        {
+          "title": "Execute with Control",
+          "body": "Carry out approved work within the agreed site conditions."
+        },
+        {
+          "title": "Update the Environment",
+          "body": "Reflect the completed change in the required project records."
+        }
+      ]
+    },
+    "sections": [
+      {
+        "id": "equipment-moves",
+        "navLabel": "Equipment Moves",
+        "title": "Move Equipment with Its Dependencies Already Understood.",
+        "lead": "Relocating equipment involves more than removing it from one rack and placing it in another.",
+        "body": [
+          "Ideal Solutions supports planned equipment moves within the defined work environment.",
+          "The existing rack position, destination, mounting requirements and affected connections should be understood before execution begins.",
+          "Where service interruption, shutdown or recovery planning may be required, those decisions remain with the customer's authorised technical team.",
+          "The physical move then follows the approved change requirements."
+        ],
+        "cta": "Discuss Your Equipment Move"
+      },
+      {
+        "id": "equipment-additions",
+        "navLabel": "Equipment Additions",
+        "title": "Add New Infrastructure Without Creating New Disorder.",
+        "lead": "New equipment has to fit the environment that already exists.",
+        "body": [
+          "Before installation, rack space, mounting arrangements, connection requirements and access conditions should be reviewed.",
+          "Ideal Solutions supports the physical addition of approved devices to existing infrastructure.",
+          "Where the requirement is focused primarily on mounting new rack equipment, our Rack-and-Stack Services provide a closely related capability.",
+          "Your team determines the technical design.",
+          "We provide the agreed onsite execution."
+        ],
+        "cta": "Plan Your Equipment Addition"
+      },
+      {
+        "id": "physical-changes",
+        "navLabel": "Physical Changes",
+        "title": "Make Approved Changes with the Existing Environment in View.",
+        "lead": "Every infrastructure change should have a defined boundary.",
+        "body": [
+          "Moves, Adds and Changes can involve physical equipment arrangement, connections, identification and other approved adjustments.",
+          "Existing infrastructure records should be reviewed before execution wherever they are available.",
+          "If onsite conditions differ from the approved requirement, the right technical owner should provide direction before additional work continues.",
+          "This keeps the change controlled rather than allowing the project scope to expand informally onsite."
+        ],
+        "cta": "Define Your Change Requirements"
+      },
+      {
+        "id": "checks-and-records",
+        "navLabel": "Checks & Records",
+        "title": "Finish the Change with a Clear Record of the New State.",
+        "lead": "The environment should not become harder to understand after a change has been completed.",
+        "body": [
+          "Ideal Solutions reviews the agreed physical work and records the completion status.",
+          "Where required, updated equipment positions, connection information, outstanding actions and permitted photographs can form part of the change handover.",
+          "For formal post-change checks, explore Equipment Testing & Deployment Verification.",
+          "For larger deployment programmes, return to our Data Centre Deployment Services."
+        ],
+        "cta": "Plan Your Change and Handover"
+      }
+    ],
+    "faq": {
+      "title": "Moves, Adds & Changes Questions, Answered",
+      "items": [
+        {
+          "title": "What does MAC mean in a data centre?",
+          "body": [
+            "MAC stands for Moves, Adds and Changes. It covers controlled physical modifications to existing infrastructure, including equipment relocation, additions and approved changes."
+          ]
+        },
+        {
+          "title": "Can equipment be moved inside an operational environment?",
+          "body": [
+            "Yes, where the change has been assessed and approved based on the affected infrastructure, dependencies and site procedures."
+          ]
+        },
+        {
+          "title": "Can Ideal Solutions move equipment between different sites?",
+          "body": [
+            "Inter-site relocation is a broader requirement than the rack-level or facility-level MAC work described here and should be scoped separately."
+          ]
+        },
+        {
+          "title": "Can new devices be added to existing racks?",
+          "body": [
+            "Yes, provided rack space, mounting requirements, connectivity and other dependencies have been reviewed."
+          ]
+        },
+        {
+          "title": "What information is needed before a planned change?",
+          "body": [
+            "Provide the existing arrangement, intended change, equipment details, site conditions, relevant infrastructure records and required completion checks."
+          ]
+        }
+      ]
+    },
+    "closing": {
+      "title": "Your technical direction. Our onsite execution.",
+      "body": "Based in Ikeja, Lagos, supporting infrastructure projects across Nigeria.",
+      "cta": "Discuss Your Requirements"
+    }
+  },
+  {
+    "proposedHref": "/services/smart-hands-technical-support/data-centre-technical-support",
+    "parentTitle": "Smart Hands & Technical Support",
+    "parentHref": "/services/smart-hands-technical-support",
+    "seoTitle": "Data Centre Technical Support Nigeria | Ideal Solutions",
+    "description": "Onsite data centre technical support in Nigeria for equipment checks, troubleshooting, connectivity issues and approved infrastructure interventions.",
+    "hero": {
+      "title": "Data Centre Technical Support",
+      "description": "Get skilled onsite technical assistance when equipment, connectivity or physical infrastructure needs more than remote monitoring can provide.",
+      "cta": "Request Data Centre Technical Support"
+    },
+    "intro": {
+      "title": "Put Technical Help at the Point of Work.",
+      "cards": [
+        {
+          "title": "See the Physical Issue",
+          "body": "Inspect equipment and connections directly inside the environment."
+        },
+        {
+          "title": "Investigate Onsite",
+          "body": "Support troubleshooting where remote tools cannot reveal the whole picture."
+        },
+        {
+          "title": "Carry Out Approved Work",
+          "body": "Perform agreed physical interventions under clear technical direction."
+        },
+        {
+          "title": "Confirm the Outcome",
+          "body": "Review what was done and identify any remaining technical action."
+        }
+      ]
+    },
+    "sections": [
+      {
+        "id": "onsite-assessment",
+        "navLabel": "Onsite Assessment",
+        "title": "See What Is Actually Happening at the Infrastructure.",
+        "lead": "Remote alerts can identify a problem without always revealing the physical cause.",
+        "body": [
+          "Ideal Solutions provides onsite technical visibility for data centre and enterprise infrastructure issues that require someone physically present at the equipment.",
+          "That may involve checking hardware condition, rack status, cable connections, device indicators or other agreed physical conditions.",
+          "The objective is to give the responsible technical team better information before a decision is made.",
+          "For remote engineering teams, that onsite visibility can reduce uncertainty and help distinguish between a software-level issue and something that requires physical attention."
+        ],
+        "cta": "Discuss Your Technical Issue"
+      },
+      {
+        "id": "technical-intervention",
+        "navLabel": "Technical Intervention",
+        "title": "Carry Out the Physical Work the Issue Requires.",
+        "lead": "Some infrastructure problems cannot be resolved through a remote console.",
+        "body": [
+          "Where authorised, Ideal Solutions performs agreed onsite technical activities around servers, storage systems, network devices and associated infrastructure.",
+          "The scope may include suitable physical checks, reconnection, component-level intervention, device handling or other approved activities based on the requirement.",
+          "Technical ownership remains clear throughout the task.",
+          "Where a decision falls outside the approved scope, the responsible customer engineer should provide direction before additional work continues."
+        ],
+        "cta": "Request Onsite Intervention"
+      },
+      {
+        "id": "troubleshooting-support",
+        "navLabel": "Troubleshooting Support",
+        "title": "Give Remote Engineers Better Eyes and Hands Onsite.",
+        "lead": "Troubleshooting becomes easier when the person making the technical decision can rely on accurate information from the rack.",
+        "body": [
+          "Ideal Solutions can work alongside internal or remote engineering teams during investigation.",
+          "Our technicians can perform agreed observations and physical checks while your specialists remain responsible for the wider diagnosis and technical direction.",
+          "This is particularly useful when the issue involves connectivity, device state, physical access or conditions that cannot be confirmed through remote tools alone.",
+          "For ongoing remote-directed physical support, explore our Smart Hands & Remote-Team Support Services."
+        ],
+        "cta": "Arrange Onsite Troubleshooting Support"
+      },
+      {
+        "id": "technical-handover",
+        "navLabel": "Technical Handover",
+        "title": "Close the Task with a Clear Technical Status.",
+        "lead": "Support work should end with more clarity than it started with.",
+        "body": [
+          "Ideal Solutions reviews the completed onsite actions against the agreed task.",
+          "Relevant observations, completed activities and outstanding issues can be communicated back to the responsible technical team.",
+          "This helps separate what has been resolved onsite from any additional configuration, replacement, engineering or project work that may still be required.",
+          "For recurring technical requirements, explore Planned Maintenance & Ongoing Technical Support.",
+          "For the wider capability, return to Smart Hands & Technical Support."
+        ],
+        "cta": "Discuss Your Support Requirement"
+      }
+    ],
+    "faq": {
+      "title": "Data Centre Technical Support Questions, Answered",
+      "items": [
+        {
+          "title": "What does data centre technical support include?",
+          "body": [
+            "It can include onsite equipment checks, physical troubleshooting support, connectivity inspection and approved infrastructure interventions depending on the agreed scope."
+          ]
+        },
+        {
+          "title": "Can Ideal Solutions help when our engineers are working remotely?",
+          "body": [
+            "Yes. Our technicians can provide onsite observations and carry out approved physical activities while your engineers retain technical direction."
+          ]
+        },
+        {
+          "title": "What equipment can you support?",
+          "body": [
+            "Support can involve suitable servers, storage systems, network devices, racks, cabling and related data centre infrastructure."
+          ]
+        },
+        {
+          "title": "Can you troubleshoot network connectivity issues onsite?",
+          "body": [
+            "Physical connectivity support can include agreed cable, port and connection checks. Wider network diagnosis or configuration should be defined separately where required."
+          ]
+        },
+        {
+          "title": "What information should we provide when requesting technical support?",
+          "body": [
+            "Share the affected equipment, observed problem, site details, available diagnostic information and the technical contact responsible for decisions."
+          ]
+        }
+      ]
+    },
+    "closing": {
+      "title": "Keep Skilled Technical Support Within Reach.",
+      "body": "Whether the requirement is a one-time onsite intervention, remotely directed task or recurring infrastructure support, Ideal Solutions provides the technical presence needed where the work actually happens.",
+      "cta": "Discuss Your Support Requirements"
+    }
+  },
+  {
+    "proposedHref": "/services/smart-hands-technical-support/smart-hands",
+    "parentTitle": "Smart Hands & Technical Support",
+    "parentHref": "/services/smart-hands-technical-support",
+    "seoTitle": "Smart Hands & Remote Hands Services Nigeria | Ideal Solutions",
+    "description": "Smart Hands and remote-team support in Nigeria for onsite equipment checks, rack-level tasks, cable work and physical infrastructure execution.",
+    "hero": {
+      "title": "Smart Hands & Remote-Team Support",
+      "description": "Keep your engineers in control while Ideal Solutions provides the skilled physical presence needed at your infrastructure in Nigeria.",
+      "cta": "Request Smart Hands Support"
+    },
+    "intro": {
+      "title": "Your Engineers Direct. We Work at the Rack.",
+      "cards": [
+        {
+          "title": "Local Presence",
+          "body": "Put skilled technical hands where the infrastructure is located."
+        },
+        {
+          "title": "Remote Direction",
+          "body": "Let your engineers retain ownership of the technical decisions."
+        },
+        {
+          "title": "Physical Execution",
+          "body": "Turn approved instructions into onsite action."
+        },
+        {
+          "title": "Clear Feedback",
+          "body": "Give remote teams better visibility into what happened onsite."
+        }
+      ]
+    },
+    "sections": [
+      {
+        "id": "remote-coordination",
+        "navLabel": "Remote Coordination",
+        "title": "Close the Distance Between Your Engineers and the Infrastructure.",
+        "lead": "The person who knows what needs to happen may be hundreds or thousands of kilometres away.",
+        "body": [
+          "Smart Hands gives remote engineering teams a local technical extension inside the data centre.",
+          "Your engineers can define the requirement, provide instructions and remain responsible for key technical decisions while Ideal Solutions performs the agreed physical activities onsite.",
+          "Before execution, communication channels, authorisation points and escalation contacts should be clear so work does not continue beyond the approved direction.",
+          "This creates a practical way to support Nigerian infrastructure without requiring your own engineer onsite for every task."
+        ],
+        "cta": "Discuss Remote-Team Support"
+      },
+      {
+        "id": "rack-level-tasks",
+        "navLabel": "Rack-Level Tasks",
+        "title": "Turn Remote Instructions into Physical Action.",
+        "lead": "Remote tools can manage systems, but they cannot touch the rack.",
+        "body": [
+          "Ideal Solutions can perform agreed physical activities such as equipment inspection, cable checks, device identification, connection work and other suitable rack-level tasks.",
+          "The exact work is defined around the instructions supplied by the responsible technical team.",
+          "Where tasks involve broader installation work, our Data Centre Deployment Services may provide a more suitable project structure.",
+          "Smart Hands is most valuable where your team already understands the technical requirement but needs someone physically present to carry it out."
+        ],
+        "cta": "Define Your Onsite Task"
+      },
+      {
+        "id": "onsite-visibility",
+        "navLabel": "Onsite Visibility",
+        "title": "Give Your Remote Team a Clearer View of the Physical Environment.",
+        "lead": "Sometimes the most useful support is simply having someone reliable standing in front of the equipment.",
+        "body": [
+          "Ideal Solutions can provide agreed visual checks, equipment identification and physical observations that help remote engineers understand what is happening onsite.",
+          "Where permitted, relevant photographs or task information can be used to support the technical conversation.",
+          "This helps reduce decisions based on incomplete assumptions and gives remote teams better context before choosing the next action.",
+          "For deeper troubleshooting needs, explore Data Centre Technical Support."
+        ],
+        "cta": "Request Onsite Visibility"
+      },
+      {
+        "id": "task-handover",
+        "navLabel": "Task Handover",
+        "title": "Know What Was Done Before the Remote Session Ends.",
+        "lead": "A Smart Hands task should not disappear into a message saying “completed.”",
+        "body": [
+          "Ideal Solutions reviews the agreed work and communicates the resulting status back to the responsible team.",
+          "That can include completed steps, relevant observations and any condition that requires further technical attention.",
+          "Clear task closure helps remote engineers decide whether the issue is resolved, whether additional work is needed or whether another specialist should become involved.",
+          "For recurring support needs, explore Planned Maintenance & Ongoing Technical Support."
+        ],
+        "cta": "Plan Your Smart Hands Requirement"
+      }
+    ],
+    "faq": {
+      "title": "Smart Hands & Remote Hands Questions, Answered",
+      "items": [
+        {
+          "title": "What are Smart Hands services?",
+          "body": [
+            "Smart Hands services provide onsite technicians who perform agreed physical infrastructure tasks on behalf of remote engineering, operations or technology teams."
+          ]
+        },
+        {
+          "title": "What is the difference between Smart Hands and remote support?",
+          "body": [
+            "Remote support takes place through software or management systems. Smart Hands provides physical onsite execution where the task requires someone at the equipment."
+          ]
+        },
+        {
+          "title": "Can our engineers direct the work in real time?",
+          "body": [
+            "Yes. The required communication method and approval process can be agreed before the task so your team can provide technical direction where needed."
+          ]
+        },
+        {
+          "title": "What kind of tasks can Smart Hands support?",
+          "body": [
+            "Suitable tasks can include equipment inspection, cable checks, physical device handling, identification and other approved rack-level activities."
+          ]
+        },
+        {
+          "title": "Is Smart Hands useful for international companies with equipment in Nigeria?",
+          "body": [
+            "Yes. It allows remote teams to retain technical ownership while using local onsite technical resources for physical execution."
+          ]
+        }
+      ]
+    },
+    "closing": {
+      "title": "Keep Skilled Technical Support Within Reach.",
+      "body": "Whether the requirement is a one-time onsite intervention, remotely directed task or recurring infrastructure support, Ideal Solutions provides the technical presence needed where the work actually happens.",
+      "cta": "Discuss Your Support Requirements"
+    }
+  },
+  {
+    "proposedHref": "/services/smart-hands-technical-support/planned-maintenance-support",
+    "parentTitle": "Smart Hands & Technical Support",
+    "parentHref": "/services/smart-hands-technical-support",
+    "seoTitle": "Data Centre Planned Maintenance & Technical Support Nigeria | Ideal Solutions",
+    "description": "Planned data centre maintenance and ongoing technical support for recurring infrastructure checks, onsite intervention and operational support in Nigeria.",
+    "hero": {
+      "title": "Planned Maintenance & Ongoing Technical Support",
+      "description": "Keep access to onsite technical capability beyond individual projects with planned support for recurring infrastructure checks, maintenance activities and future changes.",
+      "cta": "Discuss Your Maintenance Requirements"
+    },
+    "intro": {
+      "title": "Support Infrastructure Before Every Need Becomes an Urgent One.",
+      "cards": [
+        {
+          "title": "Planned Attention",
+          "body": "Schedule agreed technical work before it becomes an unplanned interruption."
+        },
+        {
+          "title": "Regular Visibility",
+          "body": "Keep closer awareness of physical infrastructure conditions."
+        },
+        {
+          "title": "Technical Continuity",
+          "body": "Work with a support team that understands the environment over time."
+        },
+        {
+          "title": "Faster Follow-Through",
+          "body": "Move recurring technical requirements forward without restarting the process each time."
+        }
+      ]
+    },
+    "sections": [
+      {
+        "id": "maintenance-planning",
+        "navLabel": "Maintenance Planning",
+        "title": "Move from Reactive Support to Planned Technical Attention.",
+        "lead": "Not every infrastructure task should begin with an unexpected problem.",
+        "body": [
+          "Ideal Solutions helps organisations structure recurring onsite technical requirements around agreed maintenance activities and operational needs.",
+          "The maintenance scope can be built around the equipment, environment and technical tasks that need periodic attention.",
+          "Planning those activities in advance makes it easier to coordinate access, responsible contacts and required technical inputs.",
+          "The objective is not to create unnecessary maintenance work.",
+          "It is to make known technical requirements easier to manage before they become disruptive."
+        ],
+        "cta": "Plan Your Maintenance Requirements"
+      },
+      {
+        "id": "recurring-technical-tasks",
+        "navLabel": "Recurring Technical Tasks",
+        "title": "Keep Routine Infrastructure Work from Competing with Bigger Priorities.",
+        "lead": "Small technical tasks can consume significant engineering time when they recur across an operating environment.",
+        "body": [
+          "Ideal Solutions provides onsite support for suitable recurring infrastructure activities defined within the maintenance scope.",
+          "That can include agreed checks, equipment attention, physical inspections and other technical tasks that require local presence.",
+          "Your internal team can remain focused on architecture, operations and higher-value technical decisions while routine onsite work is handled in a more structured way.",
+          "For individual troubleshooting events, explore Data Centre Technical Support."
+        ],
+        "cta": "Discuss Recurring Technical Support"
+      },
+      {
+        "id": "infrastructure-continuity",
+        "navLabel": "Infrastructure Continuity",
+        "title": "Keep Technical Context from Disappearing Between Projects.",
+        "lead": "Infrastructure support becomes easier when every new task does not begin from zero.",
+        "body": [
+          "Ongoing engagement can help create better familiarity with the environment, its equipment and the customer's working requirements.",
+          "That continuity can make future maintenance, technical intervention and infrastructure changes easier to coordinate.",
+          "It also gives internal and remote teams a clearer route for requesting suitable onsite assistance when new requirements appear.",
+          "Where physical tasks are being directed remotely, our Smart Hands & Remote-Team Support Services can complement ongoing maintenance support."
+        ],
+        "cta": "Build Ongoing Technical Support"
+      },
+      {
+        "id": "support-review",
+        "navLabel": "Support Review",
+        "title": "Keep the Support Model Aligned with the Infrastructure.",
+        "lead": "Maintenance requirements change as equipment, projects and operational priorities evolve.",
+        "body": [
+          "Ideal Solutions can review the agreed support activities with the customer as infrastructure needs change.",
+          "This helps ensure recurring work remains relevant instead of continuing simply because it was included in an earlier schedule.",
+          "Outstanding issues, repeated technical needs and future project requirements can also help inform the next maintenance period.",
+          "For broader infrastructure lifecycle requirements, explore Data Centre Project & Lifecycle Management.",
+          "For the complete capability group, return to Smart Hands & Technical Support."
+        ],
+        "cta": "Discuss Your Ongoing Support Plan"
+      }
+    ],
+    "faq": {
+      "title": "Planned Maintenance & Ongoing Support Questions, Answered",
+      "items": [
+        {
+          "title": "What is planned data centre maintenance?",
+          "body": [
+            "Planned maintenance is agreed technical work scheduled in advance to help inspect, maintain or support suitable infrastructure rather than waiting for every requirement to become reactive."
+          ]
+        },
+        {
+          "title": "What types of maintenance tasks can Ideal Solutions support?",
+          "body": [
+            "The exact tasks depend on the equipment and agreed scope and can include suitable physical inspections, recurring technical checks and other onsite infrastructure activities."
+          ]
+        },
+        {
+          "title": "Is planned maintenance the same as emergency support?",
+          "body": [
+            "No. Planned maintenance is scheduled around known recurring requirements. Unexpected incidents or urgent troubleshooting should be handled through an appropriate technical-support scope."
+          ]
+        },
+        {
+          "title": "Can ongoing support include Smart Hands services?",
+          "body": [
+            "Yes. Remote-directed onsite tasks can be included where Smart Hands support forms part of the agreed ongoing requirement."
+          ]
+        },
+        {
+          "title": "Can the maintenance scope change over time?",
+          "body": [
+            "Yes. Infrastructure evolves, so the support scope can be reviewed as equipment, projects and operational priorities change."
+          ]
+        }
+      ]
+    },
+    "closing": {
+      "title": "Keep Skilled Technical Support Within Reach.",
+      "body": "Whether the requirement is a one-time onsite intervention, remotely directed task or recurring infrastructure support, Ideal Solutions provides the technical presence needed where the work actually happens.",
+      "cta": "Discuss Your Support Requirements"
+    }
+  },
+  {
+    "proposedHref": "/services/server-storage-hardware/server-sales-repair",
+    "parentTitle": "Server, Storage & Hardware Lifecycle Services",
+    "parentHref": "/services/server-storage-hardware",
+    "seoTitle": "Enterprise Server Sales & Repair Nigeria | Ideal Solutions",
+    "description": "Source, upgrade and repair enterprise servers with Ideal Solutions. Support server hardware selection, replacement components and onsite technical intervention in Nigeria.",
+    "hero": {
+      "title": "Enterprise Server Sales & Repair",
+      "description": "Source suitable enterprise server hardware, replace failing components and keep critical infrastructure supportable with technical input before and after purchase.",
+      "cta": "Discuss Your Server Requirement"
+    },
+    "intro": {
+      "title": "Buy the Right Server. Keep It Useful for Longer.",
+      "cards": [
+        {
+          "title": "Better Hardware Fit",
+          "body": "Match server specifications to the workload and environment."
+        },
+        {
+          "title": "Replacement Support",
+          "body": "Source suitable parts or equipment when hardware needs attention."
+        },
+        {
+          "title": "Repair Where Practical",
+          "body": "Assess repair options before replacing infrastructure unnecessarily."
+        },
+        {
+          "title": "Lifecycle Visibility",
+          "body": "Make future upgrade and replacement decisions with clearer technical context."
+        }
+      ]
+    },
+    "sections": [
+      {
+        "id": "server-selection",
+        "navLabel": "Server Selection",
+        "title": "Choose Server Hardware Around the Workload, Not Just the Specification Sheet.",
+        "lead": "A server can look suitable on paper and still create problems when it reaches the environment.",
+        "body": [
+          "Ideal Solutions helps organisations source enterprise server hardware with consideration for workload requirements, rack environment, compatibility and future expansion.",
+          "The objective is to reduce the gap between what is purchased and what can be deployed effectively.",
+          "Where customers already have an approved specification, we can work from that requirement.",
+          "Where technical input is needed, the intended workload, existing infrastructure and deployment conditions should guide the selection."
+        ],
+        "cta": "Discuss Your Server Specification"
+      },
+      {
+        "id": "repair-and-replacement",
+        "navLabel": "Repair & Replacement",
+        "title": "Decide Whether to Repair, Replace or Escalate.",
+        "lead": "Not every server issue should automatically lead to complete replacement.",
+        "body": [
+          "Ideal Solutions can support suitable server inspection and hardware intervention where a fault, failed component or physical issue needs attention.",
+          "Where repair is practical, the required component or corrective action can be identified.",
+          "Where replacement makes more sense, the decision should be based on the server's condition, lifecycle and operational requirements.",
+          "This helps customers avoid unnecessary replacement while still recognising when older hardware has reached the point where continued repair is no longer practical."
+        ],
+        "cta": "Discuss a Server Repair Requirement"
+      },
+      {
+        "id": "upgrades-and-components",
+        "navLabel": "Upgrades & Components",
+        "title": "Extend Server Capability with the Right Hardware Changes.",
+        "lead": "Infrastructure needs change long before every server reaches end of life.",
+        "body": [
+          "Ideal Solutions can support suitable upgrades and replacement components where additional memory, storage, interface capacity or other hardware changes are required.",
+          "The existing platform, supported configurations and intended workload should be reviewed before components are sourced.",
+          "That helps reduce compatibility mistakes and gives technical teams more confidence that the upgrade supports the wider infrastructure requirement.",
+          "For broader hardware sourcing needs, explore Data Centre Hardware Procurement."
+        ],
+        "cta": "Plan a Server Upgrade"
+      },
+      {
+        "id": "lifecycle-support",
+        "navLabel": "Lifecycle Support",
+        "title": "Keep Server Decisions Connected Beyond the Initial Purchase.",
+        "lead": "The cost of server hardware extends beyond the day it is bought.",
+        "body": [
+          "Ideal Solutions helps customers connect hardware sourcing, installation, repair, upgrade and future replacement into a clearer lifecycle.",
+          "This makes it easier to decide when equipment should be supported, upgraded, redeployed or replaced.",
+          "Where servers need physical deployment, explore Server Installation & Configuration.",
+          "For the broader capability group, return to Server, Storage & Hardware Lifecycle Services."
+        ],
+        "cta": "Discuss Your Server Lifecycle Needs"
+      }
+    ],
+    "faq": {
+      "title": "Enterprise Server Sales & Repair Questions, Answered",
+      "items": [
+        {
+          "title": "Does Ideal Solutions supply enterprise servers?",
+          "body": [
+            "Yes. Ideal Solutions can support the sourcing of suitable enterprise server hardware based on approved technical requirements."
+          ]
+        },
+        {
+          "title": "Can you repair existing servers?",
+          "body": [
+            "Suitable server inspection and repair can be supported depending on the equipment, fault and availability of appropriate replacement components."
+          ]
+        },
+        {
+          "title": "Can you help with server upgrades?",
+          "body": [
+            "Yes. Hardware upgrades can be considered where the existing platform supports the required change and the intended components are compatible."
+          ]
+        },
+        {
+          "title": "Do you only support servers purchased from Ideal Solutions?",
+          "body": [
+            "No. Existing server hardware can be reviewed regardless of where it was originally purchased, subject to the available equipment information and scope."
+          ]
+        },
+        {
+          "title": "Can you install the server after supply?",
+          "body": [
+            "Yes. Physical installation and agreed configuration can be handled through our Server Installation & Configuration Services."
+          ]
+        }
+      ]
+    },
+    "closing": {
+      "title": "Source the Infrastructure. Support What Comes After.",
+      "body": "From enterprise servers and storage to the smaller components that keep projects moving, Ideal Solutions helps connect hardware decisions with deployment and ongoing support.",
+      "cta": "Discuss Your Hardware Requirements"
+    }
+  },
+  {
+    "proposedHref": "/services/server-storage-hardware/storage-provisioning-deployment",
+    "parentTitle": "Server, Storage & Hardware Lifecycle Services",
+    "parentHref": "/services/server-storage-hardware",
+    "seoTitle": "Enterprise Storage Provisioning & Deployment Nigeria | Ideal Solutions",
+    "description": "Plan and deploy enterprise storage infrastructure for capacity, performance and operational requirements with Ideal Solutions in Nigeria.",
+    "hero": {
+      "title": "Server Storage Provisioning & Deployment",
+      "description": "Build storage infrastructure around the capacity, performance and operational requirements your workloads actually need.",
+      "cta": "Discuss Your Storage Requirements"
+    },
+    "intro": {
+      "title": "Turn Storage Requirements into Usable Infrastructure.",
+      "cards": [
+        {
+          "title": "Capacity Planning",
+          "body": "Understand how much storage is required now and how that may change."
+        },
+        {
+          "title": "Platform Fit",
+          "body": "Select storage that works with the wider server and network environment."
+        },
+        {
+          "title": "Structured Deployment",
+          "body": "Coordinate physical installation, connectivity and agreed setup activities."
+        },
+        {
+          "title": "Future Expansion",
+          "body": "Leave room for growth without creating unnecessary complexity."
+        }
+      ]
+    },
+    "sections": [
+      {
+        "id": "storage-requirements",
+        "navLabel": "Storage Requirements",
+        "title": "Start with the Workload Before Choosing the Storage Platform.",
+        "lead": "Storage requirements are about more than total capacity.",
+        "body": [
+          "Ideal Solutions helps customers frame storage needs around workload behaviour, growth expectations, availability requirements and the wider infrastructure environment.",
+          "Understanding these factors early helps avoid buying storage that is oversized in one area and unsuitable in another.",
+          "Where an organisation already has a defined architecture, we can work from the approved design.",
+          "Where the requirement is still being shaped, the deployment should begin with a clear understanding of what the storage is expected to support."
+        ],
+        "cta": "Define Your Storage Requirement"
+      },
+      {
+        "id": "platform-and-capacity",
+        "navLabel": "Platform & Capacity",
+        "title": "Match Storage Capacity to How the Environment Will Use It.",
+        "lead": "The right storage decision should support both current demand and practical future growth.",
+        "body": [
+          "Ideal Solutions can support the selection and provisioning of suitable storage infrastructure based on the technical requirement supplied.",
+          "Considerations may include capacity, performance, connectivity, resilience and expansion needs.",
+          "The goal is to avoid treating storage as an isolated purchase.",
+          "It must fit the servers, network and operational model around it.",
+          "For related server requirements, explore Server Sales & Repair."
+        ],
+        "cta": "Discuss Storage Capacity Planning"
+      },
+      {
+        "id": "deployment",
+        "navLabel": "Deployment",
+        "title": "Move Storage from Specification into the Environment.",
+        "lead": "A storage platform only becomes useful when it is installed, connected and prepared for use.",
+        "body": [
+          "Ideal Solutions supports the physical deployment of suitable storage infrastructure based on the agreed project scope.",
+          "This can include equipment placement, rack installation, specified connectivity and other agreed setup tasks.",
+          "Responsibilities for advanced platform configuration, data migration or application integration should be defined separately where required.",
+          "The deployment should leave the storage environment clearly prepared for the next operational stage."
+        ],
+        "cta": "Plan Your Storage Deployment"
+      },
+      {
+        "id": "handover-and-growth",
+        "navLabel": "Handover & Growth",
+        "title": "Build Storage Today with Tomorrow's Expansion in View.",
+        "lead": "Storage infrastructure often grows faster than the systems around it.",
+        "body": [
+          "Ideal Solutions helps customers keep future changes in mind during deployment and handover.",
+          "Where relevant, records can reflect the installed platform, connectivity and agreed configuration state so future capacity additions are easier to plan.",
+          "For wider infrastructure sourcing, explore Data Centre Hardware Procurement.",
+          "For the complete capability group, return to Server, Storage & Hardware Lifecycle Services."
+        ],
+        "cta": "Discuss Your Storage Growth Plan"
+      }
+    ],
+    "faq": {
+      "title": "Storage Provisioning & Deployment Questions, Answered",
+      "items": [
+        {
+          "title": "What is storage provisioning?",
+          "body": [
+            "Storage provisioning is the process of preparing storage capacity and resources for use based on the requirements of servers, applications or workloads."
+          ]
+        },
+        {
+          "title": "Can Ideal Solutions help with storage capacity planning?",
+          "body": [
+            "Yes. Storage requirements can be reviewed around available capacity, expected growth and the wider infrastructure environment."
+          ]
+        },
+        {
+          "title": "Do you install storage hardware?",
+          "body": [
+            "Yes. Physical deployment of suitable enterprise storage equipment can be included within the agreed project scope."
+          ]
+        },
+        {
+          "title": "Does storage deployment include data migration?",
+          "body": [
+            "Data migration is a separate requirement and should be defined specifically if needed."
+          ]
+        },
+        {
+          "title": "Can storage be expanded later?",
+          "body": [
+            "Yes, where the selected platform and architecture support expansion. Future growth should be considered during initial planning."
+          ]
+        }
+      ]
+    },
+    "closing": {
+      "title": "Source the Infrastructure. Support What Comes After.",
+      "body": "From enterprise servers and storage to the smaller components that keep projects moving, Ideal Solutions helps connect hardware decisions with deployment and ongoing support.",
+      "cta": "Discuss Your Hardware Requirements"
+    }
+  },
+  {
+    "proposedHref": "/services/server-storage-hardware/data-centre-hardware-procurement",
+    "parentTitle": "Server, Storage & Hardware Lifecycle Services",
+    "parentHref": "/services/server-storage-hardware",
+    "seoTitle": "Data Centre Hardware Procurement Nigeria | Ideal Solutions",
+    "description": "Source servers, storage, network appliances and supporting data centre hardware with technical procurement support from Ideal Solutions.",
+    "hero": {
+      "title": "Data Centre Hardware Procurement",
+      "description": "Source critical infrastructure with technical context around compatibility, deployment requirements and what happens after the equipment arrives.",
+      "cta": "Send Your Hardware Requirements"
+    },
+    "intro": {
+      "title": "Procurement Should Support the Project, Not Slow It Down.",
+      "cards": [
+        {
+          "title": "Requirement Clarity",
+          "body": "Define what the project actually needs before sourcing begins."
+        },
+        {
+          "title": "Technical Fit",
+          "body": "Consider compatibility with the existing environment."
+        },
+        {
+          "title": "Coordinated Sourcing",
+          "body": "Bring related equipment and supporting components into one clearer requirement."
+        },
+        {
+          "title": "Deployment Awareness",
+          "body": "Purchase with installation and future support in mind."
+        }
+      ]
+    },
+    "sections": [
+      {
+        "id": "requirements",
+        "navLabel": "Requirements",
+        "title": "Start Procurement with a Clear Technical Requirement.",
+        "lead": "Good purchasing decisions begin before supplier quotations are compared.",
+        "body": [
+          "Ideal Solutions helps organisations structure hardware requirements around the intended infrastructure project.",
+          "That may involve identifying the required equipment category, technical specification, quantities and supporting components.",
+          "Where the customer already has an approved bill of materials, sourcing can follow that requirement.",
+          "Where there are gaps, technical clarification should happen before purchasing so cost and availability do not become the only decision criteria."
+        ],
+        "cta": "Discuss Your Hardware List"
+      },
+      {
+        "id": "technical-sourcing",
+        "navLabel": "Technical Sourcing",
+        "title": "Source Hardware That Makes Sense Inside the Existing Environment.",
+        "lead": "Availability is not the same as compatibility.",
+        "body": [
+          "Ideal Solutions supports the sourcing of suitable servers, storage, network equipment and related data centre hardware based on the agreed requirement.",
+          "Technical factors such as rack compatibility, interfaces, supportability and intended deployment should be considered alongside price and availability.",
+          "This reduces the likelihood of equipment arriving onsite only for the project team to discover that additional adapters, licences or supporting components are still needed."
+        ],
+        "cta": "Source Your Infrastructure Hardware"
+      },
+      {
+        "id": "project-coordination",
+        "navLabel": "Project Coordination",
+        "title": "Connect Procurement to the Work That Comes After Delivery.",
+        "lead": "Hardware purchasing should not sit completely separate from deployment planning.",
+        "body": [
+          "Ideal Solutions can help align procurement with the installation requirements of the project.",
+          "This means understanding what needs to arrive together, what supporting accessories are required and what onsite work follows delivery.",
+          "For server-specific requirements, explore Server Sales & Repair.",
+          "For rack components and smaller supporting items, explore Rack Accessories & Consumables Supply."
+        ],
+        "cta": "Coordinate Your Hardware Requirement"
+      },
+      {
+        "id": "procurement-handover",
+        "navLabel": "Procurement Handover",
+        "title": "Know What Was Supplied Before the Equipment Enters Deployment.",
+        "lead": "A clear procurement handover makes installation easier.",
+        "body": [
+          "Ideal Solutions can help organise the supplied equipment against the agreed requirement so project teams have a clearer understanding of what has arrived and what remains outstanding.",
+          "Where the same project continues into installation, our Data Centre Deployment Services can provide the next stage of onsite execution.",
+          "For the wider hardware capability, return to Server, Storage & Hardware Lifecycle Services."
+        ],
+        "cta": "Discuss Procurement and Deployment"
+      }
+    ],
+    "faq": {
+      "title": "Data Centre Hardware Procurement Questions, Answered",
+      "items": [
+        {
+          "title": "What type of hardware can Ideal Solutions help procure?",
+          "body": [
+            "Requirements can include suitable servers, storage systems, network devices, appliances, rack accessories and related infrastructure hardware."
+          ]
+        },
+        {
+          "title": "Can you work from our existing bill of materials?",
+          "body": [
+            "Yes. If the customer already has an approved specification or bill of materials, procurement can be structured around that requirement."
+          ]
+        },
+        {
+          "title": "Can you help determine what equipment is needed?",
+          "body": [
+            "Technical requirements can be reviewed before sourcing, depending on the scope and available project information."
+          ]
+        },
+        {
+          "title": "Do you also install procured hardware?",
+          "body": [
+            "Yes. Installation can be handled through the relevant Data Centre Deployment service where required."
+          ]
+        },
+        {
+          "title": "Can procurement include supporting components and accessories?",
+          "body": [
+            "Yes. Supporting items can be included where they are part of the agreed requirement."
+          ]
+        }
+      ]
+    },
+    "closing": {
+      "title": "Source the Infrastructure. Support What Comes After.",
+      "body": "From enterprise servers and storage to the smaller components that keep projects moving, Ideal Solutions helps connect hardware decisions with deployment and ongoing support.",
+      "cta": "Discuss Your Hardware Requirements"
+    }
+  },
+  {
+    "proposedHref": "/services/server-storage-hardware/rack-accessories-consumables",
+    "parentTitle": "Server, Storage & Hardware Lifecycle Services",
+    "parentHref": "/services/server-storage-hardware",
+    "seoTitle": "Data Centre Rack Accessories & Consumables Nigeria | Ideal Solutions",
+    "description": "Source rack accessories, mounting components, cable-management items and supporting consumables for data centre infrastructure projects.",
+    "hero": {
+      "title": "Rack Accessories & Consumables Supply",
+      "description": "Keep infrastructure work moving with the rails, mounting components, cable-management items and supporting materials the project actually requires.",
+      "cta": "Send Your Accessory Requirements"
+    },
+    "intro": {
+      "title": "Small Components Should Not Become Big Project Delays.",
+      "cards": [
+        {
+          "title": "Correct Fit",
+          "body": "Match accessories to the equipment and rack environment."
+        },
+        {
+          "title": "Project Readiness",
+          "body": "Identify supporting items before installation begins."
+        },
+        {
+          "title": "Better Organisation",
+          "body": "Use suitable cable-management and identification components."
+        },
+        {
+          "title": "Fewer Last-Minute Gaps",
+          "body": "Reduce delays caused by missing rails, brackets or other essential items."
+        }
+      ]
+    },
+    "sections": [
+      {
+        "id": "mounting-components",
+        "navLabel": "Mounting Components",
+        "title": "Get the Hardware Needed to Put Equipment Where It Belongs.",
+        "lead": "A server or appliance cannot be installed properly if the correct mounting components are missing.",
+        "body": [
+          "Ideal Solutions can support the sourcing of suitable rails, brackets, shelves and related rack-mounting items based on the equipment and rack requirements.",
+          "Compatibility should be confirmed before supply so the component is appropriate for the intended installation.",
+          "This is particularly useful where a deployment includes equipment from different vendors or where original mounting hardware is incomplete.",
+          "For installation itself, explore our Rack-and-Stack Services."
+        ],
+        "cta": "Discuss Your Mounting Requirements"
+      },
+      {
+        "id": "cable-management",
+        "navLabel": "Cable Management",
+        "title": "Keep Connections Organised with the Right Supporting Accessories.",
+        "lead": "Good cable organisation depends partly on having the correct physical components available.",
+        "body": [
+          "Ideal Solutions can support suitable cable-management accessories for rack and data centre environments.",
+          "These may include management hardware and related items that help keep cable paths clearer and easier to maintain.",
+          "The exact requirement should be based on the rack layout, cable volume and wider infrastructure design.",
+          "For broader cabling requirements, explore Network Infrastructure & Connectivity."
+        ],
+        "cta": "Plan Your Cable-Management Requirements"
+      },
+      {
+        "id": "project-consumables",
+        "navLabel": "Project Consumables",
+        "title": "Make Sure the Small Items Are Ready Before the Work Window Begins.",
+        "lead": "Projects often lose time because the main equipment arrived but the supporting materials did not.",
+        "body": [
+          "Ideal Solutions can help source agreed infrastructure consumables and supporting components needed for installation, organisation or maintenance activities.",
+          "The objective is to identify these items early enough that technicians are not waiting onsite for something inexpensive but essential.",
+          "A complete project requirement should therefore consider both major equipment and the smaller components needed to deploy it properly."
+        ],
+        "cta": "Send Your Consumables List"
+      },
+      {
+        "id": "supply-coordination",
+        "navLabel": "Supply Coordination",
+        "title": "Bring Supporting Components into the Wider Project Plan.",
+        "lead": "Accessory supply works best when it is connected to the equipment and installation schedule.",
+        "body": [
+          "Ideal Solutions can coordinate agreed rack accessories and consumables alongside wider hardware or deployment requirements.",
+          "This helps project teams understand what supporting items must be available before installation begins.",
+          "For broader equipment sourcing, explore Data Centre Hardware Procurement.",
+          "For the complete capability group, return to Server, Storage & Hardware Lifecycle Services."
+        ],
+        "cta": "Coordinate Your Project Requirements"
+      }
+    ],
+    "faq": {
+      "title": "Rack Accessories & Consumables Questions, Answered",
+      "items": [
+        {
+          "title": "What types of rack accessories can you supply?",
+          "body": [
+            "Requirements may include suitable rails, brackets, shelves, cable-management components and other rack-related accessories depending on the equipment and project."
+          ]
+        },
+        {
+          "title": "Can you help identify the right rail kit for a server?",
+          "body": [
+            "Yes, provided the server model and rack information are available so compatibility can be checked."
+          ]
+        },
+        {
+          "title": "Do you provide cable-management accessories?",
+          "body": [
+            "Yes. Suitable cable-management items can be sourced based on the rack and cabling requirement."
+          ]
+        },
+        {
+          "title": "Can accessories be supplied as part of a larger deployment?",
+          "body": [
+            "Yes. Accessories and consumables can be coordinated with wider hardware procurement or installation projects."
+          ]
+        },
+        {
+          "title": "Why should rack accessories be planned early?",
+          "body": [
+            "Missing mounting or cable-management components can delay otherwise-ready deployment work, so identifying them before the installation window reduces unnecessary disruption."
+          ]
+        }
+      ]
+    },
+    "closing": {
+      "title": "Source the Infrastructure. Support What Comes After.",
+      "body": "From enterprise servers and storage to the smaller components that keep projects moving, Ideal Solutions helps connect hardware decisions with deployment and ongoing support.",
+      "cta": "Discuss Your Hardware Requirements"
+    }
+  },
+  {
+    "proposedHref": "/services/network-infrastructure-connectivity/network-equipment-installation",
+    "parentTitle": "Network Infrastructure & Connectivity",
+    "parentHref": "/services/network-infrastructure-connectivity",
+    "seoTitle": "Network Equipment Installation Nigeria | Ideal Solutions",
+    "description": "Install switches, routers, firewalls and network appliances in data centre and enterprise environments with structured onsite execution from Ideal Solutions.",
+    "hero": {
+      "title": "Network Equipment Installation",
+      "description": "Deploy switches, routers, firewalls and network appliances with clear placement, structured connectivity and onsite execution aligned with the wider network environment.",
+      "cta": "Discuss Your Network Installation"
+    },
+    "intro": {
+      "title": "Put Network Hardware Where the Infrastructure Needs It.",
+      "cards": [
+        {
+          "title": "Defined Placement",
+          "body": "Install devices according to the approved network and rack design."
+        },
+        {
+          "title": "Physical Readiness",
+          "body": "Prepare mounting, access and connection requirements before execution."
+        },
+        {
+          "title": "Structured Connectivity",
+          "body": "Connect equipment cleanly into the surrounding infrastructure."
+        },
+        {
+          "title": "Clear Handover",
+          "body": "Know what is installed and what remains for configuration or testing."
+        }
+      ]
+    },
+    "sections": [
+      {
+        "id": "installation-planning",
+        "navLabel": "Installation Planning",
+        "title": "Plan the Network Installation Before the Hardware Reaches the Rack.",
+        "lead": "Good network deployment begins with a clear understanding of the equipment and its role.",
+        "body": [
+          "Ideal Solutions reviews the proposed network devices, intended rack positions and available infrastructure information before installation begins.",
+          "Switches, routers, firewalls and appliances may have different mounting, power and connectivity requirements.",
+          "Identifying those requirements early helps reduce delays and makes the onsite work easier to coordinate.",
+          "Where the wider design already exists, we work from the approved plan.",
+          "Where clarification is still needed, the installation should not proceed on assumptions."
+        ],
+        "cta": "Define Your Installation Scope"
+      },
+      {
+        "id": "device-placement",
+        "navLabel": "Device Placement",
+        "title": "Install Network Equipment Around the Approved Infrastructure Design.",
+        "lead": "Where a device is placed affects access, cabling and future support.",
+        "body": [
+          "Ideal Solutions provides onsite installation for suitable network equipment within data centre and enterprise environments.",
+          "Devices are mounted and positioned according to the agreed rack layout and installation requirements.",
+          "For projects involving larger rack deployments, our Rack-and-Stack Services may also support the physical installation stage.",
+          "The objective is to leave network hardware positioned in a way that supports the connection and configuration work that follows."
+        ],
+        "cta": "Plan Your Network Hardware Installation"
+      },
+      {
+        "id": "connectivity",
+        "navLabel": "Connectivity",
+        "title": "Connect the Equipment Without Creating Future Cable Confusion.",
+        "lead": "The physical installation should support a clean and understandable connectivity path.",
+        "body": [
+          "Where included in scope, Ideal Solutions completes agreed power and network connections based on the available connection schedule.",
+          "Cable routing, identification and organisation should be planned around the surrounding rack environment.",
+          "For larger physical cabling requirements, explore Structured Copper & Fibre Cabling and Cable Routing & Management."
+        ],
+        "cta": "Discuss Your Connectivity Requirements"
+      },
+      {
+        "id": "handover",
+        "navLabel": "Handover",
+        "title": "Separate Installed Hardware from the Work Still to Come.",
+        "lead": "A network device can be physically installed while configuration and validation are still outstanding.",
+        "body": [
+          "Ideal Solutions reviews the completed physical installation against the agreed scope.",
+          "Relevant device information, installation status and outstanding tasks can then be handed back to the responsible network team.",
+          "For approved setup work, explore Network Configuration.",
+          "For the wider service family, return to Network Infrastructure & Connectivity."
+        ],
+        "cta": "Discuss Installation and Handover"
+      }
+    ],
+    "faq": {
+      "title": "Network Equipment Installation Questions, Answered",
+      "items": [
+        {
+          "title": "What network equipment can Ideal Solutions install?",
+          "body": [
+            "Suitable switches, routers, firewalls, network appliances and related rack-mounted devices can be supported depending on the project scope."
+          ]
+        },
+        {
+          "title": "Does installation include configuration?",
+          "body": [
+            "Configuration should be defined separately where required. Physical installation and network configuration are related but distinct tasks."
+          ]
+        },
+        {
+          "title": "Can equipment be installed in an existing live rack?",
+          "body": [
+            "Yes, where available space, access conditions and surrounding infrastructure have been reviewed."
+          ]
+        },
+        {
+          "title": "Can you install equipment supplied by another vendor?",
+          "body": [
+            "Yes. Share the device details, mounting requirements and project information before scheduling the work."
+          ]
+        },
+        {
+          "title": "Can you also provide the required cabling?",
+          "body": [
+            "Yes. Structured cabling and cable-management services can be coordinated where they are part of the project."
+          ]
+        }
+      ]
+    },
+    "closing": {
+      "title": "Build Connectivity That Stays Understandable.",
+      "body": "From network hardware and structured cabling to configuration, documentation and remediation, Ideal Solutions helps organisations build and maintain connectivity that is easier to trace, change and support.",
+      "cta": "Discuss Your Network Requirements"
+    }
+  },
+  {
+    "proposedHref": "/services/network-infrastructure-connectivity/network-architecture-planning",
+    "parentTitle": "Network Infrastructure & Connectivity",
+    "parentHref": "/services/network-infrastructure-connectivity",
+    "seoTitle": "Network Architecture Planning Nigeria | Ideal Solutions",
+    "description": "Plan data centre and enterprise network architecture around capacity, resilience, connectivity and future infrastructure requirements with Ideal Solutions.",
+    "hero": {
+      "title": "Network Architecture Planning",
+      "description": "Build a clearer network foundation around capacity, resilience, connectivity and the way your infrastructure is expected to grow.",
+      "cta": "Discuss Your Network Architecture"
+    },
+    "intro": {
+      "title": "Plan the Network Before Complexity Builds Around It.",
+      "cards": [
+        {
+          "title": "Capacity Awareness",
+          "body": "Consider current and future connectivity demand."
+        },
+        {
+          "title": "Resilience Thinking",
+          "body": "Plan how critical connections and devices should be arranged."
+        },
+        {
+          "title": "Growth Readiness",
+          "body": "Leave room for future equipment, users and sites."
+        },
+        {
+          "title": "Clear Direction",
+          "body": "Give deployment and configuration teams a stronger technical foundation."
+        }
+      ]
+    },
+    "sections": [
+      {
+        "id": "requirements",
+        "navLabel": "Requirements",
+        "title": "Start with the Environment the Network Must Support.",
+        "lead": "A network architecture should reflect business and infrastructure requirements, not just available hardware.",
+        "body": [
+          "Ideal Solutions helps frame planning around the systems, users, equipment and connectivity needs the network must support.",
+          "Existing infrastructure, future growth, traffic patterns and operational priorities should all influence the design.",
+          "Where a current environment already exists, its limitations and useful elements should be understood before proposing change."
+        ],
+        "cta": "Define Your Network Requirements"
+      },
+      {
+        "id": "topology-planning",
+        "navLabel": "Topology Planning",
+        "title": "Give Devices and Connections a Clear Place in the Wider Design.",
+        "lead": "Topology planning determines how the network fits together before implementation begins.",
+        "body": [
+          "Ideal Solutions helps organise device roles, connection paths and network relationships into a clearer structure.",
+          "The aim is to reduce ad hoc growth and make future implementation easier to understand.",
+          "Where detailed records are required, explore Network Design & Documentation."
+        ],
+        "cta": "Plan Your Network Topology"
+      },
+      {
+        "id": "capacity-and-resilience",
+        "navLabel": "Capacity & Resilience",
+        "title": "Build for Current Demand Without Ignoring What Comes Next.",
+        "lead": "A network that works today can still become a problem when capacity and redundancy are not considered early enough.",
+        "body": [
+          "Ideal Solutions supports planning around expected load, critical connectivity and future expansion.",
+          "The appropriate level of resilience depends on the environment and business requirement.",
+          "Planning these needs before equipment is purchased or installed helps avoid unnecessary redesign later."
+        ],
+        "cta": "Discuss Capacity and Resilience"
+      },
+      {
+        "id": "implementation-readiness",
+        "navLabel": "Implementation Readiness",
+        "title": "Turn Architecture into a Plan That Can Be Built.",
+        "lead": "A useful network plan should guide installation, cabling and configuration.",
+        "body": [
+          "Ideal Solutions helps connect architecture decisions with the physical and technical work that follows.",
+          "This means giving installation teams clearer direction around equipment, connectivity and intended relationships.",
+          "For the next stage, explore Network Equipment Installation, Structured Copper & Fibre Cabling and Network Configuration."
+        ],
+        "cta": "Prepare Your Network for Implementation"
+      }
+    ],
+    "faq": {
+      "title": "Network Architecture Planning Questions, Answered",
+      "items": [
+        {
+          "title": "What is network architecture planning?",
+          "body": [
+            "It is the process of defining how network devices, connections and services should be organised to support the required capacity, resilience and operational needs."
+          ]
+        },
+        {
+          "title": "Can you plan a network around existing infrastructure?",
+          "body": [
+            "Yes. Existing network conditions can be considered when planning upgrades, expansion or restructuring."
+          ]
+        },
+        {
+          "title": "Is network architecture the same as configuration?",
+          "body": [
+            "No. Architecture defines the intended structure and relationships. Configuration applies the required settings to devices."
+          ]
+        },
+        {
+          "title": "Can planning include future expansion?",
+          "body": [
+            "Yes. Growth requirements should be considered where they are known."
+          ]
+        },
+        {
+          "title": "What information is useful before architecture planning begins?",
+          "body": [
+            "Existing topology, equipment, business requirements, connectivity needs, known constraints and future growth expectations are all useful inputs."
+          ]
+        }
+      ]
+    },
+    "closing": {
+      "title": "Build Connectivity That Stays Understandable.",
+      "body": "From network hardware and structured cabling to configuration, documentation and remediation, Ideal Solutions helps organisations build and maintain connectivity that is easier to trace, change and support.",
+      "cta": "Discuss Your Network Requirements"
+    }
+  },
+  {
+    "proposedHref": "/services/network-infrastructure-connectivity/network-design-documentation",
+    "parentTitle": "Network Infrastructure & Connectivity",
+    "parentHref": "/services/network-infrastructure-connectivity",
+    "seoTitle": "Network Design & Documentation Nigeria | Ideal Solutions",
+    "description": "Create clearer network topology, device records and connectivity documentation for data centre and enterprise environments with Ideal Solutions.",
+    "hero": {
+      "title": "Network Design & Documentation",
+      "description": "Turn network relationships, devices and connections into clearer technical records that teams can understand, support and update.",
+      "cta": "Discuss Your Network Documentation"
+    },
+    "intro": {
+      "title": "Make the Network Easier to See Before Someone Needs to Troubleshoot It.",
+      "cards": [
+        {
+          "title": "Clear Topology",
+          "body": "Show how devices and connections relate."
+        },
+        {
+          "title": "Better Records",
+          "body": "Keep relevant network information organised."
+        },
+        {
+          "title": "Easier Support",
+          "body": "Give engineers useful context during changes and troubleshooting."
+        },
+        {
+          "title": "Stronger Handover",
+          "body": "Leave technical knowledge behind after projects are completed."
+        }
+      ]
+    },
+    "sections": [
+      {
+        "id": "topology-design",
+        "navLabel": "Topology Design",
+        "title": "Show the Network in a Way Technical Teams Can Use.",
+        "lead": "A good network diagram should reduce uncertainty, not create more of it.",
+        "body": [
+          "Ideal Solutions helps structure network topology documentation around the equipment, relationships and connectivity that matter to the environment.",
+          "The level of detail should match the intended use.",
+          "A planning diagram, operational topology and physical connection record may each serve different purposes."
+        ],
+        "cta": "Discuss Your Topology Requirements"
+      },
+      {
+        "id": "device-records",
+        "navLabel": "Device Records",
+        "title": "Keep Key Infrastructure Information Easier to Find.",
+        "lead": "Network support becomes slower when device information is scattered across messages, spreadsheets and memory.",
+        "body": [
+          "Ideal Solutions can help organise agreed network device information into a more usable format.",
+          "The records may include relevant device names, roles, locations and other approved details needed for support and future work.",
+          "The purpose is to give teams a better starting point when infrastructure needs to be changed or investigated."
+        ],
+        "cta": "Organise Your Network Records"
+      },
+      {
+        "id": "connectivity-documentation",
+        "navLabel": "Connectivity Documentation",
+        "title": "Make Physical and Logical Connections Easier to Understand.",
+        "lead": "Connectivity documentation helps teams see how devices, ports and cable paths relate.",
+        "body": [
+          "Ideal Solutions can document agreed connection information based on the available infrastructure and project scope.",
+          "For deeper physical traceability, explore Cable Labelling & Port Mapping.",
+          "Good documentation should support future work rather than becoming another record that quickly falls out of date."
+        ],
+        "cta": "Map Your Network Connectivity"
+      },
+      {
+        "id": "handover-and-updates",
+        "navLabel": "Handover & Updates",
+        "title": "Keep Documentation Useful After the Project Ends.",
+        "lead": "Network records lose value when they no longer reflect the environment.",
+        "body": [
+          "Ideal Solutions can support handover and updates around completed network work.",
+          "Where documentation forms part of a project, the responsibility for future changes should also be clear.",
+          "For wider project coordination, explore Data Centre Project & Lifecycle Management.",
+          "For the complete network capability, return to Network Infrastructure & Connectivity."
+        ],
+        "cta": "Discuss Documentation Handover"
+      }
+    ],
+    "faq": {
+      "title": "Network Design & Documentation Questions, Answered",
+      "items": [
+        {
+          "title": "What network documentation can Ideal Solutions support?",
+          "body": [
+            "Depending on scope, this can include network topology diagrams, device information, connectivity records and related technical documentation."
+          ]
+        },
+        {
+          "title": "Can you document an existing network?",
+          "body": [
+            "Yes. Existing infrastructure can be reviewed and documented based on the information and access available."
+          ]
+        },
+        {
+          "title": "Is physical port mapping included?",
+          "body": [
+            "It can be included where required, or handled through the dedicated Cable Labelling & Port Mapping service."
+          ]
+        },
+        {
+          "title": "Can documentation be updated after changes?",
+          "body": [
+            "Yes. Updates can be included as part of network change or lifecycle work."
+          ]
+        },
+        {
+          "title": "Why is network documentation important?",
+          "body": [
+            "It gives technical teams clearer context during troubleshooting, expansion, migration and future changes."
+          ]
+        }
+      ]
+    },
+    "closing": {
+      "title": "Build Connectivity That Stays Understandable.",
+      "body": "From network hardware and structured cabling to configuration, documentation and remediation, Ideal Solutions helps organisations build and maintain connectivity that is easier to trace, change and support.",
+      "cta": "Discuss Your Network Requirements"
+    }
+  },
+  {
+    "proposedHref": "/services/network-infrastructure-connectivity/network-configuration",
+    "parentTitle": "Network Infrastructure & Connectivity",
+    "parentHref": "/services/network-infrastructure-connectivity",
+    "seoTitle": "Network Configuration Services Nigeria | Ideal Solutions",
+    "description": "Support approved configuration of switches, routers, firewalls and network devices with structured onsite technical execution from Ideal Solutions.",
+    "hero": {
+      "title": "Network Configuration",
+      "description": "Apply approved network settings with clear technical ownership, controlled execution and alignment with the wider network design.",
+      "cta": "Discuss Your Configuration Requirements"
+    },
+    "intro": {
+      "title": "Turn Installed Hardware into Working Network Infrastructure.",
+      "cards": [
+        {
+          "title": "Defined Settings",
+          "body": "Start from approved technical requirements."
+        },
+        {
+          "title": "Clear Ownership",
+          "body": "Keep design and configuration decisions with the responsible team."
+        },
+        {
+          "title": "Controlled Execution",
+          "body": "Apply agreed settings in a structured way."
+        },
+        {
+          "title": "Reviewed Outcome",
+          "body": "Check completed work before handover."
+        }
+      ]
+    },
+    "sections": [
+      {
+        "id": "configuration-planning",
+        "navLabel": "Configuration Planning",
+        "title": "Know What the Device Should Do Before Configuration Begins.",
+        "lead": "Configuration should follow the approved network requirement rather than improvisation onsite.",
+        "body": [
+          "Ideal Solutions works from the supplied technical information and agreed task scope.",
+          "Required device settings, addressing, interfaces and access arrangements should be established before execution.",
+          "Where design decisions are still unresolved, those should be handled before configuration is treated as ready for implementation."
+        ],
+        "cta": "Define Your Configuration Scope"
+      },
+      {
+        "id": "device-setup",
+        "navLabel": "Device Setup",
+        "title": "Apply Approved Settings to the Network Device.",
+        "lead": "Once the technical requirement is clear, the configuration can move forward in a controlled way.",
+        "body": [
+          "Ideal Solutions supports agreed setup activities for suitable switches, routers, firewalls and related network devices.",
+          "The exact configuration tasks depend on the platform, project requirement and available technical direction.",
+          "For physical installation before configuration, explore Network Equipment Installation."
+        ],
+        "cta": "Discuss Your Device Setup"
+      },
+      {
+        "id": "remote-coordination",
+        "navLabel": "Remote Coordination",
+        "title": "Keep Your Network Engineers in Control While We Work Onsite.",
+        "lead": "Specialist network expertise may sit remotely while the device itself is in Nigeria.",
+        "body": [
+          "Ideal Solutions can provide onsite execution while the customer's engineers retain technical direction.",
+          "Communication, approval points and escalation arrangements should be defined before the work begins.",
+          "This model can reduce the need for specialist travel for suitable configuration and physical support tasks."
+        ],
+        "cta": "Arrange Onsite Network Support"
+      },
+      {
+        "id": "review-and-handover",
+        "navLabel": "Review & Handover",
+        "title": "Confirm What Was Configured Before the Device Enters Service.",
+        "lead": "A configuration task should end with a clear understanding of what was completed.",
+        "body": [
+          "Ideal Solutions can review the agreed setup activities with the responsible technical team.",
+          "Outstanding issues or additional requirements should be identified before handover.",
+          "For broader physical checks, explore Equipment Testing & Deployment Verification.",
+          "For the complete network capability, return to Network Infrastructure & Connectivity."
+        ],
+        "cta": "Discuss Configuration Handover"
+      }
+    ],
+    "faq": {
+      "title": "Network Configuration Questions, Answered",
+      "items": [
+        {
+          "title": "What network devices can be configured?",
+          "body": [
+            "Suitable switches, routers, firewalls and related network appliances may be supported depending on the platform and agreed scope."
+          ]
+        },
+        {
+          "title": "Can Ideal Solutions follow our configuration standard?",
+          "body": [
+            "Yes. Your technical team can supply the approved settings and requirements for onsite execution."
+          ]
+        },
+        {
+          "title": "Does configuration include network design?",
+          "body": [
+            "No. Design and configuration are different activities, though they are closely related."
+          ]
+        },
+        {
+          "title": "Can remote engineers direct the configuration?",
+          "body": [
+            "Yes, where a suitable communication and approval process is agreed."
+          ]
+        },
+        {
+          "title": "Does configuration include testing?",
+          "body": [
+            "Basic agreed checks may be included, but broader testing should be defined separately."
+          ]
+        }
+      ]
+    },
+    "closing": {
+      "title": "Build Connectivity That Stays Understandable.",
+      "body": "From network hardware and structured cabling to configuration, documentation and remediation, Ideal Solutions helps organisations build and maintain connectivity that is easier to trace, change and support.",
+      "cta": "Discuss Your Network Requirements"
+    }
+  },
+  {
+    "proposedHref": "/services/network-infrastructure-connectivity/structured-copper-fibre-cabling",
+    "parentTitle": "Network Infrastructure & Connectivity",
+    "parentHref": "/services/network-infrastructure-connectivity",
+    "seoTitle": "Structured Cabling & Fibre Installation Nigeria | Ideal Solutions",
+    "description": "Structured copper and fibre cabling for data centre and enterprise environments, including installation, routing and organised connectivity.",
+    "hero": {
+      "title": "Structured Copper & Fibre Cabling",
+      "description": "Build organised physical connectivity across racks, devices and network zones with structured copper and fibre cabling designed around the environment.",
+      "cta": "Discuss Your Cabling Requirements"
+    },
+    "intro": {
+      "title": "Build the Physical Path Your Network Depends On.",
+      "cards": [
+        {
+          "title": "Clear Routes",
+          "body": "Plan cable paths around the wider infrastructure."
+        },
+        {
+          "title": "Appropriate Media",
+          "body": "Use copper or fibre based on the connectivity requirement."
+        },
+        {
+          "title": "Organised Installation",
+          "body": "Keep runs structured and easier to maintain."
+        },
+        {
+          "title": "Future Support",
+          "body": "Leave connectivity easier to trace and change."
+        }
+      ]
+    },
+    "sections": [
+      {
+        "id": "cabling-planning",
+        "navLabel": "Cabling Planning",
+        "title": "Plan Cable Routes Before Infrastructure Becomes Congested.",
+        "lead": "Structured cabling should support the network design, rack layout and future maintenance.",
+        "body": [
+          "Ideal Solutions reviews the connectivity requirement, device locations and available routes before installation.",
+          "The correct path depends on the environment, distance, cable type and existing infrastructure.",
+          "Planning the route first helps reduce unnecessary crossing, congestion and future confusion."
+        ],
+        "cta": "Plan Your Cabling Project"
+      },
+      {
+        "id": "copper-cabling",
+        "navLabel": "Copper Cabling",
+        "title": "Build Structured Copper Connections Around the Required Use.",
+        "lead": "Copper remains an important part of many rack-level and enterprise network environments.",
+        "body": [
+          "Ideal Solutions supports suitable copper cabling installation based on the agreed network requirement.",
+          "Cable routing, termination and organisation should be aligned with the wider infrastructure plan.",
+          "For ongoing physical organisation, explore Cable Routing & Management."
+        ],
+        "cta": "Discuss Copper Cabling"
+      },
+      {
+        "id": "fibre-cabling",
+        "navLabel": "Fibre Cabling",
+        "title": "Connect Infrastructure Where Capacity and Distance Demand Fibre.",
+        "lead": "Fibre connectivity should be planned around the environment and the network requirement it supports.",
+        "body": [
+          "Ideal Solutions supports suitable fibre installation across data centre and enterprise infrastructure.",
+          "The required fibre type, route, termination approach and connection points should be confirmed before work begins.",
+          "Where equipment is being deployed alongside the cabling project, Network Equipment Installation can support the wider requirement."
+        ],
+        "cta": "Discuss Fibre Cabling"
+      },
+      {
+        "id": "handover-and-records",
+        "navLabel": "Handover & Records",
+        "title": "Leave Cabling Easier to Trace After Installation.",
+        "lead": "A new cable run should not become another unknown connection six months later.",
+        "body": [
+          "Ideal Solutions can support agreed labelling and records as part of the cabling handover.",
+          "Where deeper traceability is required, explore Cable Labelling & Port Mapping.",
+          "For the complete capability group, return to Network Infrastructure & Connectivity."
+        ],
+        "cta": "Discuss Cabling Handover"
+      }
+    ],
+    "faq": {
+      "title": "Structured Cabling Questions, Answered",
+      "items": [
+        {
+          "title": "Do you provide both copper and fibre cabling?",
+          "body": [
+            "Yes. Suitable copper and fibre cabling can be supported based on the connectivity requirement and project scope."
+          ]
+        },
+        {
+          "title": "Can you cable inside a live data centre?",
+          "body": [
+            "Yes, where the work is planned around site access, existing infrastructure and approved procedures."
+          ]
+        },
+        {
+          "title": "Can you install rack-to-rack cabling?",
+          "body": [
+            "Yes. Rack-to-rack connectivity can be included where it forms part of the approved project."
+          ]
+        },
+        {
+          "title": "Is cable labelling included?",
+          "body": [
+            "It can be included where required and should be defined in the agreed scope."
+          ]
+        },
+        {
+          "title": "Can cabling be combined with network equipment installation?",
+          "body": [
+            "Yes. Cabling and network equipment installation can be coordinated within the same wider project."
+          ]
+        }
+      ]
+    },
+    "closing": {
+      "title": "Build Connectivity That Stays Understandable.",
+      "body": "From network hardware and structured cabling to configuration, documentation and remediation, Ideal Solutions helps organisations build and maintain connectivity that is easier to trace, change and support.",
+      "cta": "Discuss Your Network Requirements"
+    }
+  },
+  {
+    "proposedHref": "/services/network-infrastructure-connectivity/cable-routing-management",
+    "parentTitle": "Network Infrastructure & Connectivity",
+    "parentHref": "/services/network-infrastructure-connectivity",
+    "seoTitle": "Data Centre Cable Routing & Management Nigeria | Ideal Solutions",
+    "description": "Improve data centre cable organisation with structured routing, rack-level cable management and cleaner physical connectivity from Ideal Solutions.",
+    "hero": {
+      "title": "Cable Routing & Management",
+      "description": "Keep copper and fibre paths organised, accessible and easier to maintain across racks and data centre infrastructure.",
+      "cta": "Discuss Your Cable Management"
+    },
+    "intro": {
+      "title": "Keep Cable Paths Under Control as Infrastructure Grows.",
+      "cards": [
+        {
+          "title": "Cleaner Routes",
+          "body": "Reduce unnecessary crossing and congestion."
+        },
+        {
+          "title": "Better Access",
+          "body": "Keep equipment and rack areas easier to reach."
+        },
+        {
+          "title": "Easier Changes",
+          "body": "Make future additions and removals less disruptive."
+        },
+        {
+          "title": "Stronger Visibility",
+          "body": "Give technical teams a clearer physical environment."
+        }
+      ]
+    },
+    "sections": [
+      {
+        "id": "route-planning",
+        "navLabel": "Route Planning",
+        "title": "Define the Path Before Adding More Cable.",
+        "lead": "Cable disorder often begins when new connections are added without considering the wider route.",
+        "body": [
+          "Ideal Solutions reviews available pathways, rack locations and the existing environment before new routing work begins.",
+          "The objective is to create a more structured path that supports the current requirement without making future work harder."
+        ],
+        "cta": "Plan Your Cable Routes"
+      },
+      {
+        "id": "rack-level-management",
+        "navLabel": "Rack-Level Management",
+        "title": "Keep Cable Movement from Blocking the Rack.",
+        "lead": "A rack can become difficult to support even when every connection technically works.",
+        "body": [
+          "Ideal Solutions helps organise cable paths around equipment, patching and rack-management components.",
+          "Clearer routing can make devices easier to access and reduce the time required to understand the physical environment.",
+          "For broader rack cleanup, explore Rack & Cabling Remediation."
+        ],
+        "cta": "Improve Rack Cable Organisation"
+      },
+      {
+        "id": "pathway-organisation",
+        "navLabel": "Pathway Organisation",
+        "title": "Keep Connectivity Structured Beyond a Single Rack.",
+        "lead": "Good cable management should consider the route between racks, trays and infrastructure zones.",
+        "body": [
+          "Ideal Solutions supports the organisation of suitable cable paths across the wider environment.",
+          "The routing approach should account for the existing infrastructure and future maintenance needs.",
+          "For new cabling projects, explore Structured Copper & Fibre Cabling."
+        ],
+        "cta": "Discuss Pathway Organisation"
+      },
+      {
+        "id": "ongoing-maintainability",
+        "navLabel": "Ongoing Maintainability",
+        "title": "Make Future Cable Changes Easier to Understand.",
+        "lead": "Cable management should support what happens after the current project.",
+        "body": [
+          "Ideal Solutions can help leave routes clearer for future additions, troubleshooting and maintenance.",
+          "Where traceability is the primary issue, explore Cable Labelling & Port Mapping.",
+          "For the wider service group, return to Network Infrastructure & Connectivity."
+        ],
+        "cta": "Plan for Easier Future Changes"
+      }
+    ],
+    "faq": {
+      "title": "Cable Routing & Management Questions, Answered",
+      "items": [
+        {
+          "title": "What is cable management in a data centre?",
+          "body": [
+            "It is the structured organisation of cable paths so connections remain cleaner, more accessible and easier to support."
+          ]
+        },
+        {
+          "title": "Can you reorganise existing rack cabling?",
+          "body": [
+            "Yes. Existing cable environments can be reviewed and improved depending on the scope."
+          ]
+        },
+        {
+          "title": "Does cable management include new cabling?",
+          "body": [
+            "It can, but new cabling is more specifically covered under Structured Copper & Fibre Cabling."
+          ]
+        },
+        {
+          "title": "Can routing improve future maintenance?",
+          "body": [
+            "Yes. Cleaner pathways can make devices and connections easier to access and understand."
+          ]
+        },
+        {
+          "title": "Do you support fibre and copper cable management?",
+          "body": [
+            "Yes. Suitable fibre and copper routing can be supported."
+          ]
+        }
+      ]
+    },
+    "closing": {
+      "title": "Build Connectivity That Stays Understandable.",
+      "body": "From network hardware and structured cabling to configuration, documentation and remediation, Ideal Solutions helps organisations build and maintain connectivity that is easier to trace, change and support.",
+      "cta": "Discuss Your Network Requirements"
+    }
+  },
+  {
+    "proposedHref": "/services/network-infrastructure-connectivity/cable-labelling-port-mapping",
+    "parentTitle": "Network Infrastructure & Connectivity",
+    "parentHref": "/services/network-infrastructure-connectivity",
+    "seoTitle": "Cable Labelling & Port Mapping Nigeria | Ideal Solutions",
+    "description": "Make network connections easier to trace with structured cable labelling, port mapping and connectivity records for data centre environments.",
+    "hero": {
+      "title": "Cable Labelling & Port Mapping",
+      "description": "Make connections easier to identify, trace and support with structured labelling and clearer port-level visibility.",
+      "cta": "Discuss Your Labelling Requirements"
+    },
+    "intro": {
+      "title": "Know What Connects Where.",
+      "cards": [
+        {
+          "title": "Clear Identification",
+          "body": "Make cables and ports easier to recognise."
+        },
+        {
+          "title": "Better Traceability",
+          "body": "Reduce uncertainty during troubleshooting."
+        },
+        {
+          "title": "Stronger Records",
+          "body": "Connect the physical environment to useful documentation."
+        },
+        {
+          "title": "Easier Changes",
+          "body": "Give technicians clearer context before modifying connections."
+        }
+      ]
+    },
+    "sections": [
+      {
+        "id": "labelling-standards",
+        "navLabel": "Labelling Standards",
+        "title": "Give Each Connection an Identity Technical Teams Can Use.",
+        "lead": "Labels only help when they are consistent and understandable.",
+        "body": [
+          "Ideal Solutions can support agreed cable and port identification based on the customer's infrastructure standards.",
+          "The naming approach should be established before labelling begins so the result is repeatable and useful."
+        ],
+        "cta": "Define Your Labelling Approach"
+      },
+      {
+        "id": "port-mapping",
+        "navLabel": "Port Mapping",
+        "title": "Connect Physical Ports to the Wider Infrastructure Record.",
+        "lead": "Port mapping helps teams understand how devices and connections relate at the rack.",
+        "body": [
+          "Ideal Solutions can support the mapping of agreed network ports and physical connections.",
+          "This is useful where existing records are incomplete or where new work needs to be reflected accurately.",
+          "For wider documentation, explore Network Design & Documentation."
+        ],
+        "cta": "Discuss Port Mapping"
+      },
+      {
+        "id": "connectivity-records",
+        "navLabel": "Connectivity Records",
+        "title": "Leave More Than Labels Behind.",
+        "lead": "Physical identification becomes more valuable when it connects to useful infrastructure records.",
+        "body": [
+          "Ideal Solutions can capture agreed cable and port information as part of the project.",
+          "The level of detail should match what the operations or network team needs for future support."
+        ],
+        "cta": "Improve Your Connectivity Records"
+      },
+      {
+        "id": "handover-and-updates",
+        "navLabel": "Handover & Updates",
+        "title": "Keep Connection Information Useful After Changes.",
+        "lead": "Port records and labels lose value if future changes are never reflected.",
+        "body": [
+          "Ideal Solutions can support updates where labelling and mapping form part of an ongoing infrastructure change.",
+          "For broader remediation, explore Rack & Cabling Remediation.",
+          "For the full service family, return to Network Infrastructure & Connectivity."
+        ],
+        "cta": "Discuss Mapping and Handover"
+      }
+    ],
+    "faq": {
+      "title": "Cable Labelling & Port Mapping Questions, Answered",
+      "items": [
+        {
+          "title": "What is cable labelling?",
+          "body": [
+            "Cable labelling assigns clear identifiers to physical connections so technicians can recognise and trace them more easily."
+          ]
+        },
+        {
+          "title": "What is port mapping?",
+          "body": [
+            "Port mapping records how network ports connect to devices, patch panels or other infrastructure."
+          ]
+        },
+        {
+          "title": "Can you label existing cabling?",
+          "body": [
+            "Yes. Existing connections can be reviewed and labelled according to the agreed identification scheme."
+          ]
+        },
+        {
+          "title": "Can port mapping be included in network documentation?",
+          "body": [
+            "Yes. It can complement wider network design and documentation work."
+          ]
+        },
+        {
+          "title": "Can labels be updated after infrastructure changes?",
+          "body": [
+            "Yes. Updating identification after changes helps keep the records useful."
+          ]
+        }
+      ]
+    },
+    "closing": {
+      "title": "Build Connectivity That Stays Understandable.",
+      "body": "From network hardware and structured cabling to configuration, documentation and remediation, Ideal Solutions helps organisations build and maintain connectivity that is easier to trace, change and support.",
+      "cta": "Discuss Your Network Requirements"
+    }
+  },
+  {
+    "proposedHref": "/services/network-infrastructure-connectivity/rack-cabling-remediation",
+    "parentTitle": "Network Infrastructure & Connectivity",
+    "parentHref": "/services/network-infrastructure-connectivity",
+    "seoTitle": "Rack & Cabling Remediation Nigeria | Ideal Solutions",
+    "description": "Restore order to congested racks, unclear cabling and difficult-to-support infrastructure with rack and cabling remediation from Ideal Solutions.",
+    "hero": {
+      "title": "Rack & Cabling Remediation",
+      "description": "Restore order to congested racks, unclear connections and physical infrastructure that has become difficult to support.",
+      "cta": "Discuss Your Remediation Requirement"
+    },
+    "intro": {
+      "title": "Bring Clarity Back to Infrastructure That Has Grown Messy.",
+      "cards": [
+        {
+          "title": "See the Current State",
+          "body": "Understand what is installed before making changes."
+        },
+        {
+          "title": "Reduce Disorder",
+          "body": "Correct unnecessary congestion and inconsistent routing."
+        },
+        {
+          "title": "Improve Traceability",
+          "body": "Make equipment and connections easier to identify."
+        },
+        {
+          "title": "Support Future Work",
+          "body": "Leave the environment easier to maintain and expand."
+        }
+      ]
+    },
+    "sections": [
+      {
+        "id": "assessment",
+        "navLabel": "Assessment",
+        "title": "Understand the Environment Before Changing It.",
+        "lead": "Remediation should begin with a clear view of what already exists.",
+        "body": [
+          "Ideal Solutions reviews the affected rack and cabling environment to understand equipment placement, cable paths and areas of confusion or congestion.",
+          "This helps separate what should be changed from what should remain untouched.",
+          "For a broader review, explore Data Centre Infrastructure Audit & Assessment."
+        ],
+        "cta": "Assess Your Rack Environment"
+      },
+      {
+        "id": "rack-reorganisation",
+        "navLabel": "Rack Reorganisation",
+        "title": "Make the Rack Easier to Access and Understand.",
+        "lead": "Physical organisation affects how quickly technicians can support the environment.",
+        "body": [
+          "Ideal Solutions can help reorganise suitable rack-level infrastructure within the agreed remediation scope.",
+          "The work may involve improving device arrangement, accessibility or related physical organisation where appropriate."
+        ],
+        "cta": "Discuss Rack Reorganisation"
+      },
+      {
+        "id": "cable-remediation",
+        "navLabel": "Cable Remediation",
+        "title": "Replace Cable Disorder with Clearer Paths.",
+        "lead": "Cabling can remain operational while becoming increasingly difficult to maintain.",
+        "body": [
+          "Ideal Solutions supports the reorganisation of suitable copper and fibre pathways within existing infrastructure.",
+          "The remediation approach should account for active connections, site procedures and the need to preserve service continuity.",
+          "For new structured cabling, explore Structured Copper & Fibre Cabling."
+        ],
+        "cta": "Plan Cabling Remediation"
+      },
+      {
+        "id": "handover-and-improvement",
+        "navLabel": "Handover & Improvement",
+        "title": "Leave the Environment Easier to Support Than You Found It.",
+        "lead": "Remediation should improve the next maintenance, troubleshooting or expansion task.",
+        "body": [
+          "Ideal Solutions can review the completed work and capture agreed changes.",
+          "Where identification is also required, Cable Labelling & Port Mapping can strengthen the handover.",
+          "For the complete capability group, return to Network Infrastructure & Connectivity."
+        ],
+        "cta": "Discuss Remediation and Handover"
+      }
+    ],
+    "faq": {
+      "title": "Rack & Cabling Remediation Questions, Answered",
+      "items": [
+        {
+          "title": "What is rack and cabling remediation?",
+          "body": [
+            "It is the process of reviewing and improving existing rack organisation, cable routing and physical infrastructure that has become difficult to support."
+          ]
+        },
+        {
+          "title": "Can remediation be carried out in a live environment?",
+          "body": [
+            "Yes, where the affected infrastructure and work procedures have been reviewed and approved."
+          ]
+        },
+        {
+          "title": "Does remediation mean replacing all cabling?",
+          "body": [
+            "No. The required work depends on the existing condition and agreed scope."
+          ]
+        },
+        {
+          "title": "Can you label connections during remediation?",
+          "body": [
+            "Yes. Labelling and port mapping can be included where required."
+          ]
+        },
+        {
+          "title": "Should an assessment happen before remediation?",
+          "body": [
+            "Yes. Understanding the existing environment helps define what should be changed and how the work should be approached."
+          ]
+        }
+      ]
+    },
+    "closing": {
+      "title": "Build Connectivity That Stays Understandable.",
+      "body": "From network hardware and structured cabling to configuration, documentation and remediation, Ideal Solutions helps organisations build and maintain connectivity that is easier to trace, change and support.",
+      "cta": "Discuss Your Network Requirements"
+    }
+  },
+  {
+    "proposedHref": "/services/data-centre-security-safety/firewall-supply-installation-licensing",
+    "parentTitle": "Data Centre Security & Safety Systems",
+    "parentHref": "/services/data-centre-security-safety",
+    "seoTitle": "Firewall Supply, Installation & Licensing Nigeria | Ideal Solutions",
+    "description": "Source, install and license enterprise firewalls for data centre and business environments with structured deployment support from Ideal Solutions.",
+    "hero": {
+      "title": "Firewall Supply, Installation & Licensing",
+      "description": "Strengthen network protection with firewall hardware, licensing and installation aligned with the wider infrastructure and security requirement.",
+      "cta": "Discuss Your Firewall Requirements"
+    },
+    "intro": {
+      "title": "Put the Right Security Control at the Network Boundary.",
+      "cards": [
+        {
+          "title": "Suitable Hardware",
+          "body": "Choose firewall appliances that fit the intended environment."
+        },
+        {
+          "title": "Correct Licensing",
+          "body": "Align required licences and subscriptions with the selected platform."
+        },
+        {
+          "title": "Structured Installation",
+          "body": "Deploy the appliance into the approved network location."
+        },
+        {
+          "title": "Clear Next Steps",
+          "body": "Separate supply, physical deployment and advanced configuration where required."
+        }
+      ]
+    },
+    "sections": [
+      {
+        "id": "firewall-requirements",
+        "navLabel": "Firewall Requirements",
+        "title": "Start with the Security Requirement Before Choosing the Appliance.",
+        "lead": "A firewall decision should be based on what the network needs to protect and control.",
+        "body": [
+          "Ideal Solutions helps customers structure firewall requirements around the intended environment, network role and approved technical design.",
+          "The right platform depends on factors such as interface requirements, expected traffic, existing infrastructure and the security architecture around it.",
+          "Where a customer already has an approved model and specification, supply can follow that requirement.",
+          "Where clarification is needed, the technical requirement should be resolved before purchase."
+        ],
+        "cta": "Define Your Firewall Requirement"
+      },
+      {
+        "id": "supply-and-licensing",
+        "navLabel": "Supply & Licensing",
+        "title": "Source the Appliance with the Licensing It Actually Needs.",
+        "lead": "Firewall hardware and firewall capability are not always the same thing.",
+        "body": [
+          "Ideal Solutions can support suitable firewall sourcing together with the licensing or subscriptions required for the approved deployment.",
+          "The exact licence requirement depends on the selected platform and the features the organisation intends to use.",
+          "This helps avoid a situation where the appliance arrives but required functionality is unavailable because licensing was treated as an afterthought.",
+          "For broader infrastructure sourcing, explore Data Centre Hardware Procurement."
+        ],
+        "cta": "Discuss Firewall Supply & Licensing"
+      },
+      {
+        "id": "installation",
+        "navLabel": "Installation",
+        "title": "Put the Firewall into the Network with the Wider Design in View.",
+        "lead": "Physical firewall installation should align with the approved network architecture.",
+        "body": [
+          "Ideal Solutions supports suitable appliance mounting, physical connectivity and agreed installation activities within data centre and enterprise environments.",
+          "Where network configuration is also required, that scope should be clearly defined before execution.",
+          "For related device setup, explore Network Configuration Services."
+        ],
+        "cta": "Plan Your Firewall Installation"
+      },
+      {
+        "id": "handover-and-support",
+        "navLabel": "Handover & Support",
+        "title": "Leave the Firewall Ready for the Next Security Stage.",
+        "lead": "Installation should end with clarity around what has been completed and what remains.",
+        "body": [
+          "Ideal Solutions reviews the agreed supply and installation scope and identifies any remaining configuration, policy or security tasks.",
+          "Where future onsite intervention is required, our Smart Hands & Technical Support Services can provide continued local technical assistance.",
+          "For the full capability group, return to Data Centre Security & Safety Systems."
+        ],
+        "cta": "Discuss Firewall Deployment Support"
+      }
+    ],
+    "faq": {
+      "title": "Firewall Supply & Installation Questions, Answered",
+      "items": [
+        {
+          "title": "Can Ideal Solutions supply enterprise firewalls?",
+          "body": [
+            "Yes. Suitable firewall hardware can be sourced based on the approved technical requirement."
+          ]
+        },
+        {
+          "title": "Can firewall licensing be included?",
+          "body": [
+            "Yes. Required licences or subscriptions can be included where they form part of the agreed requirement."
+          ]
+        },
+        {
+          "title": "Does installation include firewall policy configuration?",
+          "body": [
+            "Not automatically. Policy and advanced configuration should be defined separately where required."
+          ]
+        },
+        {
+          "title": "Can you install firewalls in an existing data centre?",
+          "body": [
+            "Yes, provided the installation location, connectivity and change requirements have been reviewed."
+          ]
+        },
+        {
+          "title": "Can you support the firewall after installation?",
+          "body": [
+            "Yes. Suitable onsite technical support can be provided depending on the ongoing requirement."
+          ]
+        }
+      ]
+    },
+    "closing": {
+      "title": "Protect Critical Infrastructure from the Network Edge to the Facility Entrance.",
+      "body": "From firewall deployment and access control to surveillance, controlled entry and safety systems, Ideal Solutions helps organisations strengthen the layers protecting critical environments.",
+      "cta": "Discuss Your Security Requirements"
+    }
+  },
+  {
+    "proposedHref": "/services/data-centre-security-safety/door-access-control",
+    "parentTitle": "Data Centre Security & Safety Systems",
+    "parentHref": "/services/data-centre-security-safety",
+    "seoTitle": "Data Centre Access Control Systems Nigeria | Ideal Solutions",
+    "description": "Control access to data centre and critical IT spaces with door access control systems designed around protected areas and authorised entry requirements.",
+    "hero": {
+      "title": "Data Centre Door Access Control",
+      "description": "Control who can enter critical technical spaces with structured access systems designed around protected areas and authorised movement.",
+      "cta": "Discuss Your Access Control Requirements"
+    },
+    "intro": {
+      "title": "Protect Critical Areas Before Someone Reaches the Rack.",
+      "cards": [
+        {
+          "title": "Controlled Entry",
+          "body": "Restrict access to authorised users."
+        },
+        {
+          "title": "Clear Permissions",
+          "body": "Define who should enter which protected areas."
+        },
+        {
+          "title": "Better Accountability",
+          "body": "Create stronger visibility around physical access."
+        },
+        {
+          "title": "Structured Integration",
+          "body": "Align access control with the wider security environment."
+        }
+      ]
+    },
+    "sections": [
+      {
+        "id": "access-requirements",
+        "navLabel": "Access Requirements",
+        "title": "Start with Who Needs Access and What They Need to Reach.",
+        "lead": "Access control works best when protected areas and authorised users are clearly defined.",
+        "body": [
+          "Ideal Solutions helps structure access-control requirements around the physical environment and intended security model.",
+          "A data hall, server room, equipment room or other sensitive area may require different levels of restriction.",
+          "The system should therefore reflect the facility layout and the organisation's approved access policy."
+        ],
+        "cta": "Define Your Access Requirements"
+      },
+      {
+        "id": "door-control-systems",
+        "navLabel": "Door Control Systems",
+        "title": "Put Electronic Control Around Sensitive Entry Points.",
+        "lead": "The door is where physical security becomes an operational control.",
+        "body": [
+          "Ideal Solutions supports suitable access-control components and installation for protected technical spaces.",
+          "The project may involve door hardware, readers, controllers and related equipment depending on the approved design.",
+          "The installation should work with the physical characteristics of the entry point rather than treating every door as the same requirement."
+        ],
+        "cta": "Plan Your Access Control Installation"
+      },
+      {
+        "id": "authentication-and-permissions",
+        "navLabel": "Authentication & Permissions",
+        "title": "Match Entry Rights to the People Who Actually Need Them.",
+        "lead": "A secure access system is not just about locking the door.",
+        "body": [
+          "The organisation should define how users are identified, what areas they can enter and who is responsible for approving access.",
+          "Ideal Solutions supports the physical deployment of the agreed system while the customer's authorised team retains control over permission policy and user governance.",
+          "Where stricter entry control is required, explore Mantrap Door Installation & Servicing."
+        ],
+        "cta": "Discuss Access Authentication"
+      },
+      {
+        "id": "handover-and-support",
+        "navLabel": "Handover & Support",
+        "title": "Leave Access Control Clear for the Teams Managing the Facility.",
+        "lead": "A security system should be understandable after installation.",
+        "body": [
+          "Ideal Solutions can review the installed system and agreed project information with the responsible facility or security team.",
+          "Where future technical intervention is needed, onsite support can be coordinated through our wider technical-support services.",
+          "For the complete capability group, return to Data Centre Security & Safety Systems."
+        ],
+        "cta": "Discuss Access Control Support"
+      }
+    ],
+    "faq": {
+      "title": "Data Centre Access Control Questions, Answered",
+      "items": [
+        {
+          "title": "What is data centre access control?",
+          "body": [
+            "It is the use of physical and electronic controls to restrict entry to authorised personnel in sensitive technical spaces."
+          ]
+        },
+        {
+          "title": "Can access control be installed in an existing server room?",
+          "body": [
+            "Yes. Existing doors and site conditions should be reviewed before the system is selected and installed."
+          ]
+        },
+        {
+          "title": "Can access permissions differ by user?",
+          "body": [
+            "Yes. The organisation's access policy can define different permissions depending on the selected system and approved setup."
+          ]
+        },
+        {
+          "title": "Can access control work alongside CCTV?",
+          "body": [
+            "Yes. Access control and surveillance can form complementary layers within a wider physical security environment."
+          ]
+        },
+        {
+          "title": "Can Ideal Solutions maintain access-control systems?",
+          "body": [
+            "Suitable inspection, servicing and technical support can be provided depending on the installed system and agreed scope."
+          ]
+        }
+      ]
+    },
+    "closing": {
+      "title": "Protect Critical Infrastructure from the Network Edge to the Facility Entrance.",
+      "body": "From firewall deployment and access control to surveillance, controlled entry and safety systems, Ideal Solutions helps organisations strengthen the layers protecting critical environments.",
+      "cta": "Discuss Your Security Requirements"
+    }
+  },
+  {
+    "proposedHref": "/services/data-centre-security-safety/cctv-surveillance",
+    "parentTitle": "Data Centre Security & Safety Systems",
+    "parentHref": "/services/data-centre-security-safety",
+    "seoTitle": "Data Centre CCTV & Surveillance Systems Nigeria | Ideal Solutions",
+    "description": "Improve visibility around critical infrastructure with CCTV and surveillance systems for data centres, server rooms and enterprise environments.",
+    "hero": {
+      "title": "CCTV & Surveillance Systems",
+      "description": "Improve visibility around critical infrastructure, access points and protected areas with surveillance designed around the environment.",
+      "cta": "Discuss Your Surveillance Requirements"
+    },
+    "intro": {
+      "title": "See More of What Happens Around Critical Infrastructure.",
+      "cards": [
+        {
+          "title": "Relevant Coverage",
+          "body": "Position surveillance around the areas that matter."
+        },
+        {
+          "title": "Clear Visibility",
+          "body": "Improve awareness around entrances and protected spaces."
+        },
+        {
+          "title": "Recorded Activity",
+          "body": "Create useful footage for approved security review."
+        },
+        {
+          "title": "Wider Security Context",
+          "body": "Connect surveillance with the facility's overall protection approach."
+        }
+      ]
+    },
+    "sections": [
+      {
+        "id": "coverage-planning",
+        "navLabel": "Coverage Planning",
+        "title": "Decide What Needs to Be Seen Before Cameras Are Installed.",
+        "lead": "Good surveillance begins with the areas and activity the organisation needs to observe.",
+        "body": [
+          "Ideal Solutions helps structure CCTV requirements around entrances, technical spaces, restricted areas and other approved locations.",
+          "Camera positioning should consider the environment, expected field of view and operational purpose.",
+          "This helps prevent both blind spots and unnecessary coverage."
+        ],
+        "cta": "Plan Your CCTV Coverage"
+      },
+      {
+        "id": "camera-deployment",
+        "navLabel": "Camera Deployment",
+        "title": "Install Surveillance Around the Facility, Not Just Wherever a Camera Fits.",
+        "lead": "Camera placement should support the security objective and the physical environment.",
+        "body": [
+          "Ideal Solutions supports suitable CCTV installation across data centre and enterprise facilities.",
+          "The required equipment and mounting approach depend on the site conditions and approved design.",
+          "Where surveillance is part of a wider access-control project, the systems can be considered together within the security plan."
+        ],
+        "cta": "Discuss CCTV Installation"
+      },
+      {
+        "id": "monitoring-and-recording",
+        "navLabel": "Monitoring & Recording",
+        "title": "Make Surveillance Useful After the Camera Is Installed.",
+        "lead": "Visibility only creates value when footage can be reviewed and managed appropriately.",
+        "body": [
+          "Ideal Solutions can support the deployment of suitable recording and monitoring components where they form part of the agreed project.",
+          "Retention policies, user access and operational monitoring responsibilities remain matters for the customer's security and governance teams.",
+          "The technical system should support those approved requirements."
+        ],
+        "cta": "Discuss Monitoring Requirements"
+      },
+      {
+        "id": "handover-and-support",
+        "navLabel": "Handover & Support",
+        "title": "Give Security Teams a Clear View of the Installed System.",
+        "lead": "A CCTV project should end with clarity around coverage, equipment and remaining responsibilities.",
+        "body": [
+          "Ideal Solutions reviews the agreed installation and relevant system information with the responsible team.",
+          "Where maintenance or onsite inspection is required later, support can be coordinated through the wider technical-services capability.",
+          "For the complete security offering, return to Data Centre Security & Safety Systems."
+        ],
+        "cta": "Discuss Surveillance Support"
+      }
+    ],
+    "faq": {
+      "title": "CCTV & Surveillance Questions, Answered",
+      "items": [
+        {
+          "title": "Can CCTV be installed inside a data centre?",
+          "body": [
+            "Yes. Camera positioning should be planned around the facility, protected areas and approved security requirements."
+          ]
+        },
+        {
+          "title": "Can cameras cover access points and server rooms?",
+          "body": [
+            "Yes, where those locations form part of the approved surveillance scope."
+          ]
+        },
+        {
+          "title": "Does Ideal Solutions provide recording systems?",
+          "body": [
+            "Suitable recording and monitoring equipment can be included depending on the project requirement."
+          ]
+        },
+        {
+          "title": "Can CCTV work with access-control systems?",
+          "body": [
+            "Yes. CCTV and access control can complement one another as part of a layered physical-security approach."
+          ]
+        },
+        {
+          "title": "Can existing CCTV systems be expanded?",
+          "body": [
+            "Yes. Existing infrastructure can be reviewed before additional cameras or coverage areas are introduced."
+          ]
+        }
+      ]
+    },
+    "closing": {
+      "title": "Protect Critical Infrastructure from the Network Edge to the Facility Entrance.",
+      "body": "From firewall deployment and access control to surveillance, controlled entry and safety systems, Ideal Solutions helps organisations strengthen the layers protecting critical environments.",
+      "cta": "Discuss Your Security Requirements"
+    }
+  },
+  {
+    "proposedHref": "/services/data-centre-security-safety/mantrap-installation-servicing",
+    "parentTitle": "Data Centre Security & Safety Systems",
+    "parentHref": "/services/data-centre-security-safety",
+    "seoTitle": "Mantrap Door Installation & Servicing Nigeria | Ideal Solutions",
+    "description": "Strengthen access to sensitive data centre areas with mantrap door installation, integration and servicing from Ideal Solutions.",
+    "hero": {
+      "title": "Mantrap Door Installation & Servicing",
+      "description": "Add a stronger layer of access control around sensitive technical spaces with controlled entry designed to regulate movement between secured zones.",
+      "cta": "Discuss Your Mantrap Requirement"
+    },
+    "intro": {
+      "title": "Add Greater Control Between Public and Protected Space.",
+      "cards": [
+        {
+          "title": "Controlled Passage",
+          "body": "Manage how individuals move through secure entry points."
+        },
+        {
+          "title": "Stronger Access Layers",
+          "body": "Add an additional barrier before critical areas are reached."
+        },
+        {
+          "title": "Access Integration",
+          "body": "Coordinate mantrap operation with the wider access-control system."
+        },
+        {
+          "title": "Ongoing Support",
+          "body": "Keep the entry system serviceable after installation."
+        }
+      ]
+    },
+    "sections": [
+      {
+        "id": "entry-requirements",
+        "navLabel": "Entry Requirements",
+        "title": "Define the Security Objective Before Designing the Entry Point.",
+        "lead": "A mantrap should solve a clear access-control requirement.",
+        "body": [
+          "Ideal Solutions helps frame the physical entry requirement around the protected area, expected user flow and existing access-control environment.",
+          "The system should reflect the facility rather than forcing a generic security layout into an unsuitable space.",
+          "Existing doors, circulation and security policy all need to be considered before installation."
+        ],
+        "cta": "Define Your Secure Entry Requirement"
+      },
+      {
+        "id": "system-installation",
+        "navLabel": "System Installation",
+        "title": "Build Controlled Entry Around the Physical Environment.",
+        "lead": "Mantrap installation brings together doors, control components and the surrounding access space.",
+        "body": [
+          "Ideal Solutions supports suitable mantrap system installation based on the approved design.",
+          "The work may involve associated door and control equipment required to establish the intended entry sequence.",
+          "Where broader access-control work is also required, explore Data Centre Door Access Control."
+        ],
+        "cta": "Plan Your Mantrap Installation"
+      },
+      {
+        "id": "access-integration",
+        "navLabel": "Access Integration",
+        "title": "Make the Mantrap Part of the Wider Security Model.",
+        "lead": "A controlled vestibule should not operate as an isolated security feature.",
+        "body": [
+          "The intended authentication, entry rules and relationship with the wider access system should be defined as part of the project.",
+          "Ideal Solutions supports the physical implementation of the approved system while customer security teams retain control over access policy.",
+          "Where surveillance around secure entry is also required, explore CCTV & Surveillance Systems."
+        ],
+        "cta": "Discuss Security Integration"
+      },
+      {
+        "id": "servicing-and-support",
+        "navLabel": "Servicing & Support",
+        "title": "Keep Secure Entry Systems Working as Intended.",
+        "lead": "Entry-control equipment remains useful only while the physical and control components continue to operate correctly.",
+        "body": [
+          "Ideal Solutions can support suitable inspection and servicing requirements for installed mantrap systems.",
+          "Where a fault or changing facility requirement affects the system, the scope can be reviewed before corrective work proceeds.",
+          "For the wider capability group, return to Data Centre Security & Safety Systems."
+        ],
+        "cta": "Discuss Mantrap Servicing"
+      }
+    ],
+    "faq": {
+      "title": "Mantrap Door Questions, Answered",
+      "items": [
+        {
+          "title": "What is a mantrap in a data centre?",
+          "body": [
+            "A mantrap is a controlled entry space using sequential doors or access controls to regulate movement into a protected area."
+          ]
+        },
+        {
+          "title": "Why are mantraps used around critical infrastructure?",
+          "body": [
+            "They provide an additional physical-access layer before personnel enter sensitive areas."
+          ]
+        },
+        {
+          "title": "Can a mantrap integrate with an access-control system?",
+          "body": [
+            "Yes. The intended authentication and control approach should be defined within the project design."
+          ]
+        },
+        {
+          "title": "Can Ideal Solutions service an existing mantrap?",
+          "body": [
+            "Suitable servicing can be provided depending on the installed system and agreed scope."
+          ]
+        },
+        {
+          "title": "Is a mantrap suitable for every server room?",
+          "body": [
+            "Not necessarily. The facility, risk level, available space and security requirements should determine whether it is appropriate."
+          ]
+        }
+      ]
+    },
+    "closing": {
+      "title": "Protect Critical Infrastructure from the Network Edge to the Facility Entrance.",
+      "body": "From firewall deployment and access control to surveillance, controlled entry and safety systems, Ideal Solutions helps organisations strengthen the layers protecting critical environments.",
+      "cta": "Discuss Your Security Requirements"
+    }
+  },
+  {
+    "proposedHref": "/services/data-centre-security-safety/automated-door-gate-systems",
+    "parentTitle": "Data Centre Security & Safety Systems",
+    "parentHref": "/services/data-centre-security-safety",
+    "seoTitle": "Automated Door & Gate Systems Nigeria | Ideal Solutions",
+    "description": "Improve controlled entry around technical facilities with automated door and gate systems designed around access, security and operational requirements.",
+    "hero": {
+      "title": "Automated Door & Gate Systems",
+      "description": "Improve controlled movement around technical facilities with automated entry systems designed for the access and operational needs of the site.",
+      "cta": "Discuss Your Automated Entry Requirements"
+    },
+    "intro": {
+      "title": "Make Secure Entry Easier to Control and Operate.",
+      "cards": [
+        {
+          "title": "Controlled Movement",
+          "body": "Manage vehicle or personnel access around protected areas."
+        },
+        {
+          "title": "Reliable Entry",
+          "body": "Automate suitable doors and gates around operational requirements."
+        },
+        {
+          "title": "Access Integration",
+          "body": "Connect automated entry with the wider security model."
+        },
+        {
+          "title": "Ongoing Serviceability",
+          "body": "Keep physical access systems supportable over time."
+        }
+      ]
+    },
+    "sections": [
+      {
+        "id": "entry-planning",
+        "navLabel": "Entry Planning",
+        "title": "Design Automated Entry Around How the Facility Actually Operates.",
+        "lead": "Door and gate automation should support both movement and security.",
+        "body": [
+          "Ideal Solutions helps define requirements around the entry point, expected users and operational conditions.",
+          "A staff entrance, restricted technical door and vehicle gate each create different requirements.",
+          "The system should therefore reflect the way the facility is used."
+        ],
+        "cta": "Define Your Entry Requirement"
+      },
+      {
+        "id": "automation-systems",
+        "navLabel": "Automation Systems",
+        "title": "Automate Physical Entry Without Losing Control.",
+        "lead": "Automation should make access more manageable, not less secure.",
+        "body": [
+          "Ideal Solutions supports suitable automated door and gate systems for protected facilities.",
+          "The selected equipment and control approach depend on the entry type and intended operation.",
+          "Installation should consider the existing physical environment and the wider access strategy."
+        ],
+        "cta": "Plan Your Door or Gate Automation"
+      },
+      {
+        "id": "access-integration",
+        "navLabel": "Access Integration",
+        "title": "Connect Automated Entry to the Wider Security Environment.",
+        "lead": "An automated gate or door should work with the organisation's approved access controls.",
+        "body": [
+          "Where required, the entry system can be planned alongside access-control components and related security infrastructure.",
+          "For internal secure-area access, explore Data Centre Door Access Control.",
+          "For higher-security controlled entry, explore Mantrap Door Installation & Servicing."
+        ],
+        "cta": "Discuss Entry-System Integration"
+      },
+      {
+        "id": "servicing-and-handover",
+        "navLabel": "Servicing & Handover",
+        "title": "Keep Automated Access Understandable and Supportable.",
+        "lead": "A completed installation should leave the facility team clear about the system and any remaining responsibilities.",
+        "body": [
+          "Ideal Solutions reviews the agreed work and relevant system information at handover.",
+          "Suitable future servicing can be planned where the customer requires continued support.",
+          "For the full capability group, return to Data Centre Security & Safety Systems."
+        ],
+        "cta": "Discuss Automated Entry Support"
+      }
+    ],
+    "faq": {
+      "title": "Automated Door & Gate Questions, Answered",
+      "items": [
+        {
+          "title": "What types of automated entry systems can Ideal Solutions support?",
+          "body": [
+            "Suitable automated doors and gate systems can be supported depending on the facility and approved project requirements."
+          ]
+        },
+        {
+          "title": "Can automated gates work with access control?",
+          "body": [
+            "Yes. Integration can be considered where access control forms part of the approved security design."
+          ]
+        },
+        {
+          "title": "Can existing doors or gates be automated?",
+          "body": [
+            "Possibly. The existing physical equipment and site conditions should be assessed first."
+          ]
+        },
+        {
+          "title": "Can automated systems be used at technical facilities?",
+          "body": [
+            "Yes. Automated entry can support controlled access around suitable data centre and enterprise environments."
+          ]
+        },
+        {
+          "title": "Does Ideal Solutions provide servicing?",
+          "body": [
+            "Suitable servicing and onsite support can be discussed depending on the installed system."
+          ]
+        }
+      ]
+    },
+    "closing": {
+      "title": "Protect Critical Infrastructure from the Network Edge to the Facility Entrance.",
+      "body": "From firewall deployment and access control to surveillance, controlled entry and safety systems, Ideal Solutions helps organisations strengthen the layers protecting critical environments.",
+      "cta": "Discuss Your Security Requirements"
+    }
+  },
+  {
+    "proposedHref": "/services/data-centre-security-safety/fire-alarm-safety",
+    "parentTitle": "Data Centre Security & Safety Systems",
+    "parentHref": "/services/data-centre-security-safety",
+    "seoTitle": "Data Centre Fire Alarm & Safety Systems Nigeria | Ideal Solutions",
+    "description": "Support safer critical infrastructure environments with fire alarm, detection and safety systems designed around data centre and enterprise facilities.",
+    "hero": {
+      "title": "Fire Alarm & Safety Systems",
+      "description": "Improve early detection and incident awareness around critical technical environments with fire alarm and safety systems designed around the facility.",
+      "cta": "Discuss Your Fire Safety Requirements"
+    },
+    "intro": {
+      "title": "Detect Risk Before It Becomes a Larger Incident.",
+      "cards": [
+        {
+          "title": "Earlier Awareness",
+          "body": "Identify fire-related conditions as early as the approved system allows."
+        },
+        {
+          "title": "Relevant Coverage",
+          "body": "Plan detection around the protected technical environment."
+        },
+        {
+          "title": "Clear Alerting",
+          "body": "Support prompt notification of detected conditions."
+        },
+        {
+          "title": "Safer Operations",
+          "body": "Build fire detection into the wider facility-safety approach."
+        }
+      ]
+    },
+    "sections": [
+      {
+        "id": "safety-requirements",
+        "navLabel": "Safety Requirements",
+        "title": "Understand the Environment Before Selecting the Detection Approach.",
+        "lead": "Fire-safety requirements should reflect the facility and the infrastructure being protected.",
+        "body": [
+          "Ideal Solutions helps structure suitable fire-alarm requirements around the protected technical space and approved facility-safety plan.",
+          "Server rooms, data halls and related infrastructure areas can have different layout and operational conditions.",
+          "The required system should therefore follow the intended safety design rather than a generic equipment list."
+        ],
+        "cta": "Define Your Fire Safety Requirement"
+      },
+      {
+        "id": "detection-systems",
+        "navLabel": "Detection Systems",
+        "title": "Put Detection Where Early Awareness Matters.",
+        "lead": "The usefulness of a fire-alarm system depends on appropriate detection coverage and correct installation.",
+        "body": [
+          "Ideal Solutions supports suitable fire detection and alarm equipment for approved data centre and enterprise environments.",
+          "Equipment selection and positioning should reflect the project design and site conditions.",
+          "The objective is to give facility teams a structured detection layer around critical infrastructure."
+        ],
+        "cta": "Plan Your Fire Detection System"
+      },
+      {
+        "id": "alerting-and-integration",
+        "navLabel": "Alerting & Integration",
+        "title": "Make Detection Part of a Wider Response Process.",
+        "lead": "Detecting a condition is only one part of facility safety.",
+        "body": [
+          "The required alarm, notification and system relationships should be defined around the customer's approved safety procedures.",
+          "Ideal Solutions supports the physical deployment of the agreed system and associated infrastructure within scope.",
+          "Responsibilities for emergency procedures and operational response remain with the responsible facility and safety teams."
+        ],
+        "cta": "Discuss Alarm & Alerting Requirements"
+      },
+      {
+        "id": "testing-and-handover",
+        "navLabel": "Testing & Handover",
+        "title": "Know the Installed System Has Been Reviewed Before Handover.",
+        "lead": "Safety-system handover should give responsible teams clarity around the installed equipment and completed work.",
+        "body": [
+          "Ideal Solutions can support agreed installation checks and project handover activities.",
+          "The relevant facility team should understand the installed system, any outstanding items and the responsibilities that continue after project completion.",
+          "For related access and surveillance requirements, return to Data Centre Security & Safety Systems."
+        ],
+        "cta": "Discuss Fire-System Handover"
+      }
+    ],
+    "faq": {
+      "title": "Fire Alarm & Safety Questions, Answered",
+      "items": [
+        {
+          "title": "Does Ideal Solutions provide fire alarm systems for data centres?",
+          "body": [
+            "Yes. Suitable fire-detection and alarm systems can be supported for approved data centre and enterprise environments."
+          ]
+        },
+        {
+          "title": "Can fire alarms be installed in existing server rooms?",
+          "body": [
+            "Yes, subject to assessment of the existing environment and approved safety requirements."
+          ]
+        },
+        {
+          "title": "Is fire detection the same as fire suppression?",
+          "body": [
+            "No. Fire detection and alarm systems identify and communicate conditions. Suppression is a separate specialist requirement."
+          ]
+        },
+        {
+          "title": "Can fire alarms integrate with other facility systems?",
+          "body": [
+            "Potential integration depends on the approved design, system compatibility and project scope."
+          ]
+        },
+        {
+          "title": "Does Ideal Solutions test fire alarm installations?",
+          "body": [
+            "Agreed installation checks and handover activities can be included within the project scope."
+          ]
+        }
+      ]
+    },
+    "closing": {
+      "title": "Protect Critical Infrastructure from the Network Edge to the Facility Entrance.",
+      "body": "From firewall deployment and access control to surveillance, controlled entry and safety systems, Ideal Solutions helps organisations strengthen the layers protecting critical environments.",
+      "cta": "Discuss Your Security Requirements"
+    }
+  },
+  {
+    "proposedHref": "/services/infrastructure-audit-optimisation/data-centre-infrastructure-audit",
+    "parentTitle": "Infrastructure Assessment & Optimisation",
+    "parentHref": "/services/infrastructure-audit-optimisation",
+    "seoTitle": "Data Centre Infrastructure Audit Nigeria | Ideal Solutions",
+    "description": "Assess racks, equipment, cabling, labelling and physical infrastructure conditions with structured data centre infrastructure audits from Ideal Solutions.",
+    "hero": {
+      "title": "Data Centre Infrastructure Audit & Assessment",
+      "description": "Understand what is really happening inside your infrastructure before making the next deployment, remediation or expansion decision.",
+      "cta": "Request an Infrastructure Assessment"
+    },
+    "intro": {
+      "title": "Get a Clearer View of the Infrastructure You Already Have.",
+      "cards": [
+        {
+          "title": "Physical Condition",
+          "body": "Understand the current state of racks, equipment and surrounding infrastructure."
+        },
+        {
+          "title": "Connectivity Visibility",
+          "body": "Identify unclear cabling, labelling and connection relationships."
+        },
+        {
+          "title": "Actionable Findings",
+          "body": "Separate observations from issues that actually require attention."
+        },
+        {
+          "title": "Better Decisions",
+          "body": "Give future maintenance, remediation and expansion work a stronger starting point."
+        }
+      ]
+    },
+    "sections": [
+      {
+        "id": "assessment-scope",
+        "navLabel": "Assessment Scope",
+        "title": "Start with the Questions the Assessment Needs to Answer.",
+        "lead": "An infrastructure audit should have a purpose beyond simply walking through the data centre with a checklist.",
+        "body": [
+          "Ideal Solutions begins by understanding why the environment is being assessed and what decisions the findings are expected to support.",
+          "An organisation may need greater visibility before an expansion, infrastructure refresh, remediation project or new deployment.",
+          "Another may be dealing with documentation gaps, unclear rack conditions or infrastructure that has changed repeatedly over time.",
+          "The assessment scope can then focus on the areas relevant to that requirement rather than producing observations with no clear operational value.",
+          "Depending on the agreed scope, this may include:",
+          "•\track organisation",
+          "•\tequipment placement",
+          "•\tphysical equipment condition",
+          "•\tcabling",
+          "•\tlabels",
+          "•\tconnectivity visibility",
+          "•\tsupporting records",
+          "•\tother relevant physical infrastructure conditions",
+          "Your team defines the business and technical objective.",
+          "Ideal Solutions helps turn that objective into a structured onsite assessment."
+        ],
+        "cta": "Define Your Assessment Scope"
+      },
+      {
+        "id": "physical-infrastructure-review",
+        "navLabel": "Physical Infrastructure Review",
+        "title": "Compare What Exists Onsite with What Your Team Needs to Understand.",
+        "lead": "Infrastructure can remain operational while becoming increasingly difficult to see, trace and support.",
+        "body": [
+          "Ideal Solutions reviews the agreed physical areas of the environment to establish a clearer picture of current conditions.",
+          "The assessment may look at how equipment is arranged within racks, whether infrastructure can be identified clearly, how cabling is routed and whether available records reflect what is physically present.",
+          "The goal is not to criticise an environment because it does not look visually perfect.",
+          "The goal is to identify conditions that can make support, troubleshooting, future deployment or change more difficult.",
+          "Where broader technical information is available, physical observations can also be compared against existing infrastructure records.",
+          "This helps reveal the difference between:",
+          "what the organisation believes is installed",
+          "and",
+          "what is actually present onsite."
+        ],
+        "cta": "Assess Your Existing Infrastructure"
+      },
+      {
+        "id": "findings-and-priorities",
+        "navLabel": "Findings & Priorities",
+        "title": "Turn Observations into Clearer Priorities.",
+        "lead": "A useful audit should help the customer decide what deserves attention next.",
+        "body": [
+          "Not every finding carries the same operational importance.",
+          "One rack may simply benefit from better organisation.",
+          "Another condition may make future changes significantly harder because cables cannot be traced or equipment information is unclear.",
+          "Ideal Solutions can organise assessment findings around the agreed scope so teams have a clearer basis for deciding what should be addressed.",
+          "Where appropriate, findings may identify areas such as:",
+          "•\track organisation issues",
+          "•\tunclear equipment identification",
+          "•\tcable-management concerns",
+          "•\tincomplete labelling",
+          "•\tdocumentation gaps",
+          "•\tphysical deployment inconsistencies",
+          "•\tinfrastructure requiring further technical investigation",
+          "•\topportunities for remediation",
+          "The assessment itself does not need to become another oversized report that nobody uses.",
+          "It should help the responsible team answer a simpler question:",
+          "What should we do next?",
+          "For physical rack and cable improvement, explore our Rack & Cabling Remediation Services."
+        ],
+        "cta": "Discuss Your Assessment Findings"
+      },
+      {
+        "id": "assessment-handover",
+        "navLabel": "Assessment Handover",
+        "title": "Leave Your Team with a Clearer Basis for Action.",
+        "lead": "The value of an assessment appears after the inspection is finished.",
+        "body": [
+          "Ideal Solutions can organise the agreed observations, findings and relevant supporting information into a practical handover for the responsible infrastructure team.",
+          "The exact format should match the purpose of the assessment.",
+          "Depending on scope, that may include:",
+          "•\tidentified infrastructure observations",
+          "•\trelevant equipment or rack information",
+          "•\tpermitted photographs",
+          "•\tnoted documentation gaps",
+          "•\tareas requiring further investigation",
+          "•\tproposed remediation priorities",
+          "•\titems suitable for future project planning",
+          "The customer can then decide which findings require immediate attention, which can be incorporated into future work and which simply need better documentation.",
+          "Where the assessment leads to physical corrective work, continue with Rack & Cabling Remediation.",
+          "Where the requirement is to confirm a completed deployment, use Equipment Testing & Deployment Verification.",
+          "For the wider service group, return to Infrastructure Assessment & Optimisation."
+        ],
+        "cta": "Plan Your Assessment and Next Actions"
+      }
+    ],
+    "faq": {
+      "title": "Data Centre Infrastructure Audit Questions, Answered",
+      "items": [
+        {
+          "title": "What is a data centre infrastructure audit?",
+          "body": [
+            "A data centre infrastructure audit is a structured review of agreed physical infrastructure conditions such as racks, equipment, cabling, labelling, connectivity visibility and related records.",
+            "Its purpose is to give infrastructure teams a clearer understanding of the current environment and identify areas requiring attention."
+          ]
+        },
+        {
+          "title": "When should we carry out a data centre infrastructure assessment?",
+          "body": [
+            "An assessment can be useful before an expansion, infrastructure refresh, remediation project, migration or major deployment.",
+            "It can also help when the environment has changed repeatedly and existing documentation no longer provides enough visibility."
+          ]
+        },
+        {
+          "title": "Can Ideal Solutions audit an operational data centre?",
+          "body": [
+            "Yes. Assessment activities can be planned around an existing operational environment, subject to site procedures, access requirements and the agreed scope."
+          ]
+        },
+        {
+          "title": "Does an infrastructure audit include remediation?",
+          "body": [
+            "Not automatically.",
+            "The audit identifies and documents agreed infrastructure conditions. Physical corrective work can then be handled separately through services such as Rack & Cabling Remediation, Network Infrastructure or Data Centre Deployment."
+          ]
+        },
+        {
+          "title": "What information should we provide before the assessment?",
+          "body": [
+            "Useful information can include the reason for the assessment, affected racks or areas, available infrastructure records, known concerns and the decisions the assessment is expected to support."
+          ]
+        }
+      ]
+    },
+    "closing": {
+      "title": "See the Environment Clearly Before Deciding What Comes Next.",
+      "body": "Whether you are preparing for expansion, correcting existing infrastructure or trying to understand what is really onsite, Ideal Solutions helps turn physical infrastructure conditions into clearer next actions.",
+      "cta": "Request an Infrastructure Assessment"
+    }
+  },
+  {
+    "proposedHref": "/services/data-centre-project-lifecycle-management/project-management",
+    "parentTitle": "Data Centre Project & Lifecycle Management",
+    "parentHref": "/services/data-centre-project-lifecycle-management",
+    "seoTitle": "Data Centre Project Management Nigeria | Ideal Solutions",
+    "description": "Coordinate data centre infrastructure projects across planning, onsite execution, dependencies, technical teams and handover with Ideal Solutions.",
+    "hero": {
+      "title": "Data Centre Project Management",
+      "description": "Keep infrastructure projects moving with clearer coordination across technical requirements, onsite execution, dependencies and project handover.",
+      "cta": "Discuss Your Data Centre Project"
+    },
+    "intro": {
+      "title": "Keep the Technical Work Connected from Start to Completion.",
+      "cards": [
+        {
+          "title": "Clear Scope",
+          "body": "Define what needs to happen before execution begins."
+        },
+        {
+          "title": "Coordinated Teams",
+          "body": "Keep internal teams, vendors and onsite resources aligned."
+        },
+        {
+          "title": "Visible Dependencies",
+          "body": "Identify what must happen before the next task can move forward."
+        },
+        {
+          "title": "Structured Completion",
+          "body": "Bring execution, outstanding actions and handover into one clearer project flow."
+        }
+      ]
+    },
+    "sections": [
+      {
+        "id": "project-planning",
+        "navLabel": "Project Planning",
+        "title": "Give the Project a Clear Path Before Onsite Work Begins.",
+        "lead": "Infrastructure projects become harder to control when the execution begins before responsibilities and dependencies are understood.",
+        "body": [
+          "Ideal Solutions helps organise data centre projects around the agreed technical requirement, expected outcomes and onsite work that needs to be completed.",
+          "The project may involve equipment installation, networking, server deployment, infrastructure changes, testing or several related technical activities.",
+          "Before execution begins, it is useful to establish:",
+          "•\tproject scope",
+          "•\tequipment involved",
+          "•\ttechnical responsibilities",
+          "•\taccess requirements",
+          "•\tproject sequence",
+          "•\tdependencies",
+          "•\tapproval points",
+          "•\trequired completion information",
+          "This creates a clearer basis for everyone involved.",
+          "The intention is not to add unnecessary project administration.",
+          "It is to make sure the people doing the work understand what has to happen, when it has to happen and what must already be ready."
+        ],
+        "cta": "Define Your Project Scope"
+      },
+      {
+        "id": "technical-coordination",
+        "navLabel": "Technical Coordination",
+        "title": "Keep Technical Teams Working Toward the Same Outcome.",
+        "lead": "A data centre project may involve several teams that each understand only part of the delivery.",
+        "body": [
+          "Internal IT teams may own the architecture.",
+          "A vendor may supply equipment.",
+          "A remote engineer may own configuration.",
+          "Facility teams may control access.",
+          "Onsite technicians may perform physical installation.",
+          "Ideal Solutions helps coordinate the agreed technical activities so those responsibilities connect more clearly during execution.",
+          "Where a dependency changes or an onsite condition differs from the plan, the responsible technical owner can be brought into the decision before the project moves forward.",
+          "That helps reduce situations where one team believes a task is complete while another is still waiting for an input."
+        ],
+        "cta": "Discuss Project Coordination"
+      },
+      {
+        "id": "onsite-delivery",
+        "navLabel": "Onsite Delivery",
+        "title": "Turn the Project Plan into Controlled Onsite Execution.",
+        "lead": "A project only creates value when the approved work is completed inside the environment.",
+        "body": [
+          "Ideal Solutions connects project coordination with practical onsite execution.",
+          "Depending on the agreed scope, that wider project may involve services such as:",
+          "•\tequipment installation",
+          "•\track-and-stack",
+          "•\tserver deployment",
+          "•\tnetwork infrastructure",
+          "•\tstructured cabling",
+          "•\tSmart Hands support",
+          "•\tequipment moves and changes",
+          "•\ttesting and verification",
+          "The exact activities remain governed by the relevant technical scope.",
+          "Project management helps keep those workstreams connected to the wider delivery requirement.",
+          "Where the project is primarily focused on physical deployment, explore our Data Centre Deployment Services."
+        ],
+        "cta": "Plan Your Onsite Delivery"
+      },
+      {
+        "id": "project-handover",
+        "navLabel": "Project Handover",
+        "title": "Finish the Project with a Clear View of What Was Completed.",
+        "lead": "Technical delivery should not end with technicians leaving the site.",
+        "body": [
+          "Ideal Solutions helps bring completed work, outstanding actions and agreed handover information into a clearer project close.",
+          "The final handover can identify:",
+          "•\twork completed",
+          "•\twork still outstanding",
+          "•\trelevant technical observations",
+          "•\tproject records",
+          "•\tagreed documentation",
+          "•\tresponsibilities that continue after delivery",
+          "For detailed project records, explore our Installation Documentation & Project Handover Services.",
+          "Where ongoing onsite support is required after completion, continue with Planned Maintenance & Ongoing Technical Support.",
+          "For the full service group, return to Data Centre Project & Lifecycle Management."
+        ],
+        "cta": "Discuss Project Completion & Handover"
+      }
+    ],
+    "faq": {
+      "title": "Data Centre Project Management Questions, Answered",
+      "items": [
+        {
+          "title": "What does data centre project management involve?",
+          "body": [
+            "It involves coordinating the technical activities, onsite work, dependencies and project responsibilities needed to move infrastructure work from requirement through completion and handover."
+          ]
+        },
+        {
+          "title": "Can Ideal Solutions manage projects involving multiple technical services?",
+          "body": [
+            "Yes. Where the project includes several related workstreams, those activities can be coordinated within one wider delivery structure."
+          ]
+        },
+        {
+          "title": "Can you work with our existing vendors and engineering teams?",
+          "body": [
+            "Yes. Ideal Solutions can work within a project involving internal teams, vendors, OEMs, integrators and remote engineers, provided responsibilities and technical ownership are clearly defined."
+          ]
+        },
+        {
+          "title": "Does project management include installation work?",
+          "body": [
+            "It can. The relevant technical installation or support services should be included explicitly within the project scope."
+          ]
+        },
+        {
+          "title": "Can you support projects managed by an international team?",
+          "body": [
+            "Yes. Remote project teams can retain technical direction while Ideal Solutions provides local coordination and agreed onsite execution in Nigeria."
+          ]
+        }
+      ]
+    },
+    "closing": {
+      "title": "Keep Infrastructure Work Connected Beyond the Installation.",
+      "body": "From project coordination and onsite execution to documentation, infrastructure changes and ongoing support, Ideal Solutions helps teams maintain continuity across the data centre lifecycle.",
+      "cta": "Discuss Your Data Centre Project"
+    }
+  },
+  {
+    "proposedHref": "/services/data-centre-project-lifecycle-management/installation-documentation-handover",
+    "parentTitle": "Data Centre Project & Lifecycle Management",
+    "parentHref": "/services/data-centre-project-lifecycle-management",
+    "seoTitle": "Data Centre Documentation & Project Handover Nigeria | Ideal Solutions",
+    "description": "Capture infrastructure changes, installation records and project completion information with structured data centre documentation and handover support.",
+    "hero": {
+      "title": "Installation Documentation & Project Handover",
+      "description": "Give operations and technical teams a clearer record of what was installed, changed and completed before responsibility moves to the next stage.",
+      "cta": "Discuss Your Handover Requirements"
+    },
+    "intro": {
+      "title": "Leave the Next Team with More Than a Finished Installation.",
+      "cards": [
+        {
+          "title": "Clear Completion",
+          "body": "Show what work has actually been completed."
+        },
+        {
+          "title": "Better Visibility",
+          "body": "Capture relevant equipment and infrastructure changes."
+        },
+        {
+          "title": "Outstanding Actions",
+          "body": "Make unresolved items easier to identify."
+        },
+        {
+          "title": "Stronger Continuity",
+          "body": "Give future teams a better starting point for support and change."
+        }
+      ]
+    },
+    "sections": [
+      {
+        "id": "documentation-scope",
+        "navLabel": "Documentation Scope",
+        "title": "Decide What the Next Team Needs to Know.",
+        "lead": "Good documentation begins by understanding what information will actually be useful after the project.",
+        "body": [
+          "Not every technical activity requires a large report.",
+          "The level of documentation should reflect:",
+          "•\tthe project scope",
+          "•\tinfrastructure affected",
+          "•\tcustomer requirements",
+          "•\toperational needs",
+          "•\tfuture support requirements",
+          "Ideal Solutions helps organise the documentation requirement around the work that was completed.",
+          "Depending on the project, useful information may include:",
+          "•\tinstalled equipment",
+          "•\tequipment positions",
+          "•\trelevant connection information",
+          "•\tlabels",
+          "•\tagreed configuration references",
+          "•\tpermitted installation photographs",
+          "•\tcompleted checks",
+          "•\tchanges made to the environment",
+          "The purpose is to preserve useful technical knowledge rather than create paperwork that quickly becomes ignored."
+        ],
+        "cta": "Define Your Documentation Requirements"
+      },
+      {
+        "id": "installation-records",
+        "navLabel": "Installation Records",
+        "title": "Capture the Infrastructure State After the Work Is Complete.",
+        "lead": "Projects are easier to support when the physical environment can be related back to useful records.",
+        "body": [
+          "Ideal Solutions can capture agreed information relating to completed installation or infrastructure change work.",
+          "This can help operations teams understand:",
+          "•\twhat equipment was installed",
+          "•\twhere it was positioned",
+          "•\twhat physical changes were made",
+          "•\twhat relevant connectivity was affected",
+          "•\twhich project activities were completed",
+          "Where detailed network records are required, our Network Design & Documentation Services can provide a more specialised path.",
+          "Where cable-level traceability is required, explore Cable Labelling & Port Mapping."
+        ],
+        "cta": "Discuss Installation Records"
+      },
+      {
+        "id": "outstanding-actions",
+        "navLabel": "Outstanding Actions",
+        "title": "Make What Is Not Finished as Clear as What Is.",
+        "lead": "Project handover becomes difficult when incomplete work is hidden inside a general statement that the installation is complete.",
+        "body": [
+          "Ideal Solutions can help distinguish completed activities from outstanding technical actions.",
+          "These may include:",
+          "•\tpending configuration",
+          "•\tmissing equipment or components",
+          "•\tunresolved verification items",
+          "•\tdependencies owned by another team",
+          "•\tfuture remediation",
+          "•\tfurther testing",
+          "•\trequired customer decisions",
+          "The aim is not to make the project look unfinished.",
+          "It is to give the responsible team an accurate picture of the actual completion state.",
+          "That clarity can prevent future teams from discovering unresolved issues without context."
+        ],
+        "cta": "Clarify Your Outstanding Actions"
+      },
+      {
+        "id": "project-handover",
+        "navLabel": "Project Handover",
+        "title": "Transfer the Work Without Losing the Knowledge Behind It.",
+        "lead": "A strong handover connects completed project activity to the team that will operate or support the infrastructure next.",
+        "body": [
+          "Ideal Solutions can organise the agreed completion records and relevant outstanding actions into a practical handover.",
+          "The responsible customer team can then review what has been delivered and confirm the next stage of responsibility.",
+          "Where further checks are required before operational acceptance, explore Equipment Testing & Deployment Verification.",
+          "Where ongoing onsite technical support is required, continue with Planned Maintenance & Ongoing Technical Support.",
+          "For the full lifecycle capability, return to Data Centre Project & Lifecycle Management."
+        ],
+        "cta": "Plan Your Project Handover"
+      }
+    ],
+    "faq": {
+      "title": "Installation Documentation & Handover Questions, Answered",
+      "items": [
+        {
+          "title": "What is data centre project handover?",
+          "body": [
+            "Project handover is the transition from completed project work to the team responsible for operating, maintaining or supporting the infrastructure afterwards."
+          ]
+        },
+        {
+          "title": "What information can be included in installation documentation?",
+          "body": [
+            "Depending on scope, documentation may include equipment information, positions, relevant connectivity, completed work, installation photographs, verification records and outstanding actions."
+          ]
+        },
+        {
+          "title": "Is documentation only needed for large projects?",
+          "body": [
+            "No. Even smaller infrastructure changes can benefit from useful records where future teams need to understand what changed."
+          ]
+        },
+        {
+          "title": "Can Ideal Solutions document work carried out by another team?",
+          "body": [
+            "Potentially, where the necessary site access, records and information are available. The scope and limitations should be clear before the work begins."
+          ]
+        },
+        {
+          "title": "Can documentation be updated after future infrastructure changes?",
+          "body": [
+            "Yes. Documentation can be updated where change and lifecycle support form part of the ongoing requirement."
+          ]
+        }
+      ]
+    },
+    "closing": {
+      "title": "Keep Infrastructure Work Connected Beyond the Installation.",
+      "body": "From project coordination and onsite execution to documentation, infrastructure changes and ongoing support, Ideal Solutions helps teams maintain continuity across the data centre lifecycle.",
+      "cta": "Discuss Your Data Centre Project"
+    }
+  }
+]

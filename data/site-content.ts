@@ -1,3 +1,5 @@
+import { operationalAdvantageSection } from "@/data/operational-advantage";
+import { homeProjectCta } from "@/data/home-project-cta";
 import type {
   BlogPost,
   CaseStudy,
@@ -15,10 +17,10 @@ export { industryProfiles } from "@/data/industry-catalog";
 export { resourceGroups, resourceLinks } from "@/data/resource-catalog";
 
 export const siteSettings: SiteSettings = {
-  name: "Auxano Solutions Technology Limited",
-  shortName: "Auxano Solutions",
+  name: "Ideal Solutions",
+  shortName: "Ideal Solutions",
   description:
-    "End-to-end IT solutions designed, installed, and supported by experts across infrastructure, networking, hardware, software, and managed services.",
+    "Technical execution, infrastructure support and local expertise for reliable, secure and growth-ready data centre environments in Nigeria.",
   phone: "+234 8062 218 546",
   email: "ask@auxanosolutions.net",
   address:
@@ -36,12 +38,7 @@ export const navigation: NavItem[] = [
   { label: "Solutions", href: "/services", kind: "solutions" },
   { label: "Industries", href: "/industries", kind: "industries" },
   { label: "Case Studies", href: "/case-studies", kind: "link" },
-  {
-    label: "Health Check",
-    href: "/technology-security-checklist",
-    kind: "link",
-  },
-  { label: "Blog", href: "/blog", kind: "link" },
+  { label: "Resources", href: "/resources", kind: "resources" },
   { label: "About", href: "/about", kind: "link" },
 ];
 
@@ -820,7 +817,7 @@ export const marketingPages: MarketingPage[] = [
       },
       {
         _type: "trustBanner",
-        title: "More than 500 organizations trust Auxano Solutions",
+        title: "More than 500 organizations trust IdealSolutions",
         description: "From growing businesses to multi-site operations",
         cta: {
           label: "Explore our services",
@@ -828,91 +825,7 @@ export const marketingPages: MarketingPage[] = [
           variant: "primary",
         },
       },
-      {
-        _type: "categoryShowcase",
-        eyebrow: "",
-        title: "Why organizations choose Auxano Solutions",
-        description: "",
-        videoPublicId: "placeholder",
-        videoUrl: "",
-        items: [
-          {
-            id: "installed-right",
-            label: "Installed Right",
-            title:
-              "Surveyed, installed, commissioned, and handed over properly the first time.",
-            description:
-              "Auxano starts with the real site conditions, plans the installation path, commissions every component properly, and hands the environment over in a state the client can operate with confidence.",
-            bullets: [
-              "Site survey and installation planning happen before equipment is mounted",
-              "Commissioning, testing, and documentation stay inside the delivery scope",
-              "Operators receive a cleaner handover with less ambiguity after go-live",
-            ],
-            ctaLabel: "Explore Infrastructure Services",
-            ctaHref: "/services#infrastructure",
-          },
-          {
-            id: "connected-end-to-end",
-            label: "Connected End-to-End",
-            title:
-              "Cabling, network design, configuration, and documentation built as one connected system.",
-            description:
-              "Physical runs, network logic, live configuration, and final documentation are delivered together so the environment works as one system instead of a string of disconnected vendor handoffs.",
-            bullets: [
-              "Structured cabling and active network setup stay under one operating view",
-              "IP planning, routing, switching, Wi-Fi, and tuning are shaped around the real site",
-              "Diagrams and labelled handover make future troubleshooting faster",
-            ],
-            ctaLabel: "Explore Networking Services",
-            ctaHref: "/services#networking",
-          },
-          {
-            id: "original-equipment",
-            label: "Original Equipment",
-            title:
-              "Genuine hardware supplied, deployed, and ready for day-one use.",
-            description:
-              "Auxano supplies genuine devices and prepares them for the live environment so teams receive hardware that is ready to use and easier to support after deployment.",
-            bullets: [
-              "Authorised supply reduces warranty and authenticity risk",
-              "Endpoints, servers, storage, and peripherals are prepared for day-one operations",
-              "Deployment standards make growth, repair, and replacement more predictable",
-            ],
-            ctaLabel: "Explore Hardware Systems",
-            ctaHref: "/services#hardware-systems",
-          },
-          {
-            id: "licensed-configured",
-            label: "Licensed & Configured",
-            title:
-              "Security tools, operating systems, cloud apps, and business software set up properly for live environments.",
-            description:
-              "Auxano does not stop at procurement. Licensing, activation, security configuration, and business-app setup are completed against the live brief so the software layer is usable after handover.",
-            bullets: [
-              "Firewall, endpoint, OS, cloud, and app setup are completed for the real environment",
-              "Licensing, activation, and compliance records stay clearer from the start",
-              "The software layer is left usable, supportable, and ready for handover",
-            ],
-            ctaLabel: "Explore Software Services",
-            ctaHref: "/services#software-licenses",
-          },
-          {
-            id: "support-that-stays",
-            label: "Support That Stays",
-            title:
-              "Managed support, audits, and project follow-through that continue after installation.",
-            description:
-              "After installation, Auxano can continue with support, audits, advisory work, and structured project follow-through so the environment does not lose discipline once the rollout ends.",
-            bullets: [
-              "After-sales support stays tied to the way the environment was delivered",
-              "Audits and advisory work expose gaps before they grow into bigger operational issues",
-              "Project ownership can continue beyond handover when more phases are needed",
-            ],
-            ctaLabel: "Explore Managed Services",
-            ctaHref: "/services#managed-advisory",
-          },
-        ],
-      },
+      operationalAdvantageSection,
       {
         _type: "interactiveServices",
         eyebrow: "Service Ecosystem",
@@ -1065,24 +978,7 @@ export const marketingPages: MarketingPage[] = [
           },
         ],
       },
-      {
-        _type: "ctaBand",
-        eyebrow: "Consultation",
-        title: "Let’s design the right IT solution for your business.",
-        description:
-          "Partner with Auxano to deploy reliable infrastructure, strengthen security, and create technology systems built for long-term growth.",
-        primaryCta: {
-          label: "Book Consultation",
-          href: "/book-consultation",
-          variant: "primary",
-        },
-        secondaryCta: {
-          label: "Book Consultation",
-          href: "/book-consultation",
-          variant: "secondary",
-        },
-        dark: true,
-      },
+      homeProjectCta,
       {
         _type: "faqBlock",
         eyebrow: "FAQs",

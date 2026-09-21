@@ -1,14 +1,14 @@
 @import "tailwindcss";
 
 :root {
-  --color-background: #f7faff;
-  --color-foreground: #0b1220;
-  --color-ink: #0b1220;
-  --color-electric: #2f6bff;
-  --color-cyan: #19d5ff;
-  --color-cloud: #eef4ff;
-  --color-muted: #66748a;
-  --color-steel: #93a4b8;
+  --color-background: #faf7f0;
+  --color-foreground: #252b33;
+  --color-ink: #252b33;
+  --color-electric: #b87900;
+  --color-cyan: #f2a900;
+  --color-cloud: #f7edd6;
+  --color-muted: #666a6f;
+  --color-steel: #8f9296;
   --color-success: #18b67e;
   --font-display: "Poppins", ui-sans-serif, system-ui, sans-serif;
   --font-sans: "Poppins", ui-sans-serif, system-ui, sans-serif;
@@ -28,10 +28,9 @@ html {
 
 body {
   margin: 0;
+  overflow-x: clip;
   font-family: var(--font-sans);
-  background:
-    radial-gradient(circle at top left, rgba(25, 213, 255, 0.07), transparent 28%),
-    linear-gradient(180deg, #f7faff 0%, #f3f8ff 100%);
+  background: #faf7f0;
 }
 
 h1,
@@ -54,7 +53,242 @@ img {
 }
 
 ::selection {
-  background: rgba(47, 107, 255, 0.18);
+  background: rgba(242, 169, 0, 0.28);
+}
+
+/* Scoped opening styles: existing homepage sections retain their own layouts. */
+.ideal-home-opening {
+  background: #252b33;
+  color: #faf7f0;
+}
+.ideal-video-hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  min-height: 100vh;
+  min-height: 100svh;
+}
+.ideal-video-hero__video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.ideal-video-hero__shade {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(37, 43, 51, 0.12) 35%, #252b33 100%),
+    linear-gradient(90deg, rgba(12, 17, 22, 0.58), rgba(12, 17, 22, 0.12) 80%);
+}
+.ideal-video-hero__container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+  min-height: 100svh;
+  padding-top: 5rem;
+  padding-bottom: 4rem;
+}
+.ideal-video-hero__content {
+  position: relative;
+  width: min(100%, 52rem);
+  margin-left: clamp(1.5rem, 5vw, 5rem);
+}
+.ideal-video-hero__copy {
+  position: relative;
+  padding: 2.5rem 4rem 2.5rem 3.5rem;
+}
+.ideal-video-hero__frame {
+  position: absolute;
+  top: -5%;
+  left: -2%;
+  width: 112%;
+  height: 110%;
+  overflow: visible;
+  pointer-events: none;
+  stroke-width: 14px;
+  stroke-linecap: butt;
+  stroke-linejoin: miter;
+  stroke-miterlimit: 4;
+}
+.ideal-video-hero__copy h1 {
+  position: relative;
+  max-width: 19ch;
+  margin: 0;
+  font-size: clamp(2.25rem, 3.75vw, 3.6rem);
+  font-weight: 400;
+  line-height: 1.16;
+  letter-spacing: -0.025em;
+}
+.ideal-video-hero__cta {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: .2rem;
+  margin-left: 3.0rem;
+  padding: .85rem 1.1rem;
+  background: #f2a900;
+  color: #252b33;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+.ideal-video-hero__cta:hover {
+  background: #ffc23d;
+}
+.ideal-video-hero__cta:focus-visible,
+.ideal-video-hero__playback:focus-visible {
+  outline: 2px solid #faf7f0;
+  outline-offset: 5px;
+}
+.ideal-video-hero__playback {
+  position: absolute;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  display: grid;
+  place-items: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  border: 1px solid rgba(250, 247, 240, 0.35);
+  border-radius: 50%;
+  background: rgba(37, 43, 51, 0.5);
+  color: #faf7f0;
+  cursor: pointer;
+  z-index: 2;
+}
+.ideal-hero-intro {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding: 3rem 0 5rem;
+}
+.ideal-hero-intro__image {
+  position: absolute;
+  z-index: -1;
+  inset: 0 0 0 auto;
+  width: 65%;
+}
+.ideal-hero-intro__image img {
+  object-position: 75% center;
+}
+.ideal-hero-intro__image::after {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  background:
+    linear-gradient(
+      90deg,
+      #252b33 0%,
+      rgba(37, 43, 51, 0.88) 25%,
+      rgba(37, 43, 51, 0.1) 100%
+    ),
+    linear-gradient(
+      180deg,
+      #252b33 0%,
+      transparent 30%,
+      transparent 70%,
+      #252b33 100%
+    );
+}
+.ideal-hero-intro__copy {
+  max-width: 47rem;
+}
+.ideal-hero-intro__eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 0 0 1.1rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.24em;
+}
+.ideal-hero-intro__eyebrow::before {
+  content: "";
+  width: 0.6rem;
+  height: 1.35rem;
+  transform: skew(-24deg);
+  background: linear-gradient(#f2a900, rgba(242, 169, 0, 0.1));
+}
+.ideal-hero-intro__copy h2 {
+  max-width: 24ch;
+  margin: 0;
+  font-size: clamp(1.9rem, 3vw, 2.9rem);
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: -0.025em;
+}
+.ideal-hero-intro__description {
+  max-width: 43rem;
+  margin: 1.1rem 0 0;
+  color: rgba(250, 247, 240, 0.86);
+  font-size: 0.92rem;
+  line-height: 1.8;
+}
+/* Phone and small-tablet hero: unframed copy over full-bleed video.
+   Desktop keeps the existing angled frame and positioning. */
+@media (max-width: 899px) {
+  .ideal-video-hero,
+  .ideal-video-hero__container {
+    min-height: max(30.5rem, calc(100svh - 5rem));
+  }
+  .ideal-video-hero__container {
+    padding: 5.5rem clamp(1.25rem, 7vw, 3rem);
+    justify-content: center;
+  }
+  .ideal-video-hero__content {
+    width: 100%;
+    max-width: 38rem;
+    margin-inline: auto;
+    min-width: 0;
+    text-align: center;
+  }
+  .ideal-video-hero__copy {
+    padding: 0;
+  }
+  .ideal-video-hero__frame {
+    display: none;
+  }
+  .ideal-video-hero__copy h1 {
+    max-width: 100%;
+    font-size: clamp(1.875rem, 8vw, 2.75rem);
+    line-height: 1.16;
+    letter-spacing: -0.03em;
+    text-wrap: balance;
+  }
+  .ideal-video-hero__cta {
+    display: flex;
+    width: fit-content;
+    max-width: 100%;
+    min-height: 3.25rem;
+    margin: 2rem auto 0;
+    padding: .9rem 1rem;
+    gap: .6rem;
+    font-size: clamp(.8125rem, 2.9vw, 1rem);
+    line-height: 1.4;
+    text-align: center;
+    justify-content: center;
+    border-radius: .2rem;
+  }
+  .ideal-video-hero__cta svg {
+    flex-shrink: 0;
+  }
+  .ideal-video-hero__video {
+    object-position: center;
+  }
+  .ideal-video-hero__shade {
+    background:
+      linear-gradient(180deg, rgba(12,17,22,.18) 0%, rgba(12,17,22,.42) 40%, rgba(12,17,22,.42) 72%, #252b33 100%),
+      linear-gradient(90deg, rgba(12,17,22,.25), rgba(12,17,22,.08));
+  }
+}
+
+@media (max-width: 639px) {
+  .ideal-hero-intro { padding: 2.5rem 0 3.5rem; }
+  .ideal-hero-intro__image { width: 100%; opacity: .45; }
+  .ideal-hero-intro__copy { max-width: 100%; }
 }
 
 summary::-webkit-details-marker {

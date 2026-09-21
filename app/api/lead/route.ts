@@ -49,7 +49,7 @@ export async function POST(request: Request) {
   });
 
   if (!hubSpotSuccess) {
-    await sendFallbackEmail("Auxano website lead", [
+    const delivered = await sendFallbackEmail("Ideal Solutions website lead", [
       `Context: ${parsed.data.context}`,
       `Name: ${parsed.data.name}`,
       `Company: ${parsed.data.company}`,
@@ -59,6 +59,9 @@ export async function POST(request: Request) {
       "",
       parsed.data.message,
     ]);
+    if (!delivered) {
+      return NextResponse.json({error:"Your enquiry could not be delivered. Please try again or contact us directly."},{status:503});
+    }
   }
 
   return NextResponse.json({ ok: true });

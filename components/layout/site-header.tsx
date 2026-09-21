@@ -55,21 +55,25 @@ export function SiteHeader({
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-[color:rgba(11,18,32,0.08)] bg-[color:rgba(247,250,255,0.88)] backdrop-blur-xl">
+    <header className="sticky top-0 z-50 border-b border-[#252B33]/10 bg-[color:rgba(250,247,240,0.92)] backdrop-blur-xl">
       <Container className="flex h-20 items-center justify-between gap-4 2xl:gap-6">
         <Link
           href="/"
-          aria-label="Auxano Solutions home"
-          className="flex items-center"
+          aria-label="Ideal Solutions home"
+          className="flex items-center gap-3"
           onClick={() => setOpen(false)}
         >
           <Image
-            src="/image/AUxano.webp"
-            alt="Auxano Solutions"
-            width={100}
-            height={500}
-            className="h-8 w-auto object-contain md:h-12"
+            src="/idealsolutions-logo.svg"
+            alt="Ideal Solutions"
+            width={54}
+            height={52}
+            loading="eager"
+            className="!h-11 !w-auto object-contain"
           />
+          <span className="hidden text-[0.86rem] font-semibold uppercase tracking-[0.16em] text-[#252B33] sm:block">
+            Ideal Solutions
+          </span>
         </Link>
 
         <div className="hidden flex-1 justify-center xl:flex">
@@ -139,9 +143,9 @@ export function SiteHeader({
         <div className="hidden items-center gap-3 text-white xl:flex">
           <ButtonLink
             href="/book-consultation"
-            className="whitespace-nowrap bg-[linear-gradient(135deg,#355C9A_100%,#4E73B8_50%,#6C8FD6_100%)] text-white"
+            className="whitespace-nowrap rounded-none bg-[#F2A900] text-[#252B33] shadow-none hover:bg-[#ffc23d]"
           >
-            Book Consultation
+            Discuss Your Requirements
           </ButtonLink>
         </div>
 

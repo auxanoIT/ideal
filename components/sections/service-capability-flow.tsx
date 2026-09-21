@@ -78,7 +78,7 @@ export function ServiceCapabilityFlow({
 
   return (
     <section className="bg-white">
-      <div className="sticky top-20 z-30 border-y border-white/10 bg-[linear-gradient(135deg,#355C9A_100%,#4E73B8_50%,#6C8FD6_100%)] backdrop-blur">
+      <div className="sticky top-20 z-30 border-y border-[#b69a60]/30 bg-[#102444]">
         <Container className="overflow-x-auto">
           <nav
             aria-label={`${service.title} capability navigation`}
@@ -95,7 +95,7 @@ export function ServiceCapabilityFlow({
                   className={cn(
                     "border-b-2 pb-3 transition",
                     isActive
-                      ? "border-white text-white"
+                      ? "border-[#f2a900] text-[#f4ca77]"
                       : "border-transparent text-white/78 hover:border-white/40 hover:text-white",
                   )}
                 >
@@ -139,9 +139,9 @@ export function ServiceCapabilityFlow({
                 </div>
 
                 <div className={cn(reverse && "lg:order-1")}>
-                  <h3 className="text-balance text-3xl font-semibold tracking-[-0.045em] text-[var(--color-ink)] sm:text-4xl">
+                  <h2 className="text-balance text-3xl font-semibold tracking-[-0.045em] text-[var(--color-ink)] sm:text-4xl">
                     {section.title}
-                  </h3>
+                  </h2>
                   <p className="mt-4 text-base font-semibold leading-8 text-[var(--color-ink)]">
                     {section.lead}
                   </p>
@@ -150,7 +150,7 @@ export function ServiceCapabilityFlow({
                       <p key={paragraph}>{paragraph}</p>
                     ))}
                   </div>
-                  <ButtonLink href="/book-consultation" className="mt-7">
+                  <ButtonLink href="/contact" className="mt-7 min-h-11 bg-[#f2a900] bg-none text-[#102444] shadow-none hover:bg-[#ffd06b]">
                     Make an enquiry
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </ButtonLink>

@@ -61,146 +61,155 @@ function buildService(seed: ServiceSeed): Service {
 
 export const solutionCategories: SolutionCategory[] = [
   {
-    id: "infrastructure",
-    label: "Infrastructure",
-    formalTitle: "IT Infrastructure Services",
+    id: "data-centre-deployment",
+    label: "Data Centre Deployment",
+    formalTitle: "Data Centre Deployment & Infrastructure Services",
     description:
-      "Physical security, cabling, data centre readiness, site automation, and core deployment services built to standard.",
-    anchorId: "infrastructure",
-    href: "/services#infrastructure",
-    featuredTitle:
-      "Infrastructure that is designed, installed, and handed over correctly.",
-    featuredDescription:
-      "From access control and CCTV through structured cabling and data-centre readiness, this category covers the physical and operational backbone of critical environments.",
+      "New deployments, expansions and equipment refreshes from rack to operational readiness.",
+    anchorId: "data-centre-deployment",
+    href: "/services/data-centre-deployment",
+    featuredTitle: "Deploy mission-critical equipment correctly from day one.",
+    featuredDescription: "Rack-and-stack, equipment installation, server deployment and verification delivered around your operating requirements.",
     featuredImage: {
       src: "/placeholders/infrastructure-large.svg",
-      alt: "Integrated infrastructure systems for secure business facilities",
+      alt: "Data centre deployment and rack installation services",
     },
     serviceSlugs: [
-      "door-access-control",
-      "surveillance-system-cctv",
-      "structured-lan-cabling",
       "data-centre-services",
-      "automated-gates-sliding-doors",
-      "sales-of-it-hardware",
-      "repair-of-it-hardware",
-      "sales-of-data-centre-consumables",
-      "audio-visual-services-livestreaming",
-    ],
-  },
-  {
-    id: "networking",
-    label: "Networking",
-    formalTitle: "Networking Services",
-    description:
-      "Design, architecture, cabling, configuration, equipment supply, and IP telephony for environments that need speed and structure.",
-    anchorId: "networking",
-    href: "/services#networking",
-    featuredTitle: "Networks planned and configured with long-term clarity.",
-    featuredDescription:
-      "This category covers network strategy, documentation, installation, performance, and business communications so the environment scales cleanly.",
-    featuredImage: {
-      src: "/placeholders/networking-large.svg",
-      alt: "Structured business network connecting users devices and applications",
-    },
-    serviceSlugs: [
-      "network-design-with-diagram",
-      "network-architecture-planning",
-      "network-cabling",
-      "network-configurations",
-      "sales-of-network-equipment",
-      "office-telephone-system-ip-pbx",
-    ],
-  },
-  {
-    id: "hardware-systems",
-    label: "Hardware Systems",
-    formalTitle: "Computers, Servers & Printers",
-    description:
-      "Original hardware, professional setup, storage, printers, and repair support for user and server environments.",
-    anchorId: "hardware-systems",
-    href: "/services#hardware-systems",
-    featuredTitle:
-      "Hardware supply and setup that stays supportable after day one.",
-    featuredDescription:
-      "This category covers end-user devices, server systems, storage, print infrastructure, and the professional setup needed to make them reliable.",
-    featuredImage: {
-      src: "/placeholders/hardware-systems-large.svg",
-      alt: "Business computers servers storage and printer systems",
-    },
-    serviceSlugs: [
-      "desktop-laptop-sales",
-      "computer-installation-setup",
-      "server-sales-repair",
       "server-storage-provisioning-deployment",
-      "printer-sales-installation",
+      "structured-lan-cabling",
+      "sales-of-it-hardware",
+      "sales-of-data-centre-consumables",
     ],
   },
   {
-    id: "software-licenses",
-    label: "Software & Licenses",
-    formalTitle: "Software & Licenses",
+    id: "smart-hands",
+    label: "Smart Hands & Support",
+    formalTitle: "Smart Hands & Technical Support",
     description:
-      "Genuine licenses, compliant deployment, and secure configuration across firewall, antivirus, operating systems, databases, cloud, and business apps.",
-    anchorId: "software-licenses",
-    href: "/services#software-licenses",
-    featuredTitle: "Licensed, compliant, and configured for real environments.",
-    featuredDescription:
-      "This category covers the software layer of the environment, from security and operating systems to cloud subscriptions and application licensing.",
-    featuredImage: {
-      src: "/placeholders/software-licenses-large.svg",
-      alt: "Licensed business software security and cloud applications",
-    },
-    serviceSlugs: [
-      "firewall-sales-licenses",
-      "antivirus-licenses",
-      "windows-operating-system-licenses",
-      "server-operating-system-licenses",
-      "database-software-licenses",
-      "cloud-services-licenses",
-      "applications-licenses",
-    ],
-  },
-  {
-    id: "managed-advisory",
-    label: "Managed & Advisory",
-    formalTitle: "Other IT Services",
-    description:
-      "Technical support, managed services, audit-led advice, staffing support, and project leadership for organizations that need more than procurement.",
-    anchorId: "managed-advisory",
-    href: "/services#managed-advisory",
-    featuredTitle:
-      "Operational support and advisory that hold the environment together.",
-    featuredDescription:
-      "This category covers ongoing technical support, managed operations, consultancy, audits, staffing support, and structured project delivery.",
+      "Skilled onsite execution for data centre operators and remote infrastructure teams.",
+    anchorId: "smart-hands",
+    href: "/services/smart-hands-technical-support",
+    featuredTitle: "Your technical hands on the ground in Nigeria.",
+    featuredDescription: "Trusted local technicians who install, inspect, troubleshoot and support infrastructure on your behalf.",
     featuredImage: {
       src: "/placeholders/managed-advisory-large.svg",
-      alt: "Managed IT support and advisory operations environment",
+      alt: "Smart Hands data centre technical support in Nigeria",
     },
     serviceSlugs: [
       "it-technical-services",
       "it-managed-services-staff-outsourcing",
-      "it-consultancy-audit-services",
+      "repair-of-it-hardware",
       "it-project-management",
     ],
   },
   {
-    id: "fire-alarm-safety",
-    label: "Fire Alarm & Safety",
-    formalTitle: "Fire Alarm & Safety Systems",
+    id: "server-storage-hardware",
+    label: "Server, Storage & Hardware",
+    formalTitle: "Server, Storage & Hardware Lifecycle Services",
     description:
-      "Fire alarm design, supply, installation, testing, maintenance, integration, and compliance support for safer facilities.",
-    anchorId: "fire-alarm-safety",
-    href: "/services#fire-alarm-safety",
-    featuredTitle:
-      "Reliable fire alarm systems for life safety and property protection.",
-    featuredDescription:
-      "This category covers fire alarm system design, installation, inspection, maintenance, integration, NFPA 72 and BS 5839 alignment, and Nigeria, North Africa and East Africa regulatory compliance support.",
+      "Equipment, deployment expertise and lifecycle support for compute infrastructure.",
+    anchorId: "server-storage-hardware",
+    href: "/services/server-storage-hardware",
+    featuredTitle: "Infrastructure supplied and supported beyond day one.",
+    featuredDescription: "Enterprise servers, storage and compatible data centre hardware backed by technical deployment support.",
+    featuredImage: {
+      src: "/placeholders/hardware-systems-large.svg",
+      alt: "Enterprise server storage and data centre hardware",
+    },
+    serviceSlugs: [
+      "server-sales-repair",
+      "server-storage-provisioning-deployment",
+      "sales-of-data-centre-consumables",
+      "sales-of-it-hardware",
+      "repair-of-it-hardware",
+    ],
+  },
+  {
+    id: "network-infrastructure",
+    label: "Network & Connectivity",
+    formalTitle: "Network Infrastructure & Connectivity",
+    description:
+      "Physical and logical connectivity built for reliability, visibility and growth.",
+    anchorId: "network-infrastructure",
+    href: "/services/network-infrastructure-connectivity",
+    featuredTitle: "Build connectivity on a better foundation.",
+    featuredDescription: "Network architecture, configuration, copper and fibre cabling, routing, labelling and documentation.",
+    featuredImage: {
+      src: "/placeholders/networking-large.svg",
+      alt: "Structured fibre and copper data centre network infrastructure",
+    },
+    serviceSlugs: [
+      "network-architecture-planning",
+      "network-design-with-diagram",
+      "network-configurations",
+      "structured-lan-cabling",
+      "network-cabling",
+      "sales-of-network-equipment",
+    ],
+  },
+  {
+    id: "security-access",
+    label: "Security & Safety",
+    formalTitle: "Data Centre Security & Safety Systems",
+    description:
+      "Physical security, controlled access, network boundaries and life-safety infrastructure.",
+    anchorId: "security-access",
+    href: "/services/data-centre-security-safety",
+    featuredTitle: "Protect critical systems beyond the network perimeter.",
+    featuredDescription: "Firewall, access control, CCTV, automated entry and fire-safety systems for sensitive facilities.",
     featuredImage: {
       src: "/image/service-details/fire-alarm-hero-call-point.webp",
-      alt: "Red manual fire alarm call point mounted on a clean commercial wall",
+      alt: "Data centre physical security access control and safety systems",
     },
-    serviceSlugs: ["fire-alarm-safety-systems"],
+    serviceSlugs: [
+      "firewall-sales-licenses",
+      "door-access-control",
+      "surveillance-system-cctv",
+      "automated-gates-sliding-doors",
+      "fire-alarm-safety-systems",
+    ],
+  },
+  {
+    id: "assessment-optimisation",
+    label: "Assessment & Optimisation",
+    formalTitle: "Infrastructure Assessment & Optimisation",
+    description:
+      "Visibility into risks, inefficiencies and the work needed to improve existing infrastructure.",
+    anchorId: "assessment-optimisation",
+    href: "/services/infrastructure-audit-optimisation",
+    featuredTitle: "See the risks your infrastructure is hiding.",
+    featuredDescription: "Audit racks, cabling, equipment and documentation, then turn findings into visible action.",
+    featuredImage: {
+      src: "/placeholders/managed-advisory-large.svg",
+      alt: "Data centre infrastructure audit and optimisation assessment",
+    },
+    serviceSlugs: [
+      "it-consultancy-audit-services",
+      "data-centre-services",
+      "network-design-with-diagram",
+      "it-technical-services",
+    ],
+  },
+  {
+    id: "projects-lifecycle",
+    label: "Projects & Lifecycle",
+    formalTitle: "Data Centre Projects & Lifecycle Management",
+    description: "Structured delivery from planning through execution, documentation, handover and ongoing support.",
+    anchorId: "projects-lifecycle",
+    href: "/services/data-centre-project-lifecycle-management",
+    featuredTitle: "One point of accountability from plan to handover.",
+    featuredDescription: "Project management, technical execution, documentation and planned support through one accountable partner.",
+    featuredImage: {
+      src: "/placeholders/infrastructure-large.svg",
+      alt: "Data centre project and infrastructure lifecycle management",
+    },
+    serviceSlugs: [
+      "it-project-management",
+      "data-centre-services",
+      "it-managed-services-staff-outsourcing",
+      "it-technical-services",
+    ],
   },
 ];
 

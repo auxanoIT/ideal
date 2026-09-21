@@ -7,12 +7,14 @@ import { JsonLd } from "@/components/ui/json-ld";
 import { getServices, getSolutionCategories } from "@/lib/content";
 import { buildMetadata } from "@/lib/seo";
 import { absoluteUrl } from "@/lib/utils";
-import type { Service, ServiceCategory, SolutionCategory } from "@/lib/types";
+import { getSolutionMenuServices } from "@/data/solution-menu";
+import { pillarForCategory, servicePillars } from "@/data/service-pillars";
+import type { ServiceCategory, SolutionCategory } from "@/lib/types";
 
 export const metadata = buildMetadata({
-  title: "IT, ELV, CCTV, Fire Alarm, and Network Services in Nigeria",
+  title: "Data Centre Infrastructure Services in Nigeria",
   description:
-    "Explore Auxano IT, ELV, CCTV, fire alarm, access control, network cabling, hardware, software licensing, and managed support services in Nigeria.",
+    "Explore Ideal Solutions deployment, Smart Hands, hardware, connectivity, security, infrastructure assessment and project lifecycle services in Nigeria.",
   path: "/services",
   keywords: [
     "IT services Nigeria",
@@ -103,12 +105,6 @@ function orderCategoriesByNarrative(categories: SolutionCategory[]) {
   );
 }
 
-function getCategoryServices(services: Service[], slugs: string[]) {
-  return slugs
-    .map((slug) => services.find((service) => service.slug === slug))
-    .filter((service): service is Service => Boolean(service));
-}
-
 export default async function ServicesPage() {
   const [services, categories] = await Promise.all([
     getServices(),
@@ -124,48 +120,46 @@ export default async function ServicesPage() {
           {
             "@context": "https://schema.org",
             "@type": "CollectionPage",
-            name: "Auxano IT, ELV, CCTV, Fire Alarm, and Network Services",
+            name: "Ideal Solutions Data Centre Infrastructure Services",
             description:
-              "Auxano Solutions service catalog for IT infrastructure, physical security, fire safety, networking, hardware, software licensing, and managed IT support in Nigeria.",
+              "Ideal Solutions service pillars for data centre deployment, technical support, hardware, connectivity, security, assessment and lifecycle management in Nigeria.",
             url: absoluteUrl("/services"),
             inLanguage: "en-NG",
             provider: {
               "@type": "Organization",
               "@id": `${absoluteUrl("/")}#organization`,
-              name: "Auxano Solutions Technology Limited",
+              name: "Ideal Solutions",
             },
           },
           {
             "@context": "https://schema.org",
             "@type": "ItemList",
-            name: "Auxano service catalog",
-            itemListElement: services.map((service, index) => ({
+            name: "Ideal Solutions service pillars",
+            itemListElement: servicePillars.map((service, index) => ({
               "@type": "ListItem",
               position: index + 1,
               name: service.title,
               url: absoluteUrl(`/services/${service.slug}`),
-              description: service.summary,
+              description: service.description,
             })),
           },
         ]}
       />
-      <section className="overflow-hidden bg-[linear-gradient(135deg,#355C9A_100%,#4E73B8_50%,#6C8FD6_100%)] text-white">
+      <section className="overflow-hidden bg-[linear-gradient(125deg,#102444,#203b59_70%,#53482e)] text-white">
         <Container className="grid min-h-[calc(100vh-5rem)] gap-10 py-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-center lg:py-16">
           <div className="max-w-3xl">
             <h1 className="text-balance text-3xl font-semibold tracking-[-0.06em] sm:text-4xl lg:text-5xl">
-              IT, ELV, CCTV, fire alarm, and network services for Nigeria.
+              Data Centre Infrastructure Services Built for Uptime.
             </h1>
             <p className="mt-6 max-w-2xl text-base leading-8 text-slate-300 sm:text-lg">
-              Auxano delivers IT infrastructure, physical security, fire safety,
-              networking, hardware, software licensing, and managed support for
-              organizations in Lagos and across Nigeria.
+              From deployment and Smart Hands to network infrastructure, security, audits and lifecycle support, Ideal Solutions provides the technical expertise needed to deploy, maintain and improve mission-critical data centre infrastructure across Nigeria.
             </p>
           </div>
 
           <div className="relative min-h-[420px] overflow-hidden rounded-[1.5rem] border border-white/10 bg-white/5 shadow-[0_30px_90px_rgba(0,0,0,0.35)]">
             <Image
-              src="/image/servces.png"
-              alt="Auxano services platform visual"
+              src="/image/ideal-standard/ideal-solutions-isometric-data-centre-execution-method.webp"
+              alt="Isometric data centre illustration showing coordinated Ideal Solutions infrastructure execution"
               fill
               priority
               className="object-contain lg:object-cover"
@@ -189,11 +183,14 @@ export default async function ServicesPage() {
         <Container className="space-y-2">
           {orderedCategories.map((category, index) => {
             const narrative =
-              categoryNarratives[category.label as ServiceCategory];
-            const categoryServices = getCategoryServices(
-              services,
-              category.serviceSlugs,
-            );
+              categoryNarratives[category.label as ServiceCategory] ?? {
+                title: category.featuredTitle,
+                paragraphs: [category.featuredDescription],
+                imageSrc: category.featuredImage.src,
+                imageAlt: category.featuredImage.alt,
+              };
+            const categoryServices = getSolutionMenuServices(category, services);
+            const pillar = pillarForCategory(category.id);
 
             return (
               <ServiceCategoryCarousel
@@ -201,14 +198,14 @@ export default async function ServicesPage() {
                 id={category.anchorId}
                 title={narrative.title}
                 paragraphs={narrative.paragraphs}
-                imageSrc={narrative.imageSrc}
-                imageAlt={narrative.imageAlt}
+                imageSrc={pillar?.hero.src ?? narrative.imageSrc}
+                imageAlt={pillar?.hero.alt ?? narrative.imageAlt}
                 reverse={index % 2 === 1}
-                cards={categoryServices.map((service) => ({
+                cards={[{slug:category.id,title:`${category.label} — Overview`,href:category.href}, ...categoryServices.map((service) => ({
                   slug: service.slug,
                   title: service.title,
-                  href: `/services/${service.slug}`,
-                }))}
+                  href: service.menuHref,
+                }))]}
               />
             );
           })}

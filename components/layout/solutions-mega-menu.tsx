@@ -14,6 +14,7 @@ import {
 import { Container } from "@/components/ui/container";
 import type { Service, SolutionCategory } from "@/lib/types";
 import { cn } from "@/lib/utils";
+import { getSolutionMenuServices } from "@/data/solution-menu";
 
 type SolutionsMegaMenuProps = {
   categories: SolutionCategory[];
@@ -22,9 +23,7 @@ type SolutionsMegaMenuProps = {
 };
 
 function orderedServices(activeCategory: SolutionCategory, services: Service[]) {
-  return activeCategory.serviceSlugs
-    .map((slug) => services.find((service) => service.slug === slug))
-    .filter((service): service is Service => Boolean(service));
+  return getSolutionMenuServices(activeCategory, services);
 }
 
 function getServiceMenuImage(service: Service) {
@@ -73,7 +72,7 @@ export function SolutionsMegaMenu({
           initial={{ opacity: 0, y: -8 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.22, ease: [0.16, 1, 0.3, 1] }}
-          className="border-t border-b border-[color:rgba(11,18,32,0.08)] bg-white"
+          className="max-h-[calc(100dvh-5rem)] overflow-y-auto border-t border-b border-[#e6dfd1] bg-[#fffdf9]"
         >
           <Container className="grid min-h-[23.75rem] gap-8 py-10 lg:grid-cols-[185px_minmax(0,1fr)]">
             <div className="border-r border-[color:rgba(11,18,32,0.12)] pr-7">
@@ -112,17 +111,17 @@ export function SolutionsMegaMenu({
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -4 }}
                 transition={{ duration: 0.18, ease: [0.16, 1, 0.3, 1] }}
-                className="grid auto-rows-[4rem] grid-cols-4 gap-3"
+                className="grid auto-rows-[minmax(6.5rem,auto)] grid-cols-4 gap-3"
               >
                 <NavigationMenuLink
                   asChild
-                  className="group row-span-3 flex flex-col overflow-hidden rounded-md bg-[color:rgba(238,244,255,0.74)] transition-colors hover:bg-[color:rgba(238,244,255,0.96)]"
+                  className="group row-span-3 flex flex-col self-start overflow-hidden rounded-md border border-[#e6dfd1] bg-[#faf0da] transition-colors hover:bg-[#f3dfb0]"
                 >
                   <Link href={activeCategory.href}>
                     <span className="px-4 pt-4 text-[0.95rem] font-medium text-[var(--color-ink)]">
                       Overview
                     </span>
-                    <span className="relative mt-auto block h-[9.5rem] w-full overflow-hidden">
+                    <span className="relative mt-4 block h-[9.5rem] w-full overflow-hidden">
                       <Image
                         src={activeCategoryImage.src}
                         alt={activeCategoryImage.alt}
@@ -139,15 +138,15 @@ export function SolutionsMegaMenu({
 
                   return (
                     <NavigationMenuLink
-                      key={service.slug}
+                      key={service.title}
                       asChild
-                      className="group rounded-md bg-[color:rgba(247,249,252,0.92)] transition-colors hover:bg-[var(--color-cloud)]"
+                      className="group rounded-md border border-[#eee8dc] bg-[#faf7f0] transition-colors hover:border-[#d5b773] hover:bg-[#f4e8cb]"
                     >
                       <Link
-                        href={`/services/${service.slug}`}
-                        className="flex min-w-0 items-center justify-between gap-4 px-4 py-3"
+                        href={service.menuHref}
+                        className="flex min-w-0 items-center justify-between gap-3 px-4 py-3"
                       >
-                        <span className="min-w-0 text-[0.95rem] font-medium leading-snug text-[var(--color-ink)] transition-colors group-hover:text-[var(--color-electric)]">
+                        <span className="min-w-0 text-[0.85rem] font-medium leading-snug text-[#252b33] transition-colors group-hover:text-[#806019]">
                           {service.title}
                         </span>
                         <span className="relative h-10 w-14 shrink-0 overflow-hidden rounded-md bg-white/80">

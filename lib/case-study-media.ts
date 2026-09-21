@@ -64,6 +64,13 @@ const caseStudyMediaByIndustry: Record<string, ServiceNavMedia> = {
 };
 
 export function getCaseStudyMedia(caseStudy: CaseStudy): ServiceNavMedia {
+  if (caseStudy.cardImage?.src) {
+    return {
+      src: caseStudy.cardImage.src,
+      alt: caseStudy.cardImage.alt || `${caseStudy.title} case study image`,
+    };
+  }
+
   if (caseStudy.image?.src) {
     return {
       src: caseStudy.image.src,

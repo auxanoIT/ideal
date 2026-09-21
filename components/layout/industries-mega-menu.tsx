@@ -1,18 +1,29 @@
 "use client";
 
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { useState } from "react";
 
 import { IndustryIcon } from "@/components/ui/industry-icon";
+import { Container } from "@/components/ui/container";
 import {
   NavigationMenuContent,
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
-import { Container } from "@/components/ui/container";
-import type { IndustryProfile } from "@/lib/types";
+import type { IndustryGroup, IndustryProfile } from "@/lib/types";
 import { cn } from "@/lib/utils";
+
+const groupOrder: IndustryGroup[] = [
+  "critical-infrastructure-technology",
+  "enterprise-public-sector",
+  "commercial-operational",
+];
+const groupLabels: Record<IndustryGroup, string> = {
+  "critical-infrastructure-technology": "Critical Infrastructure & Technology",
+  "enterprise-public-sector": "Enterprise & Public Sector",
+  "commercial-operational": "Commercial & Operational",
+};
 
 type IndustriesMegaMenuProps = {
   industries: IndustryProfile[];
@@ -23,52 +34,74 @@ export function IndustriesMegaMenu({
   industries,
   active = false,
 }: IndustriesMegaMenuProps) {
+  const [activeGroup, setActiveGroup] = useState<IndustryGroup>(groupOrder[0]);
+  const groupIndustries = industries.filter(
+    (industry) => industry.group === activeGroup,
+  );
+
   return (
     <NavigationMenuItem>
       <NavigationMenuTrigger
         className={cn(
           "text-[var(--color-muted)]",
-          active && "bg-white text-[var(--color-ink)] shadow-[0_12px_30px_rgba(11,18,32,0.08)]",
+          active &&
+            "bg-white text-[var(--color-ink)] shadow-[0_12px_30px_rgba(11,18,32,0.08)]",
         )}
       >
         Industries
       </NavigationMenuTrigger>
       <NavigationMenuContent className="fixed inset-x-0 top-20 mt-0 w-full">
-        <motion.div
-          initial={{ opacity: 0, y: -8 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.22, ease: [0.16, 1, 0.3, 1] }}
-          className="border-t border-b border-[color:rgba(11,18,32,0.08)] bg-white"
-        >
-          <Container className="grid min-h-[23.75rem] items-start gap-8 py-10 lg:grid-cols-[130px_minmax(0,1fr)]">
-            <div className="min-h-[18.25rem] border-r border-[color:rgba(11,18,32,0.12)] pr-7">
-              <p className="text-[0.95rem] font-semibold leading-tight text-[var(--color-electric)]">
+        <div className="border-t border-b border-[color:rgba(11,18,32,0.08)] bg-white">
+          <Container className="grid min-h-[23.75rem] items-start gap-8 py-10 lg:grid-cols-[230px_minmax(0,1fr)]">
+            <div className="border-r border-[color:rgba(11,18,32,0.12)] pr-7">
+              <p className="mb-4 text-[0.68rem] font-semibold uppercase tracking-[0.14em] text-[var(--color-muted)]">
                 Industries
               </p>
+              <div className="grid gap-1">
+                {groupOrder.map((group) => (
+                  <button
+                    key={group}
+                    type="button"
+                    onMouseEnter={() => setActiveGroup(group)}
+                    onFocus={() => setActiveGroup(group)}
+                    onClick={() => setActiveGroup(group)}
+                    className={cn(
+                      "rounded-md px-3 py-3 text-left text-sm font-semibold leading-snug transition-colors",
+                      activeGroup === group
+                        ? "bg-[var(--color-cloud)] text-[var(--color-electric)]"
+                        : "text-[var(--color-ink)] hover:bg-[color:rgba(247,249,252,0.92)]",
+                    )}
+                  >
+                    {groupLabels[group]}
+                  </button>
+                ))}
+              </div>
             </div>
-
-            <div className="grid auto-rows-[4rem] grid-cols-4 gap-3">
-              {industries.map((industry) => (
+            <div className="grid grid-cols-3 gap-3">
+              {groupIndustries.map((industry) => (
                 <NavigationMenuLink
                   key={industry.slug}
                   asChild
-                  className="group rounded-md bg-[color:rgba(247,249,252,0.92)] transition-colors duration-100 hover:bg-[color:rgba(234,240,246,0.98)]"
+                  className="group rounded-md bg-[color:rgba(247,249,252,0.92)] transition-colors hover:bg-[color:rgba(234,240,246,0.98)]"
                 >
-                  <Link href={industry.href} className="flex h-full min-w-0 items-center gap-4 px-5">
+                  <Link
+                    href={industry.href}
+                    className="flex min-h-[6.5rem] min-w-0 flex-col justify-between gap-3 px-4 py-4"
+                  >
                     <IndustryIcon
                       name={industry.icon}
-                      className="h-8 w-8 shrink-0 text-[var(--color-ink)]"
+                      className="h-7 w-7 text-[var(--color-ink)]"
                       strokeWidth={1.45}
                     />
-                    <span className="min-w-0 text-[0.95rem] font-medium leading-snug text-[var(--color-ink)] transition-colors group-hover:text-[var(--color-electric)]">
-                      {industry.title}
+                    <span className="min-w-0 text-[0.9rem] font-medium leading-snug text-[var(--color-ink)] transition-colors group-hover:text-[var(--color-electric)]">
+                      {industry.navLabel}
                     </span>
                   </Link>
                 </NavigationMenuLink>
               ))}
             </div>
           </Container>
-        </motion.div>
+        </div>
       </NavigationMenuContent>
     </NavigationMenuItem>
   );

@@ -38,6 +38,7 @@ import {
   blogPostQuery,
   blogPostSlugsQuery,
   blogPostsQuery,
+  caseStudiesQuery,
   caseStudyQuery,
   careerOpeningsQuery,
   estimatorConfigQuery,
@@ -82,11 +83,16 @@ export async function getNavigation(): Promise<NavItem[]> {
 
   return navigation.map((fallbackItem) => {
     const matchedItem = content.find(
-      (item) => item.href === fallbackItem.href || item.label === fallbackItem.label,
+      (item) =>
+        item.href === fallbackItem.href || item.label === fallbackItem.label,
     );
 
     return matchedItem
-      ? { ...fallbackItem, ...matchedItem, kind: matchedItem.kind ?? fallbackItem.kind }
+      ? {
+          ...fallbackItem,
+          ...matchedItem,
+          kind: matchedItem.kind ?? fallbackItem.kind,
+        }
       : fallbackItem;
   });
 }
@@ -99,7 +105,9 @@ export async function getIndustries(): Promise<IndustryProfile[]> {
   return industryProfiles;
 }
 
-export async function getIndustryBySlug(slug: string): Promise<IndustryProfile | null> {
+export async function getIndustryBySlug(
+  slug: string,
+): Promise<IndustryProfile | null> {
   return industryProfiles.find((industry) => industry.slug === slug) ?? null;
 }
 
@@ -129,7 +137,9 @@ export async function getFooterColumns(): Promise<FooterColumn[]> {
   }
 
   return footerColumns.map((fallbackColumn) => {
-    const contentColumn = content.find((column) => column.title === fallbackColumn.title);
+    const contentColumn = content.find(
+      (column) => column.title === fallbackColumn.title,
+    );
 
     if (!contentColumn) {
       return fallbackColumn;
@@ -139,7 +149,8 @@ export async function getFooterColumns(): Promise<FooterColumn[]> {
 
     for (const fallbackLink of fallbackColumn.links) {
       const hasLink = links.some(
-        (link) => link.href === fallbackLink.href || link.label === fallbackLink.label,
+        (link) =>
+          link.href === fallbackLink.href || link.label === fallbackLink.label,
       );
 
       if (!hasLink) {
@@ -153,14 +164,17 @@ export async function getFooterColumns(): Promise<FooterColumn[]> {
       links: links.filter((link) =>
         fallbackColumn.links.some(
           (fallbackLink) =>
-            fallbackLink.href === link.href || fallbackLink.label === link.label,
+            fallbackLink.href === link.href ||
+            fallbackLink.label === link.label,
         ),
       ),
     };
   });
 }
 
-export async function getMarketingPage(slug: string): Promise<MarketingPage | null> {
+export async function getMarketingPage(
+  slug: string,
+): Promise<MarketingPage | null> {
   const content = await sanityFetch<MarketingPage>({
     query: marketingPageQuery,
     params: { slug },
@@ -168,7 +182,8 @@ export async function getMarketingPage(slug: string): Promise<MarketingPage | nu
     tags: ["pages"],
   });
 
-  const page = content ?? marketingPages.find((item) => item.slug === slug) ?? null;
+  const page =
+    content ?? marketingPages.find((item) => item.slug === slug) ?? null;
 
   return page ? applyHomeCloudinaryMedia(page) : null;
 }
@@ -195,13 +210,16 @@ export async function getServices(): Promise<Service[]> {
   }
 
   return services.map((fallbackService) => {
-    const matchedService = content.find((service) => service.slug === fallbackService.slug);
+    const matchedService = content.find(
+      (service) => service.slug === fallbackService.slug,
+    );
 
     return matchedService
       ? {
           ...fallbackService,
           ...matchedService,
-          navDescription: matchedService.navDescription ?? fallbackService.navDescription,
+          navDescription:
+            matchedService.navDescription ?? fallbackService.navDescription,
           navImage: matchedService.navImage ?? fallbackService.navImage,
         }
       : fallbackService;
@@ -254,15 +272,25 @@ export async function getServiceBySlug(slug: string): Promise<Service | null> {
 }
 
 export async function getCaseStudies(): Promise<CaseStudy[]> {
-  return caseStudies;
+  const content = await sanityFetch<CaseStudy[]>({
+    query: caseStudiesQuery,
+    preview: await isPreviewEnabled(),
+    tags: ["caseStudies"],
+  });
+
+  return (content ?? caseStudies).filter((item) => item.published === true);
 }
 
 export async function getCaseStudySlugs(): Promise<string[]> {
-  return caseStudies.map((item) => item.slug);
+  return (await getCaseStudies()).map((item) => item.slug);
 }
 
-export async function getCaseStudyBySlug(slug: string): Promise<CaseStudy | null> {
-  const fallbackCaseStudy = caseStudies.find((item) => item.slug === slug);
+export async function getCaseStudyBySlug(
+  slug: string,
+): Promise<CaseStudy | null> {
+  const fallbackCaseStudy = caseStudies.find(
+    (item) => item.slug === slug && item.published === true,
+  );
 
   if (fallbackCaseStudy) {
     return fallbackCaseStudy;
@@ -275,7 +303,7 @@ export async function getCaseStudyBySlug(slug: string): Promise<CaseStudy | null
     tags: ["caseStudies"],
   });
 
-  return content ?? null;
+  return content?.published === true ? content : null;
 }
 
 export async function getBlogPosts(): Promise<BlogPost[]> {
@@ -301,7 +329,9 @@ export async function getBlogPostSlugs(): Promise<string[]> {
   return content;
 }
 
-export async function getBlogPostBySlug(slug: string): Promise<BlogPost | null> {
+export async function getBlogPostBySlug(
+  slug: string,
+): Promise<BlogPost | null> {
   const content = await sanityFetch<BlogPost>({
     query: blogPostQuery,
     params: { slug },

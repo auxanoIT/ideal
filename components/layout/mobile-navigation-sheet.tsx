@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { ChevronLeft, ChevronRight, X } from "lucide-react";
+import { ChevronDown, ChevronLeft, ChevronRight, X } from "lucide-react";
 import {
   useState,
   type Dispatch,
@@ -19,6 +19,7 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import type {
+  IndustryGroup,
   IndustryProfile,
   NavItem,
   ResourceGroup,
@@ -26,7 +27,7 @@ import type {
   SolutionCategory,
 } from "@/lib/types";
 import { cn } from "@/lib/utils";
-
+import { getSolutionMenuServices } from "@/data/solution-menu";
 type MobileNavigationSheetProps = {
   open: boolean;
   setOpen: Dispatch<SetStateAction<boolean>>;
@@ -40,10 +41,17 @@ type MobileNavigationSheetProps = {
 
 type MobileView = "root" | "solutions" | "industries" | "resources";
 
+const industryGroups: Array<{ id: IndustryGroup; label: string }> = [
+  {
+    id: "critical-infrastructure-technology",
+    label: "Critical Infrastructure & Technology",
+  },
+  { id: "enterprise-public-sector", label: "Enterprise & Public Sector" },
+  { id: "commercial-operational", label: "Commercial & Operational" },
+];
+
 function getCategoryServices(category: SolutionCategory, services: Service[]) {
-  return category.serviceSlugs
-    .map((slug) => services.find((service) => service.slug === slug))
-    .filter((service): service is Service => Boolean(service));
+  return getSolutionMenuServices(category, services);
 }
 
 function getServiceMenuImage(service: Service) {
@@ -54,16 +62,13 @@ function getCategoryMenuImage(
   activeServices: Service[],
   activeCategory: SolutionCategory,
 ) {
-  return activeServices[0]?.capabilitySections?.[0]?.image ?? activeCategory.featuredImage;
+  return (
+    activeServices[0]?.capabilitySections?.[0]?.image ??
+    activeCategory.featuredImage
+  );
 }
 
-function PanelHeader({
-  title,
-  onBack,
-}: {
-  title: string;
-  onBack: () => void;
-}) {
+function PanelHeader({ title, onBack }: { title: string; onBack: () => void }) {
   return (
     <div className="grid grid-cols-[40px_1fr_40px] items-center border-b border-[color:rgba(11,18,32,0.08)] px-4 pb-4 pt-5">
       <button
@@ -105,9 +110,13 @@ export function MobileNavigationSheet({
   const [view, setView] = useState<MobileView>("root");
   const [activeCategoryId, setActiveCategoryId] =
     useState<string>(defaultCategoryId);
-  const [activeResourceGroupId, setActiveResourceGroupId] =
-    useState<string>(defaultResourceGroupId);
+  const [activeResourceGroupId, setActiveResourceGroupId] = useState<string>(
+    defaultResourceGroupId,
+  );
 
+  const [openIndustryGroup, setOpenIndustryGroup] = useState<IndustryGroup>(
+    industryGroups[0].id,
+  );
   const activeCategory =
     categories.find((category) => category.id === activeCategoryId) ??
     categories[0];
@@ -174,11 +183,12 @@ export function MobileNavigationSheet({
               <div className="flex items-center justify-between px-5 pb-4 pt-5">
                 <div className="flex items-center">
                   <Image
-                    src="/image/AUxano.webp"
-                    alt="Auxano Solutions"
-                    width={100}
-                    height={704}
-                    className="h-3 w-auto object-contain"
+                    src="/idealsolutions-logo.svg"
+                    alt="Ideal Solutions"
+                    width={48}
+                    height={46}
+                    loading="eager"
+                    className="!h-10 !w-auto object-contain"
                   />
                 </div>
 
@@ -258,9 +268,9 @@ export function MobileNavigationSheet({
                   <SheetClose asChild>
                     <ButtonLink
                       href="/book-consultation"
-                      className="w-full bg-[linear-gradient(135deg,#355C9A_0%,#4E73B8_50%,#6C8FD6_100%)] text-white"
+                      className="w-full rounded-none bg-[#F2A900] text-[#252B33] shadow-none"
                     >
-                      Book Consultation
+                      Discuss Your Requirements
                     </ButtonLink>
                   </SheetClose>
                 </div>
@@ -302,7 +312,7 @@ export function MobileNavigationSheet({
                     <SheetClose asChild>
                       <Link
                         href={activeCategory.href}
-                        className="group flex flex-col overflow-hidden rounded-md bg-[color:rgba(238,244,255,0.74)] transition-colors hover:bg-[color:rgba(238,244,255,0.96)]"
+                        className="group flex flex-col overflow-hidden rounded-md border border-[#e6dfd1] bg-[#faf0da] transition-colors hover:bg-[#f3dfb0]"
                       >
                         <span className="px-4 pt-4 text-[0.95rem] font-medium text-[var(--color-ink)]">
                           Overview
@@ -324,10 +334,10 @@ export function MobileNavigationSheet({
                         const serviceImage = getServiceMenuImage(service);
 
                         return (
-                          <SheetClose asChild key={service.slug}>
+                          <SheetClose asChild key={service.title}>
                             <Link
-                              href={`/services/${service.slug}`}
-                              className="group flex min-h-16 min-w-0 items-center justify-between gap-4 rounded-md bg-[color:rgba(247,249,252,0.92)] px-4 py-3 transition-colors hover:bg-[var(--color-cloud)]"
+                              href={service.menuHref}
+                              className="group flex min-h-16 min-w-0 items-center justify-between gap-4 rounded-md border border-[#eee8dc] bg-[#faf7f0] px-4 py-3 transition-colors hover:bg-[#f4e8cb]"
                             >
                               <span className="min-w-0 text-[0.95rem] font-medium leading-snug text-[var(--color-ink)] transition-colors group-hover:text-[var(--color-electric)]">
                                 {service.title}
@@ -359,24 +369,55 @@ export function MobileNavigationSheet({
                   Industries
                 </p>
 
-                <div className="mt-4 grid gap-3">
-                  {industries.map((industry) => (
-                    <SheetClose asChild key={industry.slug}>
-                      <Link
-                        href={industry.href}
-                        className="group flex min-h-16 min-w-0 items-center gap-4 rounded-md bg-[color:rgba(247,249,252,0.92)] px-4 py-3 transition-colors duration-100 hover:bg-[color:rgba(234,240,246,0.98)]"
+                <div className="mt-4 grid gap-2">
+                  {industryGroups.map((group) => {
+                    const isOpen = openIndustryGroup === group.id;
+
+                    return (
+                      <div
+                        key={group.id}
+                        className="border-b border-[color:rgba(11,18,32,0.08)] pb-2"
                       >
-                        <IndustryIcon
-                          name={industry.icon}
-                          className="h-8 w-8 shrink-0 text-[var(--color-ink)]"
-                          strokeWidth={1.45}
-                        />
-                        <span className="min-w-0 text-[0.95rem] font-medium leading-snug text-[var(--color-ink)] transition-colors group-hover:text-[var(--color-electric)]">
-                          {industry.title}
-                        </span>
-                      </Link>
-                    </SheetClose>
-                  ))}
+                        <button
+                          type="button"
+                          aria-expanded={isOpen}
+                          onClick={() => setOpenIndustryGroup(group.id)}
+                          className="flex w-full items-center justify-between gap-3 px-2 py-3 text-left text-sm font-semibold text-[var(--color-ink)]"
+                        >
+                          {group.label}
+                          <ChevronDown
+                            className={cn(
+                              "h-4 w-4 transition-transform",
+                              isOpen && "rotate-180",
+                            )}
+                          />
+                        </button>
+                        {isOpen ? (
+                          <div className="grid gap-2 pb-2">
+                            {industries
+                              .filter((industry) => industry.group === group.id)
+                              .map((industry) => (
+                                <SheetClose asChild key={industry.slug}>
+                                  <Link
+                                    href={industry.href}
+                                    className="group flex min-h-14 min-w-0 items-center gap-3 rounded-md bg-[color:rgba(247,249,252,0.92)] px-3 py-3 transition-colors hover:bg-[color:rgba(234,240,246,0.98)]"
+                                  >
+                                    <IndustryIcon
+                                      name={industry.icon}
+                                      className="h-6 w-6 shrink-0 text-[var(--color-ink)]"
+                                      strokeWidth={1.45}
+                                    />
+                                    <span className="min-w-0 text-sm font-medium leading-snug text-[var(--color-ink)] group-hover:text-[var(--color-electric)]">
+                                      {industry.navLabel}
+                                    </span>
+                                  </Link>
+                                </SheetClose>
+                              ))}
+                          </div>
+                        ) : null}
+                      </div>
+                    );
+                  })}
                 </div>
               </div>
             </section>

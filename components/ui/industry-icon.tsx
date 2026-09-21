@@ -1,6 +1,8 @@
 import {
   Building,
   Building2,
+  Boxes,
+  Cpu,
   Church,
   Factory,
   GraduationCap,
@@ -8,6 +10,8 @@ import {
   Hotel,
   Landmark,
   Network,
+  Router,
+  Server,
   Store,
   Wallet,
   Warehouse,
@@ -18,6 +22,12 @@ import type { ComponentType } from "react";
 import type { IndustryIconName } from "@/lib/types";
 
 const iconMap = {
+  "data-centre": Server,
+  telecommunications: Router,
+  technology: Cpu,
+  integrator: Network,
+  msp: Network,
+  oem: Boxes,
   corporate: Building2,
   healthcare: Hospital,
   education: GraduationCap,

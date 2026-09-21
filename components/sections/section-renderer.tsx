@@ -8,9 +8,11 @@ import { ContentSplit } from "@/components/sections/content-split";
 import { FAQBlock } from "@/components/sections/faq-block";
 import { HomeHero } from "@/components/sections/home-hero";
 import { InteractiveServices } from "@/components/sections/interactive-services";
+import { IdealStandard } from "@/components/sections/ideal-standard";
 import { LogoStrip } from "@/components/sections/logo-strip";
 import { MetricBand } from "@/components/sections/metric-band";
 import { NetworkMap } from "@/components/sections/network-map";
+import { OperationTeams } from "@/components/sections/operation-teams";
 import { RichContent } from "@/components/sections/rich-content";
 import { ServiceGrid } from "@/components/sections/service-grid";
 import { ServiceShowcase } from "@/components/sections/service-showcase";
@@ -18,6 +20,8 @@ import { TestimonialRail } from "@/components/sections/testimonial-rail";
 import { TrustBanner } from "@/components/sections/trust-banner";
 
 type SectionRendererProps = {
+  homeOperationTeams?: boolean;
+  homeIdealStandard?: boolean;
   sections: PageSection[];
   services?: Service[];
   caseStudies?: CaseStudy[];
@@ -26,6 +30,8 @@ type SectionRendererProps = {
 };
 
 export function SectionRenderer({
+  homeOperationTeams = false,
+  homeIdealStandard = false,
   sections,
   services = fallbackServices,
   caseStudies = fallbackCaseStudies,
@@ -70,10 +76,12 @@ export function SectionRenderer({
       case "categoryShowcase":
         return <CategoryShowcase key={key} section={section} />;
       case "interactiveServices":
+        if (homeIdealStandard) return <IdealStandard key={key} />;
         return <InteractiveServices key={key} section={section} />;
       case "trustBanner":
         return <TrustBanner key={key} section={section} />;
       case "networkMapSection":
+        if (homeOperationTeams) return <OperationTeams key={key} />;
         return <NetworkMap key={key} section={section} />;
       case "caseStudyRail":
         return (

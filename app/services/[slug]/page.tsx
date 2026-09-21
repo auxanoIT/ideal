@@ -21,11 +21,17 @@ import { getServiceBySlug, getServiceSlugs } from "@/lib/content";
 import { buildMetadata } from "@/lib/seo";
 import {
   buildServiceSeoDescription,
-  buildServiceSeoFaqs,
   buildServiceSeoKeywords,
   buildServiceSeoTitle,
 } from "@/lib/service-seo";
 import { absoluteUrl } from "@/lib/utils";
+import { findPillar, servicePillars, parentForService } from "@/data/service-pillars";
+import { PillarPage } from "@/components/services/pillar/pillar-page";
+import { pillarMetadata } from "@/components/services/pillar/pillar-seo";
+import { idealServiceContent } from "@/lib/ideal-service-brand";
+import { SubserviceHero } from "@/components/services/subservice-hero";
+import { productionServiceAt } from "@/data/subservice-production";
+import { ProductionServicePage, productionMetadata } from "@/components/services/production-service-page";
 import type {
   Service,
   ServiceCapabilitySection,
@@ -117,7 +123,7 @@ function buildFallbackSections(
       title: "What should be clear at completion.",
       lead: "A finished scope should leave the environment usable, supportable, and easier to govern.",
       body: [
-        "Auxano documents the technical outcome in a way that helps internal teams, external vendors, and future support work from the same operating picture.",
+        "Ideal Solutions documents the technical outcome in a way that helps internal teams, external vendors, and future support work from the same operating picture.",
       ],
       image: {
         src: image,
@@ -154,7 +160,7 @@ function getServiceHeroImage(
 export async function generateStaticParams() {
   const slugs = await getServiceSlugs();
 
-  return slugs.map((slug) => ({
+  return [...new Set([...slugs, ...servicePillars.map(pillar => pillar.slug)])].map((slug) => ({
     slug,
   }));
 }
@@ -163,6 +169,10 @@ export async function generateMetadata({
   params,
 }: ServicePageProps): Promise<Metadata> {
   const { slug } = await params;
+  const pillar = findPillar(slug);
+  if (pillar) return pillarMetadata(pillar);
+  const production = productionServiceAt(`/services/${slug}`);
+  if (production) return productionMetadata(production);
   const service = await getServiceBySlug(slug);
 
   if (!service) {
@@ -192,11 +202,17 @@ export async function generateMetadata({
 
 export default async function ServicePage({ params }: ServicePageProps) {
   const { slug } = await params;
-  const service = await getServiceBySlug(slug);
+  const pillar = findPillar(slug);
+  if (pillar) return <PillarPage pillar={pillar} />;
+  const service = idealServiceContent(await getServiceBySlug(slug));
+  const parent = parentForService(slug);
 
   if (!service) {
     notFound();
   }
+
+  const production = productionServiceAt(`/services/${slug}`);
+  if (production) return <ProductionServicePage page={production} images={service.capabilitySections?.map(section => section.image)} />;
 
   const style = categoryStyles[service.category];
   const heroImage = getServiceHeroImage(service, {
@@ -206,7 +222,6 @@ export default async function ServicePage({ params }: ServicePageProps) {
   const capabilitySections =
     service.capabilitySections ??
     buildFallbackSections(service, heroImage.src, heroImage.alt);
-  const serviceFaqs = buildServiceSeoFaqs(service);
   const serviceUrl = absoluteUrl(`/services/${service.slug}`);
   const organizationId = `${absoluteUrl("/")}#organization`;
 
@@ -222,7 +237,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
             provider: {
               "@type": "Organization",
               "@id": organizationId,
-              name: "Auxano Solutions Technology Limited",
+              name: "Ideal Solutions",
             },
             areaServed: [
               { "@type": "Country", name: "Nigeria" },
@@ -233,13 +248,6 @@ export default async function ServicePage({ params }: ServicePageProps) {
             availableChannel: {
               "@type": "ServiceChannel",
               serviceUrl,
-              servicePhone: {
-                "@type": "ContactPoint",
-                telephone: "+234 8062 218 546",
-                contactType: "sales and technical consultation",
-                areaServed: "NG",
-                availableLanguage: ["English"],
-              },
             },
             audience: service.industries.map((industry) => ({
               "@type": "Audience",
@@ -249,33 +257,6 @@ export default async function ServicePage({ params }: ServicePageProps) {
             description: buildServiceSeoDescription(service),
             image: absoluteUrl(heroImage.src),
             serviceOutput: service.deliverables,
-            offers: {
-              "@type": "Offer",
-              availability: "https://schema.org/InStock",
-              areaServed: {
-                "@type": "Country",
-                name: "Nigeria",
-              },
-              url: absoluteUrl("/book-consultation"),
-              priceSpecification: {
-                "@type": "PriceSpecification",
-                priceCurrency: "NGN",
-                description:
-                  "Pricing is scoped after a site assessment, bill of materials, implementation plan, or support requirement review.",
-              },
-            },
-          },
-          {
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            mainEntity: serviceFaqs.map((item) => ({
-              "@type": "Question",
-              name: item.question,
-              acceptedAnswer: {
-                "@type": "Answer",
-                text: item.answer,
-              },
-            })),
           },
           {
             "@context": "https://schema.org",
@@ -293,9 +274,15 @@ export default async function ServicePage({ params }: ServicePageProps) {
                 name: "Services",
                 item: absoluteUrl("/services"),
               },
-              {
+              ...(parent ? [{
                 "@type": "ListItem",
                 position: 3,
+                name: parent.title,
+                item: absoluteUrl(`/services/${parent.slug}`),
+              }] : []),
+              {
+                "@type": "ListItem",
+                position: parent ? 4 : 3,
                 name: service.title,
                 item: absoluteUrl(`/services/${service.slug}`),
               },
@@ -304,8 +291,16 @@ export default async function ServicePage({ params }: ServicePageProps) {
         ]}
       />
 
-      <section className="overflow-hidden bg-[linear-gradient(135deg,#355C9A_100%,#4E73B8_50%,#6C8FD6_100%)] text-white">
+      {parent ? <SubserviceHero title={service.title} description={service.description} image={heroImage} parent={{title:parent.title,href:`/services/${parent.slug}`}} href={`/services/${service.slug}`} /> : <>
+      <section className="overflow-hidden bg-[linear-gradient(125deg,#102444,#203b59_70%,#53482e)] text-white">
         <Container className="py-6">
+          <nav aria-label="Breadcrumb" className="mb-3 text-sm text-slate-200">
+            <ol className="flex flex-wrap items-center gap-x-3 gap-y-1">
+              <li><Link className="inline-flex min-h-11 items-center" href="/">Home</Link></li><li aria-hidden="true">/</li>
+              <li><Link className="inline-flex min-h-11 items-center" href="/services">Services</Link></li><li aria-hidden="true">/</li>
+              <li aria-current="page">{service.title}</li>
+            </ol>
+          </nav>
           <Link
             href="/services"
             className="inline-flex items-center gap-2 text-sm font-semibold text-slate-300 transition hover:text-white"
@@ -330,13 +325,14 @@ export default async function ServicePage({ params }: ServicePageProps) {
               alt={heroImage.alt}
               fill
               priority
-              quality={55}
+              quality={70}
               className="object-cover opacity-90"
               sizes="(min-width: 1024px) 54vw, 100vw"
             />
           </div>
         </Container>
       </section>
+      </>}
 
       <ServiceCapabilityFlow service={service} sections={capabilitySections} />
       <ServiceSeoAnswerBlock service={service} />

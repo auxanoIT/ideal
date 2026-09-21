@@ -26,12 +26,30 @@ const partnerLogos = [
     alt: "Excel Telecom",
   },
   { src: "/image/patner_logo/fortigate-awscom_logo.svg.png", alt: "Fortigate" },
-  { src: "/image/patner_logo/Icon.jpeg (1).svg", alt: "Auxano client" },
-  { src: "/image/patner_logo/Icon.jpeg (2).png", alt: "Auxano client" },
-  { src: "/image/patner_logo/Icon.jpeg (3).png", alt: "Auxano client" },
-  { src: "/image/patner_logo/Icon.jpeg (4).png", alt: "Auxano client" },
-  { src: "/image/patner_logo/Icon.jpeg.png", alt: "Auxano client" },
-  { src: "/image/patner_logo/Icon.png.png", alt: "Auxano client" },
+  {
+    src: "/image/patner_logo/Icon.jpeg (1).svg",
+    alt: "Ideal Solutions client logo",
+  },
+  {
+    src: "/image/patner_logo/Icon.jpeg (2).png",
+    alt: "Ideal Solutions client logo",
+  },
+  {
+    src: "/image/patner_logo/Icon.jpeg (3).png",
+    alt: "Ideal Solutions client logo",
+  },
+  {
+    src: "/image/patner_logo/Icon.jpeg (4).png",
+    alt: "Ideal Solutions client logo",
+  },
+  {
+    src: "/image/patner_logo/Icon.jpeg.png",
+    alt: "Ideal Solutions client logo",
+  },
+  {
+    src: "/image/patner_logo/Icon.png.png",
+    alt: "Ideal Solutions client logo",
+  },
   { src: "/image/patner_logo/kaspersky_icon.jpeg.png", alt: "Kaspersky" },
   {
     src: "/image/patner_logo/key_king_mobile_locksmith_icon.png.png",
@@ -125,7 +143,7 @@ export function PartnerLogoMarquee() {
             Trusted by Clients and Partners
           </h2>
           <p className="mt-3 text-lg leading-7 text-white/82 sm:text-[1.35rem]">
-            to secure people, property, and data
+            Supporting the infrastructure behind critical operations.
           </p>
         </div>
       </Container>
@@ -133,7 +151,7 @@ export function PartnerLogoMarquee() {
       <div className="partner-logo-viewport relative mt-9 hidden h-24 overflow-hidden sm:mt-11 sm:block">
         <div
           className="partner-logo-marquee flex h-full w-max items-center gap-12 px-6 sm:gap-20 sm:px-10"
-          aria-label="Auxano client and partner logos"
+          aria-label="Ideal Solutions client and partner logos"
         >
           {marqueeLogos.map((logo, index) => (
             <div
@@ -158,7 +176,7 @@ export function PartnerLogoMarquee() {
           <div
             ref={mobileScrollerRef}
             className="scrollbar-hide flex cursor-grab snap-x snap-mandatory gap-9 overflow-x-auto scroll-smooth px-1 active:cursor-grabbing"
-            aria-label="Auxano client and partner logos"
+            aria-label="Ideal Solutions client and partner logos"
           >
             {partnerLogos.map((logo) => (
               <div

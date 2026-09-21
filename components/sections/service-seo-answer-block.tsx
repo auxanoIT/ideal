@@ -1,6 +1,3 @@
-import { ArrowRight, ClipboardCheck, MapPin } from "lucide-react";
-
-import { ButtonLink } from "@/components/ui/button-link";
 import { Container } from "@/components/ui/container";
 import { buildServiceSeoFaqs } from "@/lib/service-seo";
 import type { Service } from "@/lib/types";
@@ -11,13 +8,6 @@ type ServiceSeoAnswerBlockProps = {
 
 export function ServiceSeoAnswerBlock({ service }: ServiceSeoAnswerBlockProps) {
   const faqs = buildServiceSeoFaqs(service);
-  const projectPriorities = Array.from(
-    new Set([
-      ...service.highlights.slice(0, 3),
-      ...service.deliverables.slice(0, 3),
-    ]),
-  ).slice(0, 6);
-
   return (
     <section className="bg-[#f6f8fb] py-16 sm:py-24">
       <Container>
@@ -25,7 +15,7 @@ export function ServiceSeoAnswerBlock({ service }: ServiceSeoAnswerBlockProps) {
           <div className="gap-5">
             <div className="mb-2">
               <h2 className="mt-4 text-3xl font-semibold tracking-[-0.045em] text-[var(--color-ink)] sm:text-4xl text-center">
-                How Auxano Works With You
+                How Ideal Solutions Works With You
               </h2>
             </div>
 

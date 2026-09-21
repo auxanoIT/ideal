@@ -9,6 +9,8 @@ import {
 import { getCaseStudyMedia } from "@/lib/case-study-media";
 import type { BlogBodyBlock, BlogPost, ServiceNavMedia } from "@/lib/types";
 import { absoluteUrl } from "@/lib/utils";
+import { servicePillars } from "@/data/service-pillars";
+import { productionServices } from "@/data/subservice-production";
 
 type SitemapEntryInput = {
   path: string;
@@ -98,9 +100,6 @@ const staticRoutes: SitemapEntryInput[] = [
   },
   {
     path: "/case-studies",
-    imagePaths: [
-      "/image/case-studies/enterprise-elv-integrated-hero-photo.webp",
-    ],
     changeFrequency: "monthly",
     priority: 0.74,
   },
@@ -177,6 +176,22 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   ]);
 
   const dynamicRoutes: SitemapEntryInput[] = [
+    ...productionServices
+      .filter((page) => page.href.split("/").length === 4)
+      .map((page) => ({
+        path: page.href,
+        imagePaths: [page.image.src],
+        lastModified: "2026-09-16",
+        changeFrequency: "monthly" as const,
+        priority: 0.85,
+      })),
+    ...servicePillars.map((pillar) => ({
+      path: `/services/${pillar.slug}`,
+      imagePaths: [pillar.hero.src, pillar.live.src],
+      lastModified: "2026-09-15",
+      changeFrequency: "monthly" as const,
+      priority: 0.95,
+    })),
     ...services.map((service) => ({
       path: `/services/${service.slug}`,
       imagePaths: getUniqueImagePaths([

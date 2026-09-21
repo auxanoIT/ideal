@@ -8,11 +8,12 @@ import { SectionHeading } from "@/components/ui/section-heading";
 import { getSiteSettings } from "@/lib/content";
 import { buildMetadata } from "@/lib/seo";
 import { absoluteUrl, createWhatsappLink } from "@/lib/utils";
+import { productionServices } from "@/data/subservice-production";
 
 export const metadata = buildMetadata({
-  title: "Contact Auxano Solutions in Lagos, Nigeria",
+  title: "Contact Ideal Solutions in Lagos, Nigeria",
   description:
-    "Contact Auxano Solutions in Lagos for IT infrastructure, CCTV, access control, fire alarm, network cabling, licensing, and managed IT support.",
+    "Contact Ideal Solutions in Lagos for IT infrastructure, CCTV, access control, fire alarm, network cabling, licensing, and managed IT support.",
   path: "/contact",
   keywords: [
     "contact IT company Lagos",
@@ -23,7 +24,10 @@ export const metadata = buildMetadata({
   ],
 });
 
-export default async function ContactPage() {
+export default async function ContactPage({searchParams}: {searchParams: Promise<{service?:string;section?:string}>}) {
+  const query = await searchParams;
+  const service = productionServices.find(page => page.hero.title === query.service);
+  const section = service?.sections.find(item => item.navLabel === query.section);
   const settings = await getSiteSettings();
 
   const contactCards = [
@@ -56,10 +60,10 @@ export default async function ContactPage() {
           {
             "@context": "https://schema.org",
             "@type": "ContactPage",
-            name: "Contact Auxano Solutions",
+            name: "Contact Ideal Solutions",
             url: absoluteUrl("/contact"),
             description:
-              "Contact Auxano Solutions Technology Limited for IT infrastructure, CCTV, access control, fire alarm, network cabling, software licensing, and managed IT support in Nigeria.",
+              "Contact Ideal Solutions for IT infrastructure, CCTV, access control, fire alarm, network cabling, software licensing, and managed IT support in Nigeria.",
             mainEntity: {
               "@type": "Organization",
               "@id": `${absoluteUrl("/")}#organization`,
@@ -79,8 +83,8 @@ export default async function ContactPage() {
       <section className="py-20 sm:py-24">
         <Container className="space-y-10">
           <SectionHeading
-            eyebrow="Contact Auxano"
-            title="Talk to Auxano about the systems your site depends on."
+            eyebrow="Contact Ideal Solutions"
+            title="Talk to Ideal Solutions about the systems your site depends on."
             description="Share the project, support issue, or operating requirement. Our team will help you clarify the scope and choose the right next step."
           />
 
@@ -107,7 +111,7 @@ export default async function ContactPage() {
           </div>
 
           <div className="grid gap-8 xl:grid-cols-[1.1fr_0.9fr]">
-            <LeadForm context="contact" />
+            <div id="project-enquiry" className="scroll-mt-32"><LeadForm context="contact" initialService={service?.hero.title} initialSection={section?.navLabel} serviceOptions={productionServices.map(page => page.hero.title)} /></div>
             <div className="rounded-[2rem] border border-[color:rgba(11,18,32,0.08)] bg-[var(--color-ink)] p-7 text-white shadow-[0_28px_80px_rgba(11,18,32,0.18)]">
               <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[var(--color-cyan)]">
                 Faster routes
@@ -122,7 +126,7 @@ export default async function ContactPage() {
                 <ButtonLink
                   href={createWhatsappLink(
                     settings.whatsappSales,
-                    "Hello Auxano, I need to discuss a new IT, network, or security project.",
+                    "Hello Ideal Solutions, I need to discuss a new IT, network, or security project.",
                   )}
                   className="w-full"
                 >
@@ -131,7 +135,7 @@ export default async function ContactPage() {
                 <ButtonLink
                   href={createWhatsappLink(
                     settings.whatsappSupport,
-                    "Hello Auxano, I need support assistance for an existing technical issue.",
+                    "Hello Ideal Solutions, I need support assistance for an existing technical issue.",
                   )}
                   variant="secondary"
                   className="w-full border-white/12 bg-white/8 text-white hover:border-white/22 hover:text-white"

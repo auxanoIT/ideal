@@ -79,7 +79,7 @@ function applyHomeSectionCloudinaryMedia(section: PageSection): PageSection {
       videoPublicId: cloudinaryVideos.itInfrastructure,
       videoUrl: getCloudinaryVideoUrl(cloudinaryVideos.itInfrastructure),
       items: section.items.map((item) => {
-        const publicId = mediaByItemId[item.id];
+        const publicId = item.videoPublicId ?? mediaByItemId[item.id] ?? cloudinaryVideos.itInfrastructure;
 
         return {
           ...item,

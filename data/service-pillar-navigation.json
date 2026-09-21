@@ -1,0 +1,280 @@
+{
+  "data-centre-deployment": [
+    {
+      "title": "Data Centre Rack-and-Stack Services",
+      "href": "/services/data-centre-deployment/rack-and-stack",
+      "image": {
+        "src": "/image/service-pillars/data-centre-rack-and-stack-deployment-nigeria.webp",
+        "alt": "Nigerian engineers installing rack-mounted equipment in a data centre"
+      }
+    },
+    {
+      "title": "Data Centre Equipment Installation",
+      "href": "/services/data-centre-deployment/equipment-installation",
+      "image": {
+        "src": "/image/service-pillars/ideal-solutions-live-data-centre-deployment-nigeria.webp",
+        "alt": "Ideal Solutions engineers checking a tablet and working beside active server racks"
+      }
+    },
+    {
+      "title": "Server Installation & Configuration",
+      "href": "/services/data-centre-deployment/server-installation-configuration",
+      "image": {
+        "src": "/image/service-details/server-new-supply.webp",
+        "alt": "Enterprise server hardware prepared for deployment"
+      }
+    },
+    {
+      "title": "Equipment Testing & Deployment Verification",
+      "href": "/services/data-centre-deployment/equipment-testing-verification",
+      "image": {
+        "src": "/image/service-pillars/data-centre-infrastructure-audit-inspection-nigeria.webp",
+        "alt": "Engineer inspecting server racks and cable organisation during an infrastructure assessment"
+      }
+    },
+    {
+      "title": "Equipment Moves, Adds & Changes",
+      "href": "/services/data-centre-deployment/moves-adds-changes",
+      "image": {
+        "src": "/image/service-pillars/ideal-solutions-data-centre-project-coordination-nigeria.webp",
+        "alt": "Ideal Solutions project lead reviewing a checklist while technicians work on data centre racks"
+      }
+    }
+  ],
+  "smart-hands": [
+    {
+      "title": "Data Centre Technical Support",
+      "href": "/services/it-technical-services",
+      "image": {
+        "src": "/image/operation-teams/remote-team-onsite-support-nigeria.webp",
+        "alt": "Onsite technician communicating with a remote engineering team beside data centre racks"
+      }
+    },
+    {
+      "title": "Smart Hands & Remote-Team Support",
+      "href": "/services/smart-hands-technical-support/smart-hands",
+      "image": {
+        "src": "/image/operation-teams/remote-team-onsite-support-nigeria.webp",
+        "alt": "Onsite technician communicating with a remote engineering team beside data centre racks"
+      }
+    },
+    {
+      "title": "Planned Maintenance & Ongoing Technical Support",
+      "href": "/services/smart-hands-technical-support/planned-maintenance-support",
+      "image": {
+        "src": "/image/service-pillars/smart-hands-data-centre-technical-support-nigeria.webp",
+        "alt": "Technical support engineer inspecting infrastructure in a data centre"
+      }
+    }
+  ],
+  "server-storage-hardware": [
+    {
+      "title": "Server Sales & Repair",
+      "href": "/services/server-sales-repair",
+      "image": {
+        "src": "/image/operation-teams/enterprise-hardware-procurement-nigeria.webp",
+        "alt": "Engineer reviewing enterprise server hardware at an equipment bench"
+      }
+    },
+    {
+      "title": "Server Storage Provisioning & Deployment",
+      "href": "/services/server-storage-provisioning-deployment",
+      "image": {
+        "src": "/image/operation-teams/enterprise-hardware-procurement-nigeria.webp",
+        "alt": "Engineer reviewing enterprise server hardware at an equipment bench"
+      }
+    },
+    {
+      "title": "Data Centre Hardware Procurement",
+      "href": "/services/sales-of-it-hardware",
+      "image": {
+        "src": "/image/operation-teams/enterprise-hardware-procurement-nigeria.webp",
+        "alt": "Engineer reviewing enterprise server hardware at an equipment bench"
+      }
+    },
+    {
+      "title": "Rack Accessories & Consumables Supply",
+      "href": "/services/sales-of-data-centre-consumables",
+      "image": {
+        "src": "/image/operation-teams/enterprise-hardware-procurement-nigeria.webp",
+        "alt": "Engineer reviewing enterprise server hardware at an equipment bench"
+      }
+    }
+  ],
+  "network-infrastructure": [
+    {
+      "title": "Network Equipment Installation",
+      "href": "/services/network-infrastructure-connectivity/network-equipment-installation",
+      "image": {
+        "src": "/image/service-details/network-cabling-rack.webp",
+        "alt": "Organised blue and yellow network cabling in enterprise racks"
+      }
+    },
+    {
+      "title": "Network Architecture Planning",
+      "href": "/services/network-architecture-planning",
+      "image": {
+        "src": "/image/service-details/network-cabling-rack.webp",
+        "alt": "Organised blue and yellow network cabling in enterprise racks"
+      }
+    },
+    {
+      "title": "Network Design & Documentation",
+      "href": "/services/network-design-with-diagram",
+      "image": {
+        "src": "/image/service-details/network-cabling-rack.webp",
+        "alt": "Organised blue and yellow network cabling in enterprise racks"
+      }
+    },
+    {
+      "title": "Network Configuration",
+      "href": "/services/network-configurations",
+      "image": {
+        "src": "/image/service-details/network-cabling-rack.webp",
+        "alt": "Organised blue and yellow network cabling in enterprise racks"
+      }
+    },
+    {
+      "title": "Structured Copper & Fibre Cabling",
+      "href": "/services/structured-lan-cabling",
+      "image": {
+        "src": "/image/service-details/network-cabling-rack.webp",
+        "alt": "Organised blue and yellow network cabling in enterprise racks"
+      }
+    },
+    {
+      "title": "Cable Routing & Management",
+      "href": "/services/network-cabling",
+      "image": {
+        "src": "/image/service-details/network-cabling-rack.webp",
+        "alt": "Organised blue and yellow network cabling in enterprise racks"
+      }
+    },
+    {
+      "title": "Cable Labelling & Port Mapping",
+      "href": "/services/network-infrastructure-connectivity/cable-labelling-port-mapping",
+      "image": {
+        "src": "/image/service-details/network-cabling-rack.webp",
+        "alt": "Organised blue and yellow network cabling in enterprise racks"
+      }
+    },
+    {
+      "title": "Rack & Cabling Remediation",
+      "href": "/services/network-infrastructure-connectivity/rack-cabling-remediation",
+      "image": {
+        "src": "/image/operation-teams/network-rack-remediation-comparison.webp",
+        "alt": "Illustrative comparison of disorganised and structured rack cabling"
+      }
+    }
+  ],
+  "security-access": [
+    {
+      "title": "Firewall Supply, Installation & Licensing",
+      "href": "/services/firewall-sales-licenses",
+      "image": {
+        "src": "/image/service-pillars/data-centre-security-access-control-nigeria.webp",
+        "alt": "Engineer reviewing secure access to a data centre facility"
+      }
+    },
+    {
+      "title": "Data Centre Door Access Control",
+      "href": "/services/door-access-control",
+      "image": {
+        "src": "/image/service-pillars/data-centre-security-access-control-nigeria.webp",
+        "alt": "Engineer reviewing secure access to a data centre facility"
+      }
+    },
+    {
+      "title": "CCTV & Surveillance Systems",
+      "href": "/services/surveillance-system-cctv",
+      "image": {
+        "src": "/image/service-pillars/data-centre-security-access-control-nigeria.webp",
+        "alt": "Engineer reviewing secure access to a data centre facility"
+      }
+    },
+    {
+      "title": "Mantrap Door Installation & Servicing",
+      "href": "/services/data-centre-security-safety/mantrap-installation-servicing",
+      "image": {
+        "src": "/image/service-pillars/data-centre-security-access-control-nigeria.webp",
+        "alt": "Engineer reviewing secure access to a data centre facility"
+      }
+    },
+    {
+      "title": "Automated Door & Gate Systems",
+      "href": "/services/automated-gates-sliding-doors",
+      "image": {
+        "src": "/image/service-pillars/data-centre-security-access-control-nigeria.webp",
+        "alt": "Engineer reviewing secure access to a data centre facility"
+      }
+    },
+    {
+      "title": "Fire Alarm & Safety Systems",
+      "href": "/services/fire-alarm-safety-systems",
+      "image": {
+        "src": "/image/service-pillars/data-centre-security-access-control-nigeria.webp",
+        "alt": "Engineer reviewing secure access to a data centre facility"
+      }
+    }
+  ],
+  "assessment-optimisation": [
+    {
+      "title": "Data Centre Infrastructure Audit & Assessment",
+      "href": "/services/it-consultancy-audit-services",
+      "image": {
+        "src": "/image/service-pillars/data-centre-infrastructure-audit-inspection-nigeria.webp",
+        "alt": "Engineer inspecting server racks and cable organisation during an infrastructure assessment"
+      }
+    },
+    {
+      "title": "Rack & Cabling Remediation",
+      "href": "/services/network-infrastructure-connectivity/rack-cabling-remediation",
+      "image": {
+        "src": "/image/operation-teams/network-rack-remediation-comparison.webp",
+        "alt": "Illustrative comparison of disorganised and structured rack cabling"
+      }
+    },
+    {
+      "title": "Equipment Testing & Deployment Verification",
+      "href": "/services/data-centre-deployment/equipment-testing-verification",
+      "image": {
+        "src": "/image/service-pillars/data-centre-infrastructure-audit-inspection-nigeria.webp",
+        "alt": "Engineer inspecting server racks and cable organisation during an infrastructure assessment"
+      }
+    }
+  ],
+  "projects-lifecycle": [
+    {
+      "title": "Data Centre Project Management",
+      "href": "/services/it-project-management",
+      "image": {
+        "src": "/image/service-pillars/ideal-solutions-data-centre-project-coordination-nigeria.webp",
+        "alt": "Ideal Solutions project lead reviewing a checklist while technicians work on data centre racks"
+      }
+    },
+    {
+      "title": "Installation Documentation & Project Handover",
+      "href": "/services/data-centre-project-lifecycle-management/installation-documentation-handover",
+      "image": {
+        "src": "/image/service-pillars/ideal-solutions-data-centre-project-coordination-nigeria.webp",
+        "alt": "Project coordination and documented handover inside an active data centre"
+      }
+    },
+    {
+      "title": "Equipment Moves, Adds & Changes",
+      "href": "/services/data-centre-deployment/moves-adds-changes",
+      "image": {
+        "src": "/image/service-pillars/ideal-solutions-data-centre-project-coordination-nigeria.webp",
+        "alt": "Ideal Solutions project lead reviewing a checklist while technicians work on data centre racks"
+      }
+    },
+    {
+      "title": "Planned Maintenance & Ongoing Technical Support",
+      "href": "/services/smart-hands-technical-support/planned-maintenance-support",
+      "image": {
+        "src": "/image/service-pillars/smart-hands-data-centre-technical-support-nigeria.webp",
+        "alt": "Technical support engineer inspecting infrastructure in a data centre"
+      }
+    }
+  ]
+}

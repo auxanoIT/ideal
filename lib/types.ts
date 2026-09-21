@@ -108,6 +108,12 @@ export type SolutionCategory = {
 };
 
 export type IndustryIconName =
+  | "data-centre"
+  | "telecommunications"
+  | "technology"
+  | "integrator"
+  | "msp"
+  | "oem"
   | "corporate"
   | "healthcare"
   | "education"
@@ -121,15 +127,61 @@ export type IndustryIconName =
   | "religious"
   | "multisite";
 
+export type IndustryGroup =
+  | "critical-infrastructure-technology"
+  | "enterprise-public-sector"
+  | "commercial-operational";
+
+export type IndustryChallengeTab = {
+  id: string;
+  label: string;
+  title: string;
+  description: string;
+  points: Array<{ title: string; description: string }>;
+  ctaLabel: string;
+  ctaHref: string;
+  visual: string;
+};
+
+export type IndustrySolution = {
+  title: string;
+  description: string;
+  href: string;
+  linkLabel: string;
+};
+
+export type IndustryReason = {
+  title: string;
+  description: string;
+};
+
 export type IndustryProfile = {
   slug: string;
   href: string;
   title: string;
+  navLabel: string;
+  group: IndustryGroup;
   shortDescription: string;
   heroTitle: string;
   heroDescription: string;
   heroImage: ServiceNavMedia;
   icon: IndustryIconName;
+  seoTitle: string;
+  metaDescription: string;
+  primaryKeyword: string;
+  longTailKeywords: string[];
+  challengesTitle: string;
+  challengesDescription: string;
+  challengeTabs: IndustryChallengeTab[];
+  whyTitle: string;
+  whyDescription: string;
+  whyReasons: IndustryReason[];
+  solutionsTitle: string;
+  solutionsDescription: string;
+  solutions: IndustrySolution[];
+  formTitle: string;
+  formDescription: string;
+  formCta: string;
   primaryServiceSlugs: string[];
   challengePoints: string[];
   environmentExamples: string[];
@@ -158,16 +210,28 @@ export type ResourceGroup = {
 export type CaseStudy = {
   slug: string;
   title: string;
-  client: string;
+  client?: string;
+  clientDisplayName?: string;
+  anonymous?: boolean;
   industry: string;
-  location: string;
+  location?: string;
   summary: string;
-  challenge: string;
-  solution: string[];
-  result: string;
-  metrics: Metric[];
-  relatedServices: string[];
+  challenge?: string;
+  solution?: string[];
+  result?: string;
+  outcome?: string;
+  metrics?: Metric[];
+  relatedServices?: string[];
   image?: ServiceNavMedia;
+  cardImage?: ServiceNavMedia;
+  featured?: boolean;
+  published?: boolean;
+  projectDate?: string;
+  quote?: {
+    text: string;
+    author?: string;
+    role?: string;
+  };
 };
 
 export type BlogPost = {
@@ -305,6 +369,7 @@ export type ContentSplitSection = {
 export type ServiceShowcaseItem = {
   id: string;
   title: string;
+  lead?: string;
   description: string;
   imageSrc: string;
   imageAlt: string;

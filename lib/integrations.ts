@@ -101,12 +101,12 @@ export function buildHubSpotConsentOptions() {
   return {
     consent: {
       consentToProcess: true,
-      text: "I agree that Auxano Solutions may store and process my personal data to respond to my request.",
+      text: "I agree that Ideal Solutions may store and process my personal data to respond to my request.",
       communications: [
         {
           value: true,
           subscriptionTypeId,
-          text: "I agree to receive email communication from Auxano Solutions about my request.",
+          text: "I agree to receive email communication from Ideal Solutions about my request.",
         },
       ],
     },

@@ -1,4 +1,5 @@
 import type { Service } from "@/lib/types";
+import { idealServiceContent, idealServiceText } from "@/lib/ideal-service-brand";
 
 export type ServiceSeoFaq = {
   question: string;
@@ -176,13 +177,13 @@ export function buildServiceSeoDescription(service: Service) {
   const override = serviceSeoOverrides[service.slug];
 
   if (override) {
-    return override.description;
+    return idealServiceText(override.description);
   }
 
   const serviceName = service.title.toLowerCase();
   const audience = service.industries.slice(0, 3).join(", ").toLowerCase();
 
-  return `Auxano Solutions delivers ${serviceName} in Lagos and across Nigeria for ${audience || "businesses"}, with scoping, installation, testing, and support.`;
+  return `Ideal Solutions delivers ${serviceName} in Lagos and across Nigeria for ${audience || "businesses"}, with scoping, installation, testing, and support.`;
 }
 
 export function buildServiceSeoKeywords(service: Service) {
@@ -237,7 +238,7 @@ export function buildServiceSeoFaqs(service: Service): ServiceSeoFaq[] {
     },
   ];
 
-  return [...(override?.faqs ?? []), ...standardFaqs].slice(0, 5);
+  return idealServiceContent([...(override?.faqs ?? []), ...standardFaqs].slice(0, 5));
 }
 
 export function buildServiceSeoQuestions(service: Service) {

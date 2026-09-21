@@ -14,35 +14,35 @@ import { buildMetadata } from "@/lib/seo";
 import { absoluteUrl } from "@/lib/utils";
 
 export const metadata = buildMetadata({
-  title: "Book IT, CCTV, Fire Alarm, and Network Consultation in Nigeria",
+  title: "Book a Data Centre Infrastructure Consultation | Ideal Solutions",
   description:
-    "Book a consultation with Auxano Solutions in Lagos to scope IT infrastructure, CCTV, access control, fire alarm, network cabling, cybersecurity, software licensing, or managed IT support in Nigeria.",
+    "Discuss your data centre, network, Smart Hands, hardware, security or infrastructure support requirements with Ideal Solutions in Nigeria.",
   path: "/book-consultation",
   keywords: [
-    "book IT consultation Nigeria",
-    "IT infrastructure consultation Lagos",
-    "CCTV installation consultation Nigeria",
-    "fire alarm installation consultation Lagos",
-    "network cabling consultation Nigeria",
-    "managed IT support consultation Lagos",
+    "Data Centre Infrastructure Consultation Nigeria",
+    "IT infrastructure consultation Nigeria",
+    "data centre project consultation",
+    "Smart Hands consultation Nigeria",
+    "network infrastructure consultation",
+    "server deployment consultation Nigeria",
   ],
 });
 
 const stats = [
   {
     icon: BriefcaseBusiness,
-    value: "200+",
-    label: "Projects Delivered",
+    value: "Onsite",
+    label: "Onsite Execution",
   },
   {
     icon: Headphones,
-    value: "24/7",
+    value: "Technical",
     label: "Technical Support",
   },
   {
     icon: ShieldCheck,
     value: "End-to-End",
-    label: "Deployment & Support",
+    label: "End-to-End Coordination",
   },
 ];
 
@@ -54,22 +54,20 @@ export default function BookConsultationPage() {
           {
             "@context": "https://schema.org",
             "@type": "WebPage",
-            name: "Book IT, CCTV, Fire Alarm, and Network Consultation in Nigeria",
+            name: "Book a Data Centre Infrastructure Consultation | Ideal Solutions",
             url: absoluteUrl("/book-consultation"),
             description:
-              "Book a consultation with Auxano Solutions to scope IT infrastructure, CCTV, access control, fire alarm, network cabling, cybersecurity, software licensing, or managed IT support in Nigeria.",
+              "Discuss your data centre, network, Smart Hands, hardware, security or infrastructure support requirements with Ideal Solutions in Nigeria.",
             about: [
               "IT infrastructure consultation",
-              "CCTV installation consultation",
-              "Access control consultation",
-              "Fire alarm system consultation",
-              "Network cabling consultation",
-              "Managed IT support consultation",
+              "Smart Hands consultation",
+              "Network infrastructure consultation",
+              "Server deployment consultation",
             ],
             provider: {
               "@type": "Organization",
               "@id": `${absoluteUrl("/")}#organization`,
-              name: "Auxano Solutions Technology Limited",
+              name: "Ideal Solutions",
             },
             potentialAction: {
               "@type": "CommunicateAction",
@@ -86,7 +84,7 @@ export default function BookConsultationPage() {
           <div className="relative min-h-[42rem] overflow-hidden rounded-lg lg:min-h-[45rem] xl:rounded-none">
             <Image
               src="/image/service-details/data-centre-buildout.webp"
-              alt="Data centre infrastructure corridor for Auxano consultation planning"
+              alt="Data centre infrastructure corridor for Ideal Solutions consultation planning"
               fill
               priority
               className="object-cover object-left"
@@ -97,15 +95,14 @@ export default function BookConsultationPage() {
 
             <div className="relative flex min-h-[42rem] flex-col justify-center px-5 py-10 sm:px-8 lg:min-h-[45rem] lg:px-12">
               <h1 className="mt-5 max-w-3xl text-balance text-4xl font-semibold leading-tight tracking-[-0.055em] text-[var(--color-ink)] sm:text-5xl lg:text-6xl">
-                Let&apos;s design the right{" "}
-                <span className="text-[#175be8]">IT solution</span> for your
-                business.
+                Let&apos;s Plan the Right Infrastructure Support for Your
+                Environment.
               </h1>
               <p className="mt-6 max-w-2xl text-base leading-8 text-[#34435c] sm:text-lg">
-                Whether you need infrastructure deployment, network upgrades,
-                access control, surveillance systems, cybersecurity, or managed
-                IT support, Auxano helps you plan, deploy, and support reliable
-                technology environments built for long-term performance.
+                Whether you are planning a deployment, expanding network
+                infrastructure, supporting a remote engineering team or
+                improving an existing environment, Ideal Solutions helps you
+                define the right execution path.
               </p>
 
               <div className="mt-8 grid gap-4 sm:grid-cols-3">
@@ -137,7 +134,8 @@ export default function BookConsultationPage() {
                 </div>
                 <div>
                   <h2 className="text-lg font-semibold text-[var(--color-ink)]">
-                    The strongest IT teams start with a conversation.
+                    The right infrastructure project starts with a clear
+                    requirement.
                   </h2>
                 </div>
               </div>
@@ -147,11 +145,22 @@ export default function BookConsultationPage() {
           <div className="rounded-[1.5rem] border border-white/80 bg-white/92 p-5 shadow-[0_30px_90px_rgba(11,18,32,0.11)] backdrop-blur sm:p-7 lg:p-8">
             <LeadForm
               context="consultation"
-              title="Talk to an Auxano specialist"
-              description="Share the project location, required systems, timeline, and any existing issues. Our team will review the request and respond with a practical way forward."
+              title="Talk to an Ideal Solutions Infrastructure Specialist"
+              description="Tell us about the environment, required work, location, timeline and any technical constraints. Our team will review the requirement and help identify the appropriate next step."
               className="border-0 bg-transparent p-0 shadow-none"
               showEyebrow={false}
-              submitLabel="Book Consultation"
+              submitLabel="Discuss Your Requirements"
+              serviceOptions={[
+                "Select the service you need",
+                "Data Centre Deployment & Infrastructure",
+                "Smart Hands & Technical Support",
+                "Server, Storage & Hardware",
+                "Network Infrastructure & Connectivity",
+                "Data Centre Security & Safety",
+                "Infrastructure Assessment & Optimisation",
+                "Data Centre Project & Lifecycle Management",
+                "Multiple Services / Not Sure Yet",
+              ]}
               fullWidthSubmit
             />
           </div>

@@ -21,7 +21,7 @@ export function formatDate(date: string) {
 
 export function absoluteUrl(path = "/") {
   const base = (
-    process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.auxanosolutions.net"
+    process.env.NEXT_PUBLIC_SITE_URL ?? "https://idealsolutions.com.ng"
   ).replace(/\/+$/, "");
   return new URL(path, base).toString();
 }
