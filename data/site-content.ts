@@ -30,8 +30,7 @@ export const siteSettings: SiteSettings = {
   whatsappSales: process.env.NEXT_PUBLIC_SALES_WHATSAPP ?? "+2348062218546",
   whatsappSupport: process.env.NEXT_PUBLIC_SUPPORT_WHATSAPP ?? "+2348062218546",
   hubspotMeetingUrl:
-    process.env.HUBSPOT_MEETINGS_URL ??
-    "https://meetings.hubspot.com/auxano-solutions",
+    process.env.IDEALSOLUTIONS_HUBSPOT_MEETINGS_URL ?? "",
 };
 
 export const navigation: NavItem[] = [

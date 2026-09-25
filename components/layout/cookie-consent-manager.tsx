@@ -29,7 +29,7 @@ function readConsent(): CookieConsent | null {
 function TrackingScripts() {
   const gaId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
   const clarityId = process.env.NEXT_PUBLIC_CLARITY_ID;
-  const hubspotTrackingId = process.env.NEXT_PUBLIC_HUBSPOT_TRACKING_ID;
+  const hubspotTrackingId = process.env.NEXT_PUBLIC_IDEALSOLUTIONS_HUBSPOT_TRACKING_ID;
 
   return (
     <>

@@ -60,7 +60,7 @@ export async function POST(request: Request) {
   ];
 
   const hubSpotSuccess = await submitToHubSpot({
-    formId: process.env.HUBSPOT_CHECKLIST_FORM_ID ?? process.env.HUBSPOT_FORM_ID,
+    formId: process.env.IDEALSOLUTIONS_HUBSPOT_CHECKLIST_FORM_ID ?? process.env.IDEALSOLUTIONS_HUBSPOT_FORM_ID,
     fields,
     pageUri: request.url,
     pageName: "2026 Business Technology & Security Readiness Checklist",
@@ -71,7 +71,7 @@ export async function POST(request: Request) {
 
   if (!hubSpotSuccess) {
     const fallbackSuccess = await sendFallbackEmail(
-      "Auxano checklist lead magnet result",
+      "Ideal Solutions checklist lead magnet result",
       [
         `Name: ${parsed.data.name}`,
         `Company: ${parsed.data.company}`,

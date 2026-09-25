@@ -60,8 +60,9 @@ export async function submitToHubSpot({
   ipAddress,
   legalConsentOptions,
 }: HubSpotSubmitOptions) {
-  const portalId = process.env.HUBSPOT_PORTAL_ID;
-  const finalFormId = formId ?? process.env.HUBSPOT_FORM_ID;
+  // Never fall back to the inherited site's destinations.
+  const portalId = process.env.IDEALSOLUTIONS_HUBSPOT_PORTAL_ID;
+  const finalFormId = formId ?? process.env.IDEALSOLUTIONS_HUBSPOT_FORM_ID;
 
   if (!portalId || !finalFormId) {
     return false;
@@ -92,7 +93,7 @@ export async function submitToHubSpot({
 
 export function buildHubSpotConsentOptions() {
   const configuredSubscriptionTypeId = Number(
-    process.env.HUBSPOT_SUBSCRIPTION_TYPE_ID ?? "999",
+    process.env.IDEALSOLUTIONS_HUBSPOT_SUBSCRIPTION_TYPE_ID ?? "999",
   );
   const subscriptionTypeId = Number.isFinite(configuredSubscriptionTypeId)
     ? configuredSubscriptionTypeId
@@ -127,10 +128,10 @@ export function getRequestIpAddress(request: Request) {
 
 export async function sendFallbackEmail(subject: string, lines: string[]) {
   const apiKey = process.env.RESEND_API_KEY;
-  const to = process.env.LEAD_FALLBACK_EMAIL;
-  const from = process.env.RESEND_FROM_EMAIL ?? "Auxano Website <leads@auxanosolutions.net>";
+  const to = process.env.IDEALSOLUTIONS_LEAD_FALLBACK_EMAIL;
+  const from = process.env.IDEALSOLUTIONS_RESEND_FROM_EMAIL;
 
-  if (!apiKey || !to) {
+  if (!apiKey || !to || !from) {
     return false;
   }
 

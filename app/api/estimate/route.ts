@@ -37,7 +37,7 @@ export async function POST(request: Request) {
 
   const summary = `${formatCurrencyNGN(result.low)} - ${formatCurrencyNGN(result.high)}`;
   const hubSpotSuccess = await submitToHubSpot({
-    formId: process.env.HUBSPOT_ESTIMATE_FORM_ID ?? process.env.HUBSPOT_FORM_ID,
+    formId: process.env.IDEALSOLUTIONS_HUBSPOT_ESTIMATE_FORM_ID ?? process.env.IDEALSOLUTIONS_HUBSPOT_FORM_ID,
     fields: [
       { name: "firstname", value: parsed.data.name },
       { name: "company", value: parsed.data.company },
@@ -55,7 +55,7 @@ export async function POST(request: Request) {
   });
 
   if (!hubSpotSuccess) {
-    await sendFallbackEmail("Auxano estimate request", [
+    await sendFallbackEmail("Ideal Solutions estimate request", [
       `Name: ${parsed.data.name}`,
       `Company: ${parsed.data.company}`,
       `Email: ${parsed.data.email}`,
