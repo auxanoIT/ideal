@@ -25,11 +25,7 @@ export function PillarHero({ pillar }: { pillar: Pick<ServicePillar, "title" | "
       <div className={s.scan} aria-hidden="true" />
     </div>
     <div className={s.wrap}>
-      <nav aria-label="Breadcrumb" className={s.breadcrumb}><ol>
-        <li><Link href="/">Home</Link></li><li><Link href="/services">Services</Link></li><li aria-current="page">{pillar.title}</li>
-      </ol></nav>
       <div className={s.heroCopy}>
-        <p className={s.eyebrow}>{pillar.title}</p>
         <h1 id="pillar-heading">{pillar.heroCopy.title}</h1>
         {pillar.heroCopy.body.map(text => <p className={s.heroDescription} key={text}>{text}</p>)}
         <div className={s.actions}>
@@ -38,7 +34,6 @@ export function PillarHero({ pillar }: { pillar: Pick<ServicePillar, "title" | "
         </div>
       </div>
       <div className={s.heroFoot}>
-        <div className={s.signals} aria-label="Delivery approach">{pillar.signals.map((label, index) => <span key={label}><i aria-hidden="true" />{String(index + 1).padStart(2,"0")} / {label}</span>)}</div>
         <button type="button" className={s.motionButton} onClick={() => setPaused(!paused)} aria-pressed={paused} aria-label={paused ? "Play hero animation" : "Pause hero animation"}>{paused ? <Play size={16} /> : <Pause size={16} />}</button>
       </div>
     </div>

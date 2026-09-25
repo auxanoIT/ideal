@@ -47,7 +47,7 @@ export function SiteFooter({ columns }: SiteFooterProps) {
           </div>
         </div>
 
-        <div className="grid gap-10 sm:grid-cols-3">
+        <div className="grid grid-cols-2 gap-x-5 gap-y-8 sm:grid-cols-3 sm:gap-10">
           {visibleColumns.map((column) => (
             <div key={column.title}>
               <p className="text-sm font-semibold uppercase tracking-[0.18em] text-white/56">
@@ -56,7 +56,7 @@ export function SiteFooter({ columns }: SiteFooterProps) {
               <ul className="mt-5 space-y-3">
                 {column.links.map((link) => (
                   <li key={link.href}>
-                    <Link href={link.href} className="text-sm text-white/72 transition hover:text-white">
+                    <Link href={link.href} className="inline-flex min-h-11 items-center text-sm text-white/72 transition hover:text-white">
                       {link.label}
                     </Link>
                   </li>

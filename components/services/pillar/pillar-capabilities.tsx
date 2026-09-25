@@ -5,7 +5,6 @@ import s from "./pillar.module.css";
 
 export function PillarCapabilities({ pillar }: { pillar: ServicePillar }) {
   return <section id="capabilities" className={`${s.section} ${s.capabilities}`} aria-labelledby="capabilities-heading"><div className={s.wrap}>
-    <div className={s.capabilityRule} aria-hidden="true"><span><Layers size={30} /></span><i /></div>
     <header className={s.carouselHeading}><h2 id="capabilities-heading">{pillar.capabilities.title}</h2></header>
     <PillarCarousel label={pillar.capabilities.title} items={pillar.capabilities.items.map(item=>({...item,href:capabilityHref(item.href),image:capabilityImage(item.href,pillar)}))} />
   </div></section>;

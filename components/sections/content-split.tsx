@@ -11,7 +11,7 @@ type ContentSplitProps = {
 
 export function ContentSplit({ section }: ContentSplitProps) {
   return (
-    <section className={cn("py-20 sm:py-24", section.dark && "bg-[var(--color-ink)] text-white")}>
+    <section className={cn("py-12 sm:py-24", section.dark && "bg-[var(--color-ink)] text-white")}>
       <Container
         className={cn(
           "grid items-start gap-10 lg:grid-cols-[1.02fr_0.98fr]",

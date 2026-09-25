@@ -111,7 +111,7 @@ export function SolutionsMegaMenu({
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -4 }}
                 transition={{ duration: 0.18, ease: [0.16, 1, 0.3, 1] }}
-                className="grid auto-rows-[minmax(6.5rem,auto)] grid-cols-4 gap-3"
+                className="grid auto-rows-[minmax(4.5rem,auto)] grid-cols-4 content-start gap-3"
               >
                 <NavigationMenuLink
                   asChild
@@ -144,7 +144,7 @@ export function SolutionsMegaMenu({
                     >
                       <Link
                         href={service.menuHref}
-                        className="flex min-w-0 items-center justify-between gap-3 px-4 py-3"
+                        className="flex min-w-0 items-center justify-between gap-3 px-4 py-2"
                       >
                         <span className="min-w-0 text-[0.85rem] font-medium leading-snug text-[#252b33] transition-colors group-hover:text-[#806019]">
                           {service.title}

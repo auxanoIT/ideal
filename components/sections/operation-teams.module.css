@@ -178,3 +178,12 @@
 }
 
 @media (prefers-reduced-motion: reduce) { .section *, .section *::before { animation: none !important; transition: none !important; } }
+
+/* Mobile follows the same charcoal and yellow palette as the logo. */
+@media (max-width: 767px) {
+  .item.open .trigger,.item.open .trigger:hover { background-color: #252b33; }
+  .icon,.item.open .icon { color: #956600; }
+  .accordionCta { background: #f2a900; color: #252b33; min-height: 48px; text-align: center; }
+  .accordionCta:hover { background: #ffc23d; box-shadow: none; }
+  .header h2 { font-size: clamp(1.65rem, 6.5vw, 1.9rem); }
+}

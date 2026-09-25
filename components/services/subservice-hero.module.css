@@ -1,37 +1,63 @@
 .wrapper { background: #faf7f0; padding-bottom: clamp(40px, 5vw, 80px); color: #252b33; }
-.hero { position: relative; isolation: isolate; min-height: 760px; height: min(850px, 85svh); color: white; overflow: hidden; }
-.image { object-fit: cover; object-position: center 45%; z-index: -3; }
+.hero { position: relative; isolation: isolate; display: flex; flex-direction: column; justify-content: center; min-height: clamp(520px, 70svh, 660px); padding-block: clamp(36px, 4vw, 64px) 110px; color: white; overflow: hidden; }
+.media { position: absolute; inset: 0; z-index: -3; }
+.image { object-fit: cover; object-position: center top; }
 .shade { position: absolute; inset: 0; z-index: -2; background: linear-gradient(90deg,rgba(12,15,18,.9),rgba(18,21,25,.66) 43%,rgba(18,21,25,.12) 85%),linear-gradient(0deg,rgba(18,21,25,.4),transparent 40%); }
-.ribbon { position: absolute; inset: 0; width: 100%; height: 100%; z-index: -1; pointer-events: none; }
+/* The horizontal path is at 620/760: anchor it to the CTA's centre,
+   independently of the hero height or the number of text lines. */
+.action .ribbon { position: absolute; left: 50%; bottom: 50%; width: 100vw; max-width: none; height: clamp(600px, 50vw, 760px); transform: translate(-50%, 18.4210526%); z-index: -1; pointer-events: none; }
 .breadcrumb { width: 92%; max-width: 1700px; margin: auto; padding-top: 24px; font-size: 12px; }
 .breadcrumb ol { display: flex; flex-wrap: wrap; gap: 5px 12px; list-style: none; padding: 0; }
 .breadcrumb li { display: flex; align-items: center; gap: 12px; }
 .breadcrumb li + li::before { content: "/"; color: #c7b98e; }
 .breadcrumb a { display: inline-flex; align-items: center; min-height: 32px; color: #fff; }
 .breadcrumb a:hover { text-decoration: underline; text-underline-offset: 4px; }
-.copy { width: 92%; max-width: 1700px; margin: auto; padding-top: clamp(64px, 7vw, 116px); }
-.copy h1 { max-width: 1020px; font-size: clamp(42px, 4.65vw, 84px); letter-spacing: -.035em; line-height: 1.12; margin: 0; font-weight: 400; text-wrap: balance; }
+.copy { width: 92%; max-width: 1700px; margin-inline: auto; }
+.copy h1 { max-width: 1020px; font-size: clamp(38px, 4vw, 68px); letter-spacing: -.035em; line-height: 1.12; margin: 0; font-weight: 400; text-wrap: balance; }
 .copy h1 span,.copy h1 strong { display: block; }
 .copy h1 strong { font-weight: 700; margin-top: 8px; }
-.copy p { max-width: 940px; width: 66%; margin-top: 28px; font-size: clamp(17px, 1.55vw, 27px); line-height: 1.6; text-wrap: pretty; }
-.action { position: absolute; top: 81.6%; left: max(4%, calc((100% - 1700px)/2)); transform: translateY(-50%); }
+.copy p { max-width: 940px; width: 66%; margin-top: 22px; font-size: clamp(17px, 1.4vw, 22px); line-height: 1.6; text-wrap: pretty; }
+.action { position: relative; width: 92%; max-width: 1700px; margin: 28px auto 0; }
 .cta { display: inline-flex; align-items: center; justify-content: center; gap: 18px; min-height: 64px; padding: 15px 28px; border-radius: 999px; background: #f2a900; color: #252b33; font-size: clamp(17px, 1.45vw, 25px); font-weight: 600; transition: background 300ms,box-shadow 300ms; }
 .cta:hover { background: #ffd16a; box-shadow: 0 8px 30px #0003; }
 .wrapper a:focus-visible,.wrapper button:focus-visible { outline: 3px solid #f2a900; outline-offset: 6px; }
-.highlights { position: relative; z-index: 2; width: min(84%, 1560px); margin: -66px auto 0; padding: 40px 0 16px; border-radius: 32px; background: linear-gradient(180deg,#e5dfd2,#fffdf7 38%); box-shadow: 0 12px 35px #252b330b; overflow: hidden; }
-.highlights h2 { text-align: center; max-width: 1150px; margin: 0 auto 34px; padding: 0 28px; font-size: clamp(23px, 2.6vw, 43px); font-weight: 650; line-height: 1.2; letter-spacing: -.025em; text-wrap: balance; }
+.highlights { position: relative; z-index: 2; width: min(88%, 1440px); margin: -48px auto 0; padding: 28px 0 10px; border-radius: 24px; background: linear-gradient(180deg,#eee9dd,#fffdf7 38%); box-shadow: 0 12px 35px #252b330b; overflow: hidden; }
+.highlights h2 { text-align: center; max-width: 1050px; margin: 0 auto 24px; padding: 0 24px; font-size: clamp(22px, 1.9vw, 30px); font-weight: 650; line-height: 1.25; letter-spacing: -.025em; text-wrap: balance; }
 .viewport { overflow: hidden; padding: 3px 0 12px; }
 .track { display: flex; width: max-content; animation: travel 42s linear infinite; }
 .track[data-paused="true"],.highlights:hover .track,.highlights:focus-within .track { animation-play-state: paused; }
 .group { display: flex; gap: 24px; padding-right: 24px; }
-.card { width: clamp(250px, 22vw, 380px); min-height: 235px; padding: 32px 24px; border-radius: 24px; background: white; box-shadow: 0 4px 7px #252b3315; }
-.card h3 { font-size: clamp(27px, 2.6vw, 44px); font-weight: 700; line-height: 1.12; letter-spacing: -.04em; margin-bottom: 19px; }
-.card p { font-size: clamp(16px, 1.25vw, 21px); line-height: 1.65; color: #555b62; }
+.card { width: clamp(250px, 21vw, 310px); min-height: 185px; padding: 24px 20px; border-radius: 18px; background: white; box-shadow: 0 4px 7px #252b3315; }
+.card h3 { font-size: clamp(22px, 1.7vw, 27px); font-weight: 650; line-height: 1.2; letter-spacing: -.025em; margin-bottom: 12px; }
+.card p { font-size: 15px; line-height: 1.65; color: #555b62; }
 .pause { display: flex; align-items: center; gap: 7px; margin: 0 22px 0 auto; padding: 8px 12px; min-height: 40px; font-size: 12px; border-radius: 24px; cursor: pointer; }
 @keyframes travel { to { transform: translateX(-50%); } }
-@media(min-width:1800px) { .hero { min-height: 840px; } }
-@media(max-width:900px) { .hero { min-height: 730px; height: auto; } .copy { padding-top: 75px; } .copy h1 { max-width: 760px; } .copy p { width: 85%; max-width: 650px; } .image { object-position: 65% center; } .highlights { width: 92%; } }
-@media(max-width:600px) { .hero { min-height: 740px; } .breadcrumb { font-size: 10px; padding-top: 16px; } .breadcrumb ol { gap: 2px 8px; } .copy { padding-top: 55px; } .copy h1 { font-size: clamp(32px, 8.5vw, 47px); } .copy p { width: 100%; font-size: 17px; margin-top: 24px; } .shade { background: linear-gradient(90deg,#15191dee,#15191d99); } .ribbon { width: 180%; left: -35%; } .action { top: 81.6%; } .cta { min-height: 56px; padding: 12px 22px; } .highlights { margin-top: -44px; padding-top: 28px; border-radius: 24px; } .highlights h2 { padding: 0 18px; margin-bottom: 24px; } .card { min-height: 215px; padding: 25px 22px; } }
-/* Let long service names and supplied paragraphs determine mobile hero height. */
-@media(max-width:600px) { .hero { min-height: 0; } .copy { padding-bottom: 205px; } .action { top: auto; bottom: 104px; transform: none; right: 4%; } .cta { max-width: 100%; font-size: 16px; } .ribbon { height: 100%; } }
+@media(max-width:900px) { .copy h1 { max-width: 760px; } .copy p { width: 85%; max-width: 650px; } .image { object-position: 65% center; } .highlights { width: 92%; } }
+/* Flow-based spacing lets long names grow safely instead of overlapping the CTA. */
+@media(max-width:600px) { .hero { min-height: 0; padding-block: 36px 84px; } .copy h1 { font-size: clamp(30px, 7.5vw, 40px); } .copy p { width: 100%; font-size: 16px; margin-top: 20px; } .shade { background: linear-gradient(90deg,#15191dee,#15191d99); } .ribbon { width: 180%; left: -35%; } .action { margin-top: 24px; } .cta { min-height: 52px; padding: 12px 20px; max-width: 100%; font-size: 15px; } .highlights { margin-top: -44px; padding-top: 28px; border-radius: 24px; } .highlights h2 { padding: 0 18px; margin-bottom: 24px; } .card { min-height: 215px; padding: 25px 22px; } }
 @media(prefers-reduced-motion:reduce) { .track { animation: none; } .viewport { overflow-x: auto; } .group[aria-hidden="true"] { display: none; } .pause { display: none; } .cta { transition: none; } }
+
+@media(max-width:900px) {
+  .image { object-position: center top; }
+}
+@media(max-width:600px) {
+  .wrapper { padding-bottom: 32px; }
+  .hero { padding: 0 0 56px; background: #252b33; }
+  .media { position: relative; inset: auto; width: 100%; aspect-ratio: 16 / 9; z-index: 0; background: #1b2026; }
+  .image { object-fit: contain; object-position: center; }
+  .shade { display: none; }
+  .copy { padding-top: 28px; width: calc(100% - 40px); }
+  .copy h1 { font-size: clamp(28px, 7vw, 38px); overflow-wrap: anywhere; }
+  .copy p { font-size: 15px; line-height: 1.7; margin-top: 16px; }
+  .action { width: calc(100% - 40px); margin-top: 22px; }
+  .cta { width: 100%; text-align: center; line-height: 1.4; }
+  .highlights { margin-top: -24px; padding: 24px 0 8px; border-radius: 20px; }
+  .highlights h2 { font-size: 22px; margin-bottom: 20px; }
+  .viewport { overflow-x: auto; scroll-snap-type: x mandatory; scroll-padding-inline: 16px; padding-inline: 16px; }
+  .track { animation: none; }
+  .group { gap: 12px; padding-right: 16px; }
+  .group[aria-hidden="true"], .pause { display: none; }
+  .card { width: min(74vw, 290px); min-height: 175px; padding: 22px 18px; scroll-snap-align: start; }
+  .card h3 { font-size: 22px; }
+  .card p { font-size: 14px; }
+}

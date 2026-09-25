@@ -4,17 +4,16 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { JsonLd } from '@/components/ui/json-ld';
 import { SubserviceHero } from './subservice-hero';
+import { SubserviceSectionNav } from './subservice-section-nav';
 import { contextualLinks, enquiryHref, type ProductionService } from '@/data/subservice-production';
 import { absoluteUrl } from '@/lib/utils';
 import type { ServiceNavMedia } from '@/lib/types';
 import styles from './production-service-page.module.css';
 
-const lifecycleContext: Record<string,string> = {
-  'equipment-testing-verification':'Need to understand the wider environment before deciding what to verify? Explore Data Centre Infrastructure Audit & Assessment.',
-  'moves-adds-changes':'For changes within a coordinated programme, explore Data Centre Project Management and Installation Documentation & Project Handover.',
-  'planned-maintenance-support':'Keep recurring work connected to Data Centre Project Management and Installation Documentation & Project Handover when new projects change the environment.',
-  'rack-cabling-remediation':'For ongoing organisation after remediation, explore Cable Routing & Management.',
-};
+// Keep the handover section focused on delivery, not repeated cross-selling copy.
+function deliveryBody(lines: string[]) {
+  return lines.filter(line => !(/^(For |Where )/.test(line) && contextualLinks.some(([label]) => line.includes(label))));
+}
 
 export function productionMetadata(page: ProductionService): Metadata {
   return {title:{absolute:page.seoTitle},description:page.description,alternates:{canonical:absoluteUrl(page.href)},robots:{index:true,follow:true},openGraph:{title:page.seoTitle,description:page.description,url:absoluteUrl(page.href),siteName:'Ideal Solutions',type:'website',images:[{url:absoluteUrl(page.image.src),alt:page.image.alt}]},twitter:{card:'summary_large_image',title:page.seoTitle,description:page.description,images:[absoluteUrl(page.image.src)]}};
@@ -51,12 +50,12 @@ export function ProductionServicePage({page,images=[]}: {page:ProductionService;
   return <div className={styles.page}>
     <JsonLd data={[{'@context':'https://schema.org','@type':'Service',name:page.hero.title,description:page.description,url:absoluteUrl(page.href),provider:{'@id':`${absoluteUrl('/')}#organization`},areaServed:{'@type':'Country',name:'Nigeria'}},{'@context':'https://schema.org','@type':'BreadcrumbList',itemListElement:crumbs.map((crumb,index)=>({'@type':'ListItem',position:index+1,name:crumb.name,item:absoluteUrl(crumb.href)}))}]} />
     <SubserviceHero title={page.hero.title} description={page.hero.description} image={page.image} parent={{title:page.parentTitle,href:page.parentHref}} href={page.href} copy={page.hero} introduction={page.intro} enquiryUrl={enquiryHref(page.hero.title)} />
-    <nav className={styles.nav} aria-label={`${page.hero.title} sections`}><div>{page.sections.map(section=><a key={section.id} href={`#${section.id}`}>{section.navLabel}</a>)}</div></nav>
+    <SubserviceSectionNav title={page.hero.title} sections={page.sections.map(({id,navLabel})=>({id,navLabel}))} />
     <div className={styles.sections}>{page.sections.map((section,index)=>{
       const image=visuals[index%visuals.length];
       return <section className={styles.section} id={section.id} key={section.id} aria-labelledby={`${section.id}-title`}>
         <figure className={styles.visual}><div><Image src={image.src} alt={image.alt} fill sizes="(min-width:1024px) 43vw, 92vw" quality={80} className={styles.photo}/></div><figcaption>Illustrative infrastructure imagery.</figcaption></figure>
-        <div className={styles.copy}><h2 id={`${section.id}-title`}>{section.title}</h2><p className={styles.lead}>{section.lead}</p><Body lines={section.body} current={page.href}/>{index===3 && lifecycleContext[page.href.split('/').at(-1)!] && <p><LinkedCopy text={lifecycleContext[page.href.split('/').at(-1)!]} current={page.href}/></p>}<Link className={styles.button} href={enquiryHref(page.hero.title,section.navLabel)}>{section.cta}<span aria-hidden="true">↗</span></Link></div>
+        <div className={styles.copy}><h2 id={`${section.id}-title`}>{section.title}</h2><p className={styles.lead}>{section.lead}</p><Body lines={index === 3 ? deliveryBody(section.body) : section.body} current={page.href}/><Link className={styles.button} href={enquiryHref(page.hero.title,section.navLabel)}>{section.cta}<span aria-hidden="true">↗</span></Link></div>
       </section>;
     })}</div>
     <section className={styles.faq} aria-labelledby="service-faq-title"><div><h2 id="service-faq-title">{page.faq.title}</h2><div>{page.faq.items.map(item=><details key={item.title}><summary>{item.title}<span aria-hidden="true">+</span></summary><div>{item.body.map(line=><p key={line}>{line}</p>)}</div></details>)}</div></div></section>

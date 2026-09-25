@@ -293,23 +293,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
 
       {parent ? <SubserviceHero title={service.title} description={service.description} image={heroImage} parent={{title:parent.title,href:`/services/${parent.slug}`}} href={`/services/${service.slug}`} /> : <>
       <section className="overflow-hidden bg-[linear-gradient(125deg,#102444,#203b59_70%,#53482e)] text-white">
-        <Container className="py-6">
-          <nav aria-label="Breadcrumb" className="mb-3 text-sm text-slate-200">
-            <ol className="flex flex-wrap items-center gap-x-3 gap-y-1">
-              <li><Link className="inline-flex min-h-11 items-center" href="/">Home</Link></li><li aria-hidden="true">/</li>
-              <li><Link className="inline-flex min-h-11 items-center" href="/services">Services</Link></li><li aria-hidden="true">/</li>
-              <li aria-current="page">{service.title}</li>
-            </ol>
-          </nav>
-          <Link
-            href="/services"
-            className="inline-flex items-center gap-2 text-sm font-semibold text-slate-300 transition hover:text-white"
-          >
-            <ArrowLeft className="h-4 w-4" />
-            All services
-          </Link>
-        </Container>
-        <Container className="grid gap-10 pb-16 pt-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
+        <Container className="grid gap-10 pb-16 pt-32 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
           <div className="max-w-3xl">
             <h1 className="text-balance text-5xl font-semibold tracking-[-0.06em] sm:text-6xl lg:text-7xl">
               {service.title}

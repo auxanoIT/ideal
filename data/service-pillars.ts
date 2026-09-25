@@ -71,7 +71,37 @@ const capabilityImages: Record<string, PillarImage> = {
 };
 export const capabilityImage = (href: string, pillar: ServicePillar) => capabilityImages[href.split("/").at(-1)!] ?? pillar.hero;
 
+import { industryProfiles } from "./industry-catalog";
+import type { IndustryProfile } from "@/lib/types";
+
 // Only link to an industry when that exact audience page already exists.
-export function audienceHref(title: string) {
-  return /banks|fintech/i.test(title) ? "/industries/financial-services" : undefined;
+export function getAudienceIndustry(title: string): IndustryProfile | undefined {
+  const matchStr = title.toLowerCase();
+  
+  if (matchStr.includes("data centre operator") || matchStr.includes("data centre infrastructure")) {
+    return industryProfiles.find(i => i.slug === "data-centres");
+  }
+  if (matchStr.includes("telecommunications") || matchStr.includes("isp")) {
+    return industryProfiles.find(i => i.slug === "telecommunications-isps");
+  }
+  if (matchStr.includes("bank") || matchStr.includes("fintech")) {
+    return industryProfiles.find(i => i.slug === "financial-services");
+  }
+  if (matchStr.includes("system integrator")) {
+    return industryProfiles.find(i => i.slug === "system-integrators");
+  }
+  if (matchStr.includes("managed service provider")) {
+    return industryProfiles.find(i => i.slug === "managed-service-providers");
+  }
+  if (matchStr.includes("oem") || matchStr.includes("equipment manufacturer")) {
+    return industryProfiles.find(i => i.slug === "oems-technology-vendors");
+  }
+  if (matchStr.includes("cio") || matchStr.includes("cto") || matchStr.includes("enterprise it")) {
+    return industryProfiles.find(i => i.slug === "enterprise-it");
+  }
+  if (matchStr.includes("technology compan")) {
+    return industryProfiles.find(i => i.slug === "technology-companies");
+  }
+  
+  return undefined;
 }

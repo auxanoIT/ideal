@@ -18,7 +18,8 @@ export function PillarCarousel({ items, label }: { items: PillarSlide[]; label: 
     const slide = node?.children[index] as HTMLElement | undefined;
     if (!node || !slide) return;
     const left = slide.offsetLeft - node.offsetLeft - (node.clientWidth - slide.offsetWidth) / 2;
-    node.scrollTo({ left, behavior: smooth && !matchMedia("(prefers-reduced-motion: reduce)").matches ? "smooth" : "instant" });
+    const isWrap = Math.abs(index - activeRef.current) > 1;
+    node.scrollTo({ left, behavior: smooth && !matchMedia("(prefers-reduced-motion: reduce)").matches && !isWrap ? "smooth" : "instant" });
   }
   useEffect(() => {
     const node = track.current;
@@ -34,6 +35,9 @@ export function PillarCarousel({ items, label }: { items: PillarSlide[]; label: 
           const d = Math.abs(rect.left + rect.width / 2 - midpoint);
           if (d < distance) { distance = d; closest = index; }
         });
+        if (Math.abs(node.scrollWidth - node.clientWidth - node.scrollLeft) < 5) {
+          closest = node.children.length - 1;
+        }
         activeRef.current = closest;
         setActive(closest);
       });
@@ -46,9 +50,10 @@ export function PillarCarousel({ items, label }: { items: PillarSlide[]; label: 
     return () => { observer.disconnect(); node.removeEventListener("scroll", sync); cancelAnimationFrame(frame); };
   }, []);
   return <div className={s.carousel} role="region" aria-roledescription="carousel" aria-label={label}>
-    <button className={`${s.carouselArrow} ${s.carouselPrevious}`} type="button" aria-label="Previous service" disabled={active === 0} onClick={() => center(active - 1)}><ChevronLeft aria-hidden="true" /></button>
+    <button className={`${s.carouselArrow} ${s.carouselPrevious}`} type="button" aria-label="Previous service" onClick={() => center((active - 1 + items.length) % items.length)}><ChevronLeft aria-hidden="true" /></button>
     <div className={s.carouselTrack} ref={track} onKeyDown={event => {
-      if (event.key === "ArrowRight" || event.key === "ArrowLeft") { event.preventDefault(); center(Math.max(0, Math.min(items.length - 1, active + (event.key === "ArrowRight" ? 1 : -1)))); }
+      if (event.key === "ArrowRight") { event.preventDefault(); center((active + 1) % items.length); }
+      else if (event.key === "ArrowLeft") { event.preventDefault(); center((active - 1 + items.length) % items.length); }
     }}>
       {items.map((item, index) => <article key={item.href} className={s.carouselSlide} data-active={active === index} aria-roledescription="slide" aria-label={`${index + 1} of ${items.length}: ${item.title}`} onFocus={() => center(index)}>
         <div className={s.carouselCard}>
@@ -60,7 +65,7 @@ export function PillarCarousel({ items, label }: { items: PillarSlide[]; label: 
         </div>
       </article>)}
     </div>
-    <button className={`${s.carouselArrow} ${s.carouselNext}`} type="button" aria-label="Next service" disabled={active === items.length - 1} onClick={() => center(active + 1)}><ChevronRight aria-hidden="true" /></button>
+    <button className={`${s.carouselArrow} ${s.carouselNext}`} type="button" aria-label="Next service" onClick={() => center((active + 1) % items.length)}><ChevronRight aria-hidden="true" /></button>
     <p className={s.carouselPosition} aria-live="polite">{String(active + 1).padStart(2,"0")} / {String(items.length).padStart(2,"0")}</p>
   </div>;
 }

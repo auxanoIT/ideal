@@ -24,6 +24,18 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 96px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
+
+@media (max-width: 639px) {
+  /* Prevent browser zoom on form focus and keep long content within the page. */
+  input:not([type="checkbox"]):not([type="radio"]), select, textarea { font-size: 16px; max-width: 100%; }
+  main h1, main h2, main h3, main p { overflow-wrap: break-word; }
+  main { min-width: 0; }
 }
 
 body {
@@ -253,6 +265,7 @@ img {
   }
   .ideal-video-hero__copy h1 {
     max-width: 100%;
+    margin-inline: auto;
     font-size: clamp(1.875rem, 8vw, 2.75rem);
     line-height: 1.16;
     letter-spacing: -0.03em;
@@ -288,7 +301,15 @@ img {
 @media (max-width: 639px) {
   .ideal-hero-intro { padding: 2.5rem 0 3.5rem; }
   .ideal-hero-intro__image { width: 100%; opacity: .45; }
-  .ideal-hero-intro__copy { max-width: 100%; }
+  .ideal-hero-intro__copy { 
+    max-width: 100%; 
+    text-align: center; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .ideal-hero-intro__eyebrow { justify-content: center; margin-inline: auto; }
+  .ideal-hero-intro__copy h2 { margin-inline: auto; }
 }
 
 summary::-webkit-details-marker {

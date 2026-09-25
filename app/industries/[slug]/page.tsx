@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound, permanentRedirect } from "next/navigation";
-import { ArrowDown, ArrowRight, ShieldCheck } from "lucide-react";
+import { ArrowDown, ArrowRight } from "lucide-react";
 
 import { LeadForm } from "@/components/forms/lead-form";
 import { IndustryChallengeTabs } from "@/components/sections/industry-challenge-tabs";
@@ -149,7 +149,7 @@ export default async function IndustryPage({ params }: IndustryPageProps) {
         </div>
 
         <div className="md:hidden">
-          <div className="relative min-h-[19rem] bg-[var(--color-cloud)]">
+          <div className="relative aspect-video bg-[var(--color-cloud)]">
             <Image
               src={industry.heroImage.src}
               alt={industry.heroImage.alt}
@@ -161,17 +161,17 @@ export default async function IndustryPage({ params }: IndustryPageProps) {
             <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(255,255,255,0.12)_0%,rgba(255,255,255,0.78)_100%)]" />
           </div>
 
-          <Container className="bg-[#f4f6f8] py-10">
+          <Container className="bg-[#faf7f0] py-8">
             <p className="text-balance text-[2.1rem] font-semibold leading-[1.08] tracking-[-0.04em] text-[var(--color-ink)]">
               {industry.heroTitle}
             </p>
             <p className="mt-5 text-base leading-7 text-[var(--color-muted)]">
               {industry.shortDescription}
             </p>
-            <div className="mt-7 flex items-center gap-4">
+            <div className="mt-7 flex flex-wrap items-center gap-4">
               <Link
                 href="/book-consultation"
-                className="inline-flex items-center justify-center rounded-full bg-black px-6 py-3 text-sm font-semibold !text-white transition hover:-translate-y-0.5"
+                className="inline-flex min-h-12 items-center justify-center rounded-full bg-[#f2a900] px-6 py-3 text-sm font-semibold !text-[#252b33] transition hover:bg-[#ffc23d]"
               >
                 Book Consultation
               </Link>
@@ -193,7 +193,7 @@ export default async function IndustryPage({ params }: IndustryPageProps) {
 
       <section className="bg-[#f6f8fb] py-16 sm:py-24">
         <Container className="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
-          <div className="relative min-h-[24rem] overflow-hidden rounded-lg bg-white shadow-[0_22px_70px_rgba(11,18,32,0.08)]">
+          <div className="relative aspect-[3/2] overflow-hidden rounded-lg bg-white shadow-[0_22px_70px_rgba(11,18,32,0.08)] sm:min-h-[24rem]">
             <Image
               src={industry.heroImage.src}
               alt={industry.heroImage.alt}
@@ -215,10 +215,7 @@ export default async function IndustryPage({ params }: IndustryPageProps) {
             <div className="mt-8 grid gap-6">
               {featureItems.map((item) => {
                 return (
-                  <div key={item.title} className="flex gap-4">
-                    <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-white text-[var(--color-electric)] shadow-[0_12px_32px_rgba(11,18,32,0.07)]">
-                      <ShieldCheck className="h-5 w-5" strokeWidth={1.8} />
-                    </div>
+                  <div key={item.title} className="border-l-2 border-[#f2a900] pl-4">
                     <div>
                       <h3 className="text-base font-semibold text-[var(--color-ink)]">
                         {item.title}

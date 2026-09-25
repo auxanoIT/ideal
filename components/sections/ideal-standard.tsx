@@ -67,6 +67,8 @@ export function IdealStandard() {
             control.
           </p>
         </header>
+        
+        {/* === Desktop Interactive Scene === */}
         <div
           className={styles.scene}
           data-active={active !== null || undefined}
@@ -153,7 +155,7 @@ export function IdealStandard() {
                     }}
                   >
                     <span className={styles.icon}>
-                      <Icon size={25} strokeWidth={1.6} aria-hidden="true" />
+                      <Icon size={24} strokeWidth={1.4} aria-hidden="true" />
                     </span>
                     <span className={styles.stepCopy}>
                       <span className={styles.stepTitle}>
@@ -168,6 +170,34 @@ export function IdealStandard() {
             })}
           </ol>
         </div>
+
+        {/* === Mobile Creative Cards === */}
+        <div className={styles.mobileCards}>
+          {idealStandardSteps.map((step, index) => {
+            const Icon = icons[index];
+            return (
+              <div key={step.id} className={styles.mobileCard}>
+                <div className={styles.mobileCardHeader}>
+                  <div className={styles.mobileIcon}>
+                    <Icon size={24} strokeWidth={1.4} />
+                  </div>
+                  <div className={styles.mobileTitleGroup}>
+                    <span className={styles.mobileNumber}>0{index + 1}</span>
+                    <h3 className={styles.mobileTitle}>{step.title}</h3>
+                  </div>
+                </div>
+                <div className={styles.mobileCardBody}>
+                  <p className={styles.mobileShort}>{step.short}</p>
+                  <p className={styles.mobileDesc}>{step.description}</p>
+                  <div className={styles.mobileOutcome}>
+                    <strong>Outcome:</strong> {step.outcome}
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+
       </div>
     </section>
   );

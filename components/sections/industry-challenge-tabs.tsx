@@ -50,7 +50,7 @@ export function IndustryChallengeTabs({
                   className={cn(
                     "min-w-[13.5rem] rounded-full border px-6 py-4 text-sm font-semibold transition sm:min-w-[17rem]",
                     isActive
-                      ? "border-[#084d8b] bg-[#084d8b] text-white shadow-[0_18px_45px_rgba(8,77,139,0.18)]"
+                      ? "border-[#252b33] bg-[#252b33] text-white shadow-sm"
                       : "border-[color:rgba(11,18,32,0.16)] bg-white text-[var(--color-ink)] hover:border-[color:rgba(8,77,139,0.45)]",
                   )}
                 >
@@ -96,7 +96,7 @@ export function IndustryChallengeTabs({
                     initial={{ opacity: 0, x: -10 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.22, delay: 0.06 + index * 0.04 }}
-                    className="grid gap-2 border-l-2 border-[#19d5ff] pl-4"
+                    className="grid gap-2 border-l-2 border-[#f2a900] pl-4"
                   >
                     <h4 className="text-base font-semibold text-[var(--color-ink)]">
                       {point.title}
@@ -109,7 +109,7 @@ export function IndustryChallengeTabs({
               </div>
               <ButtonLink
                 href={activeTab.ctaHref}
-                className="mt-7 !bg-[#ED6A39] !bg-none !px-5 !text-white !shadow-[0_18px_44px_rgba(237,106,57,0.24)] hover:!-translate-y-0.5 hover:!bg-[#d95c2e] hover:!text-white"
+                className="mt-7 max-sm:w-full !bg-[#f2a900] !bg-none !px-5 !text-[#252b33] !shadow-none hover:!bg-[#ffc23d]"
               >
                 {activeTab.ctaLabel}
                 <ArrowRight className="ml-2 h-4 w-4" />

@@ -10,11 +10,11 @@ type CTABandProps = {
 
 export function CTABand({ section }: CTABandProps) {
   return (
-    <section className="bg-[#f7f9fc] py-20 sm:py-24">
+    <section className="bg-[#faf7f0] py-12 sm:py-24">
       <Container>
         <div
           className={cn(
-            "overflow-hidden rounded-[2.25rem] border p-8 sm:p-12",
+            "overflow-hidden rounded-3xl border px-5 py-8 sm:rounded-[2.25rem] sm:p-12",
             section.dark
               ? "border-[#b69a60]/40 bg-[linear-gradient(135deg,#252b33,#343a40)] text-[#faf7f0]"
               : "border-[#dfc998] bg-[linear-gradient(135deg,#fffdf8_0%,#faf0da_60%,#f3dfb0_100%)] shadow-[0_12px_35px_rgba(139,107,45,0.06)]",
