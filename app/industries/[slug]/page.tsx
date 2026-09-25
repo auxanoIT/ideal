@@ -12,6 +12,7 @@ import { SectionHeading } from "@/components/ui/section-heading";
 import { getIndustryBySlug, getIndustries } from "@/lib/content";
 import { buildMetadata } from "@/lib/seo";
 import { absoluteUrl } from "@/lib/utils";
+import { industryEditorialImage, industrySolutionImage } from "@/data/industry-section-images";
 type IndustryPageProps = {
   params: Promise<{ slug: string }>;
 };
@@ -69,6 +70,7 @@ export default async function IndustryPage({ params }: IndustryPageProps) {
   }
 
   const featureItems = industry.whyReasons;
+  const supportingImage = industryEditorialImage(industry.slug, 'why');
 
   return (
     <>
@@ -195,11 +197,12 @@ export default async function IndustryPage({ params }: IndustryPageProps) {
         <Container className="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
           <div className="relative aspect-[3/2] overflow-hidden rounded-lg bg-white shadow-[0_22px_70px_rgba(11,18,32,0.08)] sm:min-h-[24rem]">
             <Image
-              src={industry.heroImage.src}
-              alt={industry.heroImage.alt}
+              src={supportingImage.src}
+              alt={supportingImage.alt}
               fill
+              loading="lazy"
               className="object-cover"
-              sizes="(min-width: 1024px) 50vw, 100vw"
+              sizes="(min-width: 1280px) 620px, (min-width: 1024px) 50vw, calc(100vw - 40px)"
             />
             <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(8,17,31,0.2),rgba(8,17,31,0))]" />
           </div>
@@ -242,6 +245,7 @@ export default async function IndustryPage({ params }: IndustryPageProps) {
 
           <div className="mt-10 grid gap-6 lg:grid-cols-3">
             {industry.solutions.map((service) => {
+              const cardImage = industrySolutionImage(service.href);
               return (
                 <article
                   key={service.href}
@@ -249,11 +253,12 @@ export default async function IndustryPage({ params }: IndustryPageProps) {
                 >
                   <div className="relative min-h-[13.5rem] bg-[var(--color-cloud)]">
                     <Image
-                      src={industry.heroImage.src}
-                      alt={industry.heroImage.alt}
+                      src={cardImage.src}
+                      alt={cardImage.alt}
                       fill
+                      loading="lazy"
                       className="object-cover"
-                      sizes="(min-width: 1024px) 31vw, 100vw"
+                      sizes="(min-width: 1280px) 400px, (min-width: 1024px) 31vw, calc(100vw - 40px)"
                     />
                   </div>
                   <div className="p-6">

@@ -77,7 +77,7 @@ export function IndustriesMegaMenu({
                 ))}
               </div>
             </div>
-            <div className="grid grid-cols-3 gap-3">
+            <div className="grid auto-rows-[minmax(4.5rem,auto)] grid-cols-3 content-start gap-3">
               {groupIndustries.map((industry) => (
                 <NavigationMenuLink
                   key={industry.slug}
@@ -86,11 +86,11 @@ export function IndustriesMegaMenu({
                 >
                   <Link
                     href={industry.href}
-                    className="flex min-h-[6.5rem] min-w-0 flex-col justify-between gap-3 px-4 py-4"
+                    className="flex min-w-0 items-center gap-3 px-4 py-2"
                   >
                     <IndustryIcon
                       name={industry.icon}
-                      className="h-7 w-7 text-[var(--color-ink)]"
+                      className="h-6 w-6 shrink-0 text-[var(--color-ink)]"
                       strokeWidth={1.45}
                     />
                     <span className="min-w-0 text-[0.9rem] font-medium leading-snug text-[var(--color-ink)] transition-colors group-hover:text-[var(--color-electric)]">

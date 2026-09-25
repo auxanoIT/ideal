@@ -1,0 +1,192 @@
+{
+  "data-centres": {
+    "challenge": {
+      "source": "service-details/data-centre-buildout",
+      "alt": "Server racks and infrastructure inside a data centre"
+    },
+    "why": {
+      "source": "service-details/data-centre-cooling",
+      "alt": "Cooling infrastructure alongside data centre equipment"
+    }
+  },
+  "telecommunications-isps": {
+    "challenge": {
+      "source": "service-details/network-cabling-backbone",
+      "alt": "Backbone network cabling and connection infrastructure"
+    },
+    "why": {
+      "source": "service-details/network-equipment-switches-routers",
+      "alt": "Network switches, routers and fibre transceivers prepared for deployment"
+    }
+  },
+  "financial-services": {
+    "challenge": {
+      "source": "industries/financial-services",
+      "alt": "Technology infrastructure in a financial services environment"
+    },
+    "why": {
+      "source": "service-details/software-firewall-enterprise",
+      "alt": "Enterprise firewall and network protection infrastructure"
+    }
+  },
+  "system-integrators": {
+    "challenge": {
+      "source": "service-details/network-design-site-survey",
+      "alt": "Technical site survey for an infrastructure installation"
+    },
+    "why": {
+      "source": "service-details/managed-project-management",
+      "alt": "Technical project coordination and delivery planning"
+    }
+  },
+  "managed-service-providers": {
+    "challenge": {
+      "source": "service-details/managed-services-monitoring",
+      "alt": "Infrastructure monitoring and technical operations"
+    },
+    "why": {
+      "source": "service-details/managed-technical-onsite-engineer",
+      "alt": "Onsite engineer providing technical infrastructure support"
+    }
+  },
+  "oems-technology-vendors": {
+    "challenge": {
+      "source": "service-details/server-new-supply",
+      "alt": "Enterprise server equipment prepared for deployment"
+    },
+    "why": {
+      "source": "service-details/hardware-bulk-procurement",
+      "alt": "IT hardware organised for supply and deployment"
+    }
+  },
+  "technology-companies": {
+    "challenge": {
+      "source": "service-details/network-config-enterprise",
+      "alt": "Enterprise network configuration and equipment"
+    },
+    "why": {
+      "source": "service-details/storage-nas-solutions",
+      "alt": "Network attached storage equipment"
+    }
+  },
+  "enterprise-it": {
+    "challenge": {
+      "source": "service-details/managed-services-staff-outsourcing",
+      "alt": "Technical team supporting enterprise IT operations"
+    },
+    "why": {
+      "source": "service-details/server-raid-configuration",
+      "alt": "Rack-mounted server and storage equipment beside a monitoring display"
+    }
+  },
+  "healthcare": {
+    "challenge": {
+      "source": "industries/healthcare",
+      "alt": "Technology used in a healthcare environment"
+    },
+    "why": {
+      "source": "service-details/computer-setup-network-email",
+      "alt": "Workstation connectivity and technical setup"
+    }
+  },
+  "government": {
+    "challenge": {
+      "source": "industries/government",
+      "alt": "Public sector workplace and technical infrastructure"
+    },
+    "why": {
+      "source": "service-details/door-access-audit",
+      "alt": "Access control review for a secure workplace"
+    }
+  },
+  "manufacturing": {
+    "challenge": {
+      "source": "industries/manufacturing",
+      "alt": "Manufacturing environment with operational technology"
+    },
+    "why": {
+      "source": "service-details/network-cabling-trunking",
+      "alt": "Organised patch cabling and cable management in network racks"
+    }
+  },
+  "warehousing-logistics": {
+    "challenge": {
+      "source": "industries/warehousing-logistics",
+      "alt": "Warehouse and logistics operating environment"
+    },
+    "why": {
+      "source": "service-details/cctv-camera-coverage",
+      "alt": "Surveillance cameras and coverage planning"
+    }
+  },
+  "corporate-offices": {
+    "challenge": {
+      "source": "industries/corporate-offices",
+      "alt": "Corporate workplace and office technology"
+    },
+    "why": {
+      "source": "service-details/av-conference-room",
+      "alt": "Meeting room conferencing infrastructure"
+    }
+  },
+  "education": {
+    "challenge": {
+      "source": "industries/education",
+      "alt": "Learning environment with IT infrastructure"
+    },
+    "why": {
+      "source": "service-details/lan-certification-testing",
+      "alt": "Structured network cabling testing equipment"
+    }
+  },
+  "retail": {
+    "challenge": {
+      "source": "industries/retail",
+      "alt": "Retail environment and store technology"
+    },
+    "why": {
+      "source": "service-details/printer-label-receipt",
+      "alt": "Receipt and label printing equipment"
+    }
+  },
+  "hospitality": {
+    "challenge": {
+      "source": "industries/hospitality",
+      "alt": "Hospitality property and guest service environment"
+    },
+    "why": {
+      "source": "service-details/ip-pbx-phones-softphones",
+      "alt": "Business telephony and communication equipment"
+    }
+  },
+  "real-estate-property-management": {
+    "challenge": {
+      "source": "industries/real-estate-property-management",
+      "alt": "Managed property and building infrastructure"
+    },
+    "why": {
+      "source": "service-details/automated-gates-sliding-doors",
+      "alt": "Automated gate and building entry infrastructure"
+    }
+  },
+  "multi-site-businesses": {
+    "challenge": {
+      "source": "industries/multi-site-smes",
+      "alt": "Business operations across multiple locations"
+    },
+    "why": {
+      "source": "service-details/network-equipment-access-points",
+      "alt": "Wireless network access points"
+    }
+  },
+  "religious-organizations": {
+    "challenge": {
+      "source": "industries/religious-organizations",
+      "alt": "Religious organisation and gathering environment"
+    },
+    "why": {
+      "source": "service-details/av-livestreaming",
+      "alt": "Live streaming and audiovisual production equipment"
+    }
+  }
+}

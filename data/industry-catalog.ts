@@ -13,8 +13,8 @@ const groups: Record<IndustryGroup, string> = {
   "commercial-operational": "Commercial & Operational",
 };
 
-// Per-industry hero images — SEO-named WebP files in public/image/industries/
-// Images pending quota reset use a temporary fallback (marked with TODO)
+// Hero references must resolve to existing WebP assets; validate with
+// node scripts/check-industry-images.mjs before shipping image changes.
 const industryHeroImages: Record<string, { src: string; alt: string }> = {
   "data-centres": {
     src: "/image/industries/data-centre-infrastructure-nigeria.webp",
@@ -68,30 +68,29 @@ const industryHeroImages: Record<string, { src: string; alt: string }> = {
     src: "/image/industries/corporate-office-it-infrastructure-nigeria.webp",
     alt: "Nigerian engineer testing structured cabling at a server rack in a corporate communications room with open-plan office visible behind glass",
   },
-  // TODO: Generate remaining images when quota resets (~16:18 WAT)
   education: {
-    src: "/image/industries/education-campus-it-infrastructure-nigeria.webp",
-    alt: "Nigerian engineer configuring network infrastructure in a campus server room",
+    src: "/image/service-details/computer-setup-os-software.webp",
+    alt: "Computer workstations and network equipment prepared for an IT learning environment",
   },
   retail: {
-    src: "/image/industries/retail-store-it-infrastructure-nigeria.webp",
-    alt: "Nigerian engineer working on network cabling in a retail store back-office technical room",
+    src: "/image/service-details/network-config-small-business.webp",
+    alt: "Back-office workstation, printer and network equipment supporting business operations",
   },
   hospitality: {
-    src: "/image/industries/hospitality-it-infrastructure-nigeria.webp",
-    alt: "Nigerian engineer inspecting network rack infrastructure in a hotel communications room",
+    src: "/image/service-details/ip-pbx-deployment.webp",
+    alt: "Business telephones and rack-mounted network infrastructure for property communications",
   },
   "real-estate-property-management": {
-    src: "/image/industries/property-management-it-infrastructure-nigeria.webp",
-    alt: "Nigerian engineer working on network and security infrastructure at a managed property technical room",
+    src: "/image/service-details/automated-gates-boom-barrier.webp",
+    alt: "Automated vehicle access barrier at a managed commercial property",
   },
   "multi-site-businesses": {
-    src: "/image/industries/multi-site-business-it-infrastructure-nigeria.webp",
-    alt: "Nigerian field engineer working at a branch network cabinet with central IT operations visible",
+    src: "/image/service-details/network-design-diagrams.webp",
+    alt: "Technical team reviewing network diagrams and infrastructure plans",
   },
   "religious-organizations": {
-    src: "/image/industries/religious-organisation-it-infrastructure-nigeria.webp",
-    alt: "Nigerian engineer inspecting network and access control infrastructure in a worship facility communications room",
+    src: "/image/service-details/av-event-production.webp",
+    alt: "Auditorium with audiovisual control equipment, stage lighting and display infrastructure",
   },
 };
 

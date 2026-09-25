@@ -8,6 +8,7 @@ import { useState } from "react";
 import { ButtonLink } from "@/components/ui/button-link";
 import type { IndustryProfile } from "@/lib/types";
 import { cn } from "@/lib/utils";
+import { industryEditorialImage } from "@/data/industry-section-images";
 
 type IndustryChallengeTabsProps = { industry: IndustryProfile };
 
@@ -19,6 +20,7 @@ export function IndustryChallengeTabs({
   const activeTab = tabs.find((tab) => tab.id === activeTabId) ?? tabs[0];
 
   if (!activeTab) return null;
+  const image = industryEditorialImage(industry.slug, 'challenge');
 
   return (
     <section className="bg-white py-14 sm:py-24">
@@ -75,11 +77,12 @@ export function IndustryChallengeTabs({
           >
             <div className="relative min-h-[17rem] overflow-hidden rounded-lg bg-[var(--color-cloud)] shadow-[0_22px_60px_rgba(11,18,32,0.08)] sm:min-h-[24rem] lg:order-2">
               <Image
-                src={industry.heroImage.src}
-                alt={industry.heroImage.alt}
+                src={image.src}
+                alt={image.alt}
                 fill
+                loading="lazy"
                 className="object-cover"
-                sizes="(min-width: 1024px) 50vw, 100vw"
+                sizes="(min-width: 1280px) 620px, (min-width: 1024px) 50vw, calc(100vw - 32px)"
               />
             </div>
             <div>

@@ -111,11 +111,11 @@ export function SolutionsMegaMenu({
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -4 }}
                 transition={{ duration: 0.18, ease: [0.16, 1, 0.3, 1] }}
-                className="grid auto-rows-[minmax(4.5rem,auto)] grid-cols-4 content-start gap-3"
+                className="grid grid-cols-4 items-start content-start gap-3"
               >
                 <NavigationMenuLink
                   asChild
-                  className="group row-span-3 flex flex-col self-start overflow-hidden rounded-md border border-[#e6dfd1] bg-[#faf0da] transition-colors hover:bg-[#f3dfb0]"
+                  className="group flex flex-col self-start overflow-hidden rounded-md border border-[#e6dfd1] bg-[#faf0da] transition-colors hover:bg-[#f3dfb0]"
                 >
                   <Link href={activeCategory.href}>
                     <span className="px-4 pt-4 text-[0.95rem] font-medium text-[var(--color-ink)]">
@@ -133,6 +133,7 @@ export function SolutionsMegaMenu({
                   </Link>
                 </NavigationMenuLink>
 
+                <div className="col-span-3 grid auto-rows-[minmax(4.5rem,auto)] grid-cols-3 content-start gap-3">
                 {activeServices.map((service) => {
                   const serviceImage = getServiceMenuImage(service);
 
@@ -162,6 +163,7 @@ export function SolutionsMegaMenu({
                     </NavigationMenuLink>
                   );
                 })}
+                </div>
               </motion.div>
             </AnimatePresence>
           </Container>
