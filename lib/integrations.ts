@@ -16,6 +16,7 @@ type HubSpotLegalConsentOptions = {
 };
 
 type HubSpotSubmitOptions = {
+  portalId?: string;
   formId?: string;
   fields: HubSpotField[];
   pageUri: string;
@@ -52,6 +53,7 @@ export async function verifyTurnstile(token?: string) {
 }
 
 export async function submitToHubSpot({
+  portalId: configuredPortalId,
   formId,
   fields,
   pageUri,
@@ -61,55 +63,60 @@ export async function submitToHubSpot({
   legalConsentOptions,
 }: HubSpotSubmitOptions) {
   // Never fall back to the inherited site's destinations.
-  const portalId = process.env.IDEALSOLUTIONS_HUBSPOT_PORTAL_ID;
+  const portalId = configuredPortalId ?? process.env.IDEALSOLUTIONS_HUBSPOT_PORTAL_ID;
   const finalFormId = formId ?? process.env.IDEALSOLUTIONS_HUBSPOT_FORM_ID;
 
   if (!portalId || !finalFormId) {
     return false;
   }
 
-  const response = await fetch(
-    `https://api.hsforms.com/submissions/v3/integration/submit/${portalId}/${finalFormId}`,
-    {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        fields,
-        context: {
-          ...(hutk ? { hutk } : {}),
-          ...(ipAddress ? { ipAddress } : {}),
-          pageUri,
-          pageName,
+  try {
+    const response = await fetch(
+      `https://api.hsforms.com/submissions/v3/integration/submit/${portalId}/${finalFormId}`,
+      {
+        method: "POST",
+        signal: AbortSignal.timeout(10_000),
+        headers: {
+          "Content-Type": "application/json",
         },
-        ...(legalConsentOptions ? { legalConsentOptions } : {}),
-      }),
-    },
-  );
+        body: JSON.stringify({
+          fields,
+          context: {
+            ...(hutk ? { hutk } : {}),
+            ...(ipAddress ? { ipAddress } : {}),
+            pageUri,
+            pageName,
+          },
+          ...(legalConsentOptions ? { legalConsentOptions } : {}),
+        }),
+      },
+    );
 
-  return response.ok;
+    return response.ok;
+  } catch {
+    // Let callers use the delivery fallback without logging customer details.
+    return false;
+  }
 }
 
 export function buildHubSpotConsentOptions() {
   const configuredSubscriptionTypeId = Number(
-    process.env.IDEALSOLUTIONS_HUBSPOT_SUBSCRIPTION_TYPE_ID ?? "999",
+    process.env.IDEALSOLUTIONS_HUBSPOT_SUBSCRIPTION_TYPE_ID,
   );
-  const subscriptionTypeId = Number.isFinite(configuredSubscriptionTypeId)
-    ? configuredSubscriptionTypeId
-    : 999;
+  const subscriptionTypeId = Number.isSafeInteger(configuredSubscriptionTypeId) &&
+    configuredSubscriptionTypeId > 0 ? configuredSubscriptionTypeId : undefined;
 
   return {
     consent: {
       consentToProcess: true,
       text: "I agree that Ideal Solutions may store and process my personal data to respond to my request.",
-      communications: [
+      communications: subscriptionTypeId ? [
         {
           value: true,
           subscriptionTypeId,
           text: "I agree to receive email communication from Ideal Solutions about my request.",
         },
-      ],
+      ] : [],
     },
   };
 }
@@ -135,26 +142,24 @@ export async function sendFallbackEmail(subject: string, lines: string[]) {
     return false;
   }
 
-  const html = `
-    <div style="font-family:Arial,sans-serif;line-height:1.6">
-      <h2>${subject}</h2>
-      <pre style="white-space:pre-wrap;font-family:Arial,sans-serif">${lines.join("\n")}</pre>
-    </div>
-  `;
+  try {
+    const response = await fetch("https://api.resend.com/emails", {
+      method: "POST",
+      signal: AbortSignal.timeout(10_000),
+      headers: {
+        Authorization: `Bearer ${apiKey}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        from,
+        to,
+        subject,
+        text: lines.join("\n"),
+      }),
+    });
 
-  const response = await fetch("https://api.resend.com/emails", {
-    method: "POST",
-    headers: {
-      Authorization: `Bearer ${apiKey}`,
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      from,
-      to,
-      subject,
-      html,
-    }),
-  });
-
-  return response.ok;
+    return response.ok;
+  } catch {
+    return false;
+  }
 }
