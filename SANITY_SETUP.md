@@ -1,5 +1,7 @@
 # Sanity Setup
 
+> Ideal Solutions: use [the current setup guide](docs/sanity-setup.md). The legacy instructions below describe the previous Auxano configuration and must not be used for this project. Ideal Solutions uses project `jl9vqh9l`, dataset `production` and `/sanity`.
+
 This project already has an embedded Sanity Studio at `/studio`. You do not need to create a separate Studio app.
 
 ## 1. Login From This Project

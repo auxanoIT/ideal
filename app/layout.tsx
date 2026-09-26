@@ -12,6 +12,7 @@ import { CookieConsentManager } from "@/components/layout/cookie-consent-manager
 import { CrawlableNav } from "@/components/layout/crawlable-nav";
 import { SiteFooter } from "@/components/layout/site-footer";
 import { SiteHeader } from "@/components/layout/site-header";
+import { SiteShell } from "@/components/layout/site-shell";
 import { JsonLd } from "@/components/ui/json-ld";
 import {
   getBlogPostSlugs,
@@ -243,6 +244,7 @@ export default async function RootLayout({
   return (
     <html lang="en" className="antialiased">
       <body className="min-h-screen bg-[var(--color-background)] text-[var(--color-foreground)]">
+        <SiteShell studio={children}>
         <div className="flex min-h-screen flex-col">
           <SiteHeader
             navigation={navigation}
@@ -262,6 +264,7 @@ export default async function RootLayout({
         </div>
         <JsonLd data={buildSiteJsonLd(siteSettings, services)} />
         <CookieConsentManager />
+        </SiteShell>
       </body>
     </html>
   );

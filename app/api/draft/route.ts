@@ -6,8 +6,13 @@ export async function GET(request: Request) {
   const secret = url.searchParams.get("secret");
   const slug = url.searchParams.get("slug") ?? "/";
 
-  if (process.env.SANITY_REVALIDATE_SECRET && secret !== process.env.SANITY_REVALIDATE_SECRET) {
+  const expectedSecret = process.env.IDEALSOLUTIONS_SANITY_REVALIDATE_SECRET;
+  if (!expectedSecret || !process.env.IDEALSOLUTIONS_SANITY_API_READ_TOKEN || secret !== expectedSecret) {
     return NextResponse.json({ error: "Invalid secret" }, { status: 401 });
+  }
+
+  if (!slug.startsWith("/") || slug.startsWith("//") || slug.includes("\\")) {
+    return NextResponse.json({ error: "Invalid preview path" }, { status: 400 });
   }
 
   const preview = await draftMode();

@@ -24,7 +24,7 @@ export const siteSettings: SiteSettings = {
   phone: "+234 8062 218 546",
   email: "ask@auxanosolutions.net",
   address:
-    "26A Adeshina Street, Off Oluwole Phillips, Obafemi Awolowo Way, Ikeja",
+    "21, Abeokuta Street, Off Obasa Street, Oba Akran Avenue, Ikeja, Lagos",
   city: "Lagos",
   country: "Nigeria",
   whatsappSales: process.env.NEXT_PUBLIC_SALES_WHATSAPP ?? "+2348062218546",

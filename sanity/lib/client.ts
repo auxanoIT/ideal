@@ -1,9 +1,8 @@
 import { createClient } from "next-sanity";
+import "server-only";
+import { apiVersion, dataset, projectId } from "../config";
 
-export const apiVersion = "2026-04-02";
-export const dataset = process.env.NEXT_PUBLIC_SANITY_DATASET ?? "production";
-export const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID ?? "";
-export const previewToken = process.env.SANITY_API_READ_TOKEN;
+export const previewToken = process.env.IDEALSOLUTIONS_SANITY_API_READ_TOKEN;
 
 export const isSanityEnabled = Boolean(projectId);
 
@@ -16,7 +15,7 @@ export function getSanityClient(preview = false) {
     projectId,
     dataset,
     apiVersion,
-    useCdn: !preview,
+    useCdn: false,
     perspective: preview ? "drafts" : "published",
     token: preview ? previewToken : undefined,
   });
@@ -35,6 +34,10 @@ export async function sanityFetch<T>({
   tags,
   preview = false,
 }: SanityFetchOptions) {
+  // Only these collections are managed in the Ideal Solutions Studio.
+  if (!tags?.some((tag) => ["posts", "caseStudies", "careerOpenings"].includes(tag))) {
+    return null;
+  }
   const client = getSanityClient(preview);
 
   if (!client) {
@@ -44,7 +47,7 @@ export async function sanityFetch<T>({
   return client.fetch<T>(query, params ?? {}, {
     next: {
       tags,
-      revalidate: preview ? 0 : false,
+      revalidate: preview ? 0 : 60,
     },
   });
 }

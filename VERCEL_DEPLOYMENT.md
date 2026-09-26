@@ -1,5 +1,7 @@
 # Vercel Deployment
 
+> Legacy deployment handoff: do not reuse the Auxano identifiers below. For Ideal Solutions, use `.env.example` and [the current Sanity setup guide](docs/sanity-setup.md). The new editor is `/sanity`, project `jl9vqh9l`, dataset `production`.
+
 This project is a standard Next.js App Router application and is ready for Vercel's zero-config Next.js deployment.
 
 ## Recommended Setup

@@ -11,10 +11,8 @@ import {
   KeyRound,
   LifeBuoy,
   Lightbulb,
-  Mail,
   MapPin,
   Network,
-  Phone,
   Server,
   ShieldCheck,
   TrendingUp,
@@ -24,6 +22,7 @@ import { motion, useReducedMotion } from "framer-motion";
 
 import { PartnerLogoMarquee } from "@/components/sections/partner-logo-marquee";
 import { Container } from "@/components/ui/container";
+import styles from "./about-genea-inspired.module.css";
 import {
   StatMetricIcon,
   type StatMetricIconKind,
@@ -152,28 +151,10 @@ const leaders = [
 
 const offices = [
   {
-    title: "Corporate Office",
+    title: "Ideal Solutions Office",
     location: "Lagos, Nigeria",
     address:
-      "26, Adeshina Street, Off Oluwole Philips, Obafemi Awolowo Way, Ikeja, Lagos.",
-    phone: "08034247062",
-    email: "ask@auxanosolutions.net",
-  },
-  {
-    title: "Abuja Office",
-    location: "FCT, Nigeria",
-    address:
-      "4th Floor, ChurchGate Tower C, Constitution Avenue, Central Business District, FCT, Nigeria.",
-    phone: "0702-639-3446",
-    email: "kayode@auxanosolutions.net",
-  },
-  {
-    title: "Cairo Office",
-    location: "Cairo, Egypt",
-    address:
-      "53, Capital Mall, behind the Court, Fifth Settlement, New Cairo, Egypt.",
-    phone: "+20 101 639 7193",
-    email: "mahmoudk@auxanosolutions.net",
+      "21, Abeokuta Street, Off Obasa Street, Oba Akran Avenue, Ikeja, Lagos",
   },
 ];
 
@@ -220,8 +201,8 @@ function SectionIntro({
       <p
         className={
           inverse
-            ? "text-sm font-semibold uppercase tracking-normal text-white/70"
-            : "text-sm font-semibold uppercase tracking-normal text-[#ed6a39]"
+            ? "text-xs font-semibold uppercase tracking-[0.16em] text-[#f2c66d]"
+            : "text-xs font-semibold uppercase tracking-[0.16em] text-[#956600]"
         }
       >
         {eyebrow}
@@ -262,15 +243,15 @@ function CtaLink({
   return (
     <Link
       href={href}
-      style={variant === "secondary" ? { color: "#0b1220" } : undefined}
+      style={variant === "secondary" ? { color: "#252b33" } : undefined}
       className={
         variant === "primary"
-          ? "inline-flex items-center gap-2 rounded-full bg-[#f97316] px-5 py-3 text-sm font-semibold text-white shadow-[0_18px_45px_rgba(249,115,22,0.28)] transition hover:-translate-y-0.5 hover:bg-[#ea580c]"
-          : "inline-flex items-center gap-2 rounded-full border border-[color:rgba(10,48,71,0.16)] bg-white px-5 py-3 text-sm font-semibold text-[var(--color-ink)] transition hover:-translate-y-0.5 hover:border-[color:rgba(47,107,255,0.4)]"
+          ? "inline-flex min-h-12 max-w-full items-center justify-center gap-2 rounded-full text-center bg-[#f2a900] px-5 py-3 text-sm font-semibold text-[#252b33] shadow-[0_18px_45px_rgba(37,43,51,0.12)] transition hover:-translate-y-0.5 hover:bg-[#ffc23d]"
+          : "inline-flex min-h-12 max-w-full items-center justify-center gap-2 rounded-full text-center border border-[color:rgba(37,43,51,0.16)] bg-white px-5 py-3 text-sm font-semibold text-[var(--color-ink)] transition hover:-translate-y-0.5 hover:border-[color:rgba(182,154,96,0.7)]"
       }
     >
       {children}
-      <ArrowRight className="h-4 w-4" />
+      <ArrowRight className="h-4 w-4 shrink-0" />
     </Link>
   );
 }
@@ -279,7 +260,7 @@ export function AboutGeneaInspired() {
   const reduceMotion = useReducedMotion();
 
   return (
-    <div className="overflow-hidden bg-[#f7faff] text-[var(--color-ink)]">
+    <div className={styles.page}>
       <section className="overflow-hidden bg-white">
         <h1 className="sr-only">
           Reliable Data Centre Infrastructure Support for Critical Environments.
@@ -313,10 +294,10 @@ export function AboutGeneaInspired() {
                 environments and organisations that need dependable hands on the
                 ground in Nigeria.
               </p>
-              <div className="mt-8 flex items-center gap-5">
+              <div className="mt-8 flex flex-wrap items-center gap-5">
                 <Link
                   href="/book-consultation"
-                  className="inline-flex items-center justify-center rounded-full bg-black px-6 py-3 text-sm font-semibold !text-white transition hover:-translate-y-0.5"
+                  className="inline-flex items-center justify-center rounded-full bg-[#f2a900] px-6 py-3 text-sm font-semibold !text-[#252b33] transition hover:-translate-y-0.5"
                 >
                   Book Consultation
                 </Link>
@@ -333,7 +314,7 @@ export function AboutGeneaInspired() {
         </div>
 
         <div className="md:hidden">
-          <div className="relative min-h-[19rem] bg-[var(--color-cloud)]">
+          <div className="relative aspect-[16/10] bg-[var(--color-cloud)]">
             <Image
               src="/image/It_management.jpg"
               alt="Ideal Solutions technical specialist reviewing an infrastructure work order"
@@ -345,7 +326,7 @@ export function AboutGeneaInspired() {
             <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(255,255,255,0.1)_0%,rgba(255,255,255,0.78)_100%)]" />
           </div>
 
-          <Container className="overflow-hidden bg-[#f4f6f8] py-10">
+          <Container className="overflow-hidden bg-[#faf7f0] py-10">
             <p className="mt-4 max-w-[20rem] text-[1.65rem] font-semibold leading-[1.12] tracking-[-0.04em] text-[var(--color-ink)]">
               Reliable Data Centre Infrastructure Support for Critical
               Environments.
@@ -356,10 +337,10 @@ export function AboutGeneaInspired() {
               environments and organisations that need dependable hands on the
               ground in Nigeria.
             </p>
-            <div className="mt-7 flex items-center gap-4">
+            <div className="mt-7 flex flex-wrap items-center gap-4">
               <Link
                 href="/book-consultation"
-                className="inline-flex items-center justify-center rounded-full bg-black px-6 py-3 text-sm font-semibold !text-white transition hover:-translate-y-0.5"
+                className="inline-flex items-center justify-center rounded-full bg-[#f2a900] px-6 py-3 text-sm font-semibold !text-[#252b33] transition hover:-translate-y-0.5"
               >
                 Book Consultation
               </Link>
@@ -377,20 +358,20 @@ export function AboutGeneaInspired() {
 
       <section className="bg-white pb-14 pt-4 sm:pb-18">
         <Container>
-          <div className="overflow-hidden rounded-[1.75rem] border border-[color:rgba(11,18,32,0.08)] bg-white">
-            <div className="grid divide-y divide-[color:rgba(53,92,154,0.18)] md:grid-cols-4 md:divide-x md:divide-y-0">
+          <div className="overflow-hidden rounded-[1.75rem] border border-[color:rgba(37,43,51,0.08)] bg-white">
+            <div className="grid grid-cols-2 gap-px bg-[#e6dfd1] md:grid-cols-4">
               {metrics.map((metric) => {
                 return (
                   <article
                     key={metric.label}
-                    className="relative flex min-h-[16rem] flex-col items-center justify-center px-6 py-9 text-center"
+                    className="relative flex min-h-[12rem] flex-col items-center justify-center bg-[#fffdf9] px-3 py-6 text-center sm:min-h-[15rem] sm:px-6 sm:py-8"
                   >
                     <StatMetricIcon kind={metric.icon} />
-                    <p className="mt-8 text-[3.5rem] font-semibold leading-none tracking-normal text-[#123f91] sm:text-[4rem]">
+                    <p className="mt-5 text-[2.5rem] font-semibold leading-none tracking-normal text-[#252b33] sm:text-[4rem]">
                       {metric.value}
                     </p>
-                    <span className="mt-6 h-1 w-16 rounded-full bg-[#f97316]" />
-                    <p className="mt-6 text-lg font-semibold text-[#1f2937]">
+                    <span className="mt-4 h-0.5 w-10 rounded-full bg-[#f2a900]" />
+                    <p className="mt-4 text-sm font-semibold sm:text-base text-[#252b33]">
                       {metric.label}
                     </p>
                   </article>
@@ -404,7 +385,7 @@ export function AboutGeneaInspired() {
       <section id="about-purpose" className="bg-white py-16 sm:py-24">
         <Container>
           <Reveal className="mx-auto max-w-5xl text-center">
-            <p className="text-sm font-semibold uppercase tracking-[0.22em]  text-[#ed6a39]">
+            <p className="text-sm font-semibold uppercase tracking-[0.22em]  text-[#956600]">
               Our Purpose
             </p>
             <h2 className="mt-5 text-balance text-3xl font-semibold leading-tight text-[var(--color-ink)] sm:text-5xl lg:text-6xl">
@@ -420,10 +401,10 @@ export function AboutGeneaInspired() {
         </Container>
       </section>
 
-      <section className="bg-[#eef4ff] py-16 sm:py-24">
+      <section className="bg-[#faf7f0] py-16 sm:py-24">
         <Container className="grid items-center gap-10 lg:grid-cols-[0.95fr_1.05fr]">
           <Reveal>
-            <div className="relative h-96 overflow-hidden rounded-lg bg-[#0A3047]">
+            <div className="relative aspect-[4/3] overflow-hidden rounded-2xl bg-[#252b33]">
               <Image
                 src="/image/IT Infrastructure.png"
                 alt="Ideal Solutions engineer working with enterprise IT infrastructure"
@@ -431,13 +412,13 @@ export function AboutGeneaInspired() {
                 className="object-cover"
                 sizes="(min-width: 1024px) 45vw, 100vw"
               />
-              <div className="absolute left-5 top-5 rounded-full bg-white px-4 py-2 text-sm font-semibold text-[#0A3047]">
+              <div className="absolute left-5 top-5 rounded-full bg-white px-4 py-2 text-sm font-semibold text-[#252b33]">
                 Enterprise-grade delivery
               </div>
             </div>
           </Reveal>
           <Reveal delay={0.1}>
-            <p className="text-sm font-semibold uppercase tracking-[0.22em] text-[#ed6a39]">
+            <p className="text-sm font-semibold uppercase tracking-[0.22em] text-[#956600]">
               Local Execution. Enterprise Standards.
             </p>
             <h2 className="mt-4 text-balance text-3xl font-semibold leading-tight text-[var(--color-ink)] sm:text-5xl">
@@ -479,10 +460,10 @@ export function AboutGeneaInspired() {
 
               return (
                 <Reveal key={value.title} delay={index * 0.04}>
-                  <article className="group h-full rounded-lg border border-[color:rgba(10,48,71,0.1)] bg-white p-5 shadow-[0_18px_48px_rgba(10,48,71,0.06)] transition duration-300 hover:-translate-y-1 hover:border-[#ed6a39]/40">
-                    <div className="relative flex h-14 w-14 items-center justify-center overflow-hidden rounded-2xl border border-[#ed6a39]/15 bg-[#ed6a39]/10 text-[#ed6a39] shadow-[0_14px_30px_rgba(237,106,57,0.14)] transition duration-300 group-hover:border-[#ed6a39] group-hover:bg-[#ed6a39] group-hover:text-white">
-                      <span className="absolute right-2 top-2 h-2 w-2 rounded-full bg-[#ed6a39] transition group-hover:bg-white/85" />
-                      <span className="absolute -bottom-3 -left-3 h-9 w-9 rounded-full border border-[#ed6a39]/20 transition group-hover:border-white/30" />
+                  <article className="group h-full rounded-lg border border-[color:rgba(37,43,51,0.1)] bg-white p-5 shadow-[0_18px_48px_rgba(37,43,51,0.06)] transition duration-300 hover:-translate-y-0.5 hover:border-[#f2a900]/40">
+                    <div className="relative flex h-14 w-14 items-center justify-center overflow-hidden rounded-2xl border border-[#f2a900]/15 bg-[#f2a900]/10 text-[#956600] shadow-[0_14px_30px_rgba(37,43,51,0.06)] transition duration-300 group-hover:border-[#f2a900] group-hover:bg-[#f2a900] group-hover:text-[#252b33]">
+                      <span className="absolute right-2 top-2 h-2 w-2 rounded-full bg-[#f2a900] transition group-hover:bg-white/85" />
+                      <span className="absolute -bottom-3 -left-3 h-9 w-9 rounded-full border border-[#f2a900]/20 transition group-hover:border-white/30" />
                       <Icon className="relative h-6 w-6 stroke-[2.2]" />
                     </div>
                     <h3 className="mt-5 text-lg font-semibold text-[var(--color-ink)]">
@@ -499,7 +480,7 @@ export function AboutGeneaInspired() {
         </Container>
       </section>
 
-      <section className="bg-[linear-gradient(135deg,#355C9A_100%,#4E73B8_50%,#6C8FD6_100%)] py-16 text-white sm:py-24">
+      <section className="bg-[linear-gradient(120deg,#252b33_0%,#30353b_72%,#514735_100%)] py-16 text-white sm:py-24">
         <Container className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr]">
           <div className="lg:sticky lg:top-28 lg:self-start">
             <SectionIntro
@@ -515,8 +496,8 @@ export function AboutGeneaInspired() {
 
               return (
                 <Reveal key={service.title} delay={index * 0.04}>
-                  <article className="min-h-52 rounded-lg border border-white/12 bg-white/[0.07] p-6 backdrop-blur transition duration-300 hover:-translate-y-1 hover:bg-white/[0.11]">
-                    <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-white text-[#0A3047]">
+                  <article className="min-h-52 rounded-2xl border border-white/12 bg-white/[0.04] p-6 transition duration-300 hover:-translate-y-0.5 hover:bg-white/[0.11]">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#f2a900]/15 text-[#f2c66d]">
                       <Icon className="h-6 w-6" />
                     </div>
                     <h3 className="mt-5 text-xl font-semibold text-white">
@@ -533,7 +514,7 @@ export function AboutGeneaInspired() {
         </Container>
       </section>
 
-      <section className="bg-[#eef4ff] py-16 sm:py-24">
+      <section className="bg-[#faf7f0] py-16 sm:py-24">
         <Container>
           <SectionIntro
             eyebrow="Our Team"
@@ -544,8 +525,8 @@ export function AboutGeneaInspired() {
           <div className="mt-11 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {leaders.map((leader, index) => (
               <Reveal key={leader.name} delay={index * 0.05}>
-                <article className="group overflow-hidden rounded-lg border border-[color:rgba(10,48,71,0.1)] bg-white shadow-[0_20px_55px_rgba(10,48,71,0.08)]">
-                  <div className="relative aspect-[4/4.6] overflow-hidden bg-[#0A3047]">
+                <article className="group overflow-hidden rounded-lg border border-[color:rgba(37,43,51,0.1)] bg-white shadow-[0_20px_55px_rgba(37,43,51,0.08)]">
+                  <div className="relative aspect-[4/4.6] overflow-hidden bg-[#252b33]">
                     <Image
                       src={leader.image}
                       alt={`${leader.name}, ${leader.role}`}
@@ -555,7 +536,7 @@ export function AboutGeneaInspired() {
                     />
                   </div>
                   <div className="p-5">
-                    <p className="text-sm font-semibold text-[#f97316]">
+                    <p className="text-sm font-semibold text-[#956600]">
                       {leader.role}
                     </p>
                     <h3 className="mt-2 text-xl font-semibold text-[var(--color-ink)]">
@@ -569,7 +550,7 @@ export function AboutGeneaInspired() {
                       className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-[var(--color-electric)]"
                     >
                       Contact
-                      <ArrowRight className="h-4 w-4" />
+                      <ArrowRight className="h-4 w-4 shrink-0" />
                     </a>
                   </div>
                 </article>
@@ -579,56 +560,13 @@ export function AboutGeneaInspired() {
         </Container>
       </section>
 
-      <section className="bg-white py-16 sm:py-24">
-        <Container>
-          <SectionIntro
-            eyebrow="Our Presence"
-            title="Local presence for onsite infrastructure support."
-            description="Our teams support infrastructure projects, technical interventions and ongoing requirements across Nigeria."
-            center
-          />
-          <div className="mt-11 grid gap-5 lg:grid-cols-3">
-            {offices.map((office, index) => (
-              <Reveal key={office.title} delay={index * 0.06}>
-                <article className="h-full rounded-lg border border-[color:rgba(10,48,71,0.1)] bg-[#f7faff] p-6 shadow-[0_18px_50px_rgba(10,48,71,0.06)]">
-                  <h3 className="mt-5 text-2xl font-semibold text-[var(--color-ink)]">
-                    {office.title}
-                  </h3>
-                  <p className="mt-1 text-sm font-semibold uppercase tracking-[0.16em] text-[var(--color-electric)]">
-                    {office.location}
-                  </p>
-                  <div className="mt-6 space-y-4 text-sm leading-7 text-[var(--color-muted)]">
-                    <p className="flex gap-3">
-                      <MapPin className="mt-1 h-4 w-4 shrink-0 text-[#f97316]" />
-                      <span>{office.address}</span>
-                    </p>
-                    <p className="flex gap-3">
-                      <Phone className="mt-1 h-4 w-4 shrink-0 text-[#f97316]" />
-                      <span>{office.phone}</span>
-                    </p>
-                    <p className="flex gap-3">
-                      <Mail className="mt-1 h-4 w-4 shrink-0 text-[#f97316]" />
-                      <span>{office.email}</span>
-                    </p>
-                  </div>
-                </article>
-              </Reveal>
-            ))}
-          </div>
-        </Container>
-      </section>
-
-      <section className="bg-[linear-gradient(135deg,#355C9A_100%,#4E73B8_50%,#6C8FD6_100%)] py-16 text-white sm:py-20">
+      <section className="bg-[linear-gradient(120deg,#252b33_0%,#30353b_72%,#514735_100%)] py-16 text-white sm:py-20">
         <Container className="grid items-center gap-8 lg:grid-cols-[1fr_auto]">
           <Reveal>
             <h2 className="mt-4 max-w-3xl text-balance text-3xl font-semibold leading-tight sm:text-5xl">
               Let&apos;s discuss the right infrastructure support for your
               environment.
             </h2>
-            <p className="mt-5 max-w-2xl text-base leading-8 text-white/72">
-              From deployment and Smart Hands to networking, hardware, security
-              and lifecycle support, bring us the requirement.
-            </p>
           </Reveal>
           <Reveal delay={0.08} className="flex flex-wrap gap-3 lg:justify-end">
             <CtaLink href="/book-consultation">Book Consultation</CtaLink>

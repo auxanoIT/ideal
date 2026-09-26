@@ -52,7 +52,7 @@ import {
   siteSettingsQuery,
   testimonialsQuery,
 } from "@/sanity/lib/queries";
-import { sanityFetch } from "@/sanity/lib/client";
+import { isSanityEnabled, sanityFetch } from "@/sanity/lib/client";
 import { applyHomeCloudinaryMedia } from "@/lib/cloudinary-media";
 
 async function isPreviewEnabled() {
@@ -292,7 +292,7 @@ export async function getCaseStudyBySlug(
     (item) => item.slug === slug && item.published === true,
   );
 
-  if (fallbackCaseStudy) {
+  if (!isSanityEnabled && fallbackCaseStudy) {
     return fallbackCaseStudy;
   }
 
@@ -322,11 +322,7 @@ export async function getBlogPostSlugs(): Promise<string[]> {
     tags: ["posts"],
   });
 
-  if (!content?.length) {
-    return blogPosts.map((post) => post.slug);
-  }
-
-  return content;
+  return content ?? (isSanityEnabled ? [] : blogPosts.map((post) => post.slug));
 }
 
 export async function getBlogPostBySlug(
@@ -339,7 +335,7 @@ export async function getBlogPostBySlug(
     tags: ["posts"],
   });
 
-  return content ?? blogPosts.find((post) => post.slug === slug) ?? null;
+  return content ?? (isSanityEnabled ? null : blogPosts.find((post) => post.slug === slug) ?? null);
 }
 
 export async function getTestimonials(): Promise<Testimonial[]> {

@@ -903,17 +903,6 @@ const post = defineType({
   ],
 });
 
-const testimonial = defineType({
-  name: "testimonial",
-  title: "Testimonials",
-  type: "document",
-  fields: [
-    defineField({ name: "quote", title: "Quote", type: "text" }),
-    defineField({ name: "name", title: "Name", type: "string" }),
-    defineField({ name: "role", title: "Role", type: "string" }),
-    defineField({ name: "company", title: "Company", type: "string" }),
-  ],
-});
 
 const careerOpening = defineType({
   name: "careerOpening",
@@ -968,32 +957,6 @@ const careerOpening = defineType({
   },
 });
 
-const faq = defineType({
-  name: "faq",
-  title: "FAQs",
-  type: "document",
-  fields: [
-    defineField({
-      name: "id",
-      title: "FAQ ID",
-      type: "string",
-      validation: (rule) => rule.required(),
-    }),
-    defineField({ name: "order", title: "Order", type: "number" }),
-    defineField({
-      name: "question",
-      title: "Question",
-      type: "string",
-      validation: (rule) => rule.required(),
-    }),
-    defineField({
-      name: "answer",
-      title: "Answer",
-      type: "text",
-      validation: (rule) => rule.required(),
-    }),
-  ],
-});
 
 export const schemaTypes = [
   metric,
@@ -1009,7 +972,5 @@ export const schemaTypes = [
   blogTable,
   caseStudy,
   post,
-  testimonial,
   careerOpening,
-  faq,
 ];

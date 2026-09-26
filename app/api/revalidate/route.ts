@@ -27,11 +27,11 @@ const documentTags: Record<string, string[]> = {
 const siteWideDocumentTypes = new Set(["footer", "navigation", "siteSettings"]);
 
 export async function POST(request: NextRequest) {
-  const secret = process.env.SANITY_REVALIDATE_SECRET;
+  const secret = process.env.IDEALSOLUTIONS_SANITY_REVALIDATE_SECRET;
 
   if (!secret) {
     return NextResponse.json(
-      { error: "Missing SANITY_REVALIDATE_SECRET" },
+      { error: "Missing IDEALSOLUTIONS_SANITY_REVALIDATE_SECRET" },
       { status: 500 },
     );
   }

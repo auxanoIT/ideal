@@ -1,16 +1,22 @@
 import { defineConfig } from "sanity";
-import { deskTool } from "sanity/desk";
+import { structureTool } from "sanity/structure";
 
-import { dataset, projectId } from "./sanity/lib/client";
+import { dataset, projectId } from "./sanity/config";
 import { schemaTypes } from "./sanity/schemaTypes";
 
 export default defineConfig({
-  name: "auxano-studio",
-  title: "Auxano Studio",
-  basePath: "/studio",
+  name: "ideal-solutions-studio",
+  title: "Ideal Solutions",
+  basePath: "/sanity",
   projectId: projectId || "placeholder",
   dataset,
-  plugins: [deskTool()],
+  plugins: [structureTool({
+    structure: (S) => S.list().title("Ideal Solutions Content").items([
+      S.documentTypeListItem("post").title("Posts / Blog"),
+      S.documentTypeListItem("caseStudy").title("Case Studies"),
+      S.documentTypeListItem("careerOpening").title("Careers"),
+    ]),
+  })],
   schema: {
     types: schemaTypes,
   },
