@@ -65,7 +65,7 @@ export function OperationTeams() {
                   <ul className={styles.benefits}>
                     {team.benefits.map((benefit) => <li key={benefit}><CircleCheck size={18} aria-hidden="true" /><span>{benefit}</span></li>)}
                   </ul>
-                  <Link className={styles.cta} href="/contact">{team.cta}<ArrowRight size={19} aria-hidden="true" /></Link>
+                  <Link className={styles.cta} href="/book-consultation">{team.cta}<ArrowRight size={19} aria-hidden="true" /></Link>
                 </div>
                 <div className={styles.visual} data-comparison={team.id === "facilities" || undefined}>
                   <div className={styles.photo}>
@@ -141,7 +141,7 @@ export function OperationTeams() {
                             </li>
                           ))}
                         </ul>
-                        <Link className={styles.accordionCta} href="/contact">
+                        <Link className={styles.accordionCta} href="/book-consultation">
                           {team.cta}
                           <ArrowRight size={19} aria-hidden="true" />
                         </Link>

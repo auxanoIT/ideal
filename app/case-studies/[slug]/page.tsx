@@ -46,8 +46,11 @@ export async function generateMetadata({
   }
 
   return buildMetadata({
-    title: caseStudy.title,
-    description: buildCaseStudySeoDescription(caseStudy),
+    title: caseStudy.seo?.metaTitle || caseStudy.title,
+    description: caseStudy.seo?.metaDescription || buildCaseStudySeoDescription(caseStudy),
+    imagePath: getCaseStudyMedia(caseStudy).src,
+    imageAlt: getCaseStudyMedia(caseStudy).alt,
+    modifiedTime: caseStudy.updatedAt,
     path: `/case-studies/${caseStudy.slug}`,
     type: "article",
     keywords: [

@@ -150,7 +150,7 @@ export function ServiceCapabilityFlow({
                       <p key={paragraph}>{paragraph}</p>
                     ))}
                   </div>
-                  <ButtonLink href="/contact" className="mt-7 min-h-11 bg-[#f2a900] bg-none text-[#102444] shadow-none hover:bg-[#ffd06b]">
+                  <ButtonLink href="/book-consultation" className="mt-7 min-h-11 bg-[#f2a900] bg-none text-[#102444] shadow-none hover:bg-[#ffd06b]">
                     Make an enquiry
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </ButtonLink>

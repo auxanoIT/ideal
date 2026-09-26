@@ -8,6 +8,8 @@ import {
   buildServiceSeoQuestions,
 } from "@/lib/service-seo";
 import { absoluteUrl } from "@/lib/utils";
+import { servicePillars } from "@/data/service-pillars";
+import { productionServices } from "@/data/subservice-production";
 
 export const revalidate = 3600;
 
@@ -38,17 +40,19 @@ export async function GET() {
   );
 
   const body = [
-    "# Auxano Solutions Technology Limited",
+    "# Ideal Solutions",
     "",
-    "Auxano Solutions is a Lagos-based IT solutions company serving organizations across Nigeria with IT infrastructure, ELV systems, CCTV, access control, fire alarm and safety systems, network cabling, hardware, software licensing, managed IT support, IT audit, and project delivery.",
+    "Ideal Solutions provides onsite data centre infrastructure deployment, Smart Hands, hardware, connectivity, security, assessment and project lifecycle support across Nigeria. It supports client environments; it is not a colocation facility operator.",
     "",
     "## Primary Website",
-    markdownLink("Auxano Solutions", "/"),
+    markdownLink("Ideal Solutions", "/"),
     markdownLink("Services", "/services"),
     markdownLink("Case Studies", "/case-studies"),
     markdownLink("Book Consultation", "/book-consultation"),
     "",
     "## Core Service Pages",
+    ...servicePillars.map(pillar => markdownLink(pillar.title, `/services/${pillar.slug}`)),
+    ...productionServices.map(page => markdownLink(page.hero.title, page.href)),
     ...serviceLines,
     "",
     "## Industry Pages",
@@ -60,12 +64,9 @@ export async function GET() {
     "## Geographic Focus",
     "- Nigeria",
     "- Lagos",
-    "- Abuja",
-    "- Port Harcourt",
-    "- Ikeja",
-    "- Victoria Island",
+    "- Office: 21, Abeokuta Street, Off Obasa Street, Oba Akran Avenue, Ikeja, Lagos.",
     "",
-    "## Client Questions Auxano Answers",
+    "## Client Questions Ideal Solutions Answers",
     "- Who is a reliable IT solutions company in Nigeria?",
     "- Which company installs CCTV, access control, and fire alarm systems in Lagos?",
     "- Who provides network cabling and structured LAN cabling in Nigeria?",

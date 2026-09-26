@@ -5,6 +5,6 @@ export const homeProjectCta: CTABandSection = {
   eyebrow: "",
   title: "Bring Us the Requirement. We’ll Help Execute It.",
   description: "Local technical expertise for data centre operators, enterprise IT teams and technology partners across Nigeria.",
-  primaryCta: { label: "Discuss Your Project", href: "/contact", variant: "primary" },
+  primaryCta: { label: "Discuss Your Project", href: "/book-consultation", variant: "primary" },
   dark: false,
 };

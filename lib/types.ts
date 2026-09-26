@@ -208,6 +208,8 @@ export type ResourceGroup = {
 };
 
 export type CaseStudy = {
+  updatedAt?: string;
+  seo?: { metaTitle?: string; metaDescription?: string };
   slug: string;
   title: string;
   client?: string;
@@ -235,6 +237,8 @@ export type CaseStudy = {
 };
 
 export type BlogPost = {
+  seo?: { metaTitle?: string; metaDescription?: string };
+  updatedAt?: string;
   slug: string;
   title: string;
   category: string;

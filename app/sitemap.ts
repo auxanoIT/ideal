@@ -9,8 +9,11 @@ import {
 import { getCaseStudyMedia } from "@/lib/case-study-media";
 import type { BlogBodyBlock, BlogPost, ServiceNavMedia } from "@/lib/types";
 import { absoluteUrl } from "@/lib/utils";
-import { servicePillars } from "@/data/service-pillars";
-import { productionServices } from "@/data/subservice-production";
+import { servicePillars, capabilityImage, findPillar, getAudienceIndustry } from "@/data/service-pillars";
+import { productionServices, productionSectionImages } from "@/data/subservice-production";
+import { industryEditorialImage, industrySolutionImage } from "@/data/industry-section-images";
+import { homeServicePillars } from "@/data/home-service-pillars";
+import { operationTeams } from "@/data/operation-teams";
 
 type SitemapEntryInput = {
   path: string;
@@ -22,7 +25,7 @@ type SitemapEntryInput = {
   priority: number;
 };
 
-const siteLastModified = new Date("2026-06-05T00:00:00.000Z");
+// Omit modification dates unless the source supplies a real editorial date.
 
 function getUniqueImagePaths(imagePaths: Array<string | undefined | null>) {
   return Array.from(
@@ -48,7 +51,7 @@ function hasSitemapImage(
 }
 
 function getBlogBodyImagePaths(body: BlogPost["body"]) {
-  return body.flatMap((block) => {
+  return (body ?? []).flatMap((block) => {
     if (hasSitemapImage(block)) {
       return block.image?.src ? [block.image.src] : [];
     }
@@ -61,9 +64,9 @@ const staticRoutes: SitemapEntryInput[] = [
   {
     path: "/",
     imagePaths: [
-      "/image/IT%20Infrastructure.png",
-      "/image/networking.png",
-      "/image/servces.png",
+      ...homeServicePillars.items.map((item) => item.imageSrc),
+      ...operationTeams.map((team) => `/image/operation-teams/${team.image}`),
+      "/image/ideal-standard/ideal-solutions-isometric-data-centre-execution-method.webp",
     ],
     changeFrequency: "weekly",
     priority: 1,
@@ -71,12 +74,8 @@ const staticRoutes: SitemapEntryInput[] = [
   {
     path: "/services",
     imagePaths: [
-      "/image/IT%20Infrastructure.png",
-      "/image/service-details/fire-alarm-hero-call-point.webp",
-      "/image/networking.png",
-      "/image/computer_and_server.png",
-      "/image/software_and_licenses.jpg",
-      "/image/It_management.jpg",
+      "/image/ideal-standard/ideal-solutions-isometric-data-centre-execution-method.webp",
+      ...servicePillars.map((pillar) => pillar.hero.src),
     ],
     changeFrequency: "weekly",
     priority: 0.95,
@@ -94,24 +93,17 @@ const staticRoutes: SitemapEntryInput[] = [
     priority: 0.8,
   },
   {
-    path: "/contact",
-    changeFrequency: "monthly",
-    priority: 0.78,
-  },
-  {
     path: "/case-studies",
     changeFrequency: "monthly",
     priority: 0.74,
   },
   {
     path: "/resources",
-    imagePaths: ["/image/service-details/cctv-camera-coverage.webp"],
     changeFrequency: "monthly",
     priority: 0.7,
   },
   {
     path: "/blog",
-    imagePaths: ["/image/service-details/cctv-camera-coverage.webp"],
     changeFrequency: "weekly",
     priority: 0.68,
   },
@@ -140,17 +132,12 @@ const staticRoutes: SitemapEntryInput[] = [
     changeFrequency: "monthly",
     priority: 0.5,
   },
-  {
-    path: "/terms",
-    changeFrequency: "yearly",
-    priority: 0.2,
-  },
 ];
 
 function toSitemapEntry({
   path,
   imagePaths = [],
-  lastModified = siteLastModified,
+  lastModified,
   changeFrequency,
   priority,
 }: SitemapEntryInput): MetadataRoute.Sitemap[number] {
@@ -161,7 +148,7 @@ function toSitemapEntry({
     ...(uniqueImagePaths.length
       ? { images: uniqueImagePaths.map((imagePath) => absoluteUrl(imagePath)) }
       : {}),
-    lastModified,
+    ...(lastModified && !Number.isNaN(new Date(lastModified).getTime()) ? { lastModified } : {}),
     changeFrequency,
     priority,
   };
@@ -177,22 +164,24 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   const dynamicRoutes: SitemapEntryInput[] = [
     ...productionServices
-      .filter((page) => page.href.split("/").length === 4)
       .map((page) => ({
         path: page.href,
-        imagePaths: [page.image.src],
-        lastModified: "2026-09-16",
+        imagePaths: [page.image.src, ...productionSectionImages(page, services.find(service => `/services/${service.slug}` === page.href)?.capabilitySections?.map(section => section.image)).map(image => image.src)],
         changeFrequency: "monthly" as const,
         priority: 0.85,
       })),
     ...servicePillars.map((pillar) => ({
       path: `/services/${pillar.slug}`,
-      imagePaths: [pillar.hero.src, pillar.live.src],
-      lastModified: "2026-09-15",
+      imagePaths: getUniqueImagePaths([
+        pillar.hero.src, pillar.live.src,
+        ...pillar.capabilities.items.map(item => capabilityImage(item.href, pillar).src),
+        ...pillar.related.items.map(item => (findPillar(item.href.split("/").at(-1)!)?.hero ?? pillar.hero).src),
+        ...pillar.audience.items.map(item => getAudienceIndustry(item.title)?.heroImage.src),
+      ]),
       changeFrequency: "monthly" as const,
       priority: 0.95,
     })),
-    ...services.map((service) => ({
+    ...services.filter(service => !productionServices.some(page => page.href === `/services/${service.slug}`) && !servicePillars.some(pillar => pillar.slug === service.slug)).map((service) => ({
       path: `/services/${service.slug}`,
       imagePaths: getUniqueImagePaths([
         service.heroImage?.src ?? service.navImage.src,
@@ -204,13 +193,18 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     })),
     ...industries.map((industry) => ({
       path: industry.href,
-      imagePaths: [industry.heroImage.src],
+      imagePaths: [industry.heroImage.src,
+        industryEditorialImage(industry.slug, "challenge").src,
+        industryEditorialImage(industry.slug, "why").src,
+        ...industry.solutions.map(solution => industrySolutionImage(solution.href).src),
+      ],
       changeFrequency: "monthly" as const,
       priority: 0.8,
     })),
     ...caseStudies.map((item) => ({
       path: `/case-studies/${item.slug}`,
       imagePaths: [getCaseStudyMedia(item).src],
+      lastModified: item.updatedAt,
       changeFrequency: "monthly" as const,
       priority: 0.66,
     })),
@@ -220,13 +214,19 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         post.coverImage?.src,
         ...getBlogBodyImagePaths(post.body),
       ]),
-      lastModified: post.publishedAt,
+      lastModified: post.updatedAt ?? post.publishedAt,
       changeFrequency: "monthly" as const,
       priority: 0.64,
     })),
   ];
 
-  return [...staticRoutes, ...dynamicRoutes]
+  const collectionRoutes = staticRoutes.map(route => ({
+    ...route,
+    imagePaths: route.path === "/blog" ? getUniqueImagePaths(posts.map(post => post.coverImage?.src))
+      : route.path === "/case-studies" ? caseStudies.map(item => getCaseStudyMedia(item).src)
+      : route.imagePaths,
+  }));
+  return [...collectionRoutes, ...dynamicRoutes]
     .map(toSitemapEntry)
     .sort((left, right) => left.url.localeCompare(right.url));
 }

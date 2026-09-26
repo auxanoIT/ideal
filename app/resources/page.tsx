@@ -17,7 +17,7 @@ const groupIcons = {
 export const metadata = buildMetadata({
   title: "IT Resources, Case Studies, and Service Guides in Nigeria",
   description:
-    "Explore Auxano IT resources, service guides, case studies, CCTV, fire alarm, network cabling, and managed support insights for Nigeria.",
+    "Explore Ideal Solutions IT resources, service guides, case studies, CCTV, fire alarm, network cabling, and managed support insights for Nigeria.",
   path: "/resources",
   keywords: [
     "IT resources Nigeria",
@@ -47,21 +47,21 @@ export default async function ResourcesPage() {
           {
             "@context": "https://schema.org",
             "@type": "CollectionPage",
-            name: "Auxano IT Resources",
+            name: "Ideal Solutions IT Resources",
             description:
-              "Resource hub for Auxano Solutions IT infrastructure, CCTV, access control, fire alarm, network cabling, managed IT support, case studies, and consultation planning.",
+              "Resource hub for Ideal Solutions IT infrastructure, CCTV, access control, fire alarm, network cabling, managed IT support, case studies, and consultation planning.",
             url: absoluteUrl("/resources"),
             inLanguage: "en-NG",
             provider: {
               "@type": "Organization",
               "@id": `${absoluteUrl("/")}#organization`,
-              name: "Auxano Solutions Technology Limited",
+              name: "Ideal Solutions",
             },
           },
           {
             "@context": "https://schema.org",
             "@type": "ItemList",
-            name: "Auxano resource links",
+            name: "Ideal Solutions resource links",
             itemListElement: links.map((link, index) => ({
               "@type": "ListItem",
               position: index + 1,

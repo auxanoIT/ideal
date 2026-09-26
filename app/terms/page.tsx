@@ -5,8 +5,9 @@ import { buildMetadata } from "@/lib/seo";
 export const metadata = buildMetadata({
   title: "Terms",
   description:
-    "Read Auxano Solutions website terms for consultation requests, service inquiries, project scoping, and business technology communications in Nigeria.",
+    "Read Ideal Solutions website terms for consultation requests, service inquiries, project scoping, and business technology communications in Nigeria.",
   path: "/terms",
+  noIndex: true, // Placeholder policy: index only after approved legal copy replaces it.
 });
 
 const termsPoints = [
@@ -21,6 +22,7 @@ export default function TermsPage() {
     <section className="py-20 sm:py-24">
       <Container className="max-w-4xl">
         <SectionHeading
+          as="h1"
           eyebrow="Terms"
           title="The launch site frames services, captures leads, and supports consultation-led sales."
           description="Replace this launch-safe summary with legal-approved terms when the client’s final operating policy is available."

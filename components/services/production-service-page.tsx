@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { JsonLd } from '@/components/ui/json-ld';
 import { SubserviceHero } from './subservice-hero';
 import { SubserviceSectionNav } from './subservice-section-nav';
-import { contextualLinks, enquiryHref, type ProductionService } from '@/data/subservice-production';
+import { contextualLinks, enquiryHref, productionSectionImages, type ProductionService } from '@/data/subservice-production';
 import { absoluteUrl } from '@/lib/utils';
 import type { ServiceNavMedia } from '@/lib/types';
 import styles from './production-service-page.module.css';
@@ -46,7 +46,7 @@ function Body({lines,current}: {lines:string[];current:string}) {
 export function ProductionServicePage({page,images=[]}: {page:ProductionService;images?:ServiceNavMedia[]}) {
   const crumbs=[{name:'Home',href:'/'},{name:'Solutions',href:'/services'},{name:page.parentTitle,href:page.parentHref},{name:page.hero.title,href:page.href}];
   // Existing assets are illustrative, never presented as verified customer work.
-  const visuals=images.length?images:[page.pillar.live,page.image,page.pillar.hero,page.pillar.live];
+  const visuals=productionSectionImages(page,images);
   return <div className={styles.page}>
     <JsonLd data={[{'@context':'https://schema.org','@type':'Service',name:page.hero.title,description:page.description,url:absoluteUrl(page.href),provider:{'@id':`${absoluteUrl('/')}#organization`},areaServed:{'@type':'Country',name:'Nigeria'}},{'@context':'https://schema.org','@type':'BreadcrumbList',itemListElement:crumbs.map((crumb,index)=>({'@type':'ListItem',position:index+1,name:crumb.name,item:absoluteUrl(crumb.href)}))}]} />
     <SubserviceHero title={page.hero.title} description={page.hero.description} image={page.image} parent={{title:page.parentTitle,href:page.parentHref}} href={page.href} copy={page.hero} introduction={page.intro} enquiryUrl={enquiryHref(page.hero.title)} />
@@ -54,7 +54,7 @@ export function ProductionServicePage({page,images=[]}: {page:ProductionService;
     <div className={styles.sections}>{page.sections.map((section,index)=>{
       const image=visuals[index%visuals.length];
       return <section className={styles.section} id={section.id} key={section.id} aria-labelledby={`${section.id}-title`}>
-        <figure className={styles.visual}><div><Image src={image.src} alt={image.alt} fill sizes="(min-width:1024px) 43vw, 92vw" quality={80} className={styles.photo}/></div><figcaption>Illustrative infrastructure imagery.</figcaption></figure>
+        <figure className={styles.visual}><div><Image src={image.src} alt={image.alt} fill sizes="(min-width:1024px) 43vw, 92vw" quality={80} className={styles.photo}/></div></figure>
         <div className={styles.copy}><h2 id={`${section.id}-title`}>{section.title}</h2><p className={styles.lead}>{section.lead}</p><Body lines={index === 3 ? deliveryBody(section.body) : section.body} current={page.href}/><Link className={styles.button} href={enquiryHref(page.hero.title,section.navLabel)}>{section.cta}<span aria-hidden="true">↗</span></Link></div>
       </section>;
     })}</div>

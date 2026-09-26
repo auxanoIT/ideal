@@ -41,6 +41,12 @@ export const metadata: Metadata = {
   authors: [{ name: "Ideal Solutions" }],
   creator: "Ideal Solutions",
   publisher: "Ideal Solutions",
+  verification: {
+    google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || undefined,
+    other: process.env.NEXT_PUBLIC_BING_SITE_VERIFICATION
+      ? { "msvalidate.01": process.env.NEXT_PUBLIC_BING_SITE_VERIFICATION }
+      : undefined,
+  },
   alternates: {
     canonical: absoluteUrl("/"),
   },
@@ -177,6 +183,13 @@ function buildSiteJsonLd(settings: SiteSettings, services: Service[]) {
         description: settings.description,
         parentOrganization: {
           "@id": organizationId,
+        },
+        address: {
+          "@type": "PostalAddress",
+          streetAddress: "21, Abeokuta Street, Off Obasa Street, Oba Akran Avenue",
+          addressLocality: "Ikeja",
+          addressRegion: "Lagos",
+          addressCountry: "NG",
         },
         areaServed: [
           {

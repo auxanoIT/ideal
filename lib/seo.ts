@@ -62,7 +62,7 @@ export function buildMetadata({
   );
 
   return {
-    title,
+    title: { absolute: /\bIdeal Solutions\b/i.test(title) ? title : `${title} | Ideal Solutions` },
     description: metaDescription,
     keywords: mergedKeywords,
     applicationName: "Ideal Solutions",
@@ -104,8 +104,7 @@ export function buildMetadata({
       images: [
         {
           url: imageUrl,
-          width: 1200,
-          height: 630,
+          ...(imagePath === "/opengraph-image" ? { width: 1200, height: 630 } : {}),
           alt: imageAlt,
         },
       ],

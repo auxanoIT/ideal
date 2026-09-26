@@ -3,7 +3,7 @@
 - Project: `jl9vqh9l`; organisation: `onu9eywww` (not needed by the client).
 - Dataset: `production`, confirmed available for public reads.
 - Local editor: http://localhost:3000/sanity
-- Future editor: https://idealsolutions.com/sanity (after deployment and domain connection).
+- Future editor: https://idealsolutions.com.ng/sanity (confirmed production domain; after deployment).
 - The old `/studio` path redirects to `/sanity`.
 
 Only posts/blog, case studies and careers are managed here. Other website content remains in the existing local files. Existing blog fields, rich text, table paste support, images, callouts and SEO structure are preserved. No Auxano documents are imported.
@@ -19,7 +19,7 @@ NEXT_PUBLIC_IDEALSOLUTIONS_SANITY_DATASET=production
 
 Restart `npm run dev` after environment changes. Old `NEXT_PUBLIC_SANITY_*` and `SANITY_*` variables are not used. Public published reads do not require a token. Studio editing uses the logged-in Sanity user's project permissions.
 
-In https://www.sanity.io/manage select this project, then API > CORS Origins. Allow `http://localhost:3000` with credentials. Before launch add the actual controlled production origin, such as `https://idealsolutions.com`, with credentials; do not include `/sanity` in the origin. Add `www` only if the Studio is also served there. No wildcard origins.
+In https://www.sanity.io/manage select this project, then API > CORS Origins. Allow `http://localhost:3000` with credentials. Before launch add the actual controlled production origin, such as `https://idealsolutions.com.ng`, with credentials; do not include `/sanity` in the origin. Add `www` only if the Studio is also served there. No wildcard origins.
 
 Setup check: the project API returned HTTP 200 for the production dataset and allowed the localhost origin with credentials. The dataset was empty at setup. Studio sign-in and a real publishing action still need the project member to log in.
 
@@ -38,7 +38,7 @@ Store a new randomly generated `IDEALSOLUTIONS_SANITY_REVALIDATE_SECRET` only in
 
 For a production webhook in the project's API settings:
 
-- URL: `https://idealsolutions.com/api/revalidate` (use the final deployed origin)
+- URL: `https://idealsolutions.com.ng/api/revalidate` (use the final deployed origin)
 - Method: POST; trigger on Create, Update and Delete; dataset production
 - Filter: `_type in ["post", "caseStudy", "careerOpening"]`
 - Projection: `{_id, _type, "slug": slug.current}`

@@ -22,7 +22,7 @@ import { buildMetadata } from "@/lib/seo";
 export const metadata = buildMetadata({
   title: "Careers",
   description:
-    "Join Auxano Solutions to work on IT infrastructure, networking, CCTV, support, and business technology projects for serious operational environments.",
+    "Join Ideal Solutions to work on IT infrastructure, networking, CCTV, support, and business technology projects for serious operational environments.",
   path: "/careers",
 });
 
@@ -115,32 +115,32 @@ export default async function CareersPage() {
   ]);
   const careersEmail = siteSettings.email || "ask@auxanosolutions.net";
   const careerMailto = `mailto:${careersEmail}?subject=${encodeURIComponent(
-    "Career Application - Auxano Solutions",
+    "Career Application - Ideal Solutions",
   )}&body=${encodeURIComponent(
-    "Hello Auxano Solutions,\n\nI would like to apply for an open position. Please find my CV attached.\n\nName:\nRole of interest:\nPhone:\n\nThank you.",
+    "Hello Ideal Solutions,\n\nI would like to apply for an open position. Please find my CV attached.\n\nName:\nRole of interest:\nPhone:\n\nThank you.",
   )}`;
 
   return (
-    <main className="overflow-hidden bg-white text-[var(--color-ink)]">
-      <section className="relative overflow-hidden bg-[#030b18] text-white">
+    <div className="overflow-hidden bg-white text-[var(--color-ink)]">
+      <section className="relative overflow-hidden bg-[#252b33] text-white">
         <div className="absolute inset-0">
           <Image
             src="/image/service-details/managed-services-monitoring.webp"
-            alt="Auxano technical operations team monitoring enterprise infrastructure"
+            alt="Ideal Solutions technical operations team monitoring enterprise infrastructure"
             fill
             priority
             className="object-cover object-center opacity-[0.78]"
             sizes="100vw"
           />
-          <div className="absolute inset-0 bg-[linear-gradient(90deg,#020817_0%,rgba(2,8,23,0.95)_28%,rgba(2,8,23,0.68)_52%,rgba(2,8,23,0.2)_100%)]" />
-          <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(2,8,23,0.1)_0%,#020817_100%)]" />
+          <div className="absolute inset-0 bg-[linear-gradient(90deg,#252b33_0%,rgba(37,43,51,0.95)_28%,rgba(37,43,51,0.68)_52%,rgba(37,43,51,0.2)_100%)]" />
+          <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(37,43,51,0.1)_0%,#252b33_100%)]" />
         </div>
 
         <Container className="relative pb-8 pt-20 sm:pt-24 lg:pt-28">
           <div className="max-w-2xl">
             <h1 className="mt-5 text-balance text-4xl font-semibold leading-tight tracking-normal sm:text-5xl lg:text-6xl">
               Build technology environments businesses{" "}
-              <span className="text-[#2f6bff]">depend on.</span>
+              <span className="text-[#f2a900]">depend on.</span>
             </h1>
             <p className="mt-6 max-w-xl text-base leading-8 text-white/[0.82]">
               Join a team delivering infrastructure, security, networking,
@@ -161,7 +161,7 @@ export default async function CareersPage() {
 
               return (
                 <div key={stat.label} className="flex items-center gap-4 p-4">
-                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg border border-white/10 bg-white/[0.08] text-[#2f6bff]">
+                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg border border-white/10 bg-white/[0.08] text-[#f2a900]">
                     <Icon className="h-6 w-6" />
                   </div>
                   <div>
@@ -183,7 +183,7 @@ export default async function CareersPage() {
         <Container>
           <div className="mx-auto max-w-3xl text-center">
             <h2 className="text-3xl font-semibold leading-tight tracking-normal sm:text-4xl">
-              Why join Auxano?
+              Why join Ideal Solutions?
             </h2>
           </div>
           <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
@@ -195,7 +195,7 @@ export default async function CareersPage() {
                   key={reason.title}
                   className="h-full rounded-lg border border-[color:rgba(11,18,32,0.1)] bg-white p-6 shadow-[0_18px_50px_rgba(15,23,42,0.05)]"
                 >
-                  <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-[color:rgba(47,107,255,0.08)] text-[#2f6bff]">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-[color:rgba(242,169,0,0.14)] text-[#956600]">
                     <Icon className="h-6 w-6" />
                   </div>
                   <h3 className="mt-6 text-lg font-semibold leading-6">
@@ -215,9 +215,9 @@ export default async function CareersPage() {
         <Container className="grid items-center gap-10 lg:grid-cols-[0.78fr_1.22fr]">
           <div>
             <h2 className="text-3xl font-semibold leading-tight tracking-normal sm:text-4xl">
-              Life at Auxano
+              Life at Ideal Solutions
             </h2>
-            <p className="mt-4 text-base font-semibold text-[#2f6bff]">
+            <p className="mt-4 text-base font-semibold text-[#956600]">
               Built around operational excellence.
             </p>
             <p className="mt-4 max-w-xl text-sm leading-7 text-[var(--color-muted)]">
@@ -231,7 +231,7 @@ export default async function CareersPage() {
                   key={bullet}
                   className="flex gap-3 text-sm text-[var(--color-ink)]"
                 >
-                  <CircleCheck className="mt-0.5 h-4 w-4 shrink-0 text-[#2f6bff]" />
+                  <CircleCheck className="mt-0.5 h-4 w-4 shrink-0 text-[#956600]" />
                   <span>{bullet}</span>
                 </div>
               ))}
@@ -239,16 +239,16 @@ export default async function CareersPage() {
           </div>
 
           <div className="grid h-[34rem] grid-cols-6 grid-rows-6 gap-3 max-sm:h-auto max-sm:grid-cols-1 max-sm:grid-rows-none">
-            <div className="relative col-span-3 row-span-6 overflow-hidden rounded-lg bg-[#e8eef8] max-sm:col-span-1 max-sm:h-72">
+            <div className="relative col-span-3 row-span-6 overflow-hidden rounded-lg bg-[#faf7f0] max-sm:col-span-1 max-sm:h-72">
               <Image
                 src="/image/service-details/managed-technical-onsite-engineer.webp"
-                alt="Auxano engineer supporting network infrastructure"
+                alt="Ideal Solutions engineer supporting network infrastructure"
                 fill
                 className="object-cover"
                 sizes="(min-width: 1024px) 38vw, 100vw"
               />
             </div>
-            <div className="relative col-span-3 row-span-3 overflow-hidden rounded-lg bg-[#e8eef8] max-sm:col-span-1 max-sm:h-56">
+            <div className="relative col-span-3 row-span-3 overflow-hidden rounded-lg bg-[#faf7f0] max-sm:col-span-1 max-sm:h-56">
               <Image
                 src="/image/service-details/managed-services-monitoring.webp"
                 alt="Technical operations workspace with monitoring dashboards"
@@ -257,7 +257,7 @@ export default async function CareersPage() {
                 sizes="(min-width: 1024px) 38vw, 100vw"
               />
             </div>
-            <div className="relative col-span-2 row-span-3 overflow-hidden rounded-lg bg-[#e8eef8] max-sm:col-span-1 max-sm:h-56">
+            <div className="relative col-span-2 row-span-3 overflow-hidden rounded-lg bg-[#faf7f0] max-sm:col-span-1 max-sm:h-56">
               <Image
                 src="/image/service-details/cctv-camera-coverage.webp"
                 alt="Commercial CCTV system installed for business security"
@@ -266,7 +266,7 @@ export default async function CareersPage() {
                 sizes="(min-width: 1024px) 22vw, 100vw"
               />
             </div>
-            <div className="relative col-span-1 row-span-3 overflow-hidden rounded-lg bg-[#e8eef8] max-sm:col-span-1 max-sm:h-56">
+            <div className="relative col-span-1 row-span-3 overflow-hidden rounded-lg bg-[#faf7f0] max-sm:col-span-1 max-sm:h-56">
               <Image
                 src="/image/service-details/door-access-credentials.webp"
                 alt="Door access control system in a commercial building"
@@ -281,7 +281,7 @@ export default async function CareersPage() {
 
       <section
         id="open-positions"
-        className="bg-[linear-gradient(180deg,#f4f8ff_0%,#ffffff_100%)] py-16 sm:py-20"
+        className="bg-[linear-gradient(180deg,#faf7f0_0%,#ffffff_100%)] py-16 sm:py-20"
       >
         <Container>
           <div className="flex items-end justify-between gap-6">
@@ -300,7 +300,7 @@ export default async function CareersPage() {
                   className="flex min-h-72 flex-col rounded-lg border border-[color:rgba(11,18,32,0.1)] bg-white p-6 shadow-[0_20px_55px_rgba(15,23,42,0.06)]"
                 >
                   {opening.department ? (
-                    <p className="mb-3 text-xs font-semibold uppercase tracking-normal text-[#2f6bff]">
+                    <p className="mb-3 text-xs font-semibold uppercase tracking-normal text-[#956600]">
                       {opening.department}
                     </p>
                   ) : null}
@@ -310,13 +310,13 @@ export default async function CareersPage() {
                   <div className="mt-4 flex flex-wrap gap-x-5 gap-y-2 text-sm text-[var(--color-muted)]">
                     {opening.location ? (
                       <span className="inline-flex items-center gap-2">
-                        <MapPin className="h-4 w-4 text-[#2f6bff]" />
+                        <MapPin className="h-4 w-4 text-[#956600]" />
                         {opening.location}
                       </span>
                     ) : null}
                     {opening.employmentType ? (
                       <span className="inline-flex items-center gap-2">
-                        <span className="h-2 w-2 rounded-full bg-[#2f6bff]" />
+                        <span className="h-2 w-2 rounded-full bg-[#956600]" />
                         {opening.employmentType}
                       </span>
                     ) : null}
@@ -337,7 +337,7 @@ export default async function CareersPage() {
             </div>
           ) : (
             <div className="mt-8 rounded-lg border border-dashed border-[color:rgba(11,18,32,0.16)] bg-white p-10 text-center shadow-[0_20px_55px_rgba(15,23,42,0.04)]">
-              <Network className="mx-auto h-10 w-10 text-[#2f6bff]" />
+              <Network className="mx-auto h-10 w-10 text-[#956600]" />
               <p className="mt-4 text-xl font-semibold text-[var(--color-ink)]">
                 No open position.
               </p>
@@ -360,7 +360,7 @@ export default async function CareersPage() {
             {hiringSteps.map((step, index) => (
               <article key={step.title} className="relative">
                 <div className="flex items-center gap-4">
-                  <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#123f91] text-sm font-semibold text-white">
+                  <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#252b33] text-sm font-semibold text-white">
                     {index + 1}
                   </span>
                   <h3 className="text-base font-semibold text-[var(--color-ink)]">
@@ -378,7 +378,7 @@ export default async function CareersPage() {
 
       <section className="bg-white pb-16 sm:pb-20">
         <Container>
-          <div className="relative overflow-hidden rounded-lg bg-[#031536] p-8 text-white sm:p-10 lg:p-12">
+          <div className="relative overflow-hidden rounded-lg bg-[#252b33] p-8 text-white sm:p-10 lg:p-12">
             <div className="absolute inset-y-0 right-0 w-1/2 opacity-[0.35]">
               <Image
                 src="/image/service-details/network-cabling-rack.webp"
@@ -387,7 +387,7 @@ export default async function CareersPage() {
                 className="object-cover"
                 sizes="50vw"
               />
-              <div className="absolute inset-0 bg-[linear-gradient(90deg,#031536_0%,rgba(3,21,54,0.5)_55%,rgba(3,21,54,0.18)_100%)]" />
+              <div className="absolute inset-0 bg-[linear-gradient(90deg,#252b33_0%,rgba(37,43,51,0.5)_55%,rgba(37,43,51,0.18)_100%)]" />
             </div>
             <div className="relative grid gap-8 lg:grid-cols-[1fr_auto] lg:items-center">
               <div className="max-w-2xl">
@@ -398,7 +398,7 @@ export default async function CareersPage() {
                   Ready to build meaningful IT solutions?
                 </h2>
                 <p className="mt-3 text-sm leading-7 text-white/[0.72] sm:text-base">
-                  Join Auxano and help businesses operate with more security,
+                  Join Ideal Solutions and help businesses operate with more security,
                   reliability, and confidence.
                 </p>
               </div>
@@ -410,6 +410,6 @@ export default async function CareersPage() {
           </div>
         </Container>
       </section>
-    </main>
+    </div>
   );
 }

@@ -151,11 +151,11 @@
 .audienceCarousel { position:relative; --slide-width:320px; }
 .audienceTrack { position:relative; display:flex; gap:16px; align-items:stretch; overflow-x:auto; overscroll-behavior-x:contain; scroll-snap-type:x mandatory; padding:10px 20px 20px; scrollbar-width:none; }
 .audienceTrack::-webkit-scrollbar { display:none; }
-.audienceCard { flex:0 0 var(--slide-width); min-width:0; scroll-snap-align:center; display:flex; flex-direction:column; align-items:center; min-height:420px; padding:32px 32px 0; background:#fff; border-radius:12px; box-shadow:0 10px 40px rgba(0,0,0,0.04); text-align:center; }
-.audienceCard h3 { font-size:1.45rem; line-height:1.25; margin:0 0 12px; color:var(--ink); }
-.audienceLink { color:#008fc6; font-size:0.95rem; font-weight:600; text-decoration:none; transition:color 0.2s; margin-bottom:24px; }
-.audienceLink:hover { color:#006b94; }
-.audienceImage { width:100%; position:relative; aspect-ratio:1.2; border-radius:8px 8px 0 0; overflow:hidden; margin-top:auto; }
+.audienceCard { flex:0 0 var(--slide-width); min-width:0; scroll-snap-align:start; display:flex; flex-direction:column; align-items:center; padding:24px 20px 20px; background:#fff; border-radius:16px; overflow:hidden; box-shadow:0 10px 30px rgba(0,0,0,0.08); text-align:center; }
+.audienceCard h3 { display:flex; align-items:center; justify-content:center; min-height:3em; font-size:1.25rem; line-height:1.35; margin:0 0 4px; color:var(--ink); }
+.audienceLink { display:inline-flex; align-items:center; min-height:44px; color:#956600; font-size:0.9rem; font-weight:600; text-decoration:none; transition:color 0.2s; margin-bottom:14px; }
+.audienceLink:hover { color:#252b33; text-decoration:underline; text-underline-offset:4px; }
+.audienceImage { width:100%; position:relative; aspect-ratio:4/3; border-radius:10px; overflow:hidden; }
 .audienceImage img { object-fit:cover; }
 .carouselHeading { max-width:850px; margin-bottom:45px; }
 .carousel { position:relative; --slide-width:380px; }
@@ -266,7 +266,7 @@
   .page h2 { font-size:clamp(1.65rem,6.5vw,2rem); }
   .center { margin-bottom:28px; }
   .audienceCarousel { --slide-width:min(78vw,300px); }
-  .audienceCard { min-height:320px; padding:22px 18px 0; }
+  .audienceCard { padding:20px 16px 16px; }
   .audienceCard h3 { font-size:1.2rem; }
   .audienceLink { color:var(--accent); font-size:.85rem; }
   .readinessGrid article { border:0; }

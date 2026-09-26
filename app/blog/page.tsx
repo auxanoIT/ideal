@@ -13,7 +13,7 @@ import { formatDate } from "@/lib/utils";
 export const metadata = buildMetadata({
   title: "Blog",
   description:
-    "Search-oriented articles on CCTV planning, managed IT budgeting, network monitoring, and enterprise operations.",
+    "Practical insights from Ideal Solutions on data centre infrastructure, onsite technical support, networking and IT operations in Nigeria.",
   path: "/blog",
 });
 
@@ -29,6 +29,7 @@ export default async function BlogPage() {
       <section className="bg-[var(--color-cloud)] py-16 sm:py-20">
         <Container>
           <SectionHeading
+            as="h1"
             align="center"
             eyebrow="Insights"
             title="Practical content for teams buying, planning, and governing infrastructure."

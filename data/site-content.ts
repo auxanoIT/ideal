@@ -1,5 +1,7 @@
 import { operationalAdvantageSection } from "@/data/operational-advantage";
 import { homeProjectCta } from "@/data/home-project-cta";
+import { servicePillars } from "@/data/service-pillars";
+import { industryProfiles as footerIndustries } from "@/data/industry-catalog";
 import type {
   BlogPost,
   CaseStudy,
@@ -585,13 +587,13 @@ export const footerColumns: FooterColumn[] = [
   {
     title: "Solutions",
     links: [
-      { label: "Infrastructure", href: "/services#infrastructure" },
-      { label: "Fire Alarm & Safety", href: "/services#fire-alarm-safety" },
-      { label: "Networking", href: "/services#networking" },
-      { label: "Hardware Systems", href: "/services#hardware-systems" },
-      { label: "Software & Licenses", href: "/services#software-licenses" },
-      { label: "Managed & Advisory", href: "/services#managed-advisory" },
+      ...servicePillars.map(pillar => ({ label: pillar.title, href: `/services/${pillar.slug}` })),
+      { label: "Everything You Need Right Here", href: "/services" },
     ],
+  },
+  {
+    title: "Industries",
+    links: footerIndustries.map(industry => ({ label: industry.navLabel, href: industry.href })),
   },
   {
     title: "Explore",

@@ -50,7 +50,7 @@ export function operationalAdvantage(
       bullets: [],
       ...item,
       id: `operational-advantage-${index + 1}`,
-      ctaHref: "/contact",
+      ctaHref: "/book-consultation",
     })),
   };
 }

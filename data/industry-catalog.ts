@@ -146,7 +146,7 @@ function challenge(
       },
     ],
     ctaLabel,
-    ctaHref: "/contact",
+    ctaHref: "/book-consultation",
     visual:
       "Technical infrastructure being inspected and supported in an operating environment.",
   };

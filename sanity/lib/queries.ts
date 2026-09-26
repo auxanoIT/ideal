@@ -95,7 +95,9 @@ export const serviceQuery = groq`
 `;
 
 export const caseStudiesQuery = groq`
-  *[_type == "caseStudy" && published == true] | order(title asc) {
+  *[_type == "caseStudy" && published == true && defined(slug.current)] | order(title asc) {
+    "updatedAt": _updatedAt,
+    seo{metaTitle, metaDescription},
     title,
     client,
     industry,
@@ -127,6 +129,8 @@ export const caseStudySlugsQuery = groq`
 
 export const caseStudyQuery = groq`
   *[_type == "caseStudy" && slug.current == $slug && published == true][0]{
+    "updatedAt": _updatedAt,
+    seo{metaTitle, metaDescription},
     title,
     client,
     industry,
@@ -153,7 +157,9 @@ export const caseStudyQuery = groq`
 `;
 
 export const blogPostsQuery = groq`
-  *[_type == "post"] | order(publishedAt desc) {
+  *[_type == "post" && defined(slug.current)] | order(publishedAt desc) {
+    seo{metaTitle, metaDescription},
+    "updatedAt": _updatedAt,
     title,
     category,
     publishedAt,
@@ -246,6 +252,8 @@ export const blogPostSlugsQuery = groq`
 
 export const blogPostQuery = groq`
   *[_type == "post" && slug.current == $slug][0]{
+    seo{metaTitle, metaDescription},
+    "updatedAt": _updatedAt,
     title,
     category,
     publishedAt,

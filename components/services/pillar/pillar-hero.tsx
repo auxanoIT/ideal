@@ -29,7 +29,7 @@ export function PillarHero({ pillar }: { pillar: Pick<ServicePillar, "title" | "
         <h1 id="pillar-heading">{pillar.heroCopy.title}</h1>
         {pillar.heroCopy.body.map(text => <p className={s.heroDescription} key={text}>{text}</p>)}
         <div className={s.actions}>
-          <Link className={s.primary} href="/contact">{pillar.heroCopy.primaryCta}<ArrowUpRight size={19} aria-hidden="true" /></Link>
+          <Link className={s.primary} href="/book-consultation">{pillar.heroCopy.primaryCta}<ArrowUpRight size={19} aria-hidden="true" /></Link>
           <a className={s.secondary} href="#capabilities">{pillar.heroCopy.secondaryCta}<ArrowDown size={18} aria-hidden="true" /></a>
         </div>
       </div>

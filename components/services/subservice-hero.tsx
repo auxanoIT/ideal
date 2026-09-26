@@ -27,7 +27,7 @@ const highlights = [
   { title: "Next steps", body: "Identify outstanding items and the information needed to move forward." },
 ];
 
-export function SubserviceHero({ title, description, image, href, copy: overrideCopy, introduction, enquiryUrl = '/contact' }: Props) {
+export function SubserviceHero({ title, description, image, href, copy: overrideCopy, introduction, enquiryUrl = '/book-consultation' }: Props) {
   const [paused, setPaused] = useState(false);
   const suppliedCopy = overrideCopy ?? subserviceHeroCopy[href.split("/").at(-1)!];
   const words = (suppliedCopy?.title ?? title).split(" ");

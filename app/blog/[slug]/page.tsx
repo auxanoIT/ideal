@@ -43,12 +43,12 @@ export async function generateMetadata({
   }
 
   return buildMetadata({
-    title: post.title,
-    description: post.excerpt,
+    title: post.seo?.metaTitle || post.title,
+    description: post.seo?.metaDescription || post.excerpt,
     path: `/blog/${post.slug}`,
     type: "article",
     publishedTime: post.publishedAt,
-    modifiedTime: post.publishedAt,
+    modifiedTime: post.updatedAt ?? post.publishedAt,
     imagePath: post.coverImage?.src,
     keywords: [post.category, post.title],
   });
@@ -82,7 +82,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             "@type": "BlogPosting",
             headline: post.title,
             datePublished: post.publishedAt,
-            dateModified: post.publishedAt,
+            dateModified: post.updatedAt ?? post.publishedAt,
             description: post.excerpt,
             image: post.coverImage
               ? absoluteUrl(post.coverImage.src)
@@ -90,15 +90,16 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             url: absoluteUrl(`/blog/${post.slug}`),
             mainEntityOfPage: absoluteUrl(`/blog/${post.slug}`),
             author: {
-              "@type": "Organization",
-              name: post.author ?? "Auxano Solutions Technology Limited",
+              "@type": post.author && post.author !== "Ideal Solutions" ? "Person" : "Organization",
+              name: post.author ?? "Ideal Solutions",
             },
             publisher: {
               "@type": "Organization",
-              name: "Auxano Solutions Technology Limited",
+              "@id": `${absoluteUrl("/")}#organization`,
+              name: "Ideal Solutions",
               logo: {
                 "@type": "ImageObject",
-                url: absoluteUrl("/image/AUxano.webp"),
+                url: absoluteUrl("/idealsolutions-logo.svg"),
               },
             },
           },

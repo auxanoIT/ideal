@@ -10,7 +10,7 @@ type SiteFooterProps = {
   settings: SiteSettings;
 };
 
-export function SiteFooter({ columns }: SiteFooterProps) {
+export function SiteFooter({ columns, settings }: SiteFooterProps) {
   const visibleColumns = columns
     .map((column) => ({
       ...column,
@@ -24,7 +24,7 @@ export function SiteFooter({ columns }: SiteFooterProps) {
 
   return (
     <footer className="border-t border-white/6 bg-[var(--color-ink)] text-white">
-      <Container className="grid gap-12 py-16 lg:grid-cols-[1.3fr_2fr]">
+      <Container className="grid gap-12 py-16">
         <div className="space-y-6">
           <Link href="/" aria-label="Ideal Solutions home" className="inline-flex items-center gap-3">
             <Image
@@ -47,13 +47,13 @@ export function SiteFooter({ columns }: SiteFooterProps) {
           </div>
         </div>
 
-        <div className="grid grid-cols-2 gap-x-5 gap-y-8 sm:grid-cols-3 sm:gap-10">
+        <div className="grid grid-cols-1 gap-x-8 gap-y-8 sm:grid-cols-2 xl:grid-cols-[1.3fr_1.3fr_0.7fr_0.8fr]">
           {visibleColumns.map((column) => (
             <div key={column.title}>
               <p className="text-sm font-semibold uppercase tracking-[0.18em] text-white/56">
                 {column.title}
               </p>
-              <ul className="mt-5 space-y-3">
+              <ul className="mt-4 space-y-1">
                 {column.links.map((link) => (
                   <li key={link.href}>
                     <Link href={link.href} className="inline-flex min-h-11 items-center text-sm text-white/72 transition hover:text-white">
@@ -62,6 +62,14 @@ export function SiteFooter({ columns }: SiteFooterProps) {
                   </li>
                 ))}
               </ul>
+              {column.title === "Contact" && (
+                <div className="mt-6 border-l-2 border-[#F2A900] pl-4">
+                  <p className="text-sm font-semibold text-white">Our Office</p>
+                  <address className="mt-2 text-sm not-italic leading-7 text-white/72">
+                    {settings.address}
+                  </address>
+                </div>
+              )}
             </div>
           ))}
         </div>
