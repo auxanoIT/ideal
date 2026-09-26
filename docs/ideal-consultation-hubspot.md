@@ -4,8 +4,11 @@
 
 The form `Ideal Solutions — Book Consultation` has been created in HubSpot
 account `148498868`. Its ID is `1f691f5a-7ade-4a3a-b32c-87b531f0423d`.
-The form and its email workflow must be published and verified before this
-change is deployed. The workflow is currently unfinished and OFF.
+The form was published on 2026-09-26. The customer acknowledgement email
+(ID `478917158133`) has been saved and attached to the simple workflow.
+The workflow remains OFF pending confirmation of the Ideal Solutions sender
+and business footer, followed by a delivery test. Do not deploy this change
+until the workflow and end-to-end delivery are verified.
 
 The consultation endpoint uses this dedicated form. Other enquiry endpoints
 retain their own configuration. All seven booking fields map to HubSpot:
@@ -30,9 +33,11 @@ The new form's submission-notification recipient is configured as
 `obafemielijahsunday@gmail.com`. Verify that user's global form email
 notifications are enabled before the live delivery test.
 
-Complete the form's simple workflow: on submission, email the enrolled contact.
-Choose the approved sender, correct subscription type, and accurate company
-footer. Enable the workflow only after the email is complete. Do not reuse an
+The form's simple workflow emails the enrolled contact on submission.
+The inactive email currently uses the user's verified Gmail address and the
+existing Auxano Primary footer as draft settings. Confirm or replace both
+before activation. The available subscription type is Marketing Information;
+verify delivery eligibility and actual subscription ID without inventing consent. Enable the workflow only after the email is complete. Do not reuse an
 Auxano-branded footer without checking that it is appropriate for Ideal Solutions.
 
 Subject: We've received your consultation request — Ideal Solutions
