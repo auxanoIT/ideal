@@ -8,6 +8,7 @@ import {
   verifyTurnstile,
 } from "@/lib/integrations";
 import { leadSchema } from "@/lib/schemas";
+import { consultationHubSpotDestination } from "@/lib/consultation-hubspot";
 
 export async function POST(request: Request) {
   const payload = await request.json().catch(() => null);
@@ -32,6 +33,7 @@ export async function POST(request: Request) {
   }
 
   const hubSpotSuccess = await submitToHubSpot({
+    ...(parsed.data.context === "consultation" ? consultationHubSpotDestination() : {}),
     fields: [
       { name: "firstname", value: parsed.data.name },
       { name: "company", value: parsed.data.company },
@@ -41,7 +43,7 @@ export async function POST(request: Request) {
       { name: "message", value: parsed.data.message },
       { name: "lead_source", value: parsed.data.context },
     ],
-    pageUri: request.url,
+    pageUri: new URL(parsed.data.context === "consultation" ? "/book-consultation" : "/contact", request.url).href,
     pageName: parsed.data.context === "consultation" ? "Book Consultation" : "Contact",
     hutk: parsed.data.hubspotTrackingCookie,
     ipAddress: getRequestIpAddress(request),
