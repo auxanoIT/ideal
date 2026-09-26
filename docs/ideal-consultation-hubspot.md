@@ -6,15 +6,16 @@ The form `Ideal Solutions — Book Consultation` has been created in HubSpot
 account `148498868`. Its ID is `1f691f5a-7ade-4a3a-b32c-87b531f0423d`.
 The form was published on 2026-09-26. The customer acknowledgement email
 (ID `478917158133`) has been saved and attached to the simple workflow.
-The workflow remains OFF. The approved sender is `info@idealsolutions.com`.
-The approved business address is 21, Abeokuta Street, Off Obasa Street,
-Oba Akran Avenue, Ikeja, Lagos, Nigeria.
+The workflow remains OFF pending sender verification and a delivery test.
+The approved sender is `info@idealsolutions.com`; HubSpot's verification email
+was requested on 2026-09-26. The address must be approved from that mailbox,
+selected in the acknowledgement email, and checked before enabling the workflow.
 
-The current Auxano account locks additional footer addresses behind an upgrade.
-Its only footer is shared with existing Auxano emails and must not be overwritten
-for this integration. Resolve this with a dedicated Ideal Solutions account or
-a plan supporting multiple footers, then configure the sender and test delivery. Do not deploy this change
-until the workflow and end-to-end delivery are verified.
+Per the user's request, the shared Primary footer was updated to `I & A Solutions`
+with both addresses: 26A Adeshina Street, Off Oluwole Phillips, Obafemi Awolowo Way;
+and 21, Abeokuta Street, Off Obasa Street, Oba Akran Avenue; Ikeja, Lagos, Nigeria.
+The existing unsubscribe and preferences links were retained. This footer is
+shared by existing Auxano emails too. Do not deploy until delivery is verified.
 
 The consultation endpoint uses this dedicated form. Other enquiry endpoints
 retain their own configuration. All seven booking fields map to HubSpot:
@@ -40,11 +41,11 @@ The new form's submission-notification recipient is configured as
 notifications are enabled before the live delivery test.
 
 The form's simple workflow emails the enrolled contact on submission.
-The inactive email currently uses the user's verified Gmail address and the
-existing Auxano Primary footer as draft settings. Replace both with the approved Ideal Solutions details
-before activation. The available subscription type is Marketing Information;
-verify delivery eligibility and actual subscription ID without inventing consent. Enable the workflow only after the email is complete. Do not reuse an
-Auxano-branded footer without checking that it is appropriate for Ideal Solutions.
+The inactive email still has the user's Gmail address as a temporary sender;
+replace it with `info@idealsolutions.com` after verification. The available
+subscription type is Marketing Information; verify delivery eligibility and
+the actual subscription ID without inventing consent. Enable the workflow
+only after the email is complete.
 
 Subject: We've received your consultation request — Ideal Solutions
 
