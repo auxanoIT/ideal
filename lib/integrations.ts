@@ -99,9 +99,9 @@ export async function submitToHubSpot({
   }
 }
 
-export function buildHubSpotConsentOptions() {
+export function buildHubSpotConsentOptions(defaultSubscriptionTypeId?: number) {
   const configuredSubscriptionTypeId = Number(
-    process.env.IDEALSOLUTIONS_HUBSPOT_SUBSCRIPTION_TYPE_ID,
+    process.env.IDEALSOLUTIONS_HUBSPOT_SUBSCRIPTION_TYPE_ID ?? defaultSubscriptionTypeId,
   );
   const subscriptionTypeId = Number.isSafeInteger(configuredSubscriptionTypeId) &&
     configuredSubscriptionTypeId > 0 ? configuredSubscriptionTypeId : undefined;
