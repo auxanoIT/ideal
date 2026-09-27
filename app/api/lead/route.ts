@@ -8,7 +8,7 @@ import {
   verifyTurnstile,
 } from "@/lib/integrations";
 import { leadSchema } from "@/lib/schemas";
-import { consultationHubSpotDestination } from "@/lib/consultation-hubspot";
+import { consultationHubSpotDestination, consultationHubSpotSubscriptionTypeId } from "@/lib/consultation-hubspot";
 
 export async function POST(request: Request) {
   const payload = await request.json().catch(() => null);
@@ -47,7 +47,9 @@ export async function POST(request: Request) {
     pageName: parsed.data.context === "consultation" ? "Book Consultation" : "Contact",
     hutk: parsed.data.hubspotTrackingCookie,
     ipAddress: getRequestIpAddress(request),
-    legalConsentOptions: buildHubSpotConsentOptions(),
+    legalConsentOptions: buildHubSpotConsentOptions(
+      parsed.data.context === "consultation" ? consultationHubSpotSubscriptionTypeId() : undefined,
+    ),
   });
 
   if (!hubSpotSuccess) {
