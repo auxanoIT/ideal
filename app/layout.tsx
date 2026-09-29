@@ -38,6 +38,11 @@ export const metadata: Metadata = {
   description:
     "Ideal Solutions provides technical execution, Smart Hands, deployment, connectivity, security and lifecycle support for data centres across Nigeria.",
   applicationName: "Ideal Solutions",
+  icons: {
+    icon: [{ url: "/idealsolutions-logo.svg", type: "image/svg+xml" }],
+    shortcut: "/idealsolutions-logo.svg",
+    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
+  },
   authors: [{ name: "Ideal Solutions" }],
   creator: "Ideal Solutions",
   publisher: "Ideal Solutions",
