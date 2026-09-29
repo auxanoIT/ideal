@@ -40,6 +40,7 @@ import {
   blogPostsQuery,
   caseStudiesQuery,
   caseStudyQuery,
+  caseStudySlugsQuery,
   careerOpeningsQuery,
   estimatorConfigQuery,
   faqsQuery,
@@ -282,7 +283,17 @@ export async function getCaseStudies(): Promise<CaseStudy[]> {
 }
 
 export async function getCaseStudySlugs(): Promise<string[]> {
-  return (await getCaseStudies()).map((item) => item.slug);
+  // Static parameter generation has no request or draft-mode cookie.
+  // Fetch only published slugs, keeping request-time previews separate.
+  const content = await sanityFetch<string[]>({
+    query: caseStudySlugsQuery,
+    preview: false,
+    tags: ["caseStudies"],
+  });
+
+  return content ?? (isSanityEnabled ? [] : caseStudies
+    .filter((item) => item.published === true)
+    .map((item) => item.slug));
 }
 
 export async function getCaseStudyBySlug(
