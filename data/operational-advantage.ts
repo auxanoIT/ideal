@@ -1,7 +1,7 @@
 import type { CategoryShowcaseSection } from "@/lib/types";
 import { cloudinaryVideos, getCloudinaryVideoUrl } from "@/lib/cloudinary-media";
 
-// Brand-specific replacements for tabs 1, 2 and 4; tab 3 keeps its existing video.
+// Brand-specific videos for all four tabs; Keep Control uses the requested Ideal Solutions clip.
 export function operationalAdvantage(
   section: CategoryShowcaseSection,
 ): CategoryShowcaseSection {
@@ -60,7 +60,7 @@ const retainedVideos = [cloudinaryVideos.itInfrastructure, cloudinaryVideos.netw
 const replacementVideos = [
   { publicId: "idealsolution_1_hj84zo", url: "https://res.cloudinary.com/dnqn2cs4e/video/upload/v1789406987/idealsolution_1_hj84zo.mp4" },
   { publicId: "idealsolution2_aztxq2", url: "https://res.cloudinary.com/dnqn2cs4e/video/upload/v1789407493/idealsolution2_aztxq2.mp4" },
-  null,
+  { publicId: "idealsolution_1_hj84zo", url: "https://res.cloudinary.com/dnqn2cs4e/video/upload/v1789406987/idealsolution_1_hj84zo.mp4" },
   { publicId: "idealsolution_4_yipfcz", url: "https://res.cloudinary.com/dnqn2cs4e/video/upload/v1789411020/idealsolution_4_yipfcz.mp4" },
 ];
 
