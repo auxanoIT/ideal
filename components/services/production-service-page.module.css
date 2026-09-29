@@ -32,7 +32,6 @@
 .closing { background:linear-gradient(120deg,#252b33,#373a3b 72%,#514735); color:white; padding:80px 24px; text-align:center; }
 .closing h2 { max-width:960px; margin:auto; }
 .closing p { max-width:860px; margin:24px auto 0; color:#e5e1d8; line-height:1.8; }
-.parent { display:block; width:fit-content; margin:28px auto 0; color:#f4ca77; text-decoration:underline; text-underline-offset:5px; }
 @media(max-width:900px) { .section { grid-template-columns:1fr; gap:24px; } .section:nth-child(even) .visual { order:0; } .visual>div { aspect-ratio:1.5; } .sections { padding:48px 24px; gap:64px; } }
 @media(max-width:550px) { .sections,.faq { padding-inline:20px; } .button { text-align:center; font-size:14px; } .faq summary { font-size:16px; } }
 @media(prefers-reduced-motion:reduce) { .button { transition:none; } }

@@ -157,7 +157,7 @@
 .audienceLink:hover { color:#252b33; text-decoration:underline; text-underline-offset:4px; }
 .audienceImage { width:100%; position:relative; aspect-ratio:4/3; border-radius:10px; overflow:hidden; }
 .audienceImage img { object-fit:cover; }
-.carouselHeading { max-width:850px; margin-bottom:45px; }
+.carouselHeading { max-width:850px; margin:0 auto 45px; text-align:center; text-wrap:balance; }
 .carousel { position:relative; --slide-width:380px; }
 .carouselTrack { position:relative; display:flex; gap:12px; align-items:stretch; overflow-x:auto; overscroll-behavior-x:contain; scroll-snap-type:x mandatory; padding:30px 20px 20px; scrollbar-width:none; }
 .carouselTrack::-webkit-scrollbar { display:none; }
@@ -194,7 +194,7 @@
 .liveBenefits p { font-size:1rem; line-height:1.8; }
 .scenarios { background:radial-gradient(ellipse at 80% 100%,#66522b 0%,transparent 60%),linear-gradient(115deg,#1d2229,#30363d); }
 .scenarios>.wrap { width:min(1560px,calc(100% - 80px)); }
-.scenarios .center { text-align:left; margin:0 0 70px; max-width:740px; }
+.scenarios .center { text-align:center; margin:0 auto 70px; max-width:900px; text-wrap:balance; }
 .scenarios h2 { color:white; }
 .scenarioGrid { display:flex; align-items:flex-end; gap:12px; overflow-x:auto; padding-bottom:16px; min-height:440px; scrollbar-color:#b69a60 transparent; }
 .scenarioCard { flex:1 0 150px; min-width:0; min-height:370px; align-self:stretch; padding:26px 22px; border:0; border-radius:22px; background:#1b2026e8; transition:flex-basis .45s,flex-grow .45s,background .4s; }

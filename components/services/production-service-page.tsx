@@ -1,5 +1,4 @@
 import type { Metadata } from 'next';
-import type { ReactNode } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { JsonLd } from '@/components/ui/json-ld';
@@ -10,7 +9,7 @@ import { absoluteUrl } from '@/lib/utils';
 import type { ServiceNavMedia } from '@/lib/types';
 import styles from './production-service-page.module.css';
 
-// Keep the handover section focused on delivery, not repeated cross-selling copy.
+// Keep every content section focused on delivery, without inline cross-selling.
 function deliveryBody(lines: string[]) {
   return lines.filter(line => !(/^(For |Where )/.test(line) && contextualLinks.some(([label]) => line.includes(label))));
 }
@@ -19,28 +18,14 @@ export function productionMetadata(page: ProductionService): Metadata {
   return {title:{absolute:page.seoTitle},description:page.description,alternates:{canonical:absoluteUrl(page.href)},robots:{index:true,follow:true},openGraph:{title:page.seoTitle,description:page.description,url:absoluteUrl(page.href),siteName:'Ideal Solutions',type:'website',images:[{url:absoluteUrl(page.image.src),alt:page.image.alt}]},twitter:{card:'summary_large_image',title:page.seoTitle,description:page.description,images:[absoluteUrl(page.image.src)]}};
 }
 
-function LinkedCopy({text,current}: {text:string;current:string}) {
-  const nodes: ReactNode[]=[];
-  let rest=text;
-  while(rest) {
-    const matches=contextualLinks.filter(([,href])=>href!==current).map(([label,href])=>({label,href,index:rest.indexOf(label)})).filter(item=>item.index>=0).sort((a,b)=>a.index-b.index || b.label.length-a.label.length);
-    const match=matches[0];
-    if(!match) {nodes.push(rest);break;}
-    nodes.push(rest.slice(0,match.index));
-    nodes.push(<Link key={nodes.length} href={match.href}>{match.label}</Link>);
-    rest=rest.slice(match.index+match.label.length);
-  }
-  return <>{nodes}</>;
-}
-
-function Body({lines,current}: {lines:string[];current:string}) {
+function Body({lines}: {lines:string[]}) {
   const blocks: {list:boolean;lines:string[]}[]=[];
-  for(const line of lines) {
+  for(const line of deliveryBody(lines)) {
     const list=line.startsWith('•');
     if(list && blocks.at(-1)?.list) blocks.at(-1)!.lines.push(line.replace(/^•\s*/,''));
     else blocks.push({list,lines:[line.replace(/^•\s*/,'')]});
   }
-  return <>{blocks.map((block,index)=>block.list?<ul key={index}>{block.lines.map(line=><li key={line}><LinkedCopy text={line} current={current}/></li>)}</ul>:<p key={index}><LinkedCopy text={block.lines[0]} current={current}/></p>)}</>;
+  return <>{blocks.map((block,index)=>block.list?<ul key={index}>{block.lines.map(line=><li key={line}>{line}</li>)}</ul>:<p key={index}>{block.lines[0]}</p>)}</>;
 }
 
 export function ProductionServicePage({page,images=[]}: {page:ProductionService;images?:ServiceNavMedia[]}) {
@@ -55,10 +40,10 @@ export function ProductionServicePage({page,images=[]}: {page:ProductionService;
       const image=visuals[index%visuals.length];
       return <section className={styles.section} id={section.id} key={section.id} aria-labelledby={`${section.id}-title`}>
         <figure className={styles.visual}><div><Image src={image.src} alt={image.alt} fill sizes="(min-width:1024px) 43vw, 92vw" quality={80} className={styles.photo}/></div></figure>
-        <div className={styles.copy}><h2 id={`${section.id}-title`}>{section.title}</h2><p className={styles.lead}>{section.lead}</p><Body lines={index === 3 ? deliveryBody(section.body) : section.body} current={page.href}/><Link className={styles.button} href={enquiryHref(page.hero.title,section.navLabel)}>{section.cta}<span aria-hidden="true">↗</span></Link></div>
+        <div className={styles.copy}><h2 id={`${section.id}-title`}>{section.title}</h2><p className={styles.lead}>{section.lead}</p><Body lines={section.body}/><Link className={styles.button} href={enquiryHref(page.hero.title,section.navLabel)}>{section.cta}<span aria-hidden="true">↗</span></Link></div>
       </section>;
     })}</div>
     <section className={styles.faq} aria-labelledby="service-faq-title"><div><h2 id="service-faq-title">{page.faq.title}</h2><div>{page.faq.items.map(item=><details key={item.title}><summary>{item.title}<span aria-hidden="true">+</span></summary><div>{item.body.map(line=><p key={line}>{line}</p>)}</div></details>)}</div></div></section>
-    <section className={styles.closing}><h2>{page.closing.title}</h2><p>{page.closing.body}</p><Link className={styles.button} href={enquiryHref(page.hero.title)}>{page.closing.cta}<span aria-hidden="true">↗</span></Link><Link className={styles.parent} href={page.parentHref}>Explore {page.parentTitle} →</Link></section>
+    <section className={styles.closing}><h2>{page.closing.title}</h2><p>{page.closing.body}</p><Link className={styles.button} href={enquiryHref(page.hero.title)}>{page.closing.cta}<span aria-hidden="true">↗</span></Link></section>
   </div>;
 }
