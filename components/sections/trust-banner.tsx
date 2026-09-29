@@ -1,6 +1,7 @@
 import { ButtonLink } from "@/components/ui/button-link";
 import { Container } from "@/components/ui/container";
 import type { TrustBannerSection } from "@/lib/types";
+import styles from "./trust-banner.module.css";
 
 type TrustBannerProps = {
   section: TrustBannerSection;
@@ -19,7 +20,7 @@ export function TrustBanner({ section }: TrustBannerProps) {
         <div className="mt-10 flex justify-center">
           <ButtonLink
             href={section.cta.href}
-            className="min-h-14 bg-[var(--color-ink)] px-8 text-base text-white shadow-none hover:-translate-y-0.5 hover:bg-[color:rgba(11,18,32,0.92)] sm:min-w-64"
+            className={`${styles.cta} min-h-14 px-8 text-base shadow-none sm:min-w-64`}
           >
             {section.cta.label}
           </ButtonLink>

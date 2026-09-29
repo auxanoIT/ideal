@@ -1,0 +1,14 @@
+.cta {
+  background: #f2a900;
+  color: #252b33;
+}
+
+.cta:hover {
+  background: #ffc23d;
+  color: #252b33;
+}
+
+.cta:focus-visible {
+  outline: 3px solid #252b33;
+  outline-offset: 4px;
+}
