@@ -6,6 +6,7 @@ type RevalidateBody = {
   _id?: string;
   _type?: string;
   slug?: string | { current?: string };
+  previousSlug?: string;
   paths?: string[];
   tags?: string[];
 };
@@ -57,6 +58,7 @@ export async function POST(request: NextRequest) {
   const paths = new Set([
     ...(body.paths ?? []),
     ...getPathsForDocument(body._type, slug),
+    ...getPathsForDocument(body._type, body.previousSlug),
   ]);
 
   if (!tags.size && !paths.size) {
@@ -99,7 +101,7 @@ function getPathsForDocument(type?: string, slug?: string) {
     case "careerOpening":
       return ["/careers"];
     case "caseStudy":
-      return ["/case-studies", slug ? `/case-studies/${slug}` : null].filter(
+      return ["/case-studies", "/sitemap.xml", slug ? `/case-studies/${slug}` : null].filter(
         isPath,
       );
     case "faq":
@@ -107,7 +109,7 @@ function getPathsForDocument(type?: string, slug?: string) {
     case "testimonial":
       return [slug && slug !== "home" ? `/${slug}` : "/"].filter(isPath);
     case "post":
-      return ["/blog", slug ? `/blog/${slug}` : null].filter(isPath);
+      return ["/blog", "/sitemap.xml", slug ? `/blog/${slug}` : null].filter(isPath);
     case "service":
       return ["/services", slug ? `/services/${slug}` : null].filter(isPath);
     default:

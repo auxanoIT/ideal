@@ -40,9 +40,23 @@ For a production webhook in the project's API settings:
 
 - URL: `https://idealsolutions.com.ng/api/revalidate` (use the final deployed origin)
 - Method: POST; trigger on Create, Update and Delete; dataset production
-- Filter: `_type in ["post", "caseStudy", "careerOpening"]`
-- Projection: `{_id, _type, "slug": slug.current}`
-- Secret: same new revalidation secret; exclude drafts.
+- Filter: `coalesce(after()._type, before()._type) in ["post", "caseStudy", "careerOpening"] && !(coalesce(after()._id, before()._id) in path("drafts.**")) && !(coalesce(after()._id, before()._id) in path("versions.**"))`
+- Projection:
+
+```groq
+{
+  "_id": coalesce(after()._id, before()._id),
+  "_type": coalesce(after()._type, before()._type),
+  "slug": coalesce(after().slug.current, before().slug.current),
+  "previousSlug": before().slug.current
+}
+```
+
+- Secret: same new revalidation secret; disable draft and version events.
+- Enable the webhook only after setting the secret in Vercel and deploying the endpoint changes.
+- Use the actual publicly reachable deployment origin if the production domain is not connected yet. Avoid an origin that redirects or requires deployment-protection login.
+- Blog/case-study events invalidate their collection, current and previous slug paths, the tagged data and `/sitemap.xml`. Career events invalidate careers. No full deployment is triggered.
+- Test by publishing a genuine approved change and checking the webhook delivery log for HTTP 200 with `revalidated: true`, then visit the affected page and sitemap. Do not publish test content to production just to test delivery.
 
 Localhost is not publicly reachable by Sanity webhooks. Use timed revalidation locally.
 
