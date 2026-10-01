@@ -30,7 +30,7 @@ Setup check: the project API returned HTTP 200 for the production dataset and al
 - Careers: complete job title, location, employment type and summary, enable **Open Position**, then Publish. Disable Open Position and publish to close it.
 - Empty collections remain empty; the integration does not seed demonstration content.
 
-Published queries use the origin API and a 60-second revalidation interval. Without a webhook, the first visit after cache expiry can serve cached content while refresh runs; reload after refresh. No webhook is required for initial local editing.
+Published queries use the origin API and a 24-hour revalidation interval. This is request-driven cache expiry, not a scheduled daily job. Without a webhook, published changes may remain cached for up to 24 hours and until a subsequent request refreshes them. That first request can serve cached content while refresh runs; reload after refresh. Draft previews remain uncached. Configure the publish webhook below when prompt publication updates are required; it invalidates tagged content before the 24-hour expiry.
 
 ## Optional immediate publish updates / draft preview
 

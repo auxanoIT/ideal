@@ -6,6 +6,10 @@ export const previewToken = process.env.IDEALSOLUTIONS_SANITY_API_READ_TOKEN;
 
 export const isSanityEnabled = Boolean(projectId);
 
+// Published content changes infrequently. This is request-driven cache expiry,
+// not a scheduled job. A configured publish webhook can invalidate it sooner.
+const PUBLISHED_CACHE_SECONDS = 24 * 60 * 60;
+
 export function getSanityClient(preview = false) {
   if (!isSanityEnabled) {
     return null;
@@ -47,7 +51,7 @@ export async function sanityFetch<T>({
   return client.fetch<T>(query, params ?? {}, {
     next: {
       tags,
-      revalidate: preview ? 0 : 60,
+      revalidate: preview ? 0 : PUBLISHED_CACHE_SECONDS,
     },
   });
 }
