@@ -32,6 +32,11 @@
 .closing { background:linear-gradient(120deg,#252b33,#373a3b 72%,#514735); color:white; padding:80px 24px; text-align:center; }
 .closing h2 { max-width:960px; margin:auto; }
 .closing p { max-width:860px; margin:24px auto 0; color:#e5e1d8; line-height:1.8; }
+.closingActions { display:flex; flex-wrap:wrap; justify-content:center; align-items:stretch; gap:16px; margin-top:32px; }
+.closingActions .button { margin-top:0; border:2px solid transparent; max-width:100%; text-align:center; }
+.closingActions .secondaryButton { background:transparent; border-color:#f2a900; color:#f2c66d; }
+.closingActions .secondaryButton:hover { background:#f2a900; color:#252b33; }
+.closingActions .button:focus-visible { outline-color:#fff; }
 @media(max-width:900px) { .section { grid-template-columns:1fr; gap:24px; } .section:nth-child(even) .visual { order:0; } .visual>div { aspect-ratio:1.5; } .sections { padding:48px 24px; gap:64px; } }
 @media(max-width:550px) { .sections,.faq { padding-inline:20px; } .button { text-align:center; font-size:14px; } .faq summary { font-size:16px; } }
 @media(prefers-reduced-motion:reduce) { .button { transition:none; } }
@@ -48,5 +53,6 @@
   .copy p,.copy ul { font-size: 15px; line-height: 1.75; overflow-wrap: anywhere; }
   .button { width: 100%; max-width: 100%; padding: 14px 18px; }
   .faq,.closing { padding-block: 48px; }
+  .closingActions { flex-direction:column; gap:12px; }
   .faq h2 { margin-bottom: 24px; }
 }

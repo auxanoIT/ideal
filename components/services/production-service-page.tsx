@@ -44,6 +44,13 @@ export function ProductionServicePage({page,images=[]}: {page:ProductionService;
       </section>;
     })}</div>
     <section className={styles.faq} aria-labelledby="service-faq-title"><div><h2 id="service-faq-title">{page.faq.title}</h2><div>{page.faq.items.map(item=><details key={item.title}><summary>{item.title}<span aria-hidden="true">+</span></summary><div>{item.body.map(line=><p key={line}>{line}</p>)}</div></details>)}</div></div></section>
-    <section className={styles.closing}><h2>{page.closing.title}</h2><p>{page.closing.body}</p><Link className={styles.button} href={enquiryHref(page.hero.title)}>{page.closing.cta}<span aria-hidden="true">↗</span></Link></section>
+    <section className={styles.closing}>
+      <h2>{page.closing.title}</h2>
+      <p>{page.closing.body}</p>
+      <div className={styles.closingActions}>
+        <Link className={styles.button} href={enquiryHref(page.hero.title)}>{page.closing.cta}<span aria-hidden="true">↗</span></Link>
+        <Link className={`${styles.button} ${styles.secondaryButton}`} href={page.parentHref}>Explore All Services<span aria-hidden="true">→</span></Link>
+      </div>
+    </section>
   </div>;
 }
