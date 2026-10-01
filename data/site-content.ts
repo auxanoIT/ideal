@@ -24,7 +24,7 @@ export const siteSettings: SiteSettings = {
   description:
     "Technical execution, infrastructure support and local expertise for reliable, secure and growth-ready data centre environments in Nigeria.",
   phone: "+234 8062 218 546",
-  email: "ask@auxanosolutions.net",
+  email: "info@idealsolutions.com.ng",
   address:
     "21, Abeokuta Street, Off Obasa Street, Oba Akran Avenue, Ikeja, Lagos",
   city: "Lagos",

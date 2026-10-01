@@ -113,7 +113,7 @@ export default async function CareersPage() {
     getCareerOpenings(),
     getSiteSettings(),
   ]);
-  const careersEmail = siteSettings.email || "ask@auxanosolutions.net";
+  const careersEmail = siteSettings.email || "info@idealsolutions.com.ng";
   const careerMailto = `mailto:${careersEmail}?subject=${encodeURIComponent(
     "Career Application - Ideal Solutions",
   )}&body=${encodeURIComponent(
