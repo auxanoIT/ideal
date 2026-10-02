@@ -18,6 +18,7 @@ import {
 } from "@/data/site-content";
 import type {
   BlogPost,
+  RelatedServicePost,
   CaseStudy,
   CareerOpening,
   EstimatorConfig,
@@ -38,6 +39,7 @@ import {
   blogPostQuery,
   blogPostSlugsQuery,
   blogPostsQuery,
+  blogPostsByRelatedServiceQuery,
   caseStudiesQuery,
   caseStudyQuery,
   caseStudySlugsQuery,
@@ -55,6 +57,7 @@ import {
 } from "@/sanity/lib/queries";
 import { isSanityEnabled, sanityFetch } from "@/sanity/lib/client";
 import { applyHomeCloudinaryMedia } from "@/lib/cloudinary-media";
+import { serviceResourceClusters } from "@/data/service-resource-clusters";
 
 async function isPreviewEnabled() {
   const preview = await draftMode();
@@ -334,6 +337,21 @@ export async function getBlogPostSlugs(): Promise<string[]> {
   });
 
   return content ?? (isSanityEnabled ? [] : blogPosts.map((post) => post.slug));
+}
+
+export async function getBlogPostsByRelatedService(relatedService: string): Promise<RelatedServicePost[]> {
+  if (!serviceResourceClusters.some(cluster => cluster.value === relatedService)) return [];
+  const posts = await sanityFetch<RelatedServicePost[]>({
+    query: blogPostsByRelatedServiceQuery,
+    params: { relatedService },
+    preview: false,
+    tags: ["posts"],
+  });
+  if (posts) return posts;
+  if (isSanityEnabled) return [];
+  return blogPosts.filter(post => post.relatedService === relatedService)
+    .sort((a,b) => (b.publishedAt || '').localeCompare(a.publishedAt || ''))
+    .map(({title,slug,coverImage,publishedAt}) => ({title,slug,coverImage,publishedAt}));
 }
 
 export async function getBlogPostBySlug(

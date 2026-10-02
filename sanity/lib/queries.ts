@@ -162,6 +162,7 @@ export const blogPostsQuery = groq`
     "updatedAt": _updatedAt,
     title,
     category,
+    relatedService,
     publishedAt,
     readingTime,
     author,
@@ -250,12 +251,27 @@ export const blogPostSlugsQuery = groq`
   *[_type == "post" && defined(slug.current)].slug.current
 `;
 
+export const blogPostsByRelatedServiceQuery = groq`
+  *[_type == "post" && defined(slug.current) && relatedService == $relatedService
+    && !(_id in path("drafts.**")) && !(_id in path("versions.**"))]
+  | order(publishedAt desc, _id asc) {
+    title,
+    "slug": slug.current,
+    publishedAt,
+    "coverImage": select(defined(coverImage.asset) => {
+      "src": coverImage.asset->url,
+      "alt": coverImage.alt
+    })
+  }
+`;
+
 export const blogPostQuery = groq`
   *[_type == "post" && slug.current == $slug][0]{
     seo{metaTitle, metaDescription},
     "updatedAt": _updatedAt,
     title,
     category,
+    relatedService,
     publishedAt,
     readingTime,
     author,

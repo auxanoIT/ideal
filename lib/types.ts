@@ -237,6 +237,7 @@ export type CaseStudy = {
 };
 
 export type BlogPost = {
+  relatedService?: string;
   seo?: { metaTitle?: string; metaDescription?: string };
   updatedAt?: string;
   slug: string;
@@ -250,6 +251,8 @@ export type BlogPost = {
   takeaways: string[];
   body: BlogBodyBlock[];
 };
+
+export type RelatedServicePost = Pick<BlogPost, "title" | "slug" | "coverImage" | "publishedAt">;
 
 export type BlogBodyBlock =
   | string

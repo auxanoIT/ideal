@@ -8,6 +8,9 @@ import { contextualLinks, enquiryHref, productionSectionImages, type ProductionS
 import { absoluteUrl } from '@/lib/utils';
 import type { ServiceNavMedia } from '@/lib/types';
 import styles from './production-service-page.module.css';
+import { resourceClusterForHref } from '@/data/service-resource-clusters';
+import { getBlogPostsByRelatedService } from '@/lib/content';
+import { RelatedServiceResources } from './related-service-resources';
 
 // Keep every content section focused on delivery, without inline cross-selling.
 function deliveryBody(lines: string[]) {
@@ -28,7 +31,9 @@ function Body({lines}: {lines:string[]}) {
   return <>{blocks.map((block,index)=>block.list?<ul key={index}>{block.lines.map(line=><li key={line}>{line}</li>)}</ul>:<p key={index}>{block.lines[0]}</p>)}</>;
 }
 
-export function ProductionServicePage({page,images=[]}: {page:ProductionService;images?:ServiceNavMedia[]}) {
+export async function ProductionServicePage({page,images=[]}: {page:ProductionService;images?:ServiceNavMedia[]}) {
+  const cluster = resourceClusterForHref(page.href);
+  const relatedPosts = cluster ? await getBlogPostsByRelatedService(cluster.value) : [];
   const crumbs=[{name:'Home',href:'/'},{name:'Solutions',href:'/services'},{name:page.parentTitle,href:page.parentHref},{name:page.hero.title,href:page.href}];
   // Existing assets are illustrative, never presented as verified customer work.
   const visuals=productionSectionImages(page,images);
@@ -44,6 +49,7 @@ export function ProductionServicePage({page,images=[]}: {page:ProductionService;
       </section>;
     })}</div>
     <section className={styles.faq} aria-labelledby="service-faq-title"><div><h2 id="service-faq-title">{page.faq.title}</h2><div>{page.faq.items.map(item=><details key={item.title}><summary>{item.title}<span aria-hidden="true">+</span></summary><div>{item.body.map(line=><p key={line}>{line}</p>)}</div></details>)}</div></div></section>
+    {cluster && <RelatedServiceResources title={cluster.title} posts={relatedPosts} />}
     <section className={styles.closing}>
       <h2>{page.closing.title}</h2>
       <p>{page.closing.body}</p>

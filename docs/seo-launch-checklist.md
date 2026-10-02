@@ -1,6 +1,6 @@
 # Ideal Solutions SEO and launch checks
 
-Production origin: **https://idealsolutions.com.ng**. Keep NEXT_PUBLIC_SITE_URL set to this exact origin in production and redeploy after changes. Do not switch to the .com domain without updating canonicals, redirects and verification.
+Production origin: **https://www.idealsolutions.com.ng**. Keep NEXT_PUBLIC_SITE_URL set to this exact origin in production and redeploy after changes. The non-www domain redirects to this origin in Vercel; canonicals and sitemap URLs must use the same destination.
 
 ## Implemented
 
@@ -19,8 +19,8 @@ Production origin: **https://idealsolutions.com.ng**. Keep NEXT_PUBLIC_SITE_URL 
 2. Replace/approve About team names, portraits, emails, office labels and metrics (founding date, years, cost savings, 24/7 availability). These are not verified Ideal Solutions claims.
 3. Publish only approved Ideal Solutions posts, jobs and case studies in the new Sanity project. Do not reuse Auxano project results as Ideal Solutions results.
    The Terms page is explicitly placeholder legal copy; it is noindex and excluded from the sitemap until approved wording is supplied.
-4. Set NEXT_PUBLIC_SITE_URL=https://idealsolutions.com.ng on the host. Add the production origin to Sanity CORS for `/sanity`; the .com URL from the earlier setup discussion is superseded.
-5. Verify the domain in Google Search Console and Bing Webmaster Tools. Add verification values if using HTML verification, then submit https://idealsolutions.com.ng/sitemap.xml after deployment.
+4. Set NEXT_PUBLIC_SITE_URL=https://www.idealsolutions.com.ng on the host and redeploy. Add this exact production origin to Sanity CORS with credentials for `/sanity`. Use https://www.idealsolutions.com.ng/api/revalidate as the webhook destination to avoid a redirect.
+5. Verify the domain in Google Search Console and Bing Webmaster Tools. Add verification values if using HTML verification, then submit https://www.idealsolutions.com.ng/sitemap.xml after deployment.
 6. Check live pages return 200, redirects resolve to the canonical domain, robots.txt and sitemap.xml are reachable, and no staging noindex is present. Keep administrative and API pages out of the sitemap.
 7. Validate representative live Service, BreadcrumbList and BlogPosting markup using appropriate validators; monitor indexing, Core Web Vitals and real enquiries. Sitemap acceptance is not an indexing or ranking guarantee.
 

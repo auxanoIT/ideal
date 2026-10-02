@@ -1,4 +1,5 @@
 import { createElement } from "react";
+import { serviceResourceClusters } from "../../data/service-resource-clusters";
 import {
   PortableTextInput,
   defineArrayMember,
@@ -796,6 +797,14 @@ const post = defineType({
       validation: (rule) => rule.required(),
     }),
     defineField({ name: "category", title: "Category", type: "string" }),
+    defineField({
+      name: "relatedService",
+      title: "Related Sub-Service",
+      type: "string",
+      description: "Optional: show this published article in the selected sub-service's Related Resources section. Category remains separate.",
+      options: { list: serviceResourceClusters.map(({title,value,pillarTitle}) => ({title: `${title} — ${pillarTitle}`, value})) },
+      validation: rule => rule.custom(value => !value || serviceResourceClusters.some(cluster => cluster.value === value) ? true : "Choose an existing sub-service."),
+    }),
     defineField({
       name: "publishedAt",
       title: "Published At",
