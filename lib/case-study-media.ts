@@ -1,4 +1,13 @@
 import type { CaseStudy, ServiceNavMedia } from "@/lib/types";
+import generatedImages from "@/data/ideal-case-study-images.json";
+
+const illustrativeImages: Record<string, ServiceNavMedia> = generatedImages;
+
+export function isIllustrativeCaseStudyImage(caseStudy: CaseStudy): boolean {
+  if (caseStudy.textOnly) return false;
+  if (caseStudy.cardImage?.src || caseStudy.image?.src) return caseStudy.imageIsIllustrative === true;
+  return Boolean(illustrativeImages[caseStudy.slug]);
+}
 
 const defaultCaseStudyMedia: ServiceNavMedia = {
   src: "/image/service-details/door-access-dashboard.webp",
@@ -81,6 +90,7 @@ export function getCaseStudyMedia(caseStudy: CaseStudy): ServiceNavMedia {
   const industryKey = caseStudy.industry?.toLowerCase();
 
   return (
+    illustrativeImages[caseStudy.slug] ??
     caseStudyMediaBySlug[caseStudy.slug] ??
     (industryKey ? caseStudyMediaByIndustry[industryKey] : undefined) ??
     defaultCaseStudyMedia

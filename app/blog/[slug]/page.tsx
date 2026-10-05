@@ -12,6 +12,7 @@ import { getBlogPostBySlug, getBlogPostSlugs } from "@/lib/content";
 import { buildMetadata } from "@/lib/seo";
 import type { BlogBodyBlock, BlogPost } from "@/lib/types";
 import { absoluteUrl, formatDate } from "@/lib/utils";
+import { serviceResourceClusters } from "@/data/service-resource-clusters";
 
 type BlogPostPageProps = {
   params: Promise<{ slug: string }>;
@@ -72,6 +73,9 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
       Boolean(heading),
     );
   const bodyBlocks = normalizeBlogBody(postBody);
+  const relatedService = serviceResourceClusters.find(
+    (service) => service.value === post.relatedService,
+  );
 
   return (
     <>
@@ -214,8 +218,10 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                 <ButtonLink href="/book-consultation">
                   Book Consultation
                 </ButtonLink>
-                <ButtonLink href="/services" variant="secondary">
-                  Explore services
+                <ButtonLink href={relatedService?.href ?? "/services"} variant="secondary">
+                  {relatedService
+                    ? `Explore ${relatedService.title}${/\bservices?$/i.test(relatedService.title) ? "" : " Services"}`
+                    : "Explore services"}
                 </ButtonLink>
               </div>
             </div>

@@ -11,6 +11,7 @@ import { ButtonLink } from "@/components/ui/button-link";
 import { Container } from "@/components/ui/container";
 import { getCaseStudies } from "@/lib/content";
 import { buildMetadata } from "@/lib/seo";
+import { idealProjectExperience } from "@/data/ideal-project-experience";
 
 export const metadata = buildMetadata({
   title: "Data Centre Infrastructure Case Studies Nigeria | Ideal Solutions",
@@ -154,9 +155,9 @@ export default async function CaseStudiesPage() {
               visibility into an existing environment.
             </p>
             <p className="mt-5 text-base leading-8 text-[var(--color-muted)]">
-              Our case studies show how Ideal Solutions approaches those
-              requirements — from understanding the environment and planning the
-              work to execution, verification and handover.
+              These project records describe work delivered for WIOCC Nigeria,
+              Open Access Data Centres, South West Bitumen and Deltatek Offshore,
+              covering equipment supply, installation, upgrades and relocation.
             </p>
           </div>
 
@@ -188,6 +189,21 @@ export default async function CaseStudiesPage() {
               </div>
             </div>
           ) : null}
+        </Container>
+      </section>
+
+      <section className="bg-[#faf7f0] py-16 sm:py-20">
+        <Container>
+          <h2 className="text-3xl font-semibold text-[var(--color-ink)] sm:text-4xl">Additional Project Experience</h2>
+          <p className="mt-5 max-w-3xl leading-8 text-[var(--color-muted)]">Alongside the selected projects, Ideal Solutions has supplied equipment and delivered technical services in the following areas.</p>
+          <div className="mt-10 grid gap-6 md:grid-cols-2">
+            {idealProjectExperience.map(group => <section key={group.title} className="rounded-2xl border border-black/10 bg-white p-6 sm:p-8">
+              <h3 className="border-l-4 border-[#f2a900] pl-4 text-xl font-semibold">{group.title}</h3>
+              <ul className="mt-5 list-disc space-y-3 pl-5 text-sm leading-7 text-[var(--color-muted)]">
+                {group.items.map(item => <li key={item}>{item}</li>)}
+              </ul>
+            </section>)}
+          </div>
         </Container>
       </section>
 

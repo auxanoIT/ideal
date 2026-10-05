@@ -208,6 +208,8 @@ export type ResourceGroup = {
 };
 
 export type CaseStudy = {
+  textOnly?: boolean;
+  imageIsIllustrative?: boolean;
   updatedAt?: string;
   seo?: { metaTitle?: string; metaDescription?: string };
   slug: string;

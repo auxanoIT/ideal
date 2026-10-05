@@ -6,7 +6,7 @@ import { ButtonLink } from "@/components/ui/button-link";
 import { CaseStudyCard } from "@/components/sections/case-study-card";
 import { Container } from "@/components/ui/container";
 import { JsonLd } from "@/components/ui/json-ld";
-import { getCaseStudyMedia } from "@/lib/case-study-media";
+import { getCaseStudyMedia, isIllustrativeCaseStudyImage } from "@/lib/case-study-media";
 import {
   getCaseStudyBySlug,
   getCaseStudySlugs,
@@ -15,6 +15,7 @@ import {
 import { buildMetadata } from "@/lib/seo";
 import type { CaseStudy } from "@/lib/types";
 import { absoluteUrl } from "@/lib/utils";
+import { findPillar } from "@/data/service-pillars";
 
 type CaseStudyPageProps = {
   params: Promise<{ slug: string }>;
@@ -48,8 +49,8 @@ export async function generateMetadata({
   return buildMetadata({
     title: caseStudy.seo?.metaTitle || caseStudy.title,
     description: caseStudy.seo?.metaDescription || buildCaseStudySeoDescription(caseStudy),
-    imagePath: getCaseStudyMedia(caseStudy).src,
-    imageAlt: getCaseStudyMedia(caseStudy).alt,
+    imagePath: caseStudy.textOnly ? "/opengraph-image" : getCaseStudyMedia(caseStudy).src,
+    imageAlt: caseStudy.textOnly ? "Ideal Solutions" : getCaseStudyMedia(caseStudy).alt,
     modifiedTime: caseStudy.updatedAt,
     path: `/case-studies/${caseStudy.slug}`,
     type: "article",
@@ -100,9 +101,11 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
             description: caseStudy.summary,
             url: absoluteUrl(`/case-studies/${caseStudy.slug}`),
             about: caseStudy.industry,
+            image: caseStudy.textOnly ? undefined : absoluteUrl(media.src),
             locationCreated: caseStudy.location,
             publisher: {
               "@type": "Organization",
+              "@id": `${absoluteUrl("/")}#organization`,
               name: "Ideal Solutions",
             },
           },
@@ -133,9 +136,10 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
         ]}
       />
       <section className="overflow-hidden bg-[var(--color-ink)] text-white">
-        <Container className="grid min-h-[640px] items-center gap-12 py-16 lg:grid-cols-[0.92fr_1.08fr] lg:py-20">
+        <Container className={`grid items-center gap-12 py-16 lg:py-20 ${caseStudy.textOnly ? "" : "min-h-[640px] lg:grid-cols-[0.92fr_1.08fr]"}`}>
           <div className="relative z-10">
-            <h1 className="mt-5 text-5xl font-semibold leading-[1.04] sm:text-3xl">
+            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#f2a900]">{caseStudy.client} · Case Study</p>
+            <h1 className="mt-5 max-w-5xl text-balance text-3xl font-semibold leading-tight sm:text-4xl lg:text-5xl">
               {caseStudy.title}
             </h1>
             <p className="mt-6 max-w-2xl text-sm leading-8 text-white/72 sm:text-lg">
@@ -152,7 +156,7 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
               </ButtonLink>
             </div>
           </div>
-          <div className="relative overflow-hidden rounded-[1.5rem] border border-white/10 bg-white/8 shadow-[0_32px_90px_rgba(0,0,0,0.28)]">
+          {!caseStudy.textOnly && <figure className="relative overflow-hidden rounded-[1.5rem] border border-white/10 bg-white/8 shadow-[0_32px_90px_rgba(0,0,0,0.28)]">
             <div className="relative aspect-[16/10]">
               <Image
                 src={media.src}
@@ -163,9 +167,9 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
                 sizes="(min-width: 1024px) 52vw, 100vw"
                 className="object-cover object-center"
               />
-              <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(11,18,32,0.04),rgba(11,18,32,0.72))]" />
             </div>
-          </div>
+            {isIllustrativeCaseStudyImage(caseStudy) && <figcaption className="px-4 py-3 text-xs leading-5 text-white/80">AI-generated illustration of the project scope. Not a photograph of the client site or delivered equipment.</figcaption>}
+          </figure>}
         </Container>
       </section>
 
@@ -203,7 +207,7 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
                 Challenge
               </p>
               <h2 className="mt-4 text-4xl font-semibold leading-tight text-[var(--color-ink)]">
-                The operating gap that needed attention
+                The project requirement
               </h2>
               <p className="mt-5 text-base leading-8 text-[var(--color-muted)]">
                 {caseStudy.challenge}
@@ -215,7 +219,7 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
                 Ideal Solutions Response
               </p>
               <h2 className="mt-4 text-4xl font-semibold leading-tight text-[var(--color-ink)]">
-                A structured rollout from assessment to handover
+                Scope of work delivered
               </h2>
               <div className="mt-7 grid gap-4">
                 {solutionSteps.length ? (
@@ -251,7 +255,7 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
                 </p>
               </div>
               <h2 className="mt-5 text-4xl font-semibold leading-tight">
-                What changed after the project
+                Project delivery summary
               </h2>
               <p className="mt-5 text-base leading-8 text-white/72">
                 {caseStudy.result}
@@ -308,9 +312,11 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
                   className="flex items-start gap-3 rounded-[1.25rem] border border-white bg-white p-5 shadow-[0_14px_35px_rgba(11,18,32,0.05)]"
                 >
                   <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-[var(--color-success)]" />
-                  <span className="text-sm font-semibold capitalize text-[var(--color-ink)]">
+                  {findPillar(service) ? <ButtonLink href={`/services/${service}`} variant="secondary">
+                    {findPillar(service)!.title}
+                  </ButtonLink> : <span className="text-sm font-semibold capitalize text-[var(--color-ink)]">
                     {service.replaceAll("-", " ")}
-                  </span>
+                  </span>}
                 </div>
               ))}
             </div>

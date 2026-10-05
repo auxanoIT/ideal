@@ -4,6 +4,8 @@ In Sanity Studio, edit a Post and select **Related Sub-Service**. For Rack & Sta
 
 Publish the article with its title, slug and cover image/alt text. The matching service page automatically displays its card after the FAQ and before the closing CTA. Existing `/blog/{slug}` URLs, canonicals and schemas are unchanged. No section is rendered when no matching published posts exist. Posts missing a cover image still receive a title-only card; add the cover image in Studio for the intended visual result.
 
+At the end of an assigned article, the existing secondary "Explore services" button becomes a service-specific return button, for example "Explore Rack & Stack Services". It links to the canonical service route from the registry. The consultation button stays unchanged. Unassigned or unrecognised service keys retain the original general services button; no broken destination is constructed from CMS text.
+
 No data migration or new service documents are required. Existing articles remain unchanged until an editor optionally assigns a sub-service and republishes. Deploy the updated application to expose the schema in the embedded `/sanity` Studio and the resource section on the site.
 
 The central registry is derived from the existing canonical capability catalogue in `data/service-resource-clusters.ts`. Both the Studio dropdown and resource lookup use it. Adding a capability to that catalogue adds its option; production-template pages automatically participate. Keep stored keys stable when changing display labels, and plan a content migration if a canonical service route must change.

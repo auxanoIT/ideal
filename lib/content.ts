@@ -1,8 +1,8 @@
 import { draftMode } from "next/headers";
+import { idealCaseStudies, mergeIdealCaseStudies } from "@/data/ideal-case-studies";
 
 import {
   blogPosts,
-  caseStudies,
   estimatorConfig,
   faqs,
   footerColumns,
@@ -42,7 +42,6 @@ import {
   blogPostsByRelatedServiceQuery,
   caseStudiesQuery,
   caseStudyQuery,
-  caseStudySlugsQuery,
   careerOpeningsQuery,
   estimatorConfigQuery,
   faqsQuery,
@@ -282,27 +281,25 @@ export async function getCaseStudies(): Promise<CaseStudy[]> {
     tags: ["caseStudies"],
   });
 
-  return (content ?? caseStudies).filter((item) => item.published === true);
+  return mergeIdealCaseStudies(content ?? []);
 }
 
 export async function getCaseStudySlugs(): Promise<string[]> {
   // Static parameter generation has no request or draft-mode cookie.
   // Fetch only published slugs, keeping request-time previews separate.
-  const content = await sanityFetch<string[]>({
-    query: caseStudySlugsQuery,
+  const content = await sanityFetch<CaseStudy[]>({
+    query: caseStudiesQuery,
     preview: false,
     tags: ["caseStudies"],
   });
 
-  return content ?? (isSanityEnabled ? [] : caseStudies
-    .filter((item) => item.published === true)
-    .map((item) => item.slug));
+  return mergeIdealCaseStudies(content ?? []).map(item => item.slug);
 }
 
 export async function getCaseStudyBySlug(
   slug: string,
 ): Promise<CaseStudy | null> {
-  const fallbackCaseStudy = caseStudies.find(
+  const fallbackCaseStudy = idealCaseStudies.find(
     (item) => item.slug === slug && item.published === true,
   );
 
@@ -317,7 +314,7 @@ export async function getCaseStudyBySlug(
     tags: ["caseStudies"],
   });
 
-  return content?.published === true ? content : null;
+  return content ? (content.published === true ? content : null) : fallbackCaseStudy ?? null;
 }
 
 export async function getBlogPosts(): Promise<BlogPost[]> {

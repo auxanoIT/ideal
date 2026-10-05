@@ -733,7 +733,17 @@ const caseStudy = defineType({
       initialValue: false,
     }),
     defineField({ name: "projectDate", title: "Project Date", type: "date" }),
+    defineField({
+      name: "textOnly", title: "No Project Photography", type: "boolean",
+      description: "Use the text-led layout when no approved project photos are available. Turn off after adding an approved case study image.",
+      initialValue: false,
+    }),
     defineField({ name: "industry", title: "Industry", type: "string" }),
+    defineField({
+      name: "imageIsIllustrative", title: "AI-Generated Illustration", type: "boolean",
+      description: "Enable for an AI-generated case-study image so the website labels it as illustrative rather than actual project photography. Leave off for approved genuine project photos.",
+      initialValue: false,
+    }),
     defineField({ name: "location", title: "Location", type: "string" }),
     defineField({
       name: "heroImage",

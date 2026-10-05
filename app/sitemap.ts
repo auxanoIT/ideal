@@ -203,7 +203,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     })),
     ...caseStudies.map((item) => ({
       path: `/case-studies/${item.slug}`,
-      imagePaths: [getCaseStudyMedia(item).src],
+      imagePaths: item.textOnly ? [] : [getCaseStudyMedia(item).src],
       lastModified: item.updatedAt,
       changeFrequency: "monthly" as const,
       priority: 0.66,
@@ -223,7 +223,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const collectionRoutes = staticRoutes.map(route => ({
     ...route,
     imagePaths: route.path === "/blog" ? getUniqueImagePaths(posts.map(post => post.coverImage?.src))
-      : route.path === "/case-studies" ? caseStudies.map(item => getCaseStudyMedia(item).src)
+      : route.path === "/case-studies" ? caseStudies.filter(item => !item.textOnly).map(item => getCaseStudyMedia(item).src)
       : route.imagePaths,
   }));
   return [...collectionRoutes, ...dynamicRoutes]
