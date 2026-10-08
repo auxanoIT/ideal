@@ -42,7 +42,7 @@ export function NetworkMap({ section }: NetworkMapProps) {
                 <Image
                   src={section.imageSrc}
                   alt={
-                    section.imageAlt ?? "Auxano network solution illustration"
+                    section.imageAlt ?? "Ideal Solutions network solution illustration"
                   }
                   fill
                   sizes="(min-width: 1024px) 55vw, 100vw"

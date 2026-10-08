@@ -8,6 +8,7 @@ type TestimonialRailProps = {
 };
 
 export function TestimonialRail({ section, testimonials }: TestimonialRailProps) {
+  if (!testimonials.length) return null;
   return (
     <section className="bg-[var(--color-cloud)] py-20 sm:py-24">
       <Container>

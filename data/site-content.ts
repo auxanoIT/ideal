@@ -4,7 +4,6 @@ import { servicePillars } from "@/data/service-pillars";
 import { industryProfiles as footerIndustries } from "@/data/industry-catalog";
 import type {
   BlogPost,
-  CaseStudy,
   EstimatorConfig,
   FAQItem,
   FooterColumn,
@@ -43,544 +42,70 @@ export const navigation: NavItem[] = [
   { label: "About", href: "/about", kind: "link" },
 ];
 
-export const caseStudies: CaseStudy[] = [
-  {
-    slug: "cihp-headquarters-elv-infrastructure-abuja",
-    title: "Standards-Compliant ELV Infrastructure for CIHP Headquarters",
-    client: "Centre for Integrated Health Programs (CIHP)",
-    industry: "Healthcare and Development Programs",
-    location: "Abuja, Nigeria",
-    summary:
-      "Auxano delivered a complete Extra-Low Voltage infrastructure foundation covering structured LAN cabling, CCTV cabling, fiber backbone components, cable management, underground pathways, and FM200-ready fire suppression pipework.",
-    challenge:
-      "CIHP needed a durable, standards-compliant ELV backbone for its headquarters that could support current ICT operations, surveillance expansion, fiber connectivity, and future life-safety systems without creating fragmented installation risk.",
-    solution: [
-      "Supplied, delivered, installed, and commissioned structured LAN and CCTV cabling infrastructure across the facility.",
-      "Implemented fiber backbone components for high-speed connectivity and long-term network scalability.",
-      "Installed cable trays, baskets, management systems, and civil-work pathways for cleaner routing and maintainability.",
-      "Prepared FM200 fire suppression pipework so the safety layer could integrate with the wider infrastructure plan.",
-      "Completed labeling, installation labor, logistics, commissioning, and handover under a professional delivery model.",
-    ],
-    result:
-      "CIHP received a structured and labeled ELV foundation that supports LAN, CCTV, fiber backbone, and FM200 readiness with better durability, operational efficiency, and maintainability for future ICT and safety upgrades.",
-    metrics: [
-      { value: "3 months", label: "March to May 2026 rollout" },
-      { value: "4 systems", label: "LAN, CCTV, fiber, FM200 readiness" },
-      { value: "1 year", label: "Professional warranty coverage" },
-    ],
-    relatedServices: [
-      "network-cabling",
-      "structured-lan-cabling",
-      "surveillance-system-cctv",
-      "data-centre-services",
-      "fire-alarm-safety-systems",
-    ],
-    image: {
-      src: "/image/case-studies/cihp-headquarters-elv-infrastructure-abuja-photo.webp",
-      alt: "Structured network rack cabling for CIHP headquarters ELV infrastructure",
-    },
-  },
-  {
-    slug: "fringe-pci-dss-infrastructure-upgrade",
-    title: "PCI DSS-Aligned ICT Infrastructure Upgrade for Fringe",
-    client: "Fringe",
-    industry: "Financial Services and Regulated Operations",
-    location: "Nigeria",
-    summary:
-      "Auxano consolidated server virtualization, network redesign, firewall deployment, wireless expansion, endpoint upgrades, access control, surveillance enhancement, cloud backup, and IT support into one compliance-focused infrastructure program.",
-    challenge:
-      "Fringe needed to strengthen cybersecurity, improve network performance, modernize critical infrastructure, and align its operating environment with PCI DSS security expectations without treating each upgrade as a disconnected workstream.",
-    solution: [
-      "Redesigned the network environment around stronger segmentation, improved performance, and better operational visibility.",
-      "Deployed firewall and security controls to support PCI DSS-aligned infrastructure hardening.",
-      "Upgraded server virtualization, wireless coverage, endpoint devices, access control, and surveillance systems as one coordinated program.",
-      "Added cloud-based data protection, improved email services, and structured IT support to stabilize operations through the transition.",
-    ],
-    result:
-      "The project established a more secure, scalable, and standards-aligned technology foundation with stronger network performance, improved resilience, centralized security controls, and clearer compliance readiness.",
-    metrics: [
-      { value: "8", label: "Upgrade workstreams unified" },
-      { value: "PCI DSS", label: "Security alignment objective" },
-      { value: "2025-2026", label: "Program delivery window" },
-    ],
-    relatedServices: [
-      "network-architecture-planning",
-      "network-configurations",
-      "firewall-sales-licenses",
-      "cloud-services-licenses",
-      "server-storage-provisioning-deployment",
-      "it-managed-services-staff-outsourcing",
-    ],
-    image: {
-      src: "/image/case-studies/fringe-pci-dss-infrastructure-upgrade-photo.webp",
-      alt: "Compliance and security infrastructure environment for Fringe PCI DSS upgrade",
-    },
-  },
-  {
-    slug: "wiocc-34-floor-it-elv-deployment",
-    title: "Two-Floor Enterprise IT and ELV Deployment for WIOCC",
-    client: "WIOCC",
-    industry: "Telecommunications",
-    location: "Victoria Island, Lagos",
-    summary:
-      "Auxano delivered a full IT and ELV infrastructure deployment for WIOCC's 3rd and 4th floor expansion, integrating enterprise networking, fiber uplinks, wireless access, biometric access control, surveillance, grounding, rack organization, testing, and documentation.",
-    challenge:
-      "WIOCC needed a high-performance, secure, and scalable technology environment for mission-critical operations across two new office floors while maintaining clean integration with existing infrastructure.",
-    solution: [
-      "Installed structured LAN cabling, fiber uplinks, managed switches, wireless access points, rack power distribution, and full patching and labeling.",
-      "Deployed multi-door biometric access control and surveillance systems to strengthen security across the expanded floors.",
-      "Completed 4th-floor uplink cabling, civil works, rack organization, dedicated earthing and grounding, system testing, and documentation.",
-      "Integrated the new environment with WIOCC's existing infrastructure to preserve operational continuity and future scalability.",
-    ],
-    result:
-      "WIOCC gained a secure, scalable, and high-performance technology foundation across the 3rd and 4th floors, ready to support high-availability operations and long-term expansion.",
-    metrics: [
-      { value: "2 floors", label: "3rd and 4th floor expansion" },
-      { value: "5 months", label: "July to November 2025 rollout" },
-      { value: "6 layers", label: "Network, fiber, wireless, access, CCTV, grounding" },
-    ],
-    relatedServices: [
-      "network-cabling",
-      "network-design-with-diagram",
-      "door-access-control",
-      "surveillance-system-cctv",
-      "data-centre-services",
-    ],
-    image: {
-      src: "/image/case-studies/wiocc-34-floor-it-elv-deployment-photo.webp",
-      alt: "Two-floor WIOCC IT and ELV deployment with network rack access control CCTV and safety systems",
-    },
-  },
-  {
-    slug: "cihp-stem-hub-relocation-ikeja",
-    title: "Seamless IT Infrastructure Relocation for CIHP STEM Hub",
-    client: "Centre for Integrated Health Programs (CIHP)",
-    industry: "Education, Innovation, and Development Programs",
-    location: "Ikeja, Lagos",
-    summary:
-      "Auxano relocated, reinstalled, upgraded, tested, labeled, and certified the CIHP STEM Hub infrastructure, including server rack systems, switching, wireless access points, IP telephony, UPS units, Synology storage, access control, CCTV, FM200, conference displays, and new cabling.",
-    challenge:
-      "CIHP needed to move the STEM Hub to a new Ikeja location without compromising performance, security, safety, or operational readiness for ongoing digital and STEM programs.",
-    solution: [
-      "Dismantled existing ICT, security, and safety systems, transported equipment, and reinstalled the environment at the new facility.",
-      "Relocated server racks, switches, wireless access points, IP telephones, UPS units, Synology storage, temperature sensors, FM200, access control, CCTV, and conference displays.",
-      "Supplied and installed new LAN and CCTV cabling, fiber interconnects, patch panels, access points, cable management systems, raised flooring, earthing infrastructure, and supporting civil works.",
-      "Tested, labeled, and certified systems to confirm performance and operational readiness in the new location.",
-    ],
-    result:
-      "The STEM Hub moved into a fully functional and modernized technology environment with continuity across networking, security, fire suppression, storage, collaboration, and support systems.",
-    metrics: [
-      { value: "2 months", label: "December 2024 to January 2025" },
-      { value: "10+", label: "Systems relocated and recommissioned" },
-      { value: "0 compromise", label: "Performance and readiness objective" },
-    ],
-    relatedServices: [
-      "computer-installation-setup",
-      "network-cabling",
-      "office-telephone-system-ip-pbx",
-      "surveillance-system-cctv",
-      "door-access-control",
-      "data-centre-services",
-    ],
-    image: {
-      src: "/image/case-studies/cihp-stem-hub-relocation-ikeja-photo.webp",
-      alt: "IT equipment relocation and data migration setup for CIHP STEM Hub",
-    },
-  },
-  {
-    slug: "wiocc-2nd-floor-elv-deployment",
-    title: "Mission-Critical ELV Infrastructure for WIOCC 2nd Floor",
-    client: "WIOCC",
-    industry: "Telecommunications",
-    location: "Victoria Island, Lagos",
-    summary:
-      "Auxano deployed a complete ELV environment for WIOCC's 2nd floor, covering surveillance, network and wireless infrastructure, biometric access control, addressable fire alarm, FM200 server room suppression, earthing, lightning protection, rack organization, patching, labeling, and documentation.",
-    challenge:
-      "WIOCC required a secure and high-performance ELV foundation for a mission-critical telecommunications office, with networking, physical security, fire protection, and electrical safety delivered as one maintainable infrastructure layer.",
-    solution: [
-      "Installed surveillance, network, wireless, and biometric access control systems using enterprise-grade equipment and structured cabling.",
-      "Deployed an addressable fire alarm system and FM200 server room suppression capability for life-safety and equipment protection.",
-      "Implemented earthing, lightning and thunder arrestor systems to protect infrastructure reliability.",
-      "Completed rack organization, patching, labeling, civil works, commissioning, and documentation for long-term maintainability.",
-    ],
-    result:
-      "WIOCC received an integrated ELV platform that strengthens operational efficiency, physical security, fire protection, electrical safety, and future scalability for a high-availability office environment.",
-    metrics: [
-      { value: "3 months", label: "September to November 2024 rollout" },
-      { value: "6 systems", label: "Integrated ELV domains" },
-      { value: "1 floor", label: "Mission-critical office environment" },
-    ],
-    relatedServices: [
-      "surveillance-system-cctv",
-      "network-cabling",
-      "door-access-control",
-      "fire-alarm-safety-systems",
-      "data-centre-services",
-    ],
-    image: {
-      src: "/image/case-studies/wiocc-2nd-floor-elv-deployment-photo.webp",
-      alt: "Fire alarm and safety layer for WIOCC 2nd floor ELV deployment",
-    },
-  },
-  {
-    slug: "cihp-stem-hub-elv-installation-2024",
-    title: "Integrated ELV Installation for CIHP STEM Hub",
-    client: "Centre for Integrated Health Programs (CIHP)",
-    industry: "Education, Innovation, and Development Programs",
-    location: "Ikeja GRA, Lagos",
-    summary:
-      "Auxano delivered a complete ELV installation for CIHP STEM Hub, integrating structured LAN, IP telephony, CCTV surveillance, lightning protection, FM200 fire suppression, server room raised flooring, access control, rack power distribution, civil works, labeling, cable testing, and documentation.",
-    challenge:
-      "The STEM Hub needed a modern, secure, and high-performance technology environment to support digital learning, collaboration, daily operations, and future expansion.",
-    solution: [
-      "Installed a robust structured LAN network and IP telephone system for collaboration and day-to-day operations.",
-      "Integrated CCTV surveillance, access control, lightning and thunder arrestor systems, and FM200 server room suppression.",
-      "Built server room readiness with raised flooring, rack power distribution, cable testing, labeling, documentation, and supporting civil works.",
-      "Configured, tested, and commissioned each ELV domain to support long-term reliability and maintainability.",
-    ],
-    result:
-      "CIHP STEM Hub received a secure, scalable, and future-ready infrastructure platform that supports STEM education, digital development, safety, communication, and operational continuity.",
-    metrics: [
-      { value: "7 domains", label: "ELV systems delivered" },
-      { value: "2024", label: "Completed installation year" },
-      { value: "1 hub", label: "Unified technology foundation" },
-    ],
-    relatedServices: [
-      "structured-lan-cabling",
-      "office-telephone-system-ip-pbx",
-      "surveillance-system-cctv",
-      "door-access-control",
-      "data-centre-services",
-      "fire-alarm-safety-systems",
-    ],
-    image: {
-      src: "/image/case-studies/cihp-stem-hub-elv-installation-2024-photo.webp",
-      alt: "IP telephony and communication infrastructure for CIHP STEM Hub ELV installation",
-    },
-  },
-  {
-    slug: "cihp-stem-hub-it-infrastructure-2023",
-    title: "Future-Ready IT Infrastructure Upgrade for CIHP STEM Hub",
-    client: "Centre for Integrated Health Programs (CIHP)",
-    industry: "Education, Innovation, and Development Programs",
-    location: "Ikeja GRA, Lagos",
-    summary:
-      "Auxano delivered a full IT and ELV infrastructure upgrade for CIHP STEM Hub, covering structured LAN infrastructure, IP telephony, CCTV surveillance, lightning protection, FM200 fire suppression, server room raised flooring, and access control systems.",
-    challenge:
-      "CIHP needed to equip the STEM Hub with a stronger technology backbone capable of supporting advanced learning, digital innovation, safety systems, and efficient day-to-day operations.",
-    solution: [
-      "Designed and deployed seven major ELV domains from material supply through installation, configuration, testing, and commissioning.",
-      "Implemented structured LAN, IP telephony, CCTV surveillance, access control, lightning protection, FM200, and server room raised flooring.",
-      "Engineered each component for safety, reliability, maintainability, and scalability as the STEM Hub's digital needs grow.",
-    ],
-    result:
-      "The facility now operates on a stronger digital infrastructure and safety platform designed to support education, innovation, secure access, surveillance, and efficient operations.",
-    metrics: [
-      { value: "7 domains", label: "Infrastructure and safety layers" },
-      { value: "2023", label: "Project delivery period" },
-      { value: "End-to-end", label: "Design to commissioning scope" },
-    ],
-    relatedServices: [
-      "network-cabling",
-      "office-telephone-system-ip-pbx",
-      "surveillance-system-cctv",
-      "door-access-control",
-      "data-centre-services",
-      "fire-alarm-safety-systems",
-    ],
-    image: {
-      src: "/image/case-studies/cihp-stem-hub-it-infrastructure-2023-photo.webp",
-      alt: "LAN certification testing for CIHP STEM Hub IT infrastructure upgrade",
-    },
-  },
-  {
-    slug: "seflam-sgl-engineering-office-elv",
-    title: "Corporate ELV Infrastructure Deployment for SEFLAM SGL Engineering",
-    client: "SEFLAM SGL Engineering Office",
-    industry: "Engineering and Corporate Offices",
-    location: "Victoria Island, Lagos",
-    summary:
-      "Auxano delivered a full ELV infrastructure upgrade for SEFLAM SGL Engineering Office, integrating structured LAN, IP telephony, CCTV surveillance, lightning protection, FM200 fire suppression, fire alarm, access control, server room raised flooring, and dedicated cooling.",
-    challenge:
-      "SEFLAM SGL needed a modern, secure, and high-performance office environment that could support engineering operations, collaboration, connectivity, fire protection, access control, and server room reliability.",
-    solution: [
-      "Installed structured LAN and IP telephony to strengthen office connectivity and communication.",
-      "Deployed CCTV surveillance, access control, fire alarm, FM200 fire suppression, lightning protection, and server room systems.",
-      "Added server room raised flooring and dedicated cooling to improve infrastructure resilience and equipment protection.",
-      "Configured, tested, and commissioned each system to meet safety, reliability, and long-term performance expectations.",
-    ],
-    result:
-      "SEFLAM SGL received a unified ELV ecosystem that improves connectivity, communication, security, fire protection, server room readiness, and operational efficiency across the engineering office.",
-    metrics: [
-      { value: "9 systems", label: "ELV and server room layers" },
-      { value: "2025", label: "Victoria Island deployment" },
-      { value: "1 office", label: "Unified corporate technology setup" },
-    ],
-    relatedServices: [
-      "structured-lan-cabling",
-      "office-telephone-system-ip-pbx",
-      "surveillance-system-cctv",
-      "door-access-control",
-      "fire-alarm-safety-systems",
-      "data-centre-services",
-    ],
-    image: {
-      src: "/image/case-studies/seflam-sgl-engineering-office-elv-photo.webp",
-      alt: "Server room cooling and ELV infrastructure for SEFLAM SGL Engineering office",
-    },
-  },
-];
+export { idealCaseStudies as caseStudies } from "@/data/ideal-case-studies";
 
-export const blogPosts: BlogPost[] = [
-  {
-    slug: "what-growing-businesses-miss-when-planning-cctv",
-    title: "What Growing Businesses Miss When Planning CCTV Deployments",
-    category: "Physical Security",
-    publishedAt: "2026-03-10",
-    readingTime: "6 min read",
-    author: "Auxano Solutions Team",
-    coverImage: {
-      src: "/image/service-details/cctv-camera-coverage.webp",
-      alt: "CCTV camera installed for commercial security coverage",
-    },
-    excerpt:
-      "Coverage quality depends on network design, operator workflow, retention planning, and post-installation discipline.",
-    takeaways: [
-      "Coverage without a monitoring workflow creates expensive blind spots.",
-      "Storage and retention should be sized before hardware is purchased.",
-      "Your network topology shapes CCTV performance more than most teams expect.",
-    ],
-    body: [
-      {
-        _type: "blogHeading",
-        text: "Plan coverage before counting cameras",
-        anchor: "plan-coverage-before-counting-cameras",
-      },
-      {
-        _type: "blogParagraph",
-        text: "Most CCTV projects fail long before installation day. The failure starts when teams think in terms of camera count instead of operational coverage. Entrances, corridors, dispatch lanes, and sensitive areas all require different logic. When that logic is skipped, the final system looks busy but performs poorly during real incidents.",
-      },
-      {
-        _type: "blogHeading",
-        text: "Retention and retrieval shape the real value",
-        anchor: "retention-and-retrieval",
-      },
-      {
-        _type: "blogParagraph",
-        text: "The second blind spot is retention and retrieval. Businesses often buy hardware first, then discover later that the footage archive is too short, too fragmented, or too hard to review quickly. A surveillance system is only useful when operators can trust what was recorded and retrieve it fast.",
-      },
-      {
-        _type: "blogImageBlock",
-        image: {
-          src: "/image/service-details/cctv-storage-retention.webp",
-          alt: "Network video recorder and storage planning for CCTV retention",
-        },
-        caption:
-          "Storage planning should happen before installation, not after footage is already needed.",
-      },
-      {
-        _type: "blogHeading",
-        text: "CCTV performance depends on the network",
-        anchor: "cctv-performance-depends-on-network",
-      },
-      {
-        _type: "blogParagraph",
-        text: "The third issue is networking. Cameras do not exist outside the network environment. Poor switching, weak uplinks, or unplanned wireless reliance can turn a security project into an ongoing reliability problem. CCTV planning should sit alongside network planning, not after it.",
-      },
-    ],
-  },
-  {
-    slug: "how-to-budget-managed-it-support-in-nigeria",
-    title: "How to Budget Managed IT Support Without Underbuying Reliability",
-    category: "Managed Services",
-    publishedAt: "2026-03-18",
-    readingTime: "7 min read",
-    author: "Auxano Solutions Team",
-    coverImage: {
-      src: "/image/service-details/managed-technical-help-desk.webp",
-      alt: "Managed IT support desk for business users",
-    },
-    excerpt:
-      "Support budgets fail when leadership only prices tickets and ignores visibility, onboarding, continuity, and user enablement.",
-    takeaways: [
-      "The cheapest support model often moves cost into downtime and escalation.",
-      "Endpoint visibility and onboarding discipline matter as much as ticket response time.",
-      "Managed support should be budgeted against business interruption, not only headcount.",
-    ],
-    body: [
-      {
-        _type: "blogHeading",
-        text: "Do not price support like a call center",
-        anchor: "do-not-price-support-like-call-center",
-      },
-      {
-        _type: "blogParagraph",
-        text: "A common budgeting mistake is treating IT support like a reactive call center. That model ignores the work required to keep devices healthy, users onboarded properly, and risk visible to leadership. Support quality is not only about response speed. It is also about how much operational friction is prevented before users feel it.",
-      },
-      {
-        _type: "blogHeading",
-        text: "Look for visibility and ownership",
-        anchor: "look-for-visibility-and-ownership",
-      },
-      {
-        _type: "blogParagraph",
-        text: "Good managed support includes device standards, endpoint visibility, escalation ownership, and repeatable reporting. Without those pieces, your support bill may look smaller on paper while the business absorbs hidden cost through interruptions, shadow fixes, and poor accountability.",
-      },
-      {
-        _type: "blogHeading",
-        text: "Budget against interruption risk",
-        anchor: "budget-against-interruption-risk",
-      },
-      {
-        _type: "blogParagraph",
-        text: "When planning budget, leadership should ask a more useful question: what level of interruption can the business tolerate? That answer usually determines whether support should stay basic, move to business-critical coverage, or include a stronger continuity posture.",
-      },
-    ],
-  },
-  {
-    slug: "network-monitoring-for-multi-site-operations",
-    title: "Why Network Monitoring Matters More Once You Have Multiple Sites",
-    category: "Networking",
-    publishedAt: "2026-03-24",
-    readingTime: "5 min read",
-    author: "Auxano Solutions Team",
-    coverImage: {
-      src: "/image/service-details/managed-services-monitoring.webp",
-      alt: "Network monitoring dashboard for multi-site operations",
-    },
-    excerpt:
-      "Once a business spreads across floors or sites, undocumented network issues become operational problems, not just technical ones.",
-    takeaways: [
-      "Visibility collapses quickly when branch networks grow without a shared model.",
-      "Monitoring improves issue response because teams stop troubleshooting from guesswork.",
-      "Documentation and alert tuning matter as much as the monitoring dashboard itself.",
-    ],
-    body: [
-      {
-        _type: "blogHeading",
-        text: "Multi-site networks need shared visibility",
-        anchor: "multi-site-networks-need-shared-visibility",
-      },
-      {
-        _type: "blogParagraph",
-        text: "Small networks can survive on memory and habit for a while. Multi-site environments cannot. The moment an organization adds floors, branches, or high-dependency endpoints like CCTV and access systems, network problems become harder to isolate and slower to resolve.",
-      },
-      {
-        _type: "blogHeading",
-        text: "Monitoring turns symptoms into evidence",
-        anchor: "monitoring-turns-symptoms-into-evidence",
-      },
-      {
-        _type: "blogParagraph",
-        text: "Monitoring adds value because it turns symptoms into evidence. Instead of hearing that the internet is slow somewhere, teams can see device status, latency patterns, and repeated failure points. That changes both technical response and leadership confidence.",
-      },
-      {
-        _type: "blogHeading",
-        text: "Documentation keeps alerts useful",
-        anchor: "documentation-keeps-alerts-useful",
-      },
-      {
-        _type: "blogParagraph",
-        text: "However, monitoring is not only a tool purchase. It works best when paired with network documentation, clear escalation paths, and realistic thresholds. Otherwise, the dashboard fills up while the team still struggles to act.",
-      },
-    ],
-  },
-];
+// Editorial content is published through the Ideal Solutions Sanity project.
+export const blogPosts: BlogPost[] = [];
 
-export const testimonials: Testimonial[] = [
-  {
-    quote:
-      "Auxano approached the environment like an operator, not just an installer. That changed the quality of the final result.",
-    name: "Operations Lead",
-    role: "Facilities and Operations",
-    company: "Lagos Head Office Deployment",
-  },
-  {
-    quote:
-      "The difference was the clarity. We could see what was being fixed, why it mattered, and what would happen next.",
-    name: "Admin Manager",
-    role: "Administration",
-    company: "Healthcare Network Refresh",
-  },
-  {
-    quote:
-      "Support readiness was part of the rollout, not an afterthought. That helped the site settle faster after launch.",
-    name: "Site Director",
-    role: "Operations",
-    company: "Warehouse Expansion Program",
-  },
-];
+// Add testimonials only after the business has approved their attribution.
+export const testimonials: Testimonial[] = [];
 
 export const faqs: FAQItem[] = [
   {
-    id: "faq-1",
-    question: "What types of businesses does Auxano work with?",
-    answer:
-      "Auxano works with businesses of all sizes — from small offices and startups to large enterprises, schools, healthcare providers, financial institutions, retail outlets, and industrial facilities. Whether you operate from one location or across multiple sites, we design and deliver IT solutions that fit your operational needs and business goals.",
+    "id": "faq-1",
+    "question": "Who does Ideal Solutions work with?",
+    "answer": "Ideal Solutions supports data centre operators, enterprise IT teams, OEMs, managed service providers, system integrators and international teams that need onsite technical execution in Nigeria. We work to an agreed scope while the client's technical owners retain control of their environment."
   },
   {
-    id: "faq-2",
-    question:
-      "Do you only sell IT equipment, or do you also handle installation?",
-    answer:
-      "We do both. Auxano supplies genuine IT hardware and software through authorised distributors, and our certified engineers handle the full installation, configuration, testing, and deployment process. That means you get a complete solution from one trusted partner instead of managing multiple vendors.",
+    "id": "faq-2",
+    "question": "What services does Ideal Solutions provide?",
+    "answer": "Our seven service pillars cover data centre deployment; Smart Hands and technical support; servers, storage and hardware; network infrastructure and connectivity; security and safety systems; infrastructure audit and optimisation; and project and lifecycle management. Supply, installation, configuration and ongoing support are agreed separately where needed."
   },
   {
-    id: "faq-3",
-    question:
-      "Can you assess our current IT infrastructure before recommending upgrades?",
-    answer:
-      "Yes. Our IT assessment services are designed to evaluate your existing infrastructure, identify inefficiencies, security risks, performance gaps, and outdated systems. From there, we provide practical recommendations aligned with your business objectives and budget.",
+    "id": "faq-3",
+    "question": "Are you a data centre operator or an onsite services provider?",
+    "answer": "Ideal Solutions is an onsite infrastructure services business, not a colocation facility operator. We support work in the customer's approved data centre, server room or enterprise environment. Hosting, rack rental, internet transit and facility operations are not implied by our deployment services."
   },
   {
-    id: "faq-4",
-    question: "Do you offer managed IT support after project delivery?",
-    answer:
-      "Absolutely. Our relationship doesn’t end after deployment. We provide ongoing managed IT support, including system monitoring, maintenance, troubleshooting, performance optimization, upgrades, and technical support to ensure your infrastructure continues to perform efficiently.",
+    "id": "faq-4",
+    "question": "Can you work with our remote engineers or existing IT team?",
+    "answer": "Yes. Your team can provide approved work instructions, rack layouts, equipment details and configuration requirements. We agree the onsite tasks, technical contacts, communication method and approval process before starting. Changes outside the agreed scope require approval."
   },
   {
-    id: "faq-5",
-    question:
-      "Can Auxano help improve our network performance and reliability?",
-    answer:
-      "Yes. We design, install, configure, and monitor business networks to improve speed, security, and stability. This includes structured cabling, wireless networks, routing, switching, firewall setup, and network monitoring to reduce downtime and improve operational efficiency.",
+    "id": "faq-5",
+    "question": "Can you assess our existing infrastructure before recommending work?",
+    "answer": "Yes. An agreed assessment can review racks, cabling, equipment identification, physical connections and available records. Findings can help define remediation, installation or expansion work. An infrastructure assessment is not automatically a cybersecurity penetration test or a regulatory certification."
   },
   {
-    id: "faq-6",
-    question: "Do you provide cybersecurity solutions?",
-    answer:
-      "Yes. Auxano offers cybersecurity solutions including firewall deployment, antivirus licensing, access control systems, governance, risk and compliance services, incident response planning, and security audits to strengthen your business against internal and external threats.",
+    "id": "faq-6",
+    "question": "Can work be carried out in a live environment?",
+    "answer": "Work can be planned around operational environments, subject to site access rules, dependencies and approved change procedures. Tasks that could interrupt service need an agreed work window, responsible technical contact and recovery approach. Zero downtime should not be assumed."
   },
   {
-    id: "faq-7",
-    question: "How do you handle disaster recovery and business continuity?",
-    answer:
-      "We create customized backup and disaster recovery plans based on your business operations and risk exposure. Instead of relying on generic backup practices, we identify critical failure points and build recovery strategies that help restore systems quickly during disruptions.",
+    "id": "faq-7",
+    "question": "Where is Ideal Solutions based, and can you support sites outside Lagos?",
+    "answer": "Our address is 21, Abeokuta Street, Off Obasa Street, Oba Akran Avenue, Ikeja, Lagos. We support infrastructure projects across Nigeria, with travel, site access, scheduling and delivery arrangements confirmed for each location. International teams can engage us for work on infrastructure located in Nigeria."
   },
   {
-    id: "faq-8",
-    question: "Do you provide IT audit and compliance services?",
-    answer:
-      "Yes. Our IT audit services evaluate your infrastructure controls, data security, system availability, access management, and disaster recovery readiness. We also help businesses align with industry best practices and regulatory requirements through governance, risk, and compliance services.",
+    "id": "faq-8",
+    "question": "Do you provide urgent, out-of-hours or recurring support?",
+    "answer": "Planned maintenance and recurring onsite support can be scoped around your equipment and operating requirements. For urgent or out-of-hours work, share the site, affected equipment, symptoms and requested time. Availability, response arrangements and any service-level commitments must be confirmed; 24/7 coverage is not automatic."
   },
   {
-    id: "faq-9",
-    question: "Can you support our internal IT team?",
-    answer:
-      "Yes. Auxano can work alongside your internal IT team to fill skill gaps, support infrastructure upgrades, monitor systems, improve performance, and provide strategic technical support whenever needed. Think of us as an extension of your IT department.",
+    "id": "faq-9",
+    "question": "What records will we receive after the work?",
+    "answer": "Completion records are agreed before execution. Depending on the task, they may include equipment positions, connection or labelling updates, completed checks, permitted photographs and outstanding issues. Your technical owner reviews the evidence against the agreed acceptance criteria; completion of a physical task is not the same as full application or business acceptance."
   },
   {
-    id: "faq-10",
-    question: "How quickly can you start a project?",
-    answer:
-      "Project timelines depend on the scope and complexity, but once requirements are confirmed, our team can begin planning and execution quickly. We prioritize proper planning, clear timelines, and efficient delivery to ensure projects are completed right the first time.",
+    "id": "faq-10",
+    "question": "What information do you need to quote and schedule a project?",
+    "answer": "Share the site location, equipment models and quantities, required tasks, available drawings or records, access restrictions and preferred work window. Pricing and timing depend on the confirmed scope, parts, logistics and site readiness. Do not send passwords or sensitive infrastructure credentials in an initial enquiry."
   },
   {
-    id: "faq-11",
-    question: "Do you serve businesses outside Lagos?",
-    answer:
-      "Yes. While Auxano is based in Ikeja, Lagos, we provide IT solutions and support for businesses across Nigeria, depending on project requirements and operational scope.",
-  },
+    "id": "faq-11",
+    "question": "How do I discuss a requirement with Ideal Solutions?",
+    "answer": "Use the Book Consultation page or email info@idealsolutions.com.ng with a short project brief. Tell us whether you need deployment, support, hardware, networking, security, an assessment or lifecycle assistance. We can then clarify the scope and next steps before work is scheduled."
+  }
 ];
 
 export const footerColumns: FooterColumn[] = [
@@ -617,7 +142,7 @@ export const marketingPages: MarketingPage[] = [
     title:
       "Infrastructure, Networking, and Managed IT Solutions for Critical Teams",
     description:
-      "Auxano Solutions helps businesses design, deploy, and support infrastructure, networking, hardware, software, and managed operations with enterprise-grade clarity.",
+      "Ideal Solutions helps businesses design, deploy, and support infrastructure, networking, hardware, software, and managed operations with enterprise-grade clarity.",
     sections: [
       {
         _type: "hero",
@@ -656,7 +181,7 @@ export const marketingPages: MarketingPage[] = [
             headline:
               "One command view for IT, CCTV, and network infrastructure.",
             description:
-              "Auxano connects IT, CCTV, networking, and support into one easier operating view.",
+              "Ideal Solutions connects IT, CCTV, networking, and support into one easier operating view.",
             primaryCta: {
               label: "Book Consultation",
               href: "/book-consultation",
@@ -710,7 +235,7 @@ export const marketingPages: MarketingPage[] = [
         eyebrow: "Our Services",
         title: "Everything your business needs under one roof.",
         description:
-          "Explore the core service areas Auxano delivers for modern business environments.",
+          "Explore the core service areas Ideal Solutions delivers for modern business environments.",
         items: [
           {
             id: "it-infrastructure",
@@ -779,9 +304,9 @@ export const marketingPages: MarketingPage[] = [
         eyebrow: "",
         title: "Ready to get it right the first time?",
         description:
-          "Auxano Solutions Technology Limited delivers specialized and cost-effective ICT services that empower businesses to streamline operations, secure assets, and scale efficiently.",
+          "Ideal Solutions Technology Limited delivers specialized and cost-effective ICT services that empower businesses to streamline operations, secure assets, and scale efficiently.",
         imageSrc: "/image/left.png",
-        imageAlt: "Auxano left-side section visual",
+        imageAlt: "Ideal Solutions left-side section visual",
         bullets: [],
         nodes: [
           {
@@ -835,7 +360,7 @@ export const marketingPages: MarketingPage[] = [
           "Select any point in the scene to explore how infrastructure, networking, hardware, software, and managed support connect in a live business setup.",
         imageSrc: "/image/servces.png",
         imageAlt:
-          "Interactive Auxano services environment showing integrated infrastructure, networking, hardware, software, and managed support touchpoints.",
+          "Interactive Ideal Solutions services environment showing integrated infrastructure, networking, hardware, software, and managed support touchpoints.",
         promptLabel: "Explore the stack",
         items: [
           {
@@ -843,7 +368,7 @@ export const marketingPages: MarketingPage[] = [
             label: "Software & Licenses",
             title: "Licensed and configured software for the real environment.",
             description:
-              "Auxano handles licensing, activation, security configuration, and cloud or business application setup so the software layer is compliant, usable, and supportable after deployment instead of becoming a separate cleanup project.",
+              "Ideal Solutions handles licensing, activation, security configuration, and cloud or business application setup so the software layer is compliant, usable, and supportable after deployment instead of becoming a separate cleanup project.",
             ctaLabel: "Explore Software",
             ctaHref: "/services#software-licenses",
             x: 24.1,
@@ -861,7 +386,7 @@ export const marketingPages: MarketingPage[] = [
             title:
               "Security and access systems deployed as one controlled layer.",
             description:
-              "Auxano delivers CCTV, access control, structured cabling, automation, and site readiness as one coordinated infrastructure layer so environments open with cleaner coverage, safer entry, and fewer technical gaps.",
+              "Ideal Solutions delivers CCTV, access control, structured cabling, automation, and site readiness as one coordinated infrastructure layer so environments open with cleaner coverage, safer entry, and fewer technical gaps.",
             ctaLabel: "Explore Infrastructure",
             ctaHref: "/services#infrastructure",
             x: 50,
@@ -897,7 +422,7 @@ export const marketingPages: MarketingPage[] = [
             title:
               "Managed IT support with clearer ownership and follow-through.",
             description:
-              "Auxano supports users, devices, escalations, and continuity with a structured operating model that keeps the environment from slipping after rollout or daily support pressure increases.",
+              "Ideal Solutions supports users, devices, escalations, and continuity with a structured operating model that keeps the environment from slipping after rollout or daily support pressure increases.",
             ctaLabel: "Explore Managed Services",
             ctaHref: "/services#managed-advisory",
             x: 13.8,
@@ -914,7 +439,7 @@ export const marketingPages: MarketingPage[] = [
             label: "Networking",
             title: "Networks designed, configured, and documented properly.",
             description:
-              "From survey-led topology planning to active configuration and final diagrams, Auxano builds networks that support CCTV, users, cloud apps, and business communications without leaving the client to coordinate separate vendors.",
+              "From survey-led topology planning to active configuration and final diagrams, Ideal Solutions builds networks that support CCTV, users, cloud apps, and business communications without leaving the client to coordinate separate vendors.",
             ctaLabel: "Explore Networking",
             ctaHref: "/services#networking",
             x: 14.8,
@@ -983,9 +508,9 @@ export const marketingPages: MarketingPage[] = [
       {
         _type: "faqBlock",
         eyebrow: "FAQs",
-        title: "Everything you need to know before getting started",
+        title: "Working with Ideal Solutions: Your Questions, Answered",
         description:
-          "Find answers to common questions about our IT solutions, implementation process, support structure, and how we help businesses build secure, scalable technology systems.",
+          "Practical answers about onsite execution, service scope, site access, scheduling and handover for infrastructure projects in Nigeria.",
         ids: [
           "faq-1",
           "faq-2",
@@ -1004,17 +529,17 @@ export const marketingPages: MarketingPage[] = [
   },
   {
     slug: "about",
-    title: "About Auxano Solutions",
+    title: "About Ideal Solutions",
     description:
-      "Auxano combines infrastructure delivery, networking, hardware systems, software licensing, and managed advisory support for organizations that need serious operational execution.",
+      "Ideal Solutions combines infrastructure delivery, networking, hardware systems, software licensing, and managed advisory support for organizations that need serious operational execution.",
     sections: [
       {
         _type: "richContent",
-        eyebrow: "About Auxano",
+        eyebrow: "About Ideal Solutions",
         title:
           "A technical delivery partner for organizations that need more than generic IT support.",
         content: [
-          "Auxano Solutions Technology Limited works across infrastructure, networking, hardware systems, software licensing, and managed advisory support. The company is built around doing technical work properly from the beginning rather than treating quality as a later correction step.",
+          "Ideal Solutions Technology Limited works across infrastructure, networking, hardware systems, software licensing, and managed advisory support. The company is built around doing technical work properly from the beginning rather than treating quality as a later correction step.",
           "That operating view matters because surveillance depends on the network, devices depend on clean setup, licensing depends on compliance discipline, and support quality shapes what happens after deployment.",
           "Clients get a serious technical partner with clear scoping, structured execution, and commercially credible handover.",
         ],

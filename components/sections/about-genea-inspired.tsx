@@ -15,7 +15,7 @@ import {
 } from "@/data/about-content";
 import styles from "./about-genea-inspired.module.css";
 
-type Story = { eyebrow?: string; title: string; paragraphs: string[] };
+type Story = { title: string; paragraphs: string[] };
 type Media = { image: string; alt: string };
 
 function Reveal({
@@ -43,12 +43,9 @@ function Reveal({
 function Text({ content, hero = false }: { content: Story; hero?: boolean }) {
   return (
     <>
-      {content.eyebrow && <p className={styles.eyebrow}>{content.eyebrow}</p>}
       {hero ? <h1>{content.title}</h1> : <h2>{content.title}</h2>}
       <div className={styles.copy}>
-        {content.paragraphs.map((text) => (
-          <p key={text}>{text}</p>
-        ))}
+        <p>{content.paragraphs.join(" ")}</p>
       </div>
     </>
   );
@@ -116,14 +113,13 @@ export function AboutGeneaInspired() {
   return (
     <div className={styles.page}>
       <section className={styles.hero}>
-        <Container className={styles.split}>
-          <Reveal>
+        <div className={styles.heroMedia}>
+          <Image src={copy.hero.image} alt={copy.hero.alt} fill priority sizes="(max-width: 767px) 100vw, 65vw" />
+        </div>
+        <Container className={styles.heroInner}>
+          <div className={styles.heroText}>
             <Text content={copy.hero} hero />
-            <Actions />
-          </Reveal>
-          <Reveal>
-            <Photo content={copy.hero} priority />
-          </Reveal>
+          </div>
         </Container>
       </section>
       {/* Former company statistics are omitted until their values are approved. */}
@@ -131,18 +127,21 @@ export function AboutGeneaInspired() {
         <Container>
           <Reveal className={styles.center}>
             <Text content={copy.purpose} />
-            <div className={styles.path}>
-              <span>Plan</span>
-              <ArrowRight aria-hidden />
-              <span>Onsite execution</span>
-              <ArrowRight aria-hidden />
-              <span>Operational readiness</span>
-            </div>
           </Reveal>
         </Container>
       </section>
       <Editorial content={copy.story} reverse warm />
       <PartnerLogoMarquee staticDisplay />
+      <section className={styles.section}>
+        <Container>
+          <Reveal className={styles.center}>
+            <Text content={copy.people} />
+          </Reveal>
+          <div className={styles.team}>
+            <AboutTeam />
+          </div>
+        </Container>
+      </section>
       <section className={styles.section}>
         <Container>
           <Reveal className={styles.center}>
@@ -158,9 +157,6 @@ export function AboutGeneaInspired() {
                 ].join(" ")}
               >
                 <div>
-                  <span className={styles.number}>
-                    {String(index + 1).padStart(2, "0")}
-                  </span>
                   <h3>{item.title}</h3>
                   <div className={styles.copy}>
                     {item.paragraphs.map((text) => (
@@ -174,22 +170,6 @@ export function AboutGeneaInspired() {
           </div>
         </Container>
       </section>
-      <section
-        className={[styles.section, styles.dark, styles.future].join(" ")}
-      >
-        <Image
-          src={copy.future.image}
-          alt=""
-          fill
-          sizes="100vw"
-          className={styles.backdrop}
-        />
-        <Container>
-          <Reveal className={styles.futureCopy}>
-            <Text content={copy.future} />
-          </Reveal>
-        </Container>
-      </section>
       <Editorial content={copy.collaboration} />
       <Editorial content={copy.quality} reverse warm />
       <section className={[styles.section, styles.dark].join(" ")}>
@@ -200,9 +180,6 @@ export function AboutGeneaInspired() {
           <div className={styles.capabilities}>
             {aboutCapabilities.map((item, index) => (
               <Reveal key={item.slug} className={styles.capability}>
-                <span className={styles.number}>
-                  {String(index + 1).padStart(2, "0")}
-                </span>
                 <h3>{item.title}</h3>
                 <p>{item.text}</p>
                 <ButtonLink href={"/services/" + item.slug} variant="secondary">
@@ -223,23 +200,12 @@ export function AboutGeneaInspired() {
           </div>
         </Container>
       </section>
-      <section className={styles.section}>
-        <Container>
-          <Reveal className={styles.center}>
-            <Text content={copy.people} />
-          </Reveal>
-          <div className={styles.team}>
-            <AboutTeam />
-          </div>
-        </Container>
-      </section>
       <section className={[styles.section, styles.warm].join(" ")}>
         <Container className={styles.split}>
           <Reveal>
             <Text content={copy.presence} />
           </Reveal>
           <Reveal className={styles.address}>
-            <p className={styles.eyebrow}>IKEJA, LAGOS</p>
             <address>
               21, Abeokuta Street,
               <br />

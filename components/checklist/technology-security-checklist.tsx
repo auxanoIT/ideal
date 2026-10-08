@@ -300,7 +300,7 @@ export function TechnologySecurityChecklist() {
               href="/book-consultation"
               className="inline-flex h-14 min-w-52 items-center justify-center rounded-full border border-white/40 px-8 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-white/10"
             >
-              Speak with Auxano
+              Speak with Ideal Solutions
             </Link>
           </div>
         </div>
@@ -381,7 +381,7 @@ export function TechnologySecurityChecklist() {
               />
               <span>
                 I agree to receive my checklist result and practical follow-up
-                communication from Auxano Solutions.
+                communication from Ideal Solutions.
               </span>
             </label>
             {gateErrors.marketingConsent ? (
@@ -753,7 +753,7 @@ function ResultPanel({
             )}
             <p className="text-sm font-semibold text-[var(--color-ink)]">
               {submittedResults
-                ? "Your score has been submitted to Auxano."
+                ? "Your score has been submitted to Ideal Solutions."
                 : submittingResults
                   ? "Saving your result for follow-up..."
                   : "Your result is ready."}
@@ -763,7 +763,7 @@ function ResultPanel({
             <p className="mt-3 text-sm leading-6 text-red-600">{submitError}</p>
           ) : (
             <p className="mt-3 text-sm leading-6 text-[var(--color-muted)]">
-              Auxano can use this score to prepare a focused technology,
+              Ideal Solutions can use this score to prepare a focused technology,
               infrastructure, and security assessment discussion.
             </p>
           )}

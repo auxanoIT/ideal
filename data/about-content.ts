@@ -1,16 +1,13 @@
 export const aboutContent = {
   hero: {
-    eyebrow: "ABOUT IDEAL SOLUTIONS",
-    title: "We Turn Infrastructure Plans Into Reliable Onsite Execution.",
+    title: "About Ideal Solutions",
     paragraphs: [
-      "Ideal Solutions supports data centre operators, enterprise IT teams and technology partners that need skilled technical execution on the ground in Nigeria.",
-      "From deployment and Smart Hands to network infrastructure, hardware, security and lifecycle support, we help teams move critical work forward with clarity, discipline and operational control.",
+      "Ideal Solutions helps data centre operators, enterprise IT teams and technology partners deploy, support and improve critical infrastructure through skilled onsite execution in Nigeria.",
     ],
-    image: "/image/operation-teams/data-centre-operations-nigeria.webp",
-    alt: "Technical work in a data centre rack aisle",
+    image: "/image/service-details/data-centre-buildout.webp",
+    alt: "Server racks and structured connectivity in a data centre",
   },
   purpose: {
-    eyebrow: "OUR PURPOSE",
     title: "Make Critical Infrastructure Easier to Deploy, Support and Grow.",
     paragraphs: [
       "Infrastructure projects often fail in the gap between what was designed and what actually happens onsite.",
@@ -19,7 +16,6 @@ export const aboutContent = {
     ],
   },
   story: {
-    eyebrow: "LOCAL EXECUTION. ENTERPRISE STANDARDS.",
     title: "The Technical Team Behind the Work That Has to Happen Onsite.",
     paragraphs: [
       "A network design can be approved remotely.",
@@ -31,11 +27,10 @@ export const aboutContent = {
       "Our role is not to take control away from the client's engineers.",
       "It is to give them the onsite capacity to execute with confidence.",
     ],
-    image: "/image/service-details/managed-technical-onsite-engineer.webp",
-    alt: "Onsite engineer inspecting technical infrastructure",
+    image: "/image/service-pillars/ideal-solutions-live-data-centre-deployment-nigeria.webp",
+    alt: "Technicians working with equipment and a tablet in a data centre rack aisle",
   },
   belief: {
-    eyebrow: "WHAT WE BELIEVE",
     title: "Good Infrastructure Work Should Make the Next Job Easier.",
     paragraphs: [
       "The quality of technical execution is not measured only by whether something works today.",
@@ -43,19 +38,7 @@ export const aboutContent = {
       "That belief shapes the way we work.",
     ],
   },
-  future: {
-    eyebrow: "BUILT FOR WHAT COMES NEXT",
-    title: "Today's Infrastructure Work Shapes Tomorrow's Support.",
-    paragraphs: [
-      "Infrastructure decisions made today influence how easily an environment can be maintained tomorrow.",
-      "That is why we care about organisation, documentation, accessibility and maintainability — not just whether something works on the day of installation.",
-      "We want the work delivered today to make future maintenance, troubleshooting and expansion easier.",
-    ],
-    image: "/image/service-details/data-centre-buildout.webp",
-    alt: "Organised data centre infrastructure",
-  },
   collaboration: {
-    eyebrow: "WORKING TOGETHER",
     title: "The Best Infrastructure Work Is Collaborative.",
     paragraphs: [
       "Complex technical environments rarely depend on one team alone.",
@@ -67,7 +50,6 @@ export const aboutContent = {
     alt: "Coordinating technical work with engineers in a server room",
   },
   quality: {
-    eyebrow: "QUALITY IN THE DETAILS",
     title: "The Small Things Become Important Later.",
     paragraphs: [
       "A cable route that makes sense.",
@@ -81,14 +63,12 @@ export const aboutContent = {
     alt: "Structured cable routing and organisation",
   },
   capabilities: {
-    eyebrow: "WHAT WE DELIVER",
     title: "Technical Execution Across the Infrastructure Lifecycle.",
     paragraphs: [
       "From new deployment to ongoing support, Ideal Solutions provides the onsite capability needed to keep infrastructure work moving.",
     ],
   },
   people: {
-    eyebrow: "THE PEOPLE BEHIND THE EXECUTION",
     title: "Infrastructure Is Technical. Delivery Is Human.",
     paragraphs: [
       "Reliable infrastructure work still depends on people who can communicate clearly, work carefully and take responsibility for what happens onsite.",
@@ -96,14 +76,12 @@ export const aboutContent = {
     ],
   },
   presence: {
-    eyebrow: "ON THE GROUND",
     title: "Local Technical Capacity Where the Work Happens.",
     paragraphs: [
       "Whether the project is led by a Nigerian enterprise team, an international OEM, a remote engineering group or a system integrator, Ideal Solutions helps close the distance between technical direction and physical execution.",
     ],
   },
   final: {
-    eyebrow: "",
     title: "Your Infrastructure. Your Standards. Our Hands on the Ground.",
     paragraphs: [
       "Bring us the deployment, change, support requirement or infrastructure challenge.",

@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { ArrowRight, ClipboardCheck, X } from "lucide-react";
 
-const storageKey = "auxano-checklist-lead-magnet-dismissed-at";
+const storageKey = "idealsolutions-checklist-lead-magnet-dismissed-at";
 const dismissWindowMs = 1000 * 60 * 60 * 24 * 7;
 
 function hasRecentDismissal() {

@@ -355,6 +355,12 @@
           "body": [
             "Yes. Ideal Solutions also provides Smart Hands, technical support, planned maintenance and broader lifecycle support for organisations that need continued onsite technical capability."
           ]
+        },
+        {
+          "title": "What do you need to quote for a deployment?",
+          "body": [
+            "Share the site, equipment schedule, rack layout, mounting components, tasks and preferred work window. Access, dependencies and completion criteria are reviewed before the scope, pricing and schedule are confirmed."
+          ]
         }
       ]
     }
@@ -721,6 +727,12 @@
           "title": "Can Smart Hands reduce engineer travel?",
           "body": [
             "Yes, for suitable tasks. Your engineers can retain technical control while physical activities are carried out locally."
+          ]
+        },
+        {
+          "title": "Are Smart Hands services automatically available 24/7?",
+          "body": [
+            "No blanket availability or response time is implied. Share the requested time, site and task so attendance and escalation arrangements can be confirmed. Recurring or out-of-hours coverage must be explicitly agreed."
           ]
         }
       ]
@@ -1095,6 +1107,12 @@
           "title": "Can you support international companies with hardware located in Nigeria?",
           "body": [
             "Yes. Ideal Solutions can provide local procurement, technical intervention and onsite hardware support for international OEMs, MSPs, system integrators and technology teams with infrastructure in Nigeria."
+          ]
+        },
+        {
+          "title": "What warranty and delivery terms apply to hardware?",
+          "body": [
+            "Availability, lead times, compatibility and applicable supplier or manufacturer terms are confirmed for the selected equipment. Installation, configuration, migration and ongoing support are separate unless included in the quotation."
           ]
         }
       ]
@@ -1504,8 +1522,13 @@
         {
           "title": "Can network support continue after installation?",
           "body": [
-            "Yes. Smart Hands, technical support and planned maintenance can provide continued onsite assistance after the initial network project is complete.",
-            "This keeps Pillar 4 aligned with the same nine-section master structure, while its own persuasive idea is clear:"
+            "Yes. Smart Hands, technical support and planned maintenance can provide continued onsite assistance after the initial network project is complete."
+          ]
+        },
+        {
+          "title": "Does network work include certification and as-built records?",
+          "body": [
+            "Required tests, acceptance limits and documentation must be specified before execution. Basic connection checks are not equivalent to certification. Agree the labels, port records, diagrams and test evidence needed for handover."
           ]
         }
       ]
@@ -1896,8 +1919,13 @@
         {
           "title": "Can Ideal Solutions support international companies with facilities in Nigeria?",
           "body": [
-            "Yes. Ideal Solutions can provide local technical execution for international organisations requiring security and infrastructure support in Nigeria.",
-            "This keeps Pillar 5 aligned to the same nine-section structure while giving it a clear persuasive idea:"
+            "Yes. Ideal Solutions can provide local technical execution for international organisations requiring security and infrastructure support in Nigeria."
+          ]
+        },
+        {
+          "title": "Does installation certify the facility as compliant?",
+          "body": [
+            "No. Installation and agreed checks do not automatically provide regulatory approval or certify the whole facility. Confirm design, inspection, integration and acceptance responsibilities with the relevant qualified parties."
           ]
         }
       ]
@@ -2265,6 +2293,12 @@
           "title": "Will the assessment include recommendations?",
           "body": [
             "Where included in scope, findings can be organised into practical observations and recommended next actions to help teams prioritise remediation or future work."
+          ]
+        },
+        {
+          "title": "Is an infrastructure assessment a cybersecurity or compliance audit?",
+          "body": [
+            "No. This scope concerns agreed physical infrastructure and related records. Penetration testing, regulatory certification and specialist safety inspections are separate requirements."
           ]
         }
       ]
@@ -2637,6 +2671,12 @@
           "title": "Why is lifecycle management important after deployment?",
           "body": [
             "Infrastructure continues to change after deployment. Good lifecycle management helps preserve visibility, documentation, support continuity and control as equipment is maintained, moved, upgraded or replaced."
+          ]
+        },
+        {
+          "title": "Who owns technical approvals and project acceptance?",
+          "body": [
+            "Technical ownership and approvals are agreed with the customer and project team. Ideal Solutions coordinates and executes agreed work, records exceptions and supports handover. The designated customer representatives approve changes and acceptance."
           ]
         }
       ]

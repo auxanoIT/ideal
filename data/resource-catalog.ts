@@ -33,7 +33,7 @@ export const resourceGroups: ResourceGroup[] = [
       label: "Solutions Overview",
       href: "/services",
     },
-    { id: "about-auxano", label: "About Auxano", href: "/about" },
+    { id: "about-ideal-solutions", label: "About Ideal Solutions", href: "/about" },
   ]),
   buildGroup("support", "Support", [
     { id: "contact", label: "Book Consultation", href: "/book-consultation" },

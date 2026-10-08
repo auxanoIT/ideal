@@ -3,7 +3,7 @@ import type { MarketingPage, PageSection } from "@/lib/types";
 const CLOUDINARY_CLOUD_NAME = "dnqn2cs4e";
 
 export const cloudinaryVideos = {
-  heroLogo: "auxano_logo_animation_imrmvo",
+  heroLogo: "idealsolution_krfs3x",
   softwareLicensing: "software_lincensing_rip8v4",
   networking: "networking_aftabv",
   itManagement: "it_management_wsufkd",
@@ -43,7 +43,7 @@ function applyHomeSectionCloudinaryMedia(section: PageSection): PageSection {
           id: "hero-logo-intro",
           videoPublicId: cloudinaryVideos.heroLogo,
           videoUrl: getCloudinaryVideoUrl(cloudinaryVideos.heroLogo),
-          headline: "Auxano Solutions for critical IT environments.",
+          headline: "Ideal Solutions for critical IT environments.",
           description:
             "Integrated technology delivery for infrastructure, networks, hardware, software, and managed operations.",
           primaryCta: {

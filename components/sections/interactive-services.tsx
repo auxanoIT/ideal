@@ -53,7 +53,7 @@ const serviceCardImages: Record<string, { src: string; alt: string }> = {
 function getServiceCardImage(itemId: string) {
   return serviceCardImages[itemId] ?? {
     src: "/image/servces.png",
-    alt: "Integrated Auxano service environment",
+    alt: "Integrated Ideal Solutions service environment",
   };
 }
 

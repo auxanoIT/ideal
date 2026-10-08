@@ -371,7 +371,7 @@ export async function getTestimonials(): Promise<Testimonial[]> {
     tags: ["testimonials"],
   });
 
-  return content ?? testimonials;
+  return content?.filter(item => !/auxano/i.test(JSON.stringify(item))) ?? testimonials;
 }
 
 export async function getFaqs(): Promise<FAQItem[]> {
@@ -381,7 +381,13 @@ export async function getFaqs(): Promise<FAQItem[]> {
     tags: ["faqs"],
   });
 
-  return content?.length ? content : faqs;
+  // Reject imported FAQ claims from a different business instead of relabelling them.
+  const currentFaqs = content?.filter(item =>
+    typeof item.question === "string" && typeof item.answer === "string" &&
+    item.question.trim() && item.answer.trim() &&
+    !/auxano/i.test(item.question + " " + item.answer),
+  );
+  return currentFaqs?.length ? currentFaqs : faqs;
 }
 
 export async function getEstimatorConfig(): Promise<EstimatorConfig> {

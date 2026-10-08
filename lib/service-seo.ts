@@ -17,7 +17,7 @@ const serviceSeoOverrides: Record<string, ServiceSeoOverride> = {
   "data-centre-services": {
     title: "Server Room & Data Centre Services Nigeria",
     description:
-      "Auxano designs and builds reliable server rooms and data centres in Nigeria, covering racks, UPS power, cooling, monitoring, access control, testing, and handover.",
+      "Ideal Solutions designs and builds reliable server rooms and data centres in Nigeria, covering racks, UPS power, cooling, monitoring, access control, testing, and handover.",
     searchTerms: [
       "server room company in Nigeria",
       "server room provider in Nigeria",
@@ -29,21 +29,21 @@ const serviceSeoOverrides: Record<string, ServiceSeoOverride> = {
     faqs: [
       {
         question:
-          "What does Auxano include in a server room or data centre project?",
+          "What does Ideal Solutions include in a server room or data centre project?",
         answer:
           "The scope can cover room layout, racks, power distribution, UPS and surge protection, cooling, environmental monitoring, controlled access, installation checks, and handover documentation. The final design is based on the site conditions, equipment load, uptime requirement, and growth plan.",
       },
       {
-        question: "Can Auxano upgrade an existing server room in Nigeria?",
+        question: "Can Ideal Solutions upgrade an existing server room in Nigeria?",
         answer:
-          "Yes. Auxano can assess an operating server room, identify risks around layout, power, cooling, monitoring, access, and maintainability, then plan an upgrade that protects business continuity while improving reliability and supportability.",
+          "Existing server rooms can be reviewed against the agreed scope. Work in a live environment requires site approval, dependency checks and an appropriate work window. Specialist power or cooling responsibilities must be confirmed separately; uninterrupted operation is not guaranteed.",
       },
     ],
   },
   "it-managed-services-staff-outsourcing": {
     title: "Managed IT Services & Outsourcing Lagos",
     description:
-      "Managed IT services and staff outsourcing in Lagos and across Nigeria, with SLA support, monitoring, cybersecurity, onsite engineers, and monthly reporting.",
+      "Discuss managed IT and onsite support in Nigeria with Ideal Solutions. Equipment, visit schedules, reporting and response arrangements are scoped together.",
     searchTerms: [
       "IT managed services in Lagos",
       "managed IT services Nigeria",
@@ -54,14 +54,14 @@ const serviceSeoOverrides: Record<string, ServiceSeoOverride> = {
     ],
     faqs: [
       {
-        question: "What is included in Auxano's managed IT services?",
+        question: "What is included in Ideal Solutions' managed IT services?",
         answer:
           "The operating model can include user support, network and server monitoring, patch oversight, firewall and security administration, incident escalation, vendor coordination, monthly reporting, and scheduled service reviews. Coverage is agreed against the client's users, sites, systems, and response requirements.",
       },
       {
-        question: "Can Auxano provide an onsite IT engineer in Lagos?",
+        question: "Can Ideal Solutions provide an onsite IT engineer in Lagos?",
         answer:
-          "Yes. Auxano can place a dedicated engineer at the client location while providing escalation support from the wider technical team. This gives staff a consistent onsite contact without leaving complex incidents dependent on one person.",
+          "Onsite staffing can be discussed against the required skills, location, schedule and supervision arrangements. Availability, responsibilities and escalation coverage must be confirmed before an engagement begins.",
       },
     ],
   },
@@ -80,9 +80,9 @@ const serviceSeoOverrides: Record<string, ServiceSeoOverride> = {
     faqs: [
       {
         question:
-          "Can Auxano install both cloud and on-premises IP PBX systems?",
+          "Can Ideal Solutions install both cloud and on-premises IP PBX systems?",
         answer:
-          "Yes. Auxano can design an on-premises or cloud-hosted IP PBX around the organization's extensions, locations, internet reliability, call routing, management needs, and budget. The selected model is configured and tested before user handover.",
+          "The platform, extensions, locations, connectivity, licences and call-routing requirements should be reviewed first. Installation and configuration can be discussed for a supported system. Hosting, carrier services and subscriptions must be explicitly included where required.",
       },
       {
         question: "Which office telephone features can be configured?",
@@ -94,7 +94,7 @@ const serviceSeoOverrides: Record<string, ServiceSeoOverride> = {
   "sales-of-it-hardware": {
     title: "IT Hardware Suppliers in Lagos, Nigeria",
     description:
-      "Business IT hardware supply in Lagos and across Nigeria for genuine laptops, desktops, servers, UPS, storage, and peripherals with warranty-backed procurement.",
+      "Ideal Solutions supports business hardware procurement in Nigeria, with specifications, availability, delivery and applicable warranty terms confirmed per order.",
     searchTerms: [
       "IT hardware suppliers Nigeria",
       "IT equipment distributors Nigeria",
@@ -105,14 +105,14 @@ const serviceSeoOverrides: Record<string, ServiceSeoOverride> = {
     ],
     faqs: [
       {
-        question: "Does Auxano supply genuine IT equipment with warranty?",
+        question: "Does Ideal Solutions supply genuine IT equipment with warranty?",
         answer:
-          "Yes. Auxano sources business hardware through recognized supply channels and provides the available manufacturer or distributor warranty information at handover. Recommendations account for workload, supportability, budget, and expected device life.",
+          "The quotation should identify the selected equipment, supply arrangements and applicable manufacturer or supplier warranty terms. Confirm coverage, exclusions and the claims process before ordering. No standard warranty period applies automatically to every product.",
       },
       {
-        question: "Can Auxano handle bulk IT equipment procurement?",
+        question: "Can Ideal Solutions handle bulk IT equipment procurement?",
         answer:
-          "Yes. Auxano can coordinate bulk procurement for offices, schools, healthcare teams, retail groups, and multi-site operations, including specification guidance, accessory planning, asset tagging, organized delivery, and warranty records.",
+          "Bulk procurement can be scoped from an approved equipment list, quantities, delivery locations and required dates. Availability, accessories, substitutions, asset records and installation requirements should be confirmed before ordering.",
       },
     ],
   },
@@ -209,46 +209,29 @@ export function buildServiceSeoKeywords(service: Service) {
 }
 
 export function buildServiceSeoFaqs(service: Service): ServiceSeoFaq[] {
-  const serviceName = service.title.toLowerCase();
-  const firstIndustries = service.industries.slice(0, 4).join(", ");
-  const primaryCapabilities = service.capabilities.slice(0, 4).join(", ");
-  const primaryDeliverables = service.deliverables.slice(0, 4).join(", ");
+  const serviceName = idealServiceText(service.title);
   const override = serviceSeoOverrides[service.slug];
-
   const standardFaqs: ServiceSeoFaq[] = [
     {
-      question: `How does Auxano deliver ${serviceName}?`,
-      answer: `Auxano begins with the operating environment, confirms the technical scope, then handles planning, supply, installation, testing, commissioning, documentation, and support handover as one coordinated delivery process.`,
+      question: `How is ${serviceName} scoped?`,
+      answer: "We review the site, existing equipment, intended outcome and customer responsibilities before agreeing the work. Supply, installation, configuration, testing and support are separate activities and are included only where specified in the agreed scope.",
     },
     {
-      question: `What is included in the project scope?`,
-      answer: `Each scope is shaped around the site, risk level, users, devices, and long-term support needs. Core delivery areas include ${primaryCapabilities || service.summary}.`,
+      question: "Can you support a site outside Lagos?",
+      answer: "Ideal Solutions is based in Ikeja, Lagos and supports infrastructure projects across Nigeria. Site access, travel, scheduling and technical resources must be confirmed for each location; local offices or immediate attendance should not be assumed.",
     },
     {
-      question: `Can Auxano support multiple Nigerian locations?`,
-      answer: `Yes. Auxano supports single-site and multi-site environments in Lagos, Abuja, Port Harcourt, and other Nigerian locations, with planning and documentation that keep deployment and future support consistent.`,
+      question: "What records are provided at handover?",
+      answer: "The completion record is agreed for the task. It can include equipment, connection or configuration changes, agreed checks, permitted photographs and unresolved issues. The customer's technical owner reviews the evidence against the acceptance criteria.",
     },
     {
-      question: `Which environments is this service suited for?`,
-      answer: `This service is suited for ${firstIndustries || "corporate offices, healthcare, education, financial services, and multi-site operations"}, with the final design adapted to each site's uptime, security, compliance, and support requirements.`,
-    },
-    {
-      question: `What happens at handover?`,
-      answer: `Handover is treated as part of the work, not an afterthought. Typical handover items include ${primaryDeliverables || "configuration records, test results, user guidance, support notes, and warranty or renewal information"}.`,
+      question: `How do I request a quotation for ${serviceName}?`,
+      answer: "Use Book Consultation or email info@idealsolutions.com.ng with the site, equipment details, required tasks and preferred work window. Scope, availability, pricing and delivery arrangements are confirmed before scheduling. Do not include passwords in an initial enquiry.",
     },
   ];
-
-  return idealServiceContent([...(override?.faqs ?? []), ...standardFaqs].slice(0, 5));
+  return idealServiceContent([...(override?.faqs ?? []), ...standardFaqs]);
 }
 
 export function buildServiceSeoQuestions(service: Service) {
-  const serviceName = service.title.toLowerCase();
-
-  return [
-    `Can Auxano deliver ${serviceName} for business sites in Nigeria?`,
-    `What is included in ${serviceName}?`,
-    `How does Auxano scope and hand over ${serviceName}?`,
-    `Can ${serviceName} support offices in Lagos, Abuja, and Port Harcourt?`,
-    `How do I book a consultation for ${serviceName}?`,
-  ];
+  return buildServiceSeoFaqs(service).map(item => item.question);
 }

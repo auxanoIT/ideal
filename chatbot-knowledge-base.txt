@@ -1,517 +1,67 @@
-Auxano Solutions Chatbot Knowledge Base
-Last updated: 2026-05-25
-
-Purpose of this file
-Use this document as the source of truth for an AI chatbot on the Auxano Solutions website. The chatbot should answer questions about Auxano Solutions Technology Limited, explain services clearly, qualify visitor needs, and guide serious prospects to book a consultation.
-
-Primary chatbot goal
-Help visitors understand which Auxano service fits their situation, gather enough context to route the request, and encourage them to book a consultation through /book-consultation.
-
-Company overview
-Auxano Solutions Technology Limited is an ICT and IT solutions company based in Ikeja, Lagos, Nigeria. Auxano designs, supplies, installs, configures, and supports technology environments for businesses and organizations. The company focuses on end-to-end delivery across infrastructure, networking, hardware systems, software and licenses, and managed or advisory IT services.
-
-Business positioning
-Auxano is not only an equipment seller. Auxano helps clients assess their environment, choose the right solution, install and configure the system, test it, document it, hand it over, and support it after deployment. The company should be described as a technical delivery partner for organizations that need reliable infrastructure, accountable security, genuine equipment, licensed software, and ongoing support.
-
-Company contact details
-Company name: Auxano Solutions Technology Limited
-Short name: Auxano Solutions
-Phone: +234 8062 218 546
-Email: info@auxanosolutions.net
-Address: 26A Adeshina Street, Off Oluwole Phillips, Obafemi Awolowo Way, Ikeja, Lagos, Nigeria
-Website consultation page: /book-consultation
-Website contact page: /contact
-Sales WhatsApp: +2348062218546
-Support WhatsApp: +2348062218546
-
-How the chatbot should speak
-Use a professional, clear, helpful tone. Avoid sounding too casual. Do not overpromise. Do not give exact pricing unless the website has provided an estimate tool or the user is asking for a rough planning range. When the scope is unclear, ask 2 to 4 practical questions and then recommend booking a consultation.
-
-Preferred response style
-Keep answers concise but useful. Explain what Auxano can do, why it matters, and what the next step should be. For most service questions, end with a soft consultation prompt such as: "The best next step is to book a consultation so the team can review your site, users, equipment, and priorities."
-
-Important chatbot behavior rules
-1. Do not claim that a project can start immediately without scope confirmation.
-2. Do not promise exact delivery timelines without a site survey or requirements review.
-3. Do not guarantee exact prices in chat.
-4. Do not diagnose a live security or infrastructure issue as certain without inspection.
-5. If a user has an urgent support issue, route them to WhatsApp Support or the contact page.
-6. If a user is planning a new project, route them to Book Consultation.
-7. If a user asks for a quotation, ask for basic scope details and guide them to book consultation.
-8. If the user is outside Lagos, say Auxano is based in Ikeja, Lagos and can support businesses across Nigeria depending on project requirements and operational scope.
-9. If the user asks whether Auxano only sells equipment, explain that Auxano supplies genuine hardware and software and also handles installation, configuration, testing, deployment, documentation, and support.
-10. If the user is not technical, reassure them that they only need to explain the business need, current problem, site type, number of users or locations, and any urgency.
-
-Consultation booking flow
-The main conversion action is: Book Consultation at /book-consultation.
-
-The consultation form asks for:
-- Full name
-- Company
-- Email
-- Phone
-- Service focus
-- Project brief
-
-Service focus options in the form:
-- Managed IT Support
-- CCTV & Surveillance
-- Network Infrastructure
-- Access Control
-- IT Audit & Compliance
-- Business Continuity & DR
-
-What to tell users about consultation
-A consultation helps Auxano understand the site, business needs, current infrastructure, risks, user count, locations, timeline, and budget expectations. The team can then recommend the right solution and next steps.
-
-Good consultation prompt
-"To recommend the right setup, Auxano will need a short brief about your site, users, locations, current equipment, and what problem you want solved. You can book a consultation here: /book-consultation."
-
-Lead qualification questions
-Use these questions when a visitor asks for help but has not provided enough detail:
-- What type of organization or facility do you run?
-- Is this for a new deployment, an upgrade, a repair, or ongoing support?
-- How many users, devices, cameras, doors, branches, or locations are involved?
-- Is the site in Lagos or another part of Nigeria?
-- What is the main problem: downtime, security gaps, poor network performance, outdated equipment, licensing, compliance, or support?
-- Is there a deadline or urgent business reason for the project?
-- Do you already have equipment, or do you need Auxano to supply and install it?
-
-Core service categories
-
-1. Infrastructure
-Infrastructure covers physical security, structured cabling, data centre readiness, site automation, hardware supply and repair, data centre consumables, and audio visual services. These services are for organizations that need the physical and operational backbone of their environment designed, installed, tested, and handed over properly.
-
-Infrastructure services include:
-- Door Access Control
-- Surveillance System (CCTV)
-- Structured LAN Cabling
-- Data Centre Services
-- Automated Gates & Sliding Doors
-- Sales of IT Hardware
-- Repair of IT Hardware
-- Sales of Data Centre Consumables
-- Audio Visual Services & Livestreaming
-
-2. Networking
-Networking covers network design, architecture planning, cabling, configuration, equipment supply, and IP telephony. These services are for businesses that need speed, stability, documentation, security, and long-term clarity across LAN, WAN, Wi-Fi, routing, switching, firewall, and communications systems.
-
-Networking services include:
-- Network Design with Diagram
-- Network Architecture Planning
-- Network Cabling
-- Network Configurations
-- Sales of Network Equipment
-- Office Telephone System (IP PBX)
-
-3. Hardware Systems
-Hardware Systems covers original desktops, laptops, servers, storage, printers, installation, setup, and repair. These services are for companies that need genuine equipment matched to role, budget, workload, and support requirements.
-
-Hardware Systems services include:
-- Desktop & Laptop Sales
-- Computer Installation and Setup
-- Server Sales and Repair
-- Server Storage Provisioning & Deployment
-- Printer Sales & Installation
-
-4. Software & Licenses
-Software & Licenses covers genuine licensing, compliant deployment, renewal management, and configuration across security tools, operating systems, databases, cloud platforms, and business applications.
-
-Software & Licenses services include:
-- Firewall Sales and Licenses
-- Antivirus Licenses
-- Windows Operating System Licenses
-- Server Operating System Licenses
-- Database Software Licenses
-- Cloud Services Licenses
-- Applications Licenses
-
-5. Managed & Advisory
-Managed & Advisory covers technical support, managed services, outsourced IT staff, audits, consultancy, project management, governance, risk review, and ongoing operational support. These services are for organizations that need more than one-time procurement.
-
-Managed & Advisory services include:
-- IT Technical Services
-- IT Managed Services & IT Staff Outsourcing
-- IT Consultancy & Audit Services
-- IT Project Management
-
-Detailed service descriptions
-
-Door Access Control
-Auxano deploys biometric and card-based door access systems with centralized control, access logging, audit trails, and site-specific configuration. This service is useful for offices, healthcare facilities, schools, warehouses, estates, and any organization that needs accountable movement through doors or controlled zones.
-Key capabilities: biometric access, proximity cards, centralized dashboard control, permission mapping, credential issuing and revocation, visitor or temporary access rules, entry and exit logs, CCTV-aware planning.
-Deliverables: access design and zone plan, configured access dashboard, credential policy, installed readers and locks, operator handover.
-When to recommend: when the user needs to control who enters a building, restrict sensitive rooms, track movement, replace keys, manage staff access, or improve physical security.
-
-Surveillance System (CCTV)
-Auxano designs and installs HD and 4K CCTV systems for offices, warehouses, schools, estates, retail outlets, and operational sites. The service includes site survey, coverage planning, camera selection, remote viewing, recording, storage sizing, installation, commissioning, and support.
-Key capabilities: indoor cameras, outdoor cameras, PTZ cameras, low-light coverage, NVR/DVR storage, remote live view, recorded playback, retention planning, blind spot reduction, maintenance support.
-Deliverables: survey-backed coverage plan, installed camera and recording system, remote viewing setup, storage plan, handover and maintenance recommendation.
-When to recommend: when the user needs security visibility, incident review, perimeter monitoring, theft reduction, branch monitoring, warehouse coverage, or remote oversight.
-
-Structured LAN Cabling
-Auxano installs Cat6, Cat6A, fibre, horizontal cabling, backbone cabling, cabinet organization, trunking, labeling, testing, and as-built documentation. The goal is a network cabling layer that is clean, traceable, certified, and supportable.
-Key capabilities: copper and fibre cabling, cable pathway planning, rack and cabinet organization, labeled runs, Fluke-certified testing, proof reports, as-built drawings.
-Deliverables: installed structured cabling system, certification reports, labels, rack organization, as-built and handover documentation.
-When to recommend: when a user is moving office, building a new site, having unreliable network points, expanding users, adding CCTV or access control, or cleaning up messy cabling.
-
-Data Centre Services
-Auxano supports server rooms and data-centre environments with racks, power, UPS, cooling, cable management, monitoring, physical protection, and uptime-focused planning.
-Key capabilities: server-room design, rack planning, UPS and power protection, cooling strategy, environmental monitoring, humidity and temperature alerts, intrusion risk alerts.
-Deliverables: data-centre readiness plan, installed or improved rack and power environment, monitoring recommendations, handover.
-When to recommend: when a user needs to improve a server room, protect equipment, reduce downtime risk, add racks, plan power and cooling, or create a more reliable infrastructure room.
-
-Automated Gates & Sliding Doors
-Auxano delivers motorized swing gates, sliding gates, boom barriers, automated sliding doors, sensors, card or remote access, phone or app control, and backup planning for controlled movement.
-Key capabilities: vehicle access control, pedestrian entry automation, car park barriers, sensor-triggered doors, remote control, safety and backup considerations.
-Deliverables: automated gate or door system, control setup, safety and operating handover.
-When to recommend: when the user needs controlled estate entry, office entry automation, car park access, facility automation, or safer movement through entry points.
-
-Sales of IT Hardware
-Auxano supplies original, warranted desktops, laptops, servers, peripherals, and accessories. Hardware is sourced to match business need and can be prepared for deployment.
-Key capabilities: desktops, laptops, workstations, servers, peripherals, accessories, bulk procurement, asset tagging, warranty-focused supply.
-Deliverables: original hardware, warranty documentation where applicable, deployment-ready equipment, procurement support.
-When to recommend: when the user wants genuine equipment, bulk procurement, replacement devices, office setup devices, servers, or accessories.
-
-Repair of IT Hardware
-Auxano handles diagnostics, repairs, part replacement, data recovery support, and preventive maintenance for laptops, desktops, servers, printers, and other IT hardware.
-Key capabilities: fault diagnosis, transparent repair advice, server and printer diagnostics, part replacement, data recovery support, preventive maintenance.
-Deliverables: repair report or recommendation, repaired equipment where possible, maintenance advice, recovery guidance.
-When to recommend: when a device or server has failed, a printer is not working, a computer is slow or damaged, a drive has failed, or the user wants preventive maintenance.
-
-Sales of Data Centre Consumables
-Auxano supplies data-centre and network consumables such as patch cables, rack hardware, SFP modules, transceivers, labels, cable management kits, cleaning tools, and connectivity accessories.
-Key capabilities: Cat5e, Cat6, Cat6A and fibre patch cables, rack accessories, SFP modules, media converters, cable-management supplies.
-Deliverables: required consumables and accessories for clean infrastructure work.
-When to recommend: when a user needs network or data-centre accessories quickly, especially for deployment, rack cleanup, cabling, or fibre connectivity.
-
-Audio Visual Services & Livestreaming
-Auxano provides conference-room AV, event production, LED displays, video walls, and professional livestreaming services.
-Key capabilities: meeting room AV, video conferencing, multi-camera livestreaming, event AV production, LED video walls, public event support.
-Deliverables: AV setup, event or room configuration, livestreaming support, tested equipment and handover.
-When to recommend: when a church, school, conference, business, or venue needs livestreaming, presentation systems, meeting room AV, or event production.
-
-Network Design with Diagram
-Auxano creates survey-led network designs with logical and physical diagrams, IP planning, equipment specifications, and bill of materials before deployment starts.
-Key capabilities: site survey, topology design, logical diagrams, physical diagrams, subnetting, DHCP scopes, DNS design, equipment specification, BOM.
-Deliverables: network design document, diagrams, IP plan, bill of materials, deployment recommendations.
-When to recommend: when a user wants to build, redesign, expand, or document a network before buying equipment or starting installation.
-
-Network Architecture Planning
-Auxano advises on network architecture for LAN, WAN, SD-WAN, cloud, hybrid environments, resilience, redundancy, and migration planning.
-Key capabilities: current-state audit, risk and gap assessment, architecture recommendation, redundancy planning, migration roadmap.
-Deliverables: architecture plan, recommendations, migration roadmap, resilience guidance.
-When to recommend: when a company is growing, has multiple branches, suffers repeated network issues, needs resilience, or is planning major infrastructure change.
-
-Network Cabling
-Auxano installs copper and fibre network cabling with testing, labeling, certification, and documentation.
-Key capabilities: Cat6, Cat6A, copper and fibre cabling, backbone cabling, data-centre cabling, conduit, trunking, cable protection, certification reports.
-Deliverables: installed cabling, tested runs, labels, certification reports, documentation.
-When to recommend: when a user needs new network points, office cabling, fibre backbone, rack cleanup, certified cabling, or cabling for CCTV and access systems.
-
-Network Configurations
-Auxano configures enterprise, small business, and home-office networks for performance, security, reliability, and clear handover.
-Key capabilities: VLANs, QoS, 802.1X, routing, switching, firewall setup, guest Wi-Fi, VPNs, printer integration, home-office Wi-Fi, configuration backups.
-Deliverables: configured network devices, secure settings, documentation, backed-up configurations.
-When to recommend: when a user has equipment but needs it configured correctly, wants better Wi-Fi, needs VLANs, VPN, firewall setup, guest network, or stable network performance.
-
-Sales of Network Equipment
-Auxano supplies genuine firewalls, routers, switches, wireless access points, network accessories, patch cables, SFP modules, and media converters based on the required specification.
-Key capabilities: firewall supply, switching, routing, access point selection, network accessories, performance and coverage matching.
-Deliverables: specified and supplied network equipment, procurement advice, deployment-ready accessories.
-When to recommend: when the user needs to buy network equipment but is unsure what model, quantity, or specification is right.
-
-Office Telephone System (IP PBX)
-Auxano deploys modern IP telephony systems for business communication, lower call costs, and support for office, branch, mobile, and PC-based users.
-Key capabilities: IP PBX, SIP trunking, desk IP phones, softphones, auto-attendant, call queues, voicemail-to-email, call recording.
-Deliverables: IP PBX system, SIP and phone setup, call flow configuration, handover.
-When to recommend: when a user needs office extensions, call routing, lower call cost, branch communication, call queues, or professional telephone systems.
-
-Desktop & Laptop Sales
-Auxano supplies desktops, laptops, and workstations from brands such as HP, Dell, Lenovo, and Apple, matched to user role, budget, and business need.
-Key capabilities: business laptops, desktops, workstations, user-role matching, bulk procurement, asset tagging, accessories.
-Deliverables: supplied devices, procurement guidance, deployment-ready hardware, accessories where required.
-When to recommend: when a business needs computers for staff, bulk purchases, role-specific devices, replacements, or new office setup.
-
-Computer Installation and Setup
-Auxano prepares computers for day-one use by installing operating systems, office applications, antivirus, business apps, email, printers, shared drives, updates, and migration support.
-Key capabilities: OS installation, Microsoft Office, antivirus setup, email setup, network connection, printer setup, shared drives, security hardening, file and email migration.
-Deliverables: ready-to-use computers, configured software, connected network services, migration support, user handover.
-When to recommend: when a user bought new computers, is onboarding staff, moving from old machines, or wants devices properly configured before use.
-
-Server Sales and Repair
-Auxano supplies, installs, diagnoses, repairs, and maintains servers for business workloads.
-Key capabilities: tower servers, rack servers, blade servers, RAM replacement, drive replacement, RAID controllers, power supplies, cooling, RAID configuration, Windows Server, Ubuntu, Red Hat, VMware ESXi.
-Deliverables: supplied or repaired server, RAID configuration, OS deployment, maintenance recommendations.
-When to recommend: when a user needs a new server, server repair, RAID setup, operating system installation, or workload planning.
-
-Server Storage Provisioning & Deployment
-Auxano designs and deploys scalable storage using NAS, SAN, RAID, redundancy, backup, recovery, and capacity planning.
-Key capabilities: NAS file sharing, SAN storage, virtualization storage, database storage, RAID deployment, recovery testing, storage growth planning.
-Deliverables: configured storage system, capacity plan, redundancy setup, backup or recovery guidance.
-When to recommend: when a business needs central file storage, backup storage, storage for servers, virtualization, databases, or future growth.
-
-Printer Sales & Installation
-Auxano supplies, installs, networks, shares, and tests printers before handover.
-Key capabilities: laser printers, inkjet printers, multifunction printers, thermal printers, barcode printers, label printers, receipt printers, Windows/Mac/mobile sharing, print management.
-Deliverables: supplied printer, installed and networked printer, tested printing, handover.
-When to recommend: when a user needs office printers, retail receipt printers, warehouse label printers, shared printers, or print cost control.
-
-Firewall Sales and Licenses
-Auxano supplies, licenses, configures, and manages firewall platforms for business security.
-Key capabilities: firewall selection, firewall licensing, performance sizing, firewall rules, endpoint synchronization, enterprise-grade security options, renewal management.
-Deliverables: firewall appliance or license, configured firewall, renewal guidance, documentation.
-When to recommend: when a user wants stronger network security, branch protection, VPN, firewall renewal, or compliance-ready security controls.
-
-Antivirus Licenses
-Auxano provides endpoint protection licenses and deployment across business devices, with central visibility and management.
-Key capabilities: antivirus licensing, endpoint protection, central console, ransomware protection, device fleet deployment, monitoring.
-Deliverables: licensed antivirus, deployed endpoint protection, management console setup, support guidance.
-When to recommend: when a user needs malware protection, ransomware protection, antivirus renewal, central security visibility, or device protection across staff computers.
-
-Windows Operating System Licenses
-Auxano supplies genuine Windows licenses for individuals, teams, and organizations, including volume licensing and compliance documentation.
-Key capabilities: Windows editions, volume licensing, compliance records, license audit visibility.
-Deliverables: genuine Windows licenses, licensing documentation, compliance support.
-When to recommend: when a user needs genuine Windows, wants to regularize licensing, is buying multiple PCs, or needs audit-ready documentation.
-
-Server Operating System Licenses
-Auxano supplies, installs, deploys, and hardens server operating systems for infrastructure roles.
-Key capabilities: Windows Server, Active Directory, Remote Desktop Services, Hyper-V, file services, Red Hat Enterprise Linux, Ubuntu Server LTS, VMware vSphere/ESXi.
-Deliverables: licensed server OS, installed and hardened system, infrastructure service setup where required.
-When to recommend: when a user needs server OS licensing, server deployment, virtualization, Active Directory, file services, or Linux server setup.
-
-Database Software Licenses
-Auxano supports database software licensing, deployment, tuning, backup, and recovery planning for business-critical workloads.
-Key capabilities: Microsoft SQL Server, MySQL, MariaDB, PostgreSQL, MongoDB, NoSQL support, automated backup, tested recovery.
-Deliverables: licensed and deployed database platform, backup and recovery configuration, performance or availability guidance.
-When to recommend: when a business application needs a database, the user needs SQL Server licensing, database setup, backup, recovery, or database platform advice.
-
-Cloud Services Licenses
-Auxano supplies and configures cloud subscriptions and platform services.
-Key capabilities: Microsoft 365, Word, Excel, Teams, Outlook, SharePoint, OneDrive, Google Workspace, Gmail, Docs, Drive, Meet, Calendar, Microsoft Azure, AWS, subscription management.
-Deliverables: cloud subscriptions, tenant setup or configuration, migration support, renewal and spend management guidance.
-When to recommend: when a user needs Microsoft 365, Google Workspace, cloud migration, cloud infrastructure, email setup, collaboration tools, or subscription management.
-
-Applications Licenses
-Auxano supplies, activates, and documents business application licenses.
-Key capabilities: Microsoft Office, Adobe Creative Cloud, AutoCAD, Autodesk, accounting software, remote access tools, PDF tools, specialist software on request.
-Deliverables: application licenses, activation support, documentation, user readiness.
-When to recommend: when a user needs software licenses for office work, design, engineering, accounting, PDF work, or specialized business tools.
-
-IT Technical Services
-Auxano provides on-site and remote support for hardware, software, networks, users, email, servers, and system administration.
-Key capabilities: first-line support, second-line support, remote support, on-site engineer dispatch, user administration, Active Directory, email administration, server care, break/fix support.
-Deliverables: support resolution, engineer visit where needed, system administration changes, issue notes, prevention recommendations.
-When to recommend: when a user has an immediate technical issue, needs troubleshooting, wants an engineer on-site, or needs occasional IT support without a managed contract.
-
-IT Managed Services & IT Staff Outsourcing
-Auxano provides predictable, SLA-backed managed IT support, monitoring, managed security, reporting, dedicated engineer placement, and IT manager-as-a-service coverage.
-Key capabilities: 24/7 monitoring, server health visibility, alert review, recurring issue tracking, firewall management, patch oversight, threat monitoring, dedicated on-site engineer, outsourced IT staff, senior IT leadership, monthly reporting.
-Deliverables: managed support model, monitoring coverage, security support, staffing structure, SLA response cadence, reporting.
-When to recommend: when a business needs ongoing IT support, wants to outsource IT, needs predictable support cost, needs an on-site engineer, or wants senior IT leadership without hiring full-time.
-
-IT Consultancy & Audit Services
-Auxano provides independent technical advice, infrastructure audits, cybersecurity audits, policy development, governance support, and vendor assessment.
-Key capabilities: hardware review, network review, cabling review, server room review, firewall rule review, patch assessment, access control checks, acceptable-use policy, password policy, data handling guidance, vendor proposal review, BOM review.
-Deliverables: audit report, gap assessment, risk findings, remediation guidance, vendor recommendations, policy documents where required.
-When to recommend: when a user wants an independent review before procurement, is unsure what is wrong, needs compliance support, wants to assess vendors, or needs a cybersecurity or infrastructure audit.
-
-IT Project Management
-Auxano manages complex IT projects from planning and scoping through vendor coordination, risk management, delivery tracking, post-implementation review, and handover.
-Key capabilities: project scope, timeline planning, milestone tracking, resource mapping, vendor coordination, risk register, blocker review, implementation review, handover notes.
-Deliverables: project scope and delivery plan, coordination cadence, risk register, progress control, post-implementation review, supportable closeout.
-When to recommend: when a user has a multi-vendor technology project, office rollout, infrastructure upgrade, complex deployment, or needs one technical control point.
-
-Industries Auxano serves
-Auxano works with businesses of all sizes, from small offices and startups to large enterprises, schools, healthcare providers, financial institutions, retail outlets, industrial facilities, property environments, and multi-site operations.
-
-Corporate Offices
-Common needs: access control, CCTV, managed IT support, visitor movement control, office network reliability, user support, secure infrastructure.
-Recommended services: Door Access Control, Surveillance System (CCTV), IT Managed Services & IT Staff Outsourcing.
-
-Healthcare
-Common needs: stable networks, controlled access, device support, continuity planning, secure patient-facing systems.
-Recommended services: Network Architecture Planning, IT Consultancy & Audit Services, Server Storage Provisioning & Deployment.
-
-Education
-Common needs: campus connectivity, surveillance, access, structured cabling, classroom and admin support.
-Recommended services: Network Cabling, Surveillance System (CCTV), Office Telephone System (IP PBX).
-
-Government
-Common needs: accountable infrastructure, access control, surveillance, audit-led planning, compliance support.
-Recommended services: Door Access Control, Firewall Sales and Licenses, IT Consultancy & Audit Services.
-
-Financial Services
-Common needs: secure networks, licensed systems, surveillance, operational controls, compliance visibility.
-Recommended services: Firewall Sales and Licenses, Server Operating System Licenses, IT Consultancy & Audit Services.
-
-Warehousing & Logistics
-Common needs: dispatch-area visibility, gate automation, structured networking, CCTV, support readiness.
-Recommended services: Network Design with Diagram, Surveillance System (CCTV), Automated Gates & Sliding Doors.
-
-Manufacturing
-Common needs: uptime, industrial-site networking, surveillance, cabling, support for production environments.
-Recommended services: Network Architecture Planning, Surveillance System (CCTV), Structured LAN Cabling.
-
-Retail
-Common needs: store surveillance, endpoint support, branch networks, software, device standardization.
-Recommended services: Surveillance System (CCTV), Desktop & Laptop Sales, Applications Licenses.
-
-Hospitality
-Common needs: guest Wi-Fi, surveillance, telephone systems, front-desk and back-office support.
-Recommended services: Surveillance System (CCTV), Office Telephone System (IP PBX), IT Technical Services.
-
-Real Estate & Property Management
-Common needs: access control, gate automation, CCTV, common-area visibility, building infrastructure.
-Recommended services: Door Access Control, Automated Gates & Sliding Doors, Surveillance System (CCTV).
-
-Religious Organizations
-Common needs: livestreaming, AV systems, surveillance, networking, access control, weekly operation reliability.
-Recommended services: Audio Visual Services & Livestreaming, Surveillance System (CCTV), Network Cabling.
-
-Multi-site SMEs
-Common needs: standardized infrastructure, support across branches, monitoring visibility, repeatable network and security patterns.
-Recommended services: IT Managed Services & IT Staff Outsourcing, Network Design with Diagram, Surveillance System (CCTV).
-
-Common FAQs and approved answers
-
-Question: What types of businesses does Auxano work with?
-Answer: Auxano works with businesses of all sizes, from small offices and startups to large enterprises, schools, healthcare providers, financial institutions, retail outlets, and industrial facilities. Whether the client operates from one location or multiple sites, Auxano designs and delivers IT solutions that fit operational needs and business goals.
-
-Question: Does Auxano only sell IT equipment, or also handle installation?
-Answer: Auxano does both. The company supplies genuine IT hardware and software through authorized distributors and certified engineers handle installation, configuration, testing, and deployment. Clients get a complete solution from one partner instead of coordinating multiple vendors.
-
-Question: Can Auxano assess our current IT infrastructure before recommending upgrades?
-Answer: Yes. Auxano can evaluate the current infrastructure, identify inefficiencies, security risks, performance gaps, and outdated systems, then provide practical recommendations aligned with business objectives and budget.
-
-Question: Does Auxano offer managed IT support after project delivery?
-Answer: Yes. Auxano provides ongoing managed IT support, including monitoring, maintenance, troubleshooting, performance optimization, upgrades, and technical support.
-
-Question: Can Auxano improve network performance and reliability?
-Answer: Yes. Auxano designs, installs, configures, and monitors business networks to improve speed, security, and stability. This includes structured cabling, wireless networks, routing, switching, firewall setup, and network monitoring.
-
-Question: Does Auxano provide cybersecurity solutions?
-Answer: Yes. Auxano provides cybersecurity support including firewall deployment, antivirus licensing, access control systems, governance, risk and compliance services, incident response planning, and security audits.
-
-Question: How does Auxano handle disaster recovery and business continuity?
-Answer: Auxano creates customized backup and disaster recovery plans based on business operations and risk exposure. The team identifies critical failure points and builds recovery strategies that help restore systems during disruptions.
-
-Question: Does Auxano provide IT audit and compliance services?
-Answer: Yes. Auxano evaluates infrastructure controls, data security, system availability, access management, and disaster recovery readiness. The team also helps businesses align with industry best practices and regulatory requirements through governance, risk, and compliance services.
-
-Question: Can Auxano support our internal IT team?
-Answer: Yes. Auxano can work alongside an internal IT team to fill skill gaps, support infrastructure upgrades, monitor systems, improve performance, and provide strategic technical support.
-
-Question: How quickly can Auxano start a project?
-Answer: Timelines depend on the scope and complexity. Once requirements are confirmed, Auxano can begin planning and execution quickly, with proper planning, clear timelines, and efficient delivery.
-
-Question: Does Auxano serve businesses outside Lagos?
-Answer: Yes. Auxano is based in Ikeja, Lagos, and can provide IT solutions and support for businesses across Nigeria depending on project requirements and operational scope.
-
-Routing guidance by user intent
-
-If the user says "I need CCTV"
-Ask about the site type, number of cameras or areas, indoor/outdoor coverage, remote viewing, storage/retention needs, and location. Recommend booking a consultation for a site survey and coverage plan.
-
-If the user says "I need access control"
-Ask how many doors, what type of users need access, whether they prefer biometric, card, face recognition, or mixed credentials, whether visitor access is needed, and whether CCTV integration is required. Recommend consultation.
-
-If the user says "My network is slow"
-Ask number of users, number of locations, whether Wi-Fi or cable is affected, equipment type if known, whether CCTV/VoIP/cloud apps depend on the network, and whether the issue is constant or intermittent. Recommend network assessment or consultation.
-
-If the user says "I need IT support"
-Ask whether they need one-time support, remote support, on-site engineer, managed support, outsourced staff, or 24/7 monitoring. Recommend IT Technical Services for ad-hoc issues or Managed IT Services for ongoing support.
-
-If the user says "I need a quote"
-Ask for service type, company name, site location, number of users/devices/locations, current problem, desired timeline, and whether equipment supply is required. Then direct to /book-consultation.
-
-If the user says "Do you sell laptops or hardware?"
-Explain that Auxano supplies original desktops, laptops, servers, printers, peripherals, network equipment, and data-centre accessories. Ask quantity, brand preference, user roles, and whether setup is required.
-
-If the user says "Do you install software or licenses?"
-Explain that Auxano supplies genuine software licenses and can configure them. Ask what software is needed, number of users/devices, whether renewal or new deployment, and whether compliance documentation is required.
-
-If the user says "We are moving office"
-Recommend structured cabling, network design, CCTV, access control, computer setup, printer setup, and managed support. Ask new site size, number of users, number of floors, expected move date, and required systems.
-
-If the user says "We need a server"
-Ask about workload, number of users, applications, storage needs, backup needs, uptime requirements, and whether they need Windows Server, Linux, virtualization, or storage. Recommend consultation.
-
-If the user says "We need audit or compliance"
-Explain IT Consultancy & Audit Services. Ask whether the focus is infrastructure, cybersecurity, licensing, access controls, disaster recovery, vendor review, or policy. Recommend consultation.
-
-If the user says "Can you come to our location?"
-Say Auxano can provide on-site support and project delivery depending on the scope and location. Ask where the site is and what service is needed. Route to consultation or WhatsApp Support depending on urgency.
-
-Recommended lead capture details
-When a prospect seems serious, try to capture or ask them to submit:
-- Name
-- Company
-- Phone
-- Email
-- Site location
-- Service needed
-- Number of users/devices/cameras/doors/locations where relevant
-- Current problem or desired outcome
-- Timeline
-- Whether they need supply, installation, support, or all of them
-
-Strong consultation closing lines
-- "This is the type of request Auxano should scope properly. Please book a consultation so the team can review the site and recommend the right solution: /book-consultation"
-- "A short consultation will help confirm the right equipment, installation plan, and support model. You can start here: /book-consultation"
-- "To avoid recommending the wrong setup, Auxano should review your environment first. Please book a consultation and include your project brief: /book-consultation"
-- "If this is urgent support for an existing issue, use WhatsApp Support. If this is a new project or upgrade, book a consultation."
-
-Sample chatbot responses
-
-Sample response for CCTV inquiry:
-"Yes. Auxano designs and installs CCTV systems for offices, warehouses, schools, estates, retail outlets, and operational sites. The team can handle site survey, camera placement, HD/4K cameras, remote viewing, recorder setup, storage sizing, and support. To scope it properly, how many areas or cameras do you have in mind, and is this indoor, outdoor, or both? The best next step is to book a consultation so Auxano can review coverage and retention needs: /book-consultation"
-
-Sample response for network issue:
-"Auxano can help with network performance, cabling, Wi-Fi, switching, routing, firewall configuration, and monitoring. Slow network issues usually need a quick assessment of users, devices, cabling, Wi-Fi coverage, and current equipment. Is the problem affecting Wi-Fi, cable connections, or both? If you want the team to review it properly, book a consultation here: /book-consultation"
-
-Sample response for managed IT support:
-"Auxano provides managed IT support, outsourced IT staff, monitoring, security oversight, reporting, and on-site or remote technical support. If you need occasional help, IT Technical Services may fit. If you need ongoing support with clearer ownership, Managed IT Services is better. How many users and locations do you need support for? You can book a consultation here: /book-consultation"
-
-Sample response for hardware purchase:
-"Auxano supplies original desktops, laptops, servers, printers, peripherals, network devices, and accessories. The team can also install, configure, secure, and prepare devices for day-one use. How many devices do you need, and will Auxano also handle setup? For a proper recommendation, book a consultation or send the brief through the contact page."
-
-Sample response for software licensing:
-"Auxano supplies genuine software licenses including Windows, Windows Server, Microsoft 365, Google Workspace, antivirus, firewall licenses, database software, Adobe, Autodesk, and other business applications. The team can also help with activation, configuration, renewal, and compliance documentation. How many users or devices need licensing?"
-
-Sample response for access control:
-"Auxano installs biometric, card-based, and centrally managed door access systems with credential control, revocation, entry logs, and optional CCTV-aware planning. To scope this, the team needs to know the number of doors, user groups, and preferred access method. You can book a consultation here: /book-consultation"
-
-Sample response for audit:
-"Yes. Auxano provides IT consultancy and audit services covering infrastructure, cybersecurity, firewall rules, patch levels, access control, licensing, vendor proposals, and IT policies. The output can include findings, risks, gaps, and remediation recommendations. To start, book a consultation and describe what you want reviewed: /book-consultation"
-
-Website pages the chatbot can mention
-Home: /
-Services: /services
-Book Consultation: /book-consultation
-Contact: /contact
-Blog: /blog
-Case Studies: /case-studies
-Support Center: /resources/support-center
-About: /about
-
-Case study proof points
-Auxano has case-study style examples covering:
-- Security modernization for a multi-floor Lagos head office, involving CCTV coverage, access control planning, and network improvements.
-- Network and continuity refresh for a private healthcare operator, involving topology documentation, monitoring, switching, wireless layout, and continuity planning.
-- Warehouse rollout with centralized visibility and support readiness, involving CCTV, network rollout, and post-launch support model.
-
-Trust and capability statements
-Auxano positions itself around:
-- End-to-end deployment and support.
-- More than 200 projects delivered.
-- 24/7 technical support.
-- More than 500 organizations trust Auxano Solutions.
-- Genuine equipment and software through authorized distributors.
-- Certified engineers for installation, configuration, testing, and deployment.
-- Practical assessment before recommending upgrades.
-- Support that can continue after installation.
-
-Final chatbot instruction
-Always try to move the visitor from general interest to a clear next step. If the visitor is not ready, educate them. If the visitor has a real project, ask enough questions to understand the scope and guide them to /book-consultation. If the visitor has an urgent issue with an existing system, route them to WhatsApp Support or /contact.
+IDEAL SOLUTIONS — WEBSITE ENQUIRY KNOWLEDGE BASE
+Updated 8 October 2026
+
+Company: Ideal Solutions Technology Limited
+Website: https://www.idealsolutions.com.ng
+Email: info@idealsolutions.com.ng
+Address: 21, Abeokuta Street, Off Obasa Street, Oba Akran Avenue, Ikeja, Lagos
+Enquiry destination: /book-consultation
+
+Ideal Solutions is an onsite infrastructure services provider, not a colocation operator.
+Service pillars:
+- Data Centre Deployment: /services/data-centre-deployment
+- Smart Hands & Technical Support: /services/smart-hands-technical-support
+- Server, Storage & Hardware: /services/server-storage-hardware
+- Network Infrastructure & Connectivity: /services/network-infrastructure-connectivity
+- Data Centre Security & Safety: /services/data-centre-security-safety
+- Infrastructure Audit & Optimisation: /services/infrastructure-audit-optimisation
+- Data Centre Project & Lifecycle Management: /services/data-centre-project-lifecycle-management
+
+ANSWERING RULES
+Use the approved FAQ answers below and the current website's service-specific scope.
+Do not promise availability, response times, 24/7 coverage, zero downtime, prices, warranties, certifications or regulatory approval without a confirmed engagement.
+Do not request passwords or sensitive infrastructure credentials in an initial enquiry.
+For pricing, urgent work, unsupported platforms or specialist safety questions, direct the visitor to the consultation page or company email.
+Use client-approved case studies from data/ideal-case-studies.json. Do not invent testimonials or customer results.
+Never say a form was submitted or an appointment was booked unless the actual submission succeeded.
+
+GENERAL FAQS
+Who does Ideal Solutions work with?
+Ideal Solutions supports data centre operators, enterprise IT teams, OEMs, managed service providers, system integrators and international teams that need onsite technical execution in Nigeria. We work to an agreed scope while the client's technical owners retain control of their environment.
+
+What services does Ideal Solutions provide?
+Our seven service pillars cover data centre deployment; Smart Hands and technical support; servers, storage and hardware; network infrastructure and connectivity; security and safety systems; infrastructure audit and optimisation; and project and lifecycle management. Supply, installation, configuration and ongoing support are agreed separately where needed.
+
+Are you a data centre operator or an onsite services provider?
+Ideal Solutions is an onsite infrastructure services business, not a colocation facility operator. We support work in the customer's approved data centre, server room or enterprise environment. Hosting, rack rental, internet transit and facility operations are not implied by our deployment services.
+
+Can you work with our remote engineers or existing IT team?
+Yes. Your team can provide approved work instructions, rack layouts, equipment details and configuration requirements. We agree the onsite tasks, technical contacts, communication method and approval process before starting. Changes outside the agreed scope require approval.
+
+Can you assess our existing infrastructure before recommending work?
+Yes. An agreed assessment can review racks, cabling, equipment identification, physical connections and available records. Findings can help define remediation, installation or expansion work. An infrastructure assessment is not automatically a cybersecurity penetration test or a regulatory certification.
+
+Can work be carried out in a live environment?
+Work can be planned around operational environments, subject to site access rules, dependencies and approved change procedures. Tasks that could interrupt service need an agreed work window, responsible technical contact and recovery approach. Zero downtime should not be assumed.
+
+Where is Ideal Solutions based, and can you support sites outside Lagos?
+Our address is 21, Abeokuta Street, Off Obasa Street, Oba Akran Avenue, Ikeja, Lagos. We support infrastructure projects across Nigeria, with travel, site access, scheduling and delivery arrangements confirmed for each location. International teams can engage us for work on infrastructure located in Nigeria.
+
+Do you provide urgent, out-of-hours or recurring support?
+Planned maintenance and recurring onsite support can be scoped around your equipment and operating requirements. For urgent or out-of-hours work, share the site, affected equipment, symptoms and requested time. Availability, response arrangements and any service-level commitments must be confirmed; 24/7 coverage is not automatic.
+
+What records will we receive after the work?
+Completion records are agreed before execution. Depending on the task, they may include equipment positions, connection or labelling updates, completed checks, permitted photographs and outstanding issues. Your technical owner reviews the evidence against the agreed acceptance criteria; completion of a physical task is not the same as full application or business acceptance.
+
+What information do you need to quote and schedule a project?
+Share the site location, equipment models and quantities, required tasks, available drawings or records, access restrictions and preferred work window. Pricing and timing depend on the confirmed scope, parts, logistics and site readiness. Do not send passwords or sensitive infrastructure credentials in an initial enquiry.
+
+How do I discuss a requirement with Ideal Solutions?
+Use the Book Consultation page or email info@idealsolutions.com.ng with a short project brief. Tell us whether you need deployment, support, hardware, networking, security, an assessment or lifecycle assistance. We can then clarify the scope and next steps before work is scheduled.
+
+SERVICE-SPECIFIC FAQ SOURCE
+The detailed questions and answers are maintained in:
+- data/service-pillars-content.json (seven pillars)
+- data/subservice-production.json (29 sub-services)
+- lib/service-seo.ts (other service pages)
+Publish or import those records separately if your external chatbot requires its own knowledge upload.

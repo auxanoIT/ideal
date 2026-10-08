@@ -245,7 +245,7 @@ export const services: Service[] = [
     detailTitle:
       "Door access systems built around control, proof, and clean daily operation.",
     detailDescription:
-      "Auxano designs access-control projects around credential strategy, centralized administration, traceable entry records, and integration with the wider security environment.",
+      "Ideal Solutions designs access-control projects around credential strategy, centralized administration, traceable entry records, and integration with the wider security environment.",
     capabilitySections: [
       {
         id: "credential-entry",
@@ -253,7 +253,7 @@ export const services: Service[] = [
         title: "Biometric and card access that fits the site.",
         lead: "Fingerprint, facial recognition, and proximity cards should reduce friction at the door without weakening operational control.",
         body: [
-          "Auxano aligns reader choice, lock type, traffic volume, and entry policy before devices are installed. That keeps the door experience fast for approved users while preserving stricter control for sensitive spaces.",
+          "Ideal Solutions aligns reader choice, lock type, traffic volume, and entry policy before devices are installed. That keeps the door experience fast for approved users while preserving stricter control for sensitive spaces.",
           "The outcome is not just hardware on the wall. It is a credential model that matches the way people actually move through the building.",
         ],
         image: {
@@ -284,7 +284,7 @@ export const services: Service[] = [
         lead: "An access system earns trust when the record of movement is clear, searchable, and usable during review.",
         body: [
           "Door events should support incident review, compliance questions, and basic operational accountability without requiring teams to reconstruct events from memory.",
-          "Auxano scopes logs, schedules, and operator expectations so the audit trail is not simply enabled, but usable.",
+          "Ideal Solutions scopes logs, schedules, and operator expectations so the audit trail is not simply enabled, but usable.",
         ],
         image: {
           src: "/image/service-details/door-access-audit.webp",
@@ -298,7 +298,7 @@ export const services: Service[] = [
         lead: "The front door becomes more valuable when entry events and security visibility are planned together.",
         body: [
           "Access events become stronger when teams can connect a door action to the relevant video context.",
-          "Auxano plans the handoff between access control and surveillance so the security stack works as one coordinated environment rather than isolated tools.",
+          "Ideal Solutions plans the handoff between access control and surveillance so the security stack works as one coordinated environment rather than isolated tools.",
         ],
         image: {
           src: "/image/service-details/door-access-integration.webp",
@@ -338,7 +338,7 @@ export const services: Service[] = [
     detailTitle:
       "Surveillance designed for visibility, retention, and usable response.",
     detailDescription:
-      "Auxano delivers CCTV as a full service, not a camera-only purchase: coverage design, remote review, storage sizing, commissioning, and lifecycle support stay connected.",
+      "Ideal Solutions delivers CCTV as a full service, not a camera-only purchase: coverage design, remote review, storage sizing, commissioning, and lifecycle support stay connected.",
     capabilitySections: [
       {
         id: "camera-coverage",
@@ -347,7 +347,7 @@ export const services: Service[] = [
           "HD and 4K camera design based on the environment, not a generic count.",
         lead: "Indoor, outdoor, PTZ, low-light, and day-night needs should be chosen from the risk picture of the site.",
         body: [
-          "Auxano starts with line of sight, activity zones, entrances, blind spots, and review expectations. That keeps the solution focused on evidence quality and operational awareness.",
+          "Ideal Solutions starts with line of sight, activity zones, entrances, blind spots, and review expectations. That keeps the solution focused on evidence quality and operational awareness.",
           "The aim is camera placement that protects what matters without wasting budget on poor angles or duplicated coverage.",
         ],
         image: {
@@ -377,7 +377,7 @@ export const services: Service[] = [
           "Recorder and storage sizing tied to the retention window the business actually needs.",
         lead: "A surveillance project is incomplete if footage quality is high but retention planning is weak.",
         body: [
-          "Auxano aligns NVR or DVR capacity with camera count, resolution, frame needs, and the number of days footage must remain available.",
+          "Ideal Solutions aligns NVR or DVR capacity with camera count, resolution, frame needs, and the number of days footage must remain available.",
           "That keeps storage expectations realistic and protects against discovering too late that the evidence window is shorter than required.",
         ],
         image: {
@@ -409,7 +409,7 @@ export const services: Service[] = [
     summary:
       "Reliable fire alarm and detection systems for life safety, property protection, early detection, emergency response, and compliance.",
     description:
-      "Intelligent Fire Alarm Design & Installation for Maximum Protection. With over 15 years of industry experience, Auxano Solutions designs and installs advanced fire alarm systems in Nigeria, North Africa and East Africa tailored to your building layout, occupancy, and risk profile. We provide addressable and conventional fire alarm systems, smoke detectors, heat detectors, fire alarm control panels, and emergency notification systems that deliver reliable fire detection and rapid response.",
+      "Ideal Solutions supports the planning, installation and testing of suitable fire detection and alarm systems. Equipment, responsibilities, checks and handover requirements are agreed for the site before work begins.",
     navDescription:
       "Fire alarm design, installation, testing, maintenance, integration, and compliance support.",
     heroImage: {
@@ -445,7 +445,7 @@ export const services: Service[] = [
     detailTitle:
       "Reliable fire alarm systems for life safety and property protection.",
     detailDescription:
-      "Auxano Solutions delivers advanced fire alarm and detection systems that support early fire detection, fast emergency response, business continuity, and compliance with global and Nigeria, North Africa and East Africa safety requirements.",
+      "Ideal Solutions delivers advanced fire alarm and detection systems that support early fire detection, fast emergency response, business continuity, and agreed site safety requirements.",
     capabilitySections: [
       {
         id: "fire-alarm-design",
@@ -453,7 +453,7 @@ export const services: Service[] = [
         title: "Fire Alarm Design & Installation Tailored to Your Facility",
         lead: "We design and install intelligent fire alarm systems that provide maximum coverage, efficient detection, and clear emergency notification.",
         body: [
-          "Protect Lives, Assets, and Operations with Industry-Leading Fire Alarm & Safety Systems. With over 15 years of experience in fire safety and protection solutions across Nigeria, Auxano Solutions designs, supplies, installs, tests, commissions, and maintains advanced fire alarm and fire detection systems for commercial, residential, and industrial facilities. We help businesses, schools, hospitals, hotels, warehouses, factories, and corporate organizations achieve early fire detection, rapid emergency response, regulatory compliance, and maximum life safety protection.",
+          "Ideal Solutions supports the planning, installation and testing of suitable fire detection and alarm systems. Equipment, responsibilities, checks and handover requirements are agreed for the site before work begins.",
         ],
         image: {
           src: "/image/service-details/fire-alarm-system-design.jpg",
@@ -466,7 +466,7 @@ export const services: Service[] = [
         title: "Seamless Installation & Commissioning",
         lead: "The system should be installed cleanly, connected correctly, and proven before it is handed over.",
         body: [
-          "Auxano handles device mounting, cabling coordination, panel setup, zone logic, and commissioning checks so the installed system matches the agreed design.",
+          "Ideal Solutions handles device mounting, cabling coordination, panel setup, zone logic, and commissioning checks so the installed system matches the agreed design.",
           "Commissioning closes the gap between equipment being present and the safety system being ready for use.",
         ],
         image: {
@@ -480,7 +480,7 @@ export const services: Service[] = [
         title: "Inspection, Testing & Maintenance",
         lead: "Routine maintenance is critical to ensure performance, reliability, and compliance with safety regulations.",
         body: [
-          "Keep Your Fire Alarm System Reliable, Compliant, and Ready. Auxano Solutions provides professional fire alarm inspection, testing, maintenance, and repair services in Nigeria, North Africa and East Africa to ensure your fire protection system operates at peak performance. Our preventive maintenance programs include routine inspections, fault diagnosis, system upgrades, emergency support, and compliance checks, helping businesses reduce downtime, maintain safety standards, and protect lives and property.",
+          "Ideal Solutions can support agreed inspection, fault investigation and maintenance activities for suitable fire alarm systems. The installed equipment, site procedures, scheduling and specialist responsibilities should be reviewed before work is arranged.",
         ],
         image: {
           src: "/image/service-details/fire-alarm-testing-maintenance.jpg",
@@ -520,7 +520,7 @@ export const services: Service[] = [
           "International fire alarm standards and Nigerian regulatory compliance.",
         lead: "Fire alarm systems need documentation and delivery discipline that can stand up to safety review.",
         body: [
-          "Fire Alarm Systems Built to International Safety Standards. Auxano Solutions designs, installs, and maintains fire alarm systems in accordance with recognized standards such as NFPA 72 (National Fire Alarm and Signaling Code) and BS 5839. Our commitment to industry best practices ensures reliable fire detection, system performance, and compliance for commercial and industrial facilities.",
+          "The applicable design requirements, inspection responsibilities and acceptance checks should be confirmed with the customer and relevant specialists before installation. A technical service does not by itself certify the facility or guarantee regulatory approval.",
           "Meeting Nigerian Fire Safety Regulations with Confidence. We help organizations comply with Federal Fire Service (FFS) regulations, State Fire Service requirements, and the National Building Code (NBC) through professionally designed and maintained fire alarm systems. Our compliance-focused approach helps businesses meet regulatory obligations while improving workplace safety and asset protection.",
         ],
         image: {
@@ -534,7 +534,7 @@ export const services: Service[] = [
         title: "Industries We Serve",
         lead: "Different facilities carry different risks, occupancy patterns, and compliance expectations.",
         body: [
-          "Specialized Fire Protection Solutions Across Multiple Industries. Auxano Solutions delivers fire alarm installation and maintenance services in Nigeria, North Africa and East Africa for commercial buildings, industrial facilities, oil and gas installations, hospitals, schools, universities, hotels, residential estates, and corporate organizations. Each solution is customized to address the unique risks and operational requirements of the industry we serve.",
+          "Fire alarm work is scoped to the facility, existing equipment and approved requirements. Share the site location, current system details and intended changes so the required technical activities and responsibilities can be reviewed.",
         ],
         image: {
           src: "/image/service-details/fire-alarm-system-design.jpg",
@@ -542,12 +542,12 @@ export const services: Service[] = [
         },
       },
       {
-        id: "why-auxano",
-        navLabel: "Why Auxano",
-        title: "Why Choose Auxano Solutions",
-        lead: "Auxano Solutions combines engineering experience, compliance awareness, and fast support for fire safety projects.",
+        id: "why-ideal-solutions",
+        navLabel: "Why Ideal Solutions",
+        title: "Why Choose Ideal Solutions",
+        lead: "Ideal Solutions combines engineering experience, compliance awareness, and fast support for fire safety projects.",
         body: [
-          "Trusted Fire Safety Experts Delivering Reliable Protection. With over 15 years of experience, certified engineers, and a proven project delivery record, Auxano Solutions provides tailored fire alarm and fire protection solutions that meet both local and international standards. Clients choose us for our technical expertise, responsive support, quality workmanship, and commitment to protecting lives, property, and business operations.",
+          "Ideal Solutions supports the planning, installation and testing of suitable fire detection and alarm systems. Equipment, responsibilities, checks and handover requirements are agreed for the site before work begins.",
         ],
         image: {
           src: "/image/service-details/fire-alarm-testing-maintenance.jpg",
@@ -600,7 +600,7 @@ export const services: Service[] = [
           "Cat6, Cat6A, and fibre chosen for the actual load and distance.",
         lead: "The right cable in the right place first time prevents expensive compromises later.",
         body: [
-          "Auxano selects copper or fibre based on endpoint demand, backbone needs, equipment layout, and future expandability rather than habit.",
+          "Ideal Solutions selects copper or fibre based on endpoint demand, backbone needs, equipment layout, and future expandability rather than habit.",
           "That keeps the network foundation ready for both current traffic and the upgrades that arrive after occupancy or expansion.",
         ],
         image: {
@@ -691,7 +691,7 @@ export const services: Service[] = [
     detailTitle:
       "Infrastructure readiness shaped around uptime, protection, and environmental control.",
     detailDescription:
-      "Auxano treats data centre work as a reliability discipline built around room readiness, power continuity, cooling, and environmental monitoring.",
+      "Ideal Solutions treats data centre work as a reliability discipline built around room readiness, power continuity, cooling, and environmental monitoring.",
     capabilitySections: [
       {
         id: "server-room-buildout",
@@ -700,7 +700,7 @@ export const services: Service[] = [
           "Server rooms designed around racks, power, cooling, and physical protection.",
         lead: "The room itself is part of the infrastructure and should be engineered with the same care as the equipment inside it.",
         body: [
-          "Auxano aligns rack layout, working clearance, power routes, cooling considerations, and controlled access before deployment gets crowded or difficult to maintain.",
+          "Ideal Solutions aligns rack layout, working clearance, power routes, cooling considerations, and controlled access before deployment gets crowded or difficult to maintain.",
           "That produces a cleaner technical environment and lowers the risk of costly rework later.",
         ],
         image: {
@@ -730,7 +730,7 @@ export const services: Service[] = [
           "Cooling strategies that preserve equipment health and operating stability.",
         lead: "Temperature drift shortens equipment life and weakens reliability before it becomes obvious.",
         body: [
-          "Auxano plans thermal control around the room footprint, equipment density, airflow, and the expected operational profile of the space.",
+          "Ideal Solutions plans thermal control around the room footprint, equipment density, airflow, and the expected operational profile of the space.",
           "That avoids the pattern of installing equipment first and discovering environmental limits after the fact.",
         ],
         image: {
@@ -786,7 +786,7 @@ export const services: Service[] = [
     detailTitle:
       "Automated gates and sliding doors built for secure, controlled movement.",
     detailDescription:
-      "Auxano delivers secure, smart entry systems across motorized gates, car park barriers, sensor-triggered doors, and remote control with safety protections built in.",
+      "Ideal Solutions delivers secure, smart entry systems across motorized gates, car park barriers, sensor-triggered doors, and remote control with safety protections built in.",
     capabilitySections: [
       {
         id: "swing-sliding-gates",
@@ -795,7 +795,7 @@ export const services: Service[] = [
           "Motorized swing and sliding gates for vehicle and pedestrian access.",
         lead: "Entry automation should improve movement without weakening safety, control, or accountability at the perimeter.",
         body: [
-          "Auxano designs motorized gate systems around the actual site flow: vehicle approach, pedestrian movement, security posture, available power, and manual override requirements.",
+          "Ideal Solutions designs motorized gate systems around the actual site flow: vehicle approach, pedestrian movement, security posture, available power, and manual override requirements.",
           "That keeps the installation practical for daily use while still protecting the entrance as a controlled access point.",
         ],
         image: {
@@ -811,7 +811,7 @@ export const services: Service[] = [
         lead: "Car park and driveway control works best when the barrier is fast, visible, and matched to traffic volume.",
         body: [
           "Boom barriers help facilities separate approved vehicle movement from open access, especially where guards, reception teams, tenants, or visitors share the same entrance.",
-          "Auxano plans barrier placement, activation method, and traffic behavior so the gate line remains efficient rather than becoming a bottleneck.",
+          "Ideal Solutions plans barrier placement, activation method, and traffic behavior so the gate line remains efficient rather than becoming a bottleneck.",
         ],
         image: {
           src: "/image/service-details/automated-gates-boom-barrier.webp",
@@ -839,7 +839,7 @@ export const services: Service[] = [
         title: "Remote, app, phone, and card control for everyday operation.",
         lead: "The right control method lets authorized users operate entry points without creating new security gaps.",
         body: [
-          "Auxano can configure entry operation around phones, remotes, cards, or operator controls depending on the site and the people who need access.",
+          "Ideal Solutions can configure entry operation around phones, remotes, cards, or operator controls depending on the site and the people who need access.",
           "Anti-crush sensors, power backup, and override planning are treated as part of the delivery standard, not optional afterthoughts.",
         ],
         image: {
@@ -880,7 +880,7 @@ export const services: Service[] = [
     detailTitle:
       "Original IT hardware sourced, warranted, and ready for deployment.",
     detailDescription:
-      "Auxano sources genuine IT equipment and prepares it for real deployment through role-matched devices, server supply, supporting accessories, and organized bulk procurement.",
+      "Ideal Solutions sources genuine IT equipment and prepares it for real deployment through role-matched devices, server supply, supporting accessories, and organized bulk procurement.",
     capabilitySections: [
       {
         id: "desktops-laptops-workstations",
@@ -888,7 +888,7 @@ export const services: Service[] = [
         title: "Desktops, laptops, and workstations matched to the role.",
         lead: "The right machine depends on workload, user role, budget, warranty expectations, and deployment timing.",
         body: [
-          "Auxano helps clients choose across HP, Dell, Lenovo, Apple, and other suitable device tiers without treating every user as if they have the same computing needs.",
+          "Ideal Solutions helps clients choose across HP, Dell, Lenovo, Apple, and other suitable device tiers without treating every user as if they have the same computing needs.",
           "That keeps procurement practical: finance, administration, design, field, and executive users can each receive hardware that fits the job.",
         ],
         image: {
@@ -903,7 +903,7 @@ export const services: Service[] = [
           "Server hardware sourced for business-critical infrastructure needs.",
         lead: "Server procurement should be tied to workload, resilience, expansion, and supportability from the start.",
         body: [
-          "Auxano supplies server hardware from recognized business vendors and helps align tower, rack, or workload-specific choices with the operational role the server must perform.",
+          "Ideal Solutions supplies server hardware from recognized business vendors and helps align tower, rack, or workload-specific choices with the operational role the server must perform.",
           "The result is not just a purchase order. It is a better-informed infrastructure decision.",
         ],
         image: {
@@ -918,7 +918,7 @@ export const services: Service[] = [
           "Peripherals and accessories supplied with the same deployment discipline.",
         lead: "Monitors, UPS units, storage, and accessories shape how usable the core hardware becomes on day one.",
         body: [
-          "Auxano can bundle supporting items with the main hardware order so teams do not lose time chasing missing adapters, displays, storage, backup power, or workspace accessories.",
+          "Ideal Solutions can bundle supporting items with the main hardware order so teams do not lose time chasing missing adapters, displays, storage, backup power, or workspace accessories.",
           "This is especially useful when a team is opening a new office, onboarding users, or refreshing a fleet.",
         ],
         image: {
@@ -932,7 +932,7 @@ export const services: Service[] = [
         title: "Bulk procurement with asset-tagged delivery for organizations.",
         lead: "Large hardware orders need tracking, warranty control, and delivery structure, not just boxes arriving at reception.",
         body: [
-          "For schools, offices, healthcare teams, retail groups, and growing businesses, Auxano can coordinate bulk procurement with asset tagging and organized handover.",
+          "For schools, offices, healthcare teams, retail groups, and growing businesses, Ideal Solutions can coordinate bulk procurement with asset tagging and organized handover.",
           "Every product is sourced through authorized channels so warranty and authenticity stay clear.",
         ],
         image: {
@@ -973,7 +973,7 @@ export const services: Service[] = [
     detailTitle:
       "Hardware repair handled with diagnosis, transparency, and recovery in mind.",
     detailDescription:
-      "Auxano handles repairs through transparent diagnosis, practical recovery planning, and clear repair scopes for user devices, servers, printers, data recovery, and preventive maintenance.",
+      "Ideal Solutions handles repairs through transparent diagnosis, practical recovery planning, and clear repair scopes for user devices, servers, printers, data recovery, and preventive maintenance.",
     capabilitySections: [
       {
         id: "laptop-desktop-repair",
@@ -982,7 +982,7 @@ export const services: Service[] = [
           "Laptop and desktop repairs that get users back to work quickly.",
         lead: "Screens, keyboards, motherboards, power issues, and internal components should be diagnosed before repair decisions are made.",
         body: [
-          "Auxano isolates the fault, explains the repair path, and confirms likely parts or service requirements before work proceeds.",
+          "Ideal Solutions isolates the fault, explains the repair path, and confirms likely parts or service requirements before work proceeds.",
           "That keeps the process clearer for business users who need uptime, cost control, and honest expectations.",
         ],
         image: {
@@ -997,7 +997,7 @@ export const services: Service[] = [
           "Server and printer diagnostics with part replacement where needed.",
         lead: "Shared infrastructure failures affect more than one user, so diagnosis must be careful and accountable.",
         body: [
-          "Auxano supports diagnostics and part replacement for servers and printers, helping teams resolve hardware faults without unnecessary replacement when repair is practical.",
+          "Ideal Solutions supports diagnostics and part replacement for servers and printers, helping teams resolve hardware faults without unnecessary replacement when repair is practical.",
           "The approach is designed to restore service while documenting what failed and what should be watched next.",
         ],
         image: {
@@ -1011,7 +1011,7 @@ export const services: Service[] = [
         title: "Data recovery support for failed drives and damaged storage.",
         lead: "When a drive fails, the first response should protect the chance of recovery rather than make the damage worse.",
         body: [
-          "Auxano helps assess failed drives and storage incidents, then recommends the safest practical path for retrieving critical data where recovery is possible.",
+          "Ideal Solutions helps assess failed drives and storage incidents, then recommends the safest practical path for retrieving critical data where recovery is possible.",
           "This service is especially important when business files, accounts, project records, or operational data are trapped on failed hardware.",
         ],
         image: {
@@ -1026,7 +1026,7 @@ export const services: Service[] = [
           "Preventive maintenance scheduled before problems become downtime.",
         lead: "Servicing equipment before failure is often cheaper and less disruptive than emergency repair.",
         body: [
-          "Auxano can schedule cleaning, checks, component review, firmware or system observations, and practical maintenance recommendations for devices and shared equipment.",
+          "Ideal Solutions can schedule cleaning, checks, component review, firmware or system observations, and practical maintenance recommendations for devices and shared equipment.",
           "The goal is to reduce repeat faults and give the client better visibility into hardware condition.",
         ],
         image: {
@@ -1072,7 +1072,7 @@ export const services: Service[] = [
     detailTitle:
       "Critical consumables supplied quickly for clean, supportable infrastructure.",
     detailDescription:
-      "Auxano supplies the consumables that keep infrastructure work moving, including patching, rack hardware, fibre accessories, and cable-management kits for ongoing site work.",
+      "Ideal Solutions supplies the consumables that keep infrastructure work moving, including patching, rack hardware, fibre accessories, and cable-management kits for ongoing site work.",
     capabilitySections: [
       {
         id: "patch-cables",
@@ -1081,7 +1081,7 @@ export const services: Service[] = [
           "Cat5e, Cat6, Cat6A, and fibre patch cables in the lengths you need.",
         lead: "The right patch cable stock keeps deployments, expansions, and emergency changes moving without delay.",
         body: [
-          "Auxano supplies patch cables across copper and fibre requirements, helping data rooms, offices, and support teams avoid low-quality or mismatched connectivity supplies.",
+          "Ideal Solutions supplies patch cables across copper and fibre requirements, helping data rooms, offices, and support teams avoid low-quality or mismatched connectivity supplies.",
           "This is useful for new racks, cleanup projects, urgent replacements, and recurring operational demand.",
         ],
         image: {
@@ -1096,7 +1096,7 @@ export const services: Service[] = [
           "Rack hardware that keeps cabinet work organized and serviceable.",
         lead: "Small rack components can decide whether a deployment is clean, safe, and easy to maintain.",
         body: [
-          "Auxano supplies cage nuts, blanking panels, shelf brackets, rails, and other cabinet accessories needed for practical rack organization.",
+          "Ideal Solutions supplies cage nuts, blanking panels, shelf brackets, rails, and other cabinet accessories needed for practical rack organization.",
           "Having the right rack hardware available reduces improvisation and keeps installations more professional.",
         ],
         image: {
@@ -1111,7 +1111,7 @@ export const services: Service[] = [
           "SFP modules and transceivers for fibre connectivity accessories.",
         lead: "Fibre links depend on correctly matched modules, connectors, distance, and speed requirements.",
         body: [
-          "Auxano helps source SFP modules, transceivers, and related fibre accessories so network and data-centre teams can complete connectivity work with fewer compatibility surprises.",
+          "Ideal Solutions helps source SFP modules, transceivers, and related fibre accessories so network and data-centre teams can complete connectivity work with fewer compatibility surprises.",
           "The supply conversation can include the equipment already in place and the performance target for the link.",
         ],
         image: {
@@ -1126,7 +1126,7 @@ export const services: Service[] = [
           "Cable-management kits, labels, cleaning tools, and support consumables.",
         lead: "Good infrastructure work depends on the small supplies that make routing, labeling, and maintenance repeatable.",
         body: [
-          "Auxano supplies ties, labels, cable-management tools, thermal paste, cleaning tools, and supporting items for teams maintaining racks and technical rooms.",
+          "Ideal Solutions supplies ties, labels, cable-management tools, thermal paste, cleaning tools, and supporting items for teams maintaining racks and technical rooms.",
           "Fast supply and volume pricing support recurring infrastructure needs rather than one-off emergency buying.",
         ],
         image: {
@@ -1172,7 +1172,7 @@ export const services: Service[] = [
     detailTitle:
       "Audio visual and livestreaming delivery planned down to the last detail.",
     detailDescription:
-      "Auxano handles AV and livestreaming as a complete room or event service: set up, live operation, pack-down, and the production details that let the audience experience run smoothly.",
+      "Ideal Solutions handles AV and livestreaming as a complete room or event service: set up, live operation, pack-down, and the production details that let the audience experience run smoothly.",
     capabilitySections: [
       {
         id: "conference-room-av",
@@ -1181,7 +1181,7 @@ export const services: Service[] = [
           "Conference room AV for meetings, collaboration, and video conferencing.",
         lead: "Meeting rooms need audio, display, and conferencing systems that work cleanly for everyday users.",
         body: [
-          "Auxano designs and installs projectors, displays, PA systems, microphones, speakers, and video conferencing tools around the room size and use case.",
+          "Ideal Solutions designs and installs projectors, displays, PA systems, microphones, speakers, and video conferencing tools around the room size and use case.",
           "The aim is a room that teams can use quickly and confidently before every meeting.",
         ],
         image: {
@@ -1195,7 +1195,7 @@ export const services: Service[] = [
         title: "Full AV production for conferences, launches, and ceremonies.",
         lead: "Events need technical delivery that supports the program instead of distracting from it.",
         body: [
-          "Auxano can plan and run event audio, displays, staging support, microphones, playback, and live technical operation for corporate, educational, and public moments.",
+          "Ideal Solutions can plan and run event audio, displays, staging support, microphones, playback, and live technical operation for corporate, educational, and public moments.",
           "The team handles setup and live management so organizers can focus on the audience and program.",
         ],
         image: {
@@ -1210,7 +1210,7 @@ export const services: Service[] = [
           "Professional multi-camera livestreaming to major online platforms.",
         lead: "Livestreaming should be planned around camera coverage, audio clarity, switching, platform setup, and live reliability.",
         body: [
-          "Auxano supports multi-camera streaming to YouTube, Facebook, Zoom, and other event platforms, with the operating crew and technical preparation needed for a smooth broadcast.",
+          "Ideal Solutions supports multi-camera streaming to YouTube, Facebook, Zoom, and other event platforms, with the operating crew and technical preparation needed for a smooth broadcast.",
           "This helps events reach remote audiences without reducing the experience to a single static phone camera.",
         ],
         image: {
@@ -1225,7 +1225,7 @@ export const services: Service[] = [
           "LED video walls for high-impact events and permanent installations.",
         lead: "Large-format display systems should be specified for brightness, viewing distance, content type, and installation context.",
         body: [
-          "Auxano can support LED video wall planning for temporary events and permanent facilities where standard displays are not enough.",
+          "Ideal Solutions can support LED video wall planning for temporary events and permanent facilities where standard displays are not enough.",
           "The scope can include screen sizing, placement, source management, setup, live operation, and pack-down where required.",
         ],
         image: {
@@ -1274,7 +1274,7 @@ export const services: Service[] = [
         title: "Physical assessment of your space and requirements.",
         lead: "A reliable network starts with the building, users, devices, and operating constraints that the design must support.",
         body: [
-          "Auxano reviews the physical environment before equipment is specified, including rooms, routes, power, endpoint locations, wireless behavior, and expansion expectations.",
+          "Ideal Solutions reviews the physical environment before equipment is specified, including rooms, routes, power, endpoint locations, wireless behavior, and expansion expectations.",
           "That early survey reduces assumptions and gives the design a stronger foundation for installation, configuration, and future support.",
         ],
         image: {
@@ -1288,7 +1288,7 @@ export const services: Service[] = [
         title: "Logical and physical diagrams for every engineer that follows.",
         lead: "Network documentation should make the environment easier to understand, support, and extend.",
         body: [
-          "Auxano produces diagrams that separate how the network is structured logically from how it is physically deployed across rooms, racks, and pathways.",
+          "Ideal Solutions produces diagrams that separate how the network is structured logically from how it is physically deployed across rooms, racks, and pathways.",
           "This becomes permanent IT documentation instead of knowledge trapped with the first installer.",
         ],
         image: {
@@ -1303,7 +1303,7 @@ export const services: Service[] = [
           "Structured IP planning for subnetting, DHCP scopes, and DNS design.",
         lead: "Address planning protects the network from avoidable conflicts, confusion, and growth limits.",
         body: [
-          "Auxano defines addressing, segmentation, DHCP scopes, DNS needs, and service layout so the network can be configured cleanly from the beginning.",
+          "Ideal Solutions defines addressing, segmentation, DHCP scopes, DNS needs, and service layout so the network can be configured cleanly from the beginning.",
           "That structure is especially important when the environment includes multiple departments, guest access, servers, phones, CCTV, or wireless networks.",
         ],
         image: {
@@ -1317,7 +1317,7 @@ export const services: Service[] = [
         title: "Bill of materials with exact equipment specifications.",
         lead: "A clear BOM turns the design into a procurement-ready scope with fewer surprises.",
         body: [
-          "Auxano defines equipment categories, quantities, specifications, and deployment dependencies so purchasing is tied to the actual design.",
+          "Ideal Solutions defines equipment categories, quantities, specifications, and deployment dependencies so purchasing is tied to the actual design.",
           "This helps clients compare budgets properly and prevents underbuying or buying the wrong class of hardware.",
         ],
         image: {
@@ -1363,7 +1363,7 @@ export const services: Service[] = [
     detailTitle:
       "Network architecture planning aligned to strategy, resilience, and migration realities.",
     detailDescription:
-      "Auxano provides network architecture advice with independent review, practical redundancy planning, migration sequencing, and recommendations that fit the operating environment.",
+      "Ideal Solutions provides network architecture advice with independent review, practical redundancy planning, migration sequencing, and recommendations that fit the operating environment.",
     capabilitySections: [
       {
         id: "current-state-audit",
@@ -1371,7 +1371,7 @@ export const services: Service[] = [
         title: "Current-state audit of gaps, risks, and performance.",
         lead: "Architecture work should begin with a clear view of what exists today and what is already causing risk.",
         body: [
-          "Auxano reviews the current network against business requirements, support pressure, security exposure, and performance expectations.",
+          "Ideal Solutions reviews the current network against business requirements, support pressure, security exposure, and performance expectations.",
           "The goal is to document real gaps before recommending a target architecture or migration path.",
         ],
         image: {
@@ -1386,7 +1386,7 @@ export const services: Service[] = [
           "Architecture recommendation across LAN, WAN, SD-WAN, cloud, and hybrid needs.",
         lead: "The right architecture depends on the business model, not on one default vendor or one fashionable topology.",
         body: [
-          "Auxano weighs LAN, WAN, SD-WAN, cloud, and hybrid options against operational fit, resilience, cost, and supportability.",
+          "Ideal Solutions weighs LAN, WAN, SD-WAN, cloud, and hybrid options against operational fit, resilience, cost, and supportability.",
           "The recommendation explains the tradeoffs so leadership and technical teams can make a practical decision.",
         ],
         image: {
@@ -1400,7 +1400,7 @@ export const services: Service[] = [
         title: "Redundancy planning to reduce single points of failure.",
         lead: "A network can look complete and still be fragile if critical paths have no fallback.",
         body: [
-          "Auxano identifies where resilience is needed: links, power, core switching, firewalls, wireless coverage, service paths, and branch connectivity.",
+          "Ideal Solutions identifies where resilience is needed: links, power, core switching, firewalls, wireless coverage, service paths, and branch connectivity.",
           "The plan is shaped around business impact so redundancy is added where it actually protects operations.",
         ],
         image: {
@@ -1414,7 +1414,7 @@ export const services: Service[] = [
         title: "Migration roadmap from old to new with minimal disruption.",
         lead: "Good architecture becomes valuable only when the migration path can be executed without avoidable downtime.",
         body: [
-          "Auxano breaks migration into practical phases, dependencies, testing points, rollback thinking, and communication needs.",
+          "Ideal Solutions breaks migration into practical phases, dependencies, testing points, rollback thinking, and communication needs.",
           "That roadmap helps the business modernize without turning every improvement into an operational interruption.",
         ],
         image: {
@@ -1464,7 +1464,7 @@ export const services: Service[] = [
           "Horizontal and backbone cabling using Cat6, Cat6A, copper, and fibre.",
         lead: "The cabling layer must support the network's current load and the growth that follows.",
         body: [
-          "Auxano plans cable routes, media type, outlet locations, patching, and backbone needs around the environment and equipment strategy.",
+          "Ideal Solutions plans cable routes, media type, outlet locations, patching, and backbone needs around the environment and equipment strategy.",
           "That keeps the physical layer ready for voice, data, wireless, surveillance, and other connected systems.",
         ],
         image: {
@@ -1479,7 +1479,7 @@ export const services: Service[] = [
           "Data-centre cabling that is colour-coded, labelled, and managed.",
         lead: "Rack cabling should make operations easier, not create a hidden support problem.",
         body: [
-          "Auxano organizes patching, rack runs, cabinet layout, and colour discipline so changes remain understandable after handover.",
+          "Ideal Solutions organizes patching, rack runs, cabinet layout, and colour discipline so changes remain understandable after handover.",
           "This improves troubleshooting, reduces accidental disconnects, and creates a more professional data room.",
         ],
         image: {
@@ -1494,7 +1494,7 @@ export const services: Service[] = [
           "Conduit and trunking for cable protection through walls, floors, and ceilings.",
         lead: "Cable pathways protect the installation and make the finished site look disciplined.",
         body: [
-          "Auxano routes cables through appropriate containment, reducing exposure, damage risk, and visual clutter across workspaces and technical areas.",
+          "Ideal Solutions routes cables through appropriate containment, reducing exposure, damage risk, and visual clutter across workspaces and technical areas.",
           "Pathway planning also makes future additions cleaner because the route strategy is already defined.",
         ],
         image: {
@@ -1508,7 +1508,7 @@ export const services: Service[] = [
         title: "Fluke-certified reports for every run on completion.",
         lead: "Completed cabling should be proven with test results, not accepted by sight alone.",
         body: [
-          "Auxano tests cable runs and provides certification evidence where required, supporting TIA-568 and ISO 11801 compliant delivery.",
+          "Ideal Solutions tests cable runs and provides certification evidence where required, supporting TIA-568 and ISO 11801 compliant delivery.",
           "As-built drawings and reports help future engineers understand what was installed and verified.",
         ],
         image: {
@@ -1563,7 +1563,7 @@ export const services: Service[] = [
           "Enterprise configuration for VLANs, QoS, 802.1X, routing, and hardening.",
         lead: "Enterprise networks need segmentation, prioritization, authentication, and routing discipline from the beginning.",
         body: [
-          "Auxano configures enterprise-grade network behavior around users, departments, applications, voice, wireless, servers, and security boundaries.",
+          "Ideal Solutions configures enterprise-grade network behavior around users, departments, applications, voice, wireless, servers, and security boundaries.",
           "The work can include VLANs, QoS, 802.1X, routing protocols, and hardening controls depending on the environment.",
         ],
         image: {
@@ -1578,7 +1578,7 @@ export const services: Service[] = [
           "Small business setup for firewalls, guest WiFi, VPNs, and printer integration.",
         lead: "Small business networks still need clean security and usability, even when the environment is smaller.",
         body: [
-          "Auxano configures firewall rules, secure wireless, guest access, VPN access, and shared devices so teams can work reliably without exposing the network unnecessarily.",
+          "Ideal Solutions configures firewall rules, secure wireless, guest access, VPN access, and shared devices so teams can work reliably without exposing the network unnecessarily.",
           "The setup is practical for offices, retail locations, clinics, schools, and professional service teams.",
         ],
         image: {
@@ -1593,7 +1593,7 @@ export const services: Service[] = [
           "Fast, reliable home and home-office WiFi with device management.",
         lead: "Remote and hybrid work need stable connectivity without turning the home network into a constant support burden.",
         body: [
-          "Auxano improves WiFi placement, device behavior, router settings, access controls, and reliability for home-office and executive home environments.",
+          "Ideal Solutions improves WiFi placement, device behavior, router settings, access controls, and reliability for home-office and executive home environments.",
           "This helps users work with better video calls, stronger coverage, and clearer device control.",
         ],
         image: {
@@ -1608,7 +1608,7 @@ export const services: Service[] = [
           "Full documentation with configurations backed up and handed over.",
         lead: "Nothing should be a mystery after the network has been configured.",
         body: [
-          "Auxano records key configuration decisions, backs up device configs, and hands over support notes so future changes can be made with context.",
+          "Ideal Solutions records key configuration decisions, backs up device configs, and hands over support notes so future changes can be made with context.",
           "This closes the gap between a working network and a network that can be owned properly by the client.",
         ],
         image: {
@@ -1649,7 +1649,7 @@ export const services: Service[] = [
     detailTitle:
       "Genuine network equipment specified around the right need, price, and deployment plan.",
     detailDescription:
-      "Auxano specifies and supplies firewalls, routers, switches, wireless access points, and accessories around the right need, budget, and deployment plan.",
+      "Ideal Solutions specifies and supplies firewalls, routers, switches, wireless access points, and accessories around the right need, budget, and deployment plan.",
     capabilitySections: [
       {
         id: "network-firewalls",
@@ -1657,7 +1657,7 @@ export const services: Service[] = [
         title: "Firewall supply for the security edge of the network.",
         lead: "Firewall selection should match the threat profile, user count, bandwidth, services, and support model.",
         body: [
-          "Auxano helps clients choose firewall platforms and licensing needs based on actual operating requirements rather than buying a device that is too weak or unnecessarily complex.",
+          "Ideal Solutions helps clients choose firewall platforms and licensing needs based on actual operating requirements rather than buying a device that is too weak or unnecessarily complex.",
           "The goal is genuine hardware, correct sizing, and a clearer security path.",
         ],
         image: {
@@ -1672,7 +1672,7 @@ export const services: Service[] = [
           "Routers and switches specified for the network they must support.",
         lead: "Routing and switching hardware should be selected for performance, ports, power, growth, and manageability.",
         body: [
-          "Auxano sources switching and routing equipment across common business tiers, helping clients choose what fits the design and budget.",
+          "Ideal Solutions sources switching and routing equipment across common business tiers, helping clients choose what fits the design and budget.",
           "The recommendation can account for PoE needs, uplinks, VLANs, stacking, branch connectivity, and long-term support.",
         ],
         image: {
@@ -1687,7 +1687,7 @@ export const services: Service[] = [
           "Wireless access points matched to coverage, density, and management needs.",
         lead: "The right access point depends on the building, users, application load, and management expectations.",
         body: [
-          "Auxano helps specify wireless access points for offices, schools, retail spaces, warehouses, and other environments where coverage and stability matter.",
+          "Ideal Solutions helps specify wireless access points for offices, schools, retail spaces, warehouses, and other environments where coverage and stability matter.",
           "The supply conversation considers placement, controller model, guest access, capacity, and future expansion.",
         ],
         image: {
@@ -1702,8 +1702,8 @@ export const services: Service[] = [
           "Cables and accessories including patch cables, SFP modules, and media converters.",
         lead: "Accessories complete the installation and often decide whether the main equipment can be deployed without delay.",
         body: [
-          "Auxano supplies the supporting parts needed for network projects, including patch cables, SFP modules, media converters, and related connectivity accessories.",
-          "When clients are not sure what to buy, Auxano can spec the right equipment and accessories for the budget and design.",
+          "Ideal Solutions supplies the supporting parts needed for network projects, including patch cables, SFP modules, media converters, and related connectivity accessories.",
+          "When clients are not sure what to buy, Ideal Solutions can spec the right equipment and accessories for the budget and design.",
         ],
         image: {
           src: "/image/service-details/network-equipment-accessories.webp",
@@ -1757,7 +1757,7 @@ export const services: Service[] = [
           "IP PBX deployment for on-premises or cloud-hosted communication.",
         lead: "A modern PBX should match how the business answers, routes, records, and manages calls.",
         body: [
-          "Auxano deploys IP PBX platforms around the organization's call flow, sites, users, extensions, and management requirements.",
+          "Ideal Solutions deploys IP PBX platforms around the organization's call flow, sites, users, extensions, and management requirements.",
           "The solution can support on-premises or cloud-hosted models depending on reliability, budget, and operating preference.",
         ],
         image: {
@@ -1771,7 +1771,7 @@ export const services: Service[] = [
         title: "SIP trunking for lower-cost local and international calls.",
         lead: "SIP trunking moves business calling over internet connectivity while preserving professional call handling.",
         body: [
-          "Auxano configures SIP connectivity, provider details, routing behavior, failover thinking, and call quality considerations.",
+          "Ideal Solutions configures SIP connectivity, provider details, routing behavior, failover thinking, and call quality considerations.",
           "For many businesses, the move to IP telephony can reduce phone bills while improving flexibility.",
         ],
         image: {
@@ -1786,7 +1786,7 @@ export const services: Service[] = [
           "IP phones and softphones for desk, mobile, and PC-based working.",
         lead: "Users should be able to communicate from the right device without losing the structure of the office phone system.",
         body: [
-          "Auxano rolls out desk phones, mobile softphones, and PC calling apps so teams can work across offices, remote locations, and hybrid schedules.",
+          "Ideal Solutions rolls out desk phones, mobile softphones, and PC calling apps so teams can work across offices, remote locations, and hybrid schedules.",
           "This expands communication without forcing every user into the same hardware pattern.",
         ],
         image: {
@@ -1801,7 +1801,7 @@ export const services: Service[] = [
           "Smart features including auto-attendant, queues, voicemail-to-email, and recording.",
         lead: "The value of IP telephony comes from better call handling, not only newer handsets.",
         body: [
-          "Auxano configures smart business features around how the organization receives calls, routes departments, manages missed calls, and reviews conversations where required.",
+          "Ideal Solutions configures smart business features around how the organization receives calls, routes departments, manages missed calls, and reviews conversations where required.",
           "These features help teams improve responsiveness and create a more professional caller experience.",
         ],
         image: {
@@ -1850,7 +1850,7 @@ export const services: Service[] = [
           "HP, Dell, Lenovo, Apple, desktops, laptops, and workstations across all tiers.",
         lead: "Hardware supply should start with what each user needs to do, not a single generic device choice.",
         body: [
-          "Auxano helps clients source business-ready desktops, laptops, and workstations from recognized hardware ecosystems, with attention to performance, warranty, durability, and role fit.",
+          "Ideal Solutions helps clients source business-ready desktops, laptops, and workstations from recognized hardware ecosystems, with attention to performance, warranty, durability, and role fit.",
           "That makes the purchase easier to defend commercially and easier to support technically after delivery.",
         ],
         image: {
@@ -1865,7 +1865,7 @@ export const services: Service[] = [
           "Business and consumer device choices matched to each role and budget.",
         lead: "A finance user, designer, field worker, executive, and front-desk team should not be forced into the same specification.",
         body: [
-          "Auxano compares user role, application load, mobility, screen needs, storage, memory, and support expectations before recommending a hardware tier.",
+          "Ideal Solutions compares user role, application load, mobility, screen needs, storage, memory, and support expectations before recommending a hardware tier.",
           "This keeps procurement controlled without underspecifying the people whose work depends on performance.",
         ],
         image: {
@@ -1880,7 +1880,7 @@ export const services: Service[] = [
           "Bulk procurement that is asset-tagged, delivered, and deployment-ready.",
         lead: "Large device orders need organization, tracking, and handover discipline from the moment they arrive.",
         body: [
-          "Auxano can coordinate bulk device supply for growing teams, schools, offices, clinics, and multi-user environments, including asset tagging and delivery organization.",
+          "Ideal Solutions can coordinate bulk device supply for growing teams, schools, offices, clinics, and multi-user environments, including asset tagging and delivery organization.",
           "This helps internal teams know what was supplied, where it goes, and how it should be supported.",
         ],
         image: {
@@ -1895,7 +1895,7 @@ export const services: Service[] = [
           "Monitors, docking stations, bags, peripherals, and supporting accessories.",
         lead: "The device is only ready for work when the accessories needed by the user are included in the plan.",
         body: [
-          "Auxano can bundle displays, docking stations, UPS units, storage, keyboards, mice, bags, and related accessories around each role.",
+          "Ideal Solutions can bundle displays, docking stations, UPS units, storage, keyboards, mice, bags, and related accessories around each role.",
           "That reduces day-one gaps and prevents teams from losing time chasing small but essential items after delivery.",
         ],
         image: {
@@ -1945,7 +1945,7 @@ export const services: Service[] = [
           "Licensed Windows, Office suite, antivirus, and business apps installed correctly.",
         lead: "A new computer should arrive ready for actual work, with licensed software and core applications configured properly.",
         body: [
-          "Auxano handles operating system setup, productivity apps, antivirus, browser and business application readiness, and basic device configuration.",
+          "Ideal Solutions handles operating system setup, productivity apps, antivirus, browser and business application readiness, and basic device configuration.",
           "The setup is applied consistently whether the scope is one device or a larger deployment batch.",
         ],
         image: {
@@ -1960,7 +1960,7 @@ export const services: Service[] = [
           "Devices connected to the network, email, printers, and shared drives.",
         lead: "A configured computer is not complete until it can reach the services and shared resources users depend on.",
         body: [
-          "Auxano connects devices to wired or wireless networks, business email, printers, shared drives, and common collaboration tools.",
+          "Ideal Solutions connects devices to wired or wireless networks, business email, printers, shared drives, and common collaboration tools.",
           "This reduces first-day support issues and helps users start work without repeated manual fixes.",
         ],
         image: {
@@ -1975,7 +1975,7 @@ export const services: Service[] = [
           "Security hardening with firewall, updates, and unnecessary services controlled.",
         lead: "Device setup should reduce avoidable exposure before users start storing business data on the machine.",
         body: [
-          "Auxano enables security baselines such as firewall settings, update configuration, antivirus readiness, local account hygiene, and unnecessary service review.",
+          "Ideal Solutions enables security baselines such as firewall settings, update configuration, antivirus readiness, local account hygiene, and unnecessary service review.",
           "This gives each new endpoint a stronger starting posture before it enters daily use.",
         ],
         image: {
@@ -1990,7 +1990,7 @@ export const services: Service[] = [
           "Files, emails, and settings moved from old machines to new machines.",
         lead: "Hardware refresh should preserve the user’s working context instead of leaving them to rebuild everything manually.",
         body: [
-          "Auxano supports data migration from old devices to new ones, including business files, selected settings, mail profiles, and practical user handover checks.",
+          "Ideal Solutions supports data migration from old devices to new ones, including business files, selected settings, mail profiles, and practical user handover checks.",
           "This is especially useful during refresh projects where productivity loss is as important as the device purchase itself.",
         ],
         image: {
@@ -2044,7 +2044,7 @@ export const services: Service[] = [
         title: "Tower, rack, and blade servers sized for your workload.",
         lead: "Server selection should be shaped by workload, resilience, storage, power, operating system, and future growth.",
         body: [
-          "Auxano helps clients choose server hardware around the role it must play: file services, applications, virtualization, databases, backup, or branch operations.",
+          "Ideal Solutions helps clients choose server hardware around the role it must play: file services, applications, virtualization, databases, backup, or branch operations.",
           "The goal is a server platform that is supportable from the beginning rather than oversized, undersized, or poorly matched.",
         ],
         image: {
@@ -2059,7 +2059,7 @@ export const services: Service[] = [
           "RAM, drives, RAID controllers, PSUs, and cooling replaced where faults require it.",
         lead: "Server repair should isolate the fault quickly while protecting the workload and data it supports.",
         body: [
-          "Auxano diagnoses server hardware faults and supports part replacement across memory, storage, controllers, power, and cooling components.",
+          "Ideal Solutions diagnoses server hardware faults and supports part replacement across memory, storage, controllers, power, and cooling components.",
           "The service is built around transparent diagnosis and practical restoration, not blind replacement.",
         ],
         image: {
@@ -2074,7 +2074,7 @@ export const services: Service[] = [
           "RAID configuration for data protection through RAID 1, 5, 6, and 10.",
         lead: "RAID planning should be intentional, documented, and tested against the recovery expectations of the business.",
         body: [
-          "Auxano configures RAID based on workload, capacity, performance, and recovery needs, then documents the selected protection model.",
+          "Ideal Solutions configures RAID based on workload, capacity, performance, and recovery needs, then documents the selected protection model.",
           "This gives the client a clearer view of how storage failure risk is being reduced.",
         ],
         image: {
@@ -2089,7 +2089,7 @@ export const services: Service[] = [
           "Windows Server, Ubuntu, Red Hat, and VMware ESXi installed and hardened.",
         lead: "A server is not ready until the operating platform is installed, secured, and aligned to its role.",
         body: [
-          "Auxano deploys server operating systems and virtualization platforms with baseline hardening, service configuration, and handover notes.",
+          "Ideal Solutions deploys server operating systems and virtualization platforms with baseline hardening, service configuration, and handover notes.",
           "That includes the practical work needed to prepare the server for business services rather than leaving it as bare hardware.",
         ],
         image: {
@@ -2143,7 +2143,7 @@ export const services: Service[] = [
         title: "NAS solutions for file sharing, backup, and collaboration.",
         lead: "Network-attached storage gives teams a structured place to share, protect, and organize business data.",
         body: [
-          "Auxano provisions NAS platforms around file access, user permissions, backup expectations, storage pools, and collaboration needs.",
+          "Ideal Solutions provisions NAS platforms around file access, user permissions, backup expectations, storage pools, and collaboration needs.",
           "This is suitable for offices, creative teams, healthcare environments, and businesses that need centralized file storage without unnecessary complexity.",
         ],
         image: {
@@ -2158,7 +2158,7 @@ export const services: Service[] = [
           "SAN solutions for virtualization, databases, and high-performance shared storage.",
         lead: "Performance-sensitive workloads need shared storage that is planned for throughput, resilience, and host access.",
         body: [
-          "Auxano helps design and deploy SAN storage where virtualization, databases, and shared high-performance workloads require stronger storage architecture.",
+          "Ideal Solutions helps design and deploy SAN storage where virtualization, databases, and shared high-performance workloads require stronger storage architecture.",
           "The scope considers connectivity, redundancy, workload profile, and the infrastructure that will consume the storage.",
         ],
         image: {
@@ -2173,7 +2173,7 @@ export const services: Service[] = [
           "RAID deployment with redundant storage and tested recovery procedures.",
         lead: "Redundancy should be built into storage design, not bolted on after the first failure.",
         body: [
-          "Auxano configures RAID and recovery procedures around the storage platform and the business impact of data loss or downtime.",
+          "Ideal Solutions configures RAID and recovery procedures around the storage platform and the business impact of data loss or downtime.",
           "Testing and documentation help confirm that protection is practical, not just theoretical.",
         ],
         image: {
@@ -2188,7 +2188,7 @@ export const services: Service[] = [
           "Capacity planning that forecasts storage needs before space runs out.",
         lead: "Storage projects should include the growth curve, not only the space needed on the day of installation.",
         body: [
-          "Auxano estimates current use, growth rate, retention needs, backup requirements, and workload behavior before recommending capacity.",
+          "Ideal Solutions estimates current use, growth rate, retention needs, backup requirements, and workload behavior before recommending capacity.",
           "That helps the client avoid emergency expansion and protects the storage investment for longer.",
         ],
         image: {
@@ -2238,7 +2238,7 @@ export const services: Service[] = [
           "Laser, inkjet, and multifunction printers matched to business use.",
         lead: "The right printer depends on volume, output type, user behavior, maintenance expectations, and network integration.",
         body: [
-          "Auxano supplies and installs office printers for teams that need dependable printing, scanning, copying, and shared use across departments.",
+          "Ideal Solutions supplies and installs office printers for teams that need dependable printing, scanning, copying, and shared use across departments.",
           "The recommendation considers workload and operating cost instead of treating every printer as interchangeable.",
         ],
         image: {
@@ -2253,7 +2253,7 @@ export const services: Service[] = [
           "Thermal, barcode, label, and receipt printers for logistics, retail, and warehousing.",
         lead: "Specialist printers need to match the workflow, label size, media type, and application that drives them.",
         body: [
-          "Auxano supports label and receipt printer deployment for logistics, warehousing, point-of-sale, inventory, and operational workflows.",
+          "Ideal Solutions supports label and receipt printer deployment for logistics, warehousing, point-of-sale, inventory, and operational workflows.",
           "The scope can include device selection, connection, driver setup, testing, and user handover.",
         ],
         image: {
@@ -2267,7 +2267,7 @@ export const services: Service[] = [
         title: "Printers shared across Windows, Mac, and mobile devices.",
         lead: "Printer installation is complete only when the right users can print reliably from the devices they actually use.",
         body: [
-          "Auxano configures printer access across wired, wireless, Windows, Mac, and mobile environments, with testing before handover.",
+          "Ideal Solutions configures printer access across wired, wireless, Windows, Mac, and mobile environments, with testing before handover.",
           "This reduces repeated support calls and makes shared printing more predictable.",
         ],
         image: {
@@ -2282,7 +2282,7 @@ export const services: Service[] = [
           "Print management to track and reduce printing costs organization-wide.",
         lead: "Print environments are easier to control when usage, cost, access, and support are visible.",
         body: [
-          "Auxano can help structure print management so organizations understand device usage, reduce waste, and support the right printer policy.",
+          "Ideal Solutions can help structure print management so organizations understand device usage, reduce waste, and support the right printer policy.",
           "This matters for offices, schools, healthcare environments, and any business where printing cost or accountability is a recurring concern.",
         ],
         image: {
@@ -2332,7 +2332,7 @@ export const services: Service[] = [
           "Firewall platforms selected for performance, value, and real network demand.",
         lead: "A firewall should match bandwidth, user count, site risk, VPN needs, and inspection requirements before it is purchased.",
         body: [
-          "Auxano helps clients choose firewall hardware and licenses around the actual environment instead of leaving the device at default assumptions.",
+          "Ideal Solutions helps clients choose firewall hardware and licenses around the actual environment instead of leaving the device at default assumptions.",
           "The result is a security edge that is sized, licensed, and ready to be configured for the business.",
         ],
         image: {
@@ -2346,7 +2346,7 @@ export const services: Service[] = [
         title: "Synchronized security across firewall and endpoint protection.",
         lead: "Firewall value increases when the wider security stack can share visibility and response context.",
         body: [
-          "Auxano can align firewall licensing with endpoint security needs, monitoring expectations, and user behavior so perimeter and device protection work together.",
+          "Ideal Solutions can align firewall licensing with endpoint security needs, monitoring expectations, and user behavior so perimeter and device protection work together.",
           "This supports stronger threat response than isolated tools managed in separate silos.",
         ],
         image: {
@@ -2360,7 +2360,7 @@ export const services: Service[] = [
         title: "Enterprise-grade firewall options for complex environments.",
         lead: "Larger environments need more than basic filtering; they need segmentation, inspection, policy control, and resilience.",
         body: [
-          "Auxano scopes firewall needs for complex sites, multi-branch networks, regulated teams, and environments with heavier security requirements.",
+          "Ideal Solutions scopes firewall needs for complex sites, multi-branch networks, regulated teams, and environments with heavier security requirements.",
           "The service can support advanced firewall platforms where the network requires deeper controls and stronger governance.",
         ],
         image: {
@@ -2375,7 +2375,7 @@ export const services: Service[] = [
           "Renewal management so firewall protection never quietly lapses.",
         lead: "Security licenses lose value when expiry dates are unmanaged and protection lapses unnoticed.",
         body: [
-          "Auxano tracks renewal needs, expiry timing, license coverage, and upgrade windows so the client can plan before protection is interrupted.",
+          "Ideal Solutions tracks renewal needs, expiry timing, license coverage, and upgrade windows so the client can plan before protection is interrupted.",
           "That keeps the firewall useful as an active security control, not a forgotten appliance.",
         ],
         image: {
@@ -2416,7 +2416,7 @@ export const services: Service[] = [
     detailTitle:
       "Endpoint protection licensed, deployed, and monitored across the business fleet.",
     detailDescription:
-      "Auxano does not stop at selling an antivirus key; the service covers vendor fit, central console setup, ransomware protection, deployment, and monitoring across devices.",
+      "Ideal Solutions does not stop at selling an antivirus key; the service covers vendor fit, central console setup, ransomware protection, deployment, and monitoring across devices.",
     capabilitySections: [
       {
         id: "antivirus-vendor-fit",
@@ -2425,7 +2425,7 @@ export const services: Service[] = [
           "Endpoint protection matched to budget, risk profile, and device estate.",
         lead: "The best antivirus choice depends on how many devices need protection and what level of risk the business carries.",
         body: [
-          "Auxano compares endpoint protection options against budget, management needs, risk exposure, and the support model expected after deployment.",
+          "Ideal Solutions compares endpoint protection options against budget, management needs, risk exposure, and the support model expected after deployment.",
           "The recommendation is practical: the goal is a solution the client can afford, manage, and trust.",
         ],
         image: {
@@ -2440,7 +2440,7 @@ export const services: Service[] = [
           "Central management console for monitoring all protected devices.",
         lead: "Endpoint security becomes more useful when coverage and incidents are visible from one place.",
         body: [
-          "Auxano configures central management so administrators can see protected devices, coverage gaps, alerts, and policy status.",
+          "Ideal Solutions configures central management so administrators can see protected devices, coverage gaps, alerts, and policy status.",
           "This helps the business move beyond one-by-one installation into fleet-level control.",
         ],
         image: {
@@ -2454,7 +2454,7 @@ export const services: Service[] = [
         title: "Ransomware protection treated as a critical business control.",
         lead: "Modern endpoint protection must account for ransomware, not only traditional virus detection.",
         body: [
-          "Auxano helps configure endpoint protection around ransomware risk, user behavior, update discipline, and the response path when suspicious activity appears.",
+          "Ideal Solutions helps configure endpoint protection around ransomware risk, user behavior, update discipline, and the response path when suspicious activity appears.",
           "This gives businesses a stronger practical defence against one of the most disruptive endpoint threats.",
         ],
         image: {
@@ -2468,7 +2468,7 @@ export const services: Service[] = [
         title: "Deployment included across the fleet, not left to the client.",
         lead: "A license is not the same as protection until it is installed, configured, and verified.",
         body: [
-          "Auxano deploys antivirus software across business devices, confirms coverage, and provides practical guidance for ongoing monitoring and renewal.",
+          "Ideal Solutions deploys antivirus software across business devices, confirms coverage, and provides practical guidance for ongoing monitoring and renewal.",
           "That closes the gap between procurement and actual protection.",
         ],
         image: {
@@ -2523,7 +2523,7 @@ export const services: Service[] = [
           "Windows editions selected for individuals, teams, and organizations.",
         lead: "The right Windows edition depends on device role, security needs, management requirements, and user type.",
         body: [
-          "Auxano helps clients choose Windows licensing options for individual users, teams, and business environments that need genuine, supportable operating systems.",
+          "Ideal Solutions helps clients choose Windows licensing options for individual users, teams, and business environments that need genuine, supportable operating systems.",
           "This keeps devices properly activated and easier to manage.",
         ],
         image: {
@@ -2537,7 +2537,7 @@ export const services: Service[] = [
         title: "Volume licensing for organizations with multiple devices.",
         lead: "Teams with several devices need a licensing approach that is easier to track than scattered individual keys.",
         body: [
-          "Auxano supports volume licensing conversations where organizations need cost-effective, documented, and centrally understandable license coverage.",
+          "Ideal Solutions supports volume licensing conversations where organizations need cost-effective, documented, and centrally understandable license coverage.",
           "This is useful for refresh projects, new offices, schools, and growing businesses.",
         ],
         image: {
@@ -2552,7 +2552,7 @@ export const services: Service[] = [
           "Compliance documentation registered in the organization's name.",
         lead: "Licensing should leave the business with records it can defend during review or audit.",
         body: [
-          "Auxano helps preserve license documentation and procurement records so the client has a cleaner compliance position.",
+          "Ideal Solutions helps preserve license documentation and procurement records so the client has a cleaner compliance position.",
           "That documentation is part of the value of buying properly, not a side detail.",
         ],
         image: {
@@ -2567,7 +2567,7 @@ export const services: Service[] = [
           "License audit visibility so the business knows where OS licensing stands.",
         lead: "An audit view helps teams identify gaps before licensing becomes a procurement or compliance problem.",
         body: [
-          "Auxano can help review existing operating system license coverage, document device status, and recommend remediation where gaps exist.",
+          "Ideal Solutions can help review existing operating system license coverage, document device status, and recommend remediation where gaps exist.",
           "This gives decision-makers a clearer view of what is compliant, what is missing, and what should be cleaned up.",
         ],
         image: {
@@ -2622,7 +2622,7 @@ export const services: Service[] = [
           "Windows Server for Active Directory, RDS, Hyper-V, and file services.",
         lead: "Windows Server licensing should match the roles the business expects the server to carry.",
         body: [
-          "Auxano supports Windows Server licensing, installation, and configuration around directory services, remote desktop services, virtualization, and shared file needs.",
+          "Ideal Solutions supports Windows Server licensing, installation, and configuration around directory services, remote desktop services, virtualization, and shared file needs.",
           "The deployment can include AD, DNS, DHCP, Group Policy, and baseline hardening where required.",
         ],
         image: {
@@ -2636,7 +2636,7 @@ export const services: Service[] = [
         title: "Red Hat Enterprise Linux for critical Linux workloads.",
         lead: "Commercial Linux workloads often need supportability, lifecycle clarity, and hardened deployment.",
         body: [
-          "Auxano helps clients license and deploy Red Hat Enterprise Linux where critical workloads require a commercially supported Linux platform.",
+          "Ideal Solutions helps clients license and deploy Red Hat Enterprise Linux where critical workloads require a commercially supported Linux platform.",
           "The scope can include installation, baseline hardening, service readiness, and handover documentation.",
         ],
         image: {
@@ -2651,7 +2651,7 @@ export const services: Service[] = [
           "Ubuntu Server LTS for web, database, and open-source environments.",
         lead: "Ubuntu Server fits many modern workloads when it is installed and governed properly.",
         body: [
-          "Auxano deploys Ubuntu Server LTS for web, database, application, and open-source infrastructure needs, with the baseline setup required for production readiness.",
+          "Ideal Solutions deploys Ubuntu Server LTS for web, database, application, and open-source infrastructure needs, with the baseline setup required for production readiness.",
           "The service helps avoid informal server builds that become hard to patch or support later.",
         ],
         image: {
@@ -2665,7 +2665,7 @@ export const services: Service[] = [
         title: "VMware vSphere and ESXi for virtualized infrastructure.",
         lead: "Virtualization can reduce hardware cost and improve flexibility when it is planned around real workloads.",
         body: [
-          "Auxano supports VMware licensing and deployment for organizations consolidating services, improving resilience, or modernizing server infrastructure.",
+          "Ideal Solutions supports VMware licensing and deployment for organizations consolidating services, improving resilience, or modernizing server infrastructure.",
           "The work can include host readiness, storage awareness, network planning, and handover of the virtualized platform.",
         ],
         image: {
@@ -2719,7 +2719,7 @@ export const services: Service[] = [
         title: "Microsoft SQL Server licensing for business applications.",
         lead: "Business applications need a database platform that is correctly licensed, configured, and protected.",
         body: [
-          "Auxano supports SQL Server licensing conversations and deployment planning for standard and enterprise application workloads.",
+          "Ideal Solutions supports SQL Server licensing conversations and deployment planning for standard and enterprise application workloads.",
           "The goal is a database environment that is supportable, performant, and aligned to the application it serves.",
         ],
         image: {
@@ -2734,7 +2734,7 @@ export const services: Service[] = [
           "MySQL, MariaDB, and PostgreSQL for open-source relational workloads.",
         lead: "Open-source databases still need professional deployment, tuning, backup, and governance.",
         body: [
-          "Auxano deploys relational database platforms around application requirements, user load, storage needs, and operational support expectations.",
+          "Ideal Solutions deploys relational database platforms around application requirements, user load, storage needs, and operational support expectations.",
           "This helps clients use open-source databases without treating them as unmanaged technical shortcuts.",
         ],
         image: {
@@ -2748,7 +2748,7 @@ export const services: Service[] = [
         title: "MongoDB and NoSQL support for modern application workloads.",
         lead: "Modern application data may require flexible document storage instead of a purely relational model.",
         body: [
-          "Auxano supports NoSQL database deployment where the application workload calls for flexible schema design, high-volume data, or modern development patterns.",
+          "Ideal Solutions supports NoSQL database deployment where the application workload calls for flexible schema design, high-volume data, or modern development patterns.",
           "The scope can include configuration, access planning, backup awareness, and support notes.",
         ],
         image: {
@@ -2762,7 +2762,7 @@ export const services: Service[] = [
         title: "Automated backup and tested recovery configuration.",
         lead: "A database is not properly managed until backup and restore behavior has been planned and tested.",
         body: [
-          "Auxano configures backup schedules, retention expectations, restore procedures, and recovery checks around the criticality of the database.",
+          "Ideal Solutions configures backup schedules, retention expectations, restore procedures, and recovery checks around the criticality of the database.",
           "This protects availability and reduces panic when data loss, corruption, or server failure occurs.",
         ],
         image: {
@@ -2812,7 +2812,7 @@ export const services: Service[] = [
           "Microsoft 365 for Word, Excel, Teams, Outlook, SharePoint, and OneDrive.",
         lead: "Microsoft 365 value depends on licensing, identity, email, collaboration, storage, and user adoption being configured together.",
         body: [
-          "Auxano supports Microsoft 365 licensing, tenant setup, user provisioning, email configuration, Teams readiness, SharePoint structure, and OneDrive adoption.",
+          "Ideal Solutions supports Microsoft 365 licensing, tenant setup, user provisioning, email configuration, Teams readiness, SharePoint structure, and OneDrive adoption.",
           "The service can include migration and practical configuration so the subscription becomes a working environment.",
         ],
         image: {
@@ -2826,7 +2826,7 @@ export const services: Service[] = [
         title: "Google Workspace for Gmail, Docs, Drive, Meet, and Calendar.",
         lead: "Google Workspace should be configured around users, files, meetings, identity, and administration.",
         body: [
-          "Auxano helps clients license and configure Google Workspace for communication, collaboration, cloud storage, meetings, and team administration.",
+          "Ideal Solutions helps clients license and configure Google Workspace for communication, collaboration, cloud storage, meetings, and team administration.",
           "This gives organizations a cleaner path from subscription purchase to working cloud environment.",
         ],
         image: {
@@ -2841,7 +2841,7 @@ export const services: Service[] = [
           "Microsoft Azure and AWS for cloud infrastructure and platform services.",
         lead: "Cloud infrastructure needs design discipline, cost awareness, security, and operational ownership.",
         body: [
-          "Auxano supports Azure and AWS licensing and platform conversations around infrastructure, hosting, identity, storage, networking, and application needs.",
+          "Ideal Solutions supports Azure and AWS licensing and platform conversations around infrastructure, hosting, identity, storage, networking, and application needs.",
           "The work can include environment configuration, migration planning, and operational guidance.",
         ],
         image: {
@@ -2856,7 +2856,7 @@ export const services: Service[] = [
           "Subscription management so renewals, spend, and lapses stay under control.",
         lead: "Cloud subscriptions can waste money quickly when licenses are unmanaged or renewals are missed.",
         body: [
-          "Auxano tracks subscriptions, renewal dates, user allocation, and optimization opportunities so the client avoids waste and service interruption.",
+          "Ideal Solutions tracks subscriptions, renewal dates, user allocation, and optimization opportunities so the client avoids waste and service interruption.",
           "That keeps the cloud environment commercially controlled as well as technically configured.",
         ],
         image: {
@@ -2910,7 +2910,7 @@ export const services: Service[] = [
         title: "Microsoft Office perpetual and subscription licensing.",
         lead: "Office licensing should match how teams create documents, collaborate, and manage email or productivity workflows.",
         body: [
-          "Auxano sources Office licenses and helps clients choose between perpetual and subscription models based on business requirements.",
+          "Ideal Solutions sources Office licenses and helps clients choose between perpetual and subscription models based on business requirements.",
           "The goal is genuine, activated software with cleaner procurement records.",
         ],
         image: {
@@ -2925,7 +2925,7 @@ export const services: Service[] = [
           "Adobe Creative Cloud licensing for design, video, and marketing teams.",
         lead: "Creative teams need the right application access without compliance gaps or procurement confusion.",
         body: [
-          "Auxano supports creative software licensing for design, video editing, marketing production, and content teams that need reliable access to professional tools.",
+          "Ideal Solutions supports creative software licensing for design, video editing, marketing production, and content teams that need reliable access to professional tools.",
           "The service helps align licenses with roles and renewal expectations.",
         ],
         image: {
@@ -2939,7 +2939,7 @@ export const services: Service[] = [
         title: "AutoCAD and Autodesk licensing for engineers and architects.",
         lead: "Engineering and architecture tools need licensing that fits project teams, device performance, and compliance expectations.",
         body: [
-          "Auxano sources CAD and engineering application licenses for teams that need specialist software for design, architecture, drawing, and technical production.",
+          "Ideal Solutions sources CAD and engineering application licenses for teams that need specialist software for design, architecture, drawing, and technical production.",
           "The recommendation can account for user roles, subscription needs, and procurement timing.",
         ],
         image: {
@@ -2954,7 +2954,7 @@ export const services: Service[] = [
           "Accounting, remote access, PDF tools, and specialist software sourced on request.",
         lead: "Business teams often need practical tools beyond the headline software suites.",
         body: [
-          "Auxano can source accounting software, remote access tools, PDF applications, and other specialist licenses when a team needs legitimate, documented software.",
+          "Ideal Solutions can source accounting software, remote access tools, PDF applications, and other specialist licenses when a team needs legitimate, documented software.",
           "If a license is not listed, the team can still ask; the service is designed to support broad software sourcing.",
         ],
         image: {
@@ -3004,7 +3004,7 @@ export const services: Service[] = [
           "First and second-line support for hardware, software, and network issues.",
         lead: "Users need a clear route to support when devices, applications, accounts, or connectivity interrupt the workday.",
         body: [
-          "Auxano handles first-line triage and second-line escalation so issues are categorized, prioritized, and resolved without leaving users to chase multiple vendors.",
+          "Ideal Solutions handles first-line triage and second-line escalation so issues are categorized, prioritized, and resolved without leaving users to chase multiple vendors.",
           "The support path covers common endpoint problems, software faults, email issues, network symptoms, and user access concerns.",
         ],
         image: {
@@ -3018,7 +3018,7 @@ export const services: Service[] = [
         title: "Engineer dispatch when remote support is not enough.",
         lead: "Some problems need a qualified person at the desk, rack, device, or site before the root cause can be confirmed.",
         body: [
-          "When remote diagnosis reaches its limit, Auxano can dispatch on-site engineers to inspect hardware, cabling, access, power, network points, and user workstations directly.",
+          "When remote diagnosis reaches its limit, Ideal Solutions can dispatch on-site engineers to inspect hardware, cabling, access, power, network points, and user workstations directly.",
           "That field presence helps reduce delays when the issue is physical, location-specific, or tied to multiple systems in the environment.",
         ],
         image: {
@@ -3033,7 +3033,7 @@ export const services: Service[] = [
           "System administration for users, email, servers, and directory services.",
         lead: "Daily IT operations depend on accounts, permissions, mailboxes, servers, and identity services staying clean and controlled.",
         body: [
-          "Auxano supports user account administration, Active Directory tasks, email configuration, server care, and routine operational changes that keep teams productive.",
+          "Ideal Solutions supports user account administration, Active Directory tasks, email configuration, server care, and routine operational changes that keep teams productive.",
           "The goal is disciplined administration, not casual changes that later become access, security, or support problems.",
         ],
         image: {
@@ -3047,7 +3047,7 @@ export const services: Service[] = [
         title: "Ad-hoc support without forcing a long-term commitment.",
         lead: "Some clients need expert intervention for a specific failure, not a full managed-service contract.",
         body: [
-          "Auxano can handle break/fix work for urgent or isolated technical problems, then leave behind practical notes and recommendations for preventing repeat incidents.",
+          "Ideal Solutions can handle break/fix work for urgent or isolated technical problems, then leave behind practical notes and recommendations for preventing repeat incidents.",
           "This gives clients access to professional support even when the need is occasional, project-based, or incident-driven.",
         ],
         image: {
@@ -3097,7 +3097,7 @@ export const services: Service[] = [
           "24/7 monitoring that detects risk before users feel the outage.",
         lead: "Networks and servers should be watched continuously, not only checked after a complaint arrives.",
         body: [
-          "Auxano monitors key network, server, and availability signals so alerts can be reviewed before downtime becomes widespread.",
+          "Ideal Solutions monitors key network, server, and availability signals so alerts can be reviewed before downtime becomes widespread.",
           "This gives the client a more proactive operating posture and a clearer view of recurring issues across the environment.",
         ],
         image: {
@@ -3112,7 +3112,7 @@ export const services: Service[] = [
           "Managed security across firewall rules, patching, and threat visibility.",
         lead: "Security operations need routine control, not one-time configuration that slowly becomes outdated.",
         body: [
-          "Auxano supports firewall management, patch update oversight, and threat monitoring so the protective layer remains active and reviewed.",
+          "Ideal Solutions supports firewall management, patch update oversight, and threat monitoring so the protective layer remains active and reviewed.",
           "The service helps clients maintain security hygiene without depending only on internal availability or informal checks.",
         ],
         image: {
@@ -3126,7 +3126,7 @@ export const services: Service[] = [
         title: "Dedicated IT engineers at the client location on contract.",
         lead: "Some organizations need reliable IT presence without carrying every role as a permanent internal hire.",
         body: [
-          "Auxano can provide outsourced IT staff who operate at the client's location while remaining backed by the wider technical team.",
+          "Ideal Solutions can provide outsourced IT staff who operate at the client's location while remaining backed by the wider technical team.",
           "That model gives the business day-to-day support presence, clearer accountability, and access to broader expertise when escalation is required.",
         ],
         image: {
@@ -3141,7 +3141,7 @@ export const services: Service[] = [
           "IT manager as a service for senior technical leadership without a full-time hire.",
         lead: "Operational teams often need senior technology direction, not just ticket closure.",
         body: [
-          "Auxano can provide IT leadership coverage for prioritization, reporting, vendor alignment, risk review, and technology planning.",
+          "Ideal Solutions can provide IT leadership coverage for prioritization, reporting, vendor alignment, risk review, and technology planning.",
           "This gives decision-makers a senior point of view while keeping the commercial model predictable.",
         ],
         image: {
@@ -3196,7 +3196,7 @@ export const services: Service[] = [
           "Infrastructure audit across hardware, network, cabling, risks, and gaps.",
         lead: "A technical environment should be assessed before major spend, expansion, or remediation decisions are made.",
         body: [
-          "Auxano reviews the state of hardware, network architecture, cabling, server rooms, and support dependencies to identify risks and gaps.",
+          "Ideal Solutions reviews the state of hardware, network architecture, cabling, server rooms, and support dependencies to identify risks and gaps.",
           "The output helps leadership understand what is working, what is fragile, and what should be addressed first.",
         ],
         image: {
@@ -3211,7 +3211,7 @@ export const services: Service[] = [
           "Cybersecurity audit of firewall rules, patch levels, access controls, and staff practices.",
         lead: "Security posture depends on configuration, maintenance, access discipline, and the habits of people using the systems.",
         body: [
-          "Auxano reviews firewall posture, endpoint patch levels, access controls, admin practices, and user behavior risks that can expose the business.",
+          "Ideal Solutions reviews firewall posture, endpoint patch levels, access controls, admin practices, and user behavior risks that can expose the business.",
           "The findings help the client move from assumptions to practical security actions.",
         ],
         image: {
@@ -3226,7 +3226,7 @@ export const services: Service[] = [
           "IT policy development for acceptable use, passwords, and data handling.",
         lead: "Technical controls are stronger when the people using the environment have clear operating rules.",
         body: [
-          "Auxano helps define policies for acceptable use, password management, data handling, device behavior, and operational responsibility.",
+          "Ideal Solutions helps define policies for acceptable use, password management, data handling, device behavior, and operational responsibility.",
           "The aim is practical governance that users and managers can actually follow, not a document that sits unused.",
         ],
         image: {
@@ -3240,7 +3240,7 @@ export const services: Service[] = [
         title: "Objective vendor assessment with no sales bias.",
         lead: "Vendor proposals should be evaluated against the client's requirements, risk, and long-term operating fit.",
         body: [
-          "Auxano can review vendor proposals, technical claims, bill of materials, support terms, and delivery assumptions on the client's behalf.",
+          "Ideal Solutions can review vendor proposals, technical claims, bill of materials, support terms, and delivery assumptions on the client's behalf.",
           "This helps decision-makers compare options with a more independent technical view before committing budget.",
         ],
         image: {
@@ -3294,7 +3294,7 @@ export const services: Service[] = [
         title: "Planning and scoping before work begins.",
         lead: "Complex projects need a clear scope, timeline, resource plan, and decision structure before vendors start work.",
         body: [
-          "Auxano defines the delivery scope, milestones, dependencies, roles, and resource requirements so everyone is working from the same project baseline.",
+          "Ideal Solutions defines the delivery scope, milestones, dependencies, roles, and resource requirements so everyone is working from the same project baseline.",
           "That planning discipline reduces ambiguity and keeps procurement, engineering, and client stakeholders aligned.",
         ],
         image: {
@@ -3308,7 +3308,7 @@ export const services: Service[] = [
         title: "Vendor coordination toward one delivery outcome.",
         lead: "Multi-supplier projects fail when each party optimizes for its own task instead of the shared result.",
         body: [
-          "Auxano coordinates vendors, engineers, stakeholders, timelines, and dependencies so equipment, configuration, installation, and handover activities line up.",
+          "Ideal Solutions coordinates vendors, engineers, stakeholders, timelines, and dependencies so equipment, configuration, installation, and handover activities line up.",
           "This gives the client one control point for progress, issues, and accountability.",
         ],
         image: {
@@ -3322,7 +3322,7 @@ export const services: Service[] = [
         title: "Risk management before small problems become project delays.",
         lead: "The best time to resolve project risk is before it becomes a visible escalation.",
         body: [
-          "Auxano tracks assumptions, access constraints, supply issues, technical dependencies, and stakeholder blockers that can delay delivery.",
+          "Ideal Solutions tracks assumptions, access constraints, supply issues, technical dependencies, and stakeholder blockers that can delay delivery.",
           "Risks are made visible early, then managed through decisions, mitigations, and clear ownership.",
         ],
         image: {
@@ -3336,7 +3336,7 @@ export const services: Service[] = [
         title: "Post-implementation review and clean handover to operations.",
         lead: "A project is not finished when installation ends; it is finished when operations can run and support it.",
         body: [
-          "Auxano reviews delivered work against scope, confirms outstanding items, organizes operational notes, and supports a clean transition to the people who will own the environment.",
+          "Ideal Solutions reviews delivered work against scope, confirms outstanding items, organizes operational notes, and supports a clean transition to the people who will own the environment.",
           "That final review protects the value of the project after the vendors leave site.",
         ],
         image: {
