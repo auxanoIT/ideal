@@ -1,10 +1,12 @@
 import { AboutGeneaInspired } from "@/components/sections/about-genea-inspired";
 import { buildMetadata } from "@/lib/seo";
 
-export const metadata = buildMetadata({
-  title: "About Ideal Solutions | Data Centre Infrastructure Support Nigeria",
-  description:
-    "Ideal Solutions provides onsite data centre and IT infrastructure support for critical environments and enterprise teams in Nigeria.",
+const description =
+  "Learn how Ideal Solutions helps data centre operators, enterprise IT teams and technology partners deploy, support and improve critical infrastructure through skilled onsite execution in Nigeria.";
+
+const baseMetadata = buildMetadata({
+  title: "About Ideal Solutions | Data Centre Infrastructure Services Nigeria",
+  description,
   path: "/about",
   keywords: [
     "about Ideal Solutions",
@@ -14,6 +16,13 @@ export const metadata = buildMetadata({
     "onsite technical support Nigeria",
   ],
 });
+
+export const metadata = {
+  ...baseMetadata,
+  description,
+  openGraph: { ...baseMetadata.openGraph, description },
+  twitter: { ...baseMetadata.twitter, description },
+};
 
 export default function AboutPage() {
   return <AboutGeneaInspired />;

@@ -71,7 +71,7 @@ const partnerLogos = [
 
 const marqueeLogos = [...partnerLogos, ...partnerLogos];
 
-export function PartnerLogoMarquee() {
+export function PartnerLogoMarquee({ staticDisplay = false }: { staticDisplay?: boolean }) {
   const mobileScrollerRef = useRef<HTMLDivElement | null>(null);
   const [activePage, setActivePage] = useState(0);
   const [pageCount, setPageCount] = useState(1);
@@ -134,6 +134,20 @@ export function PartnerLogoMarquee() {
       behavior: "smooth",
     });
   }
+
+  if (staticDisplay) return (
+    <section className="bg-[#f2a900] py-14 text-[#252b33] sm:py-20">
+      <Container>
+        <div className="mx-auto max-w-4xl text-center">
+          <h2 className="text-3xl font-medium tracking-tight sm:text-4xl">Trusted by Clients and Partners</h2>
+          <p className="mt-4 text-base sm:text-lg">Supporting the infrastructure behind critical operations.</p>
+        </div>
+        <div className="mt-10 grid grid-cols-3 items-center gap-6 sm:grid-cols-6 sm:gap-8" aria-label="Ideal Solutions client and partner logos">
+          {partnerLogos.map(logo => <div key={logo.src} className="relative h-14"><Image src={logo.src} alt={logo.alt} fill className="object-contain grayscale" sizes="(max-width: 639px) 80px, 140px" /></div>)}
+        </div>
+      </Container>
+    </section>
+  );
 
   return (
     <section className="overflow-hidden bg-[linear-gradient(135deg,var(--color-electric),var(--color-cyan))] py-10 text-white sm:py-12">

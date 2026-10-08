@@ -14,6 +14,8 @@ import { productionServices, productionSectionImages } from "@/data/subservice-p
 import { industryEditorialImage, industrySolutionImage } from "@/data/industry-section-images";
 import { homeServicePillars } from "@/data/home-service-pillars";
 import { operationTeams } from "@/data/operation-teams";
+import { aboutTeam } from "@/data/about-team";
+import { aboutImagePaths } from "@/data/about-content";
 
 type SitemapEntryInput = {
   path: string;
@@ -110,12 +112,8 @@ const staticRoutes: SitemapEntryInput[] = [
   {
     path: "/about",
     imagePaths: [
-      "/image/It_management.jpg",
-      "/image/IT%20Infrastructure.png",
-      "/image/about/Olatunji%20Aduloju.jpeg",
-      "/image/about/Tosin%20Ayorinde.jpeg",
-      "/image/about/Kayode%20Mejabi.jpeg",
-      "/image/about/Mahmoud%20Khallaf.jpeg",
+      ...aboutImagePaths,
+      ...aboutTeam.map(person => person.image),
     ],
     changeFrequency: "monthly",
     priority: 0.62,
