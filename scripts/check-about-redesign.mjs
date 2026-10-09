@@ -32,7 +32,8 @@ try {
   assert.equal(await page.locator('main [class*="eyebrow"],main [class*="number"]').count(),0);
   assert.ok(!(await page.locator('main').innerText()).includes("Today's Infrastructure Work Shapes Tomorrow's Support."));
   const headings=await page.locator('main h2, main h3').allTextContents();
-  assert.ok(headings.indexOf('Infrastructure Is Technical. Delivery Is Human.') < headings.indexOf('Understand Before You Touch.'));
+  assert.ok(headings.indexOf('Infrastructure Is Technical. Delivery Is Human.') < headings.indexOf(principles[0].title));
+  assert.ok(principles.every(item => item.title.startsWith('We ')), 'Every principle should be a We statement');
   const purpose=page.locator('section').filter({has:page.getByRole('heading',{name:content.purpose.title,exact:true})});
   assert.equal(await purpose.locator('p').count(),1);
   assert.equal(await page.title(),'About Ideal Solutions | Data Centre Infrastructure Services Nigeria');

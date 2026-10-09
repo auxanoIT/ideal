@@ -114,7 +114,13 @@ export function AboutGeneaInspired() {
     <div className={styles.page}>
       <section className={styles.hero}>
         <div className={styles.heroMedia}>
-          <Image src={copy.hero.image} alt={copy.hero.alt} fill priority sizes="(max-width: 767px) 100vw, 65vw" />
+          <Image
+            src={copy.hero.image}
+            alt={copy.hero.alt}
+            fill
+            priority
+            sizes="(max-width: 767px) 100vw, 65vw"
+          />
         </div>
         <Container className={styles.heroInner}>
           <div className={styles.heroText}>
@@ -186,15 +192,6 @@ export function AboutGeneaInspired() {
                   {item.cta}
                   <ArrowUpRight size={18} aria-hidden />
                 </ButtonLink>
-                {index === 5 && (
-                  <ButtonLink
-                    href="/services/data-centre-project-lifecycle-management"
-                    variant="secondary"
-                  >
-                    Explore Project Lifecycle Management
-                    <ArrowUpRight size={18} aria-hidden />
-                  </ButtonLink>
-                )}
               </Reveal>
             ))}
           </div>

@@ -92,17 +92,17 @@ export const aboutContent = {
 
 export const aboutPrinciples = [
   {
-    title: "Understand Before You Touch.",
+    title: "We Understand Before We Act.",
     paragraphs: [
       "Every environment already has a history.",
       "Existing equipment, live connections, operating procedures and technical dependencies matter.",
       "Before changing infrastructure, we first understand what is already there and what the work is expected to achieve.",
     ],
-    image: "/image/service-details/network-architecture-audit.webp",
-    alt: "Reviewing existing network infrastructure",
+    image: "/image/service-pillars/data-centre-infrastructure-audit-inspection-nigeria.webp",
+    alt: "Technician inspecting network connections and test equipment in a data centre rack",
   },
   {
-    title: "Keep the Client in Control.",
+    title: "We Keep You in Control.",
     paragraphs: [
       "We provide execution capacity without taking technical ownership away from the teams responsible for the environment.",
       "Your engineers define the requirement.",
@@ -112,16 +112,16 @@ export const aboutPrinciples = [
     alt: "Onsite technical support connected with a remote team",
   },
   {
-    title: "Execute with Discipline.",
+    title: "We Execute with Discipline.",
     paragraphs: [
       "Infrastructure work should not depend on improvisation.",
       "We work from agreed requirements, defined responsibilities and site procedures so execution remains controlled and easier to review.",
     ],
-    image: "/image/service-details/network-config-documentation.webp",
-    alt: "Network configuration and technical documentation",
+    image: "/image/service-pillars/data-centre-rack-and-stack-deployment-nigeria.webp",
+    alt: "Two technicians carefully positioning a server on its rack rails",
   },
   {
-    title: "Leave Clarity Behind.",
+    title: "We Leave a Clear Handover.",
     paragraphs: [
       "A completed task should not create confusion for the next engineer.",
       "Where relevant, we use clear labelling, verification, documentation and handover so the work remains understandable after the project is complete.",
@@ -130,17 +130,17 @@ export const aboutPrinciples = [
     alt: "Organised network cabling within a rack",
   },
   {
-    title: "Solve the Real Problem.",
+    title: "We Solve the Real Problem.",
     paragraphs: [
       "Not every requirement needs a complex solution.",
       "Sometimes the most useful thing is getting the right technical person to the right infrastructure with the right information.",
       "We focus on what actually moves the customer forward.",
     ],
-    image: "/image/service-details/repair-servers-printers.webp",
-    alt: "Hands-on equipment troubleshooting",
+    image: "/image/operation-teams/system-integrator-field-delivery-nigeria.webp",
+    alt: "Technician reviewing a rack server alongside a tablet in a technical workspace",
   },
   {
-    title: "Think Beyond Today.",
+    title: "We Think Beyond Today.",
     paragraphs: [
       "Infrastructure keeps changing.",
       "Equipment gets replaced. Capacity grows. New connections are introduced. Teams evolve.",
