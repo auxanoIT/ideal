@@ -149,10 +149,10 @@ export default async function ServicesPage() {
         <Container className="grid min-h-[calc(100vh-5rem)] gap-10 py-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-center lg:py-16">
           <div className="max-w-3xl">
             <h1 className="text-balance text-3xl font-semibold tracking-[-0.06em] sm:text-4xl lg:text-5xl">
-              Data Centre Infrastructure Services Built for Uptime.
+              Data Centre & IT Infrastructure Services Built for Real Operations
             </h1>
             <p className="mt-6 max-w-2xl text-base leading-8 text-slate-300 sm:text-lg">
-              From deployment and Smart Hands to network infrastructure, security, audits and lifecycle support, Ideal Solutions provides the technical expertise needed to deploy, maintain and improve mission-critical data centre infrastructure across Nigeria.
+             From specialist data centre deployment and Smart Hands to enterprise networking, hardware, security and lifecycle support, Ideal Solutions provides the technical capabilities needed to deploy, maintain and improve critical infrastructure.
             </p>
           </div>
 

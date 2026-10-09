@@ -92,7 +92,7 @@ export function IdealSolutionsHome() {
                 />
               </svg>
               <h1 id="ideal-hero-title">
-                Your Data Centre Infrastructure Partner on the Ground in Nigeria
+                Your Onsite Partner for Data Centre & IT Infrastructure in Nigeria
               </h1>
             </div>
             <Link href="/book-consultation" className="ideal-video-hero__cta">
@@ -134,7 +134,7 @@ export function IdealSolutionsHome() {
           >
             <p className="ideal-hero-intro__eyebrow">What We Bring Onsite</p>
             <h2 id="ideal-intro-title">
-              The Technical Execution Behind Reliable Data Centres
+              The Technical Execution Behind Reliable Data Centre & IT Infrastructure
             </h2>
             <p className="ideal-hero-intro__description">
               From rack-and-stack and structured cabling to Smart Hands,
