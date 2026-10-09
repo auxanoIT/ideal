@@ -1,7 +1,7 @@
 import sharp from 'sharp';
 
 // Keep raster browser and iOS fallbacks aligned with the public brand logo.
-const logo = 'public/idealsolutions-logo.svg';
+const logo = 'public/brand/ideal-globe.png';
 await sharp(logo, {density: 300})
   .resize(512, 512, {fit: 'contain', background: {r:255,g:255,b:255,alpha:0}})
   .png()

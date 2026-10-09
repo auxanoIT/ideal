@@ -79,7 +79,7 @@ export function MobileNavigationSheet({ open, setOpen, navigation, categories, i
       <SheetTitle className="sr-only">Ideal Solutions navigation</SheetTitle>
       <div className={styles.shell}>
         <div className={styles.header}>
-          {view === 'root' ? <Image src="/idealsolutions-logo.svg" alt="Ideal Solutions" width={36} height={35} className={styles.logo} /> : <button type="button" className={styles.iconButton} aria-label="Back to main menu" onClick={() => changeView('root')}><ChevronLeft size={21} /></button>}
+          {view === 'root' ? <Image src="/brand/ideal-globe.png" alt="Ideal Solutions" width={36} height={36} className={styles.logo} /> : <button type="button" className={styles.iconButton} aria-label="Back to main menu" onClick={() => changeView('root')}><ChevronLeft size={21} /></button>}
           <h2 ref={heading} tabIndex={-1} className={styles.title}>{titles[view]}</h2>
           <SheetClose asChild><button type="button" className={styles.iconButton} aria-label="Close menu"><X size={21} /></button></SheetClose>
         </div>

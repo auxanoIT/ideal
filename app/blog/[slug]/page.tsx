@@ -103,7 +103,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               name: "Ideal Solutions",
               logo: {
                 "@type": "ImageObject",
-                url: absoluteUrl("/idealsolutions-logo.svg"),
+                url: absoluteUrl("/brand/ideal-full-logo.png"),
               },
             },
           },

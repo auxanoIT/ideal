@@ -28,13 +28,13 @@ export function SiteFooter({ columns, settings }: SiteFooterProps) {
         <div className="space-y-6">
           <Link href="/" aria-label="Ideal Solutions home" className="inline-flex items-center gap-3">
             <Image
-              src="/idealsolutions-logo.svg"
+              src="/brand/ideal-footer-logo.png"
               alt="Ideal Solutions"
-              width={58}
-              height={56}
-              className="!h-14 !w-auto object-contain brightness-0 invert"
+              width={1000}
+              height={205}
+              sizes="(max-width: 639px) 256px, 320px"
+              className="h-auto w-64 max-w-full object-contain sm:w-80"
             />
-            <span className="text-sm font-semibold uppercase tracking-[0.18em]">Ideal Solutions</span>
           </Link>
           <p className="max-w-xl text-sm leading-7 text-white/68">
             Onsite technical execution and infrastructure support for teams

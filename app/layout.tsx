@@ -39,9 +39,9 @@ export const metadata: Metadata = {
     "Ideal Solutions provides technical execution, Smart Hands, deployment, connectivity, security and lifecycle support for data centres across Nigeria.",
   applicationName: "Ideal Solutions",
   icons: {
-    icon: [{ url: "/idealsolutions-logo.svg", type: "image/svg+xml" }],
-    shortcut: "/idealsolutions-logo.svg",
-    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
+    icon: [{ url: "/brand/favicon.png", sizes: "48x48", type: "image/png" }],
+    shortcut: "/brand/favicon.png",
+    apple: [{ url: "/apple-touch-icon.png?v=globe", sizes: "180x180", type: "image/png" }],
   },
   authors: [{ name: "Ideal Solutions" }],
   creator: "Ideal Solutions",
@@ -157,7 +157,7 @@ function buildSiteJsonLd(settings: SiteSettings, services: Service[]) {
         name: settings.name,
         alternateName: settings.shortName,
         url: absoluteUrl("/"),
-        logo: absoluteUrl("/idealsolutions-logo.svg"),
+        logo: absoluteUrl("/brand/ideal-full-logo.png"),
         image: absoluteUrl("/opengraph-image"),
         description: settings.description,
         knowsAbout: [
@@ -184,7 +184,7 @@ function buildSiteJsonLd(settings: SiteSettings, services: Service[]) {
         name: settings.name,
         url: absoluteUrl("/"),
         image: absoluteUrl("/opengraph-image"),
-        logo: absoluteUrl("/idealsolutions-logo.svg"),
+        logo: absoluteUrl("/brand/ideal-full-logo.png"),
         description: settings.description,
         parentOrganization: {
           "@id": organizationId,

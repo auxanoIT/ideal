@@ -64,9 +64,9 @@ export function SiteHeader({
           onClick={() => setOpen(false)}
         >
           <Image
-            src="/idealsolutions-logo.svg"
+            src="/brand/ideal-globe.png"
             alt="Ideal Solutions"
-            width={54}
+            width={52}
             height={52}
             loading="eager"
             className="!h-11 !w-auto object-contain"

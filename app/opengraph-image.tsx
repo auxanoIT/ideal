@@ -1,4 +1,6 @@
 import { ImageResponse } from "next/og";
+import { readFile } from "node:fs/promises";
+import path from "node:path";
 
 export const alt = "Ideal Solutions data centre infrastructure services";
 export const size = {
@@ -7,7 +9,8 @@ export const size = {
 };
 export const contentType = "image/png";
 
-export default function OpenGraphImage() {
+export default async function OpenGraphImage() {
+  const logo = await readFile(path.join(process.cwd(), "public/brand/ideal-globe.png"));
   return new ImageResponse(
     (
       <div
@@ -52,13 +55,15 @@ export default function OpenGraphImage() {
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
-                background: "#F2A900",
+                background: "#ffffff",
                 color: "#252B33",
                 fontSize: "32px",
                 fontWeight: 700,
               }}
             >
-              IS
+              {/* ImageResponse requires a native image rather than next/image. */}
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src={`data:image/png;base64,${logo.toString("base64")}`} width={64} height={64} alt="Ideal Solutions" />
             </div>
             <div style={{ display: "flex", flexDirection: "column" }}>
               <span style={{ fontSize: "22px", letterSpacing: "0.32em", textTransform: "uppercase", color: "#F2A900" }}>
