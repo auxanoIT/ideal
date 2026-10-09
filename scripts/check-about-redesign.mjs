@@ -27,6 +27,14 @@ try {
   const decline=page.getByRole('button',{name:'Decline',exact:true});
   if(await decline.isVisible())await decline.click();
   assert.equal(await page.locator('h1').count(),1);
+  const hero=page.locator('main section').first();
+  assert.equal(await hero.locator('a,button').count(),0);
+  assert.equal(await page.locator('main [class*="eyebrow"],main [class*="number"]').count(),0);
+  assert.ok(!(await page.locator('main').innerText()).includes("Today's Infrastructure Work Shapes Tomorrow's Support."));
+  const headings=await page.locator('main h2, main h3').allTextContents();
+  assert.ok(headings.indexOf('Infrastructure Is Technical. Delivery Is Human.') < headings.indexOf('Understand Before You Touch.'));
+  const purpose=page.locator('section').filter({has:page.getByRole('heading',{name:content.purpose.title,exact:true})});
+  assert.equal(await purpose.locator('p').count(),1);
   assert.equal(await page.title(),'About Ideal Solutions | Data Centre Infrastructure Services Nigeria');
   assert.equal(await page.locator('meta[name="description"]').getAttribute('content'),'Learn how Ideal Solutions helps data centre operators, enterprise IT teams and technology partners deploy, support and improve critical infrastructure through skilled onsite execution in Nigeria.');
   const body=await page.locator('main').innerText();
