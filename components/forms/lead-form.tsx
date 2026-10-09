@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useTransition } from "react";
+import { useId, useRef, useState, useTransition } from "react";
 import { CalendarDays } from "lucide-react";
 
 import { TurnstileField } from "@/components/forms/turnstile-field";
@@ -9,6 +9,8 @@ import {
   normalizeEmail,
 } from "@/lib/email-validation";
 import { cn, getBrowserCookie } from "@/lib/utils";
+import { leadSchema } from "@/lib/schemas";
+import { formErrors } from "@/lib/form-errors";
 
 type LeadFormProps = {
   context: "contact" | "consultation";
@@ -50,6 +52,16 @@ export function LeadForm({
   serviceOptions,
 }: LeadFormProps) {
   const [status, setStatus] = useState<"idle" | "success" | "error">("idle");
+  const formRef = useRef<HTMLFormElement>(null);
+  const errorId = useId();
+  const [fieldErrors, setFieldErrors] = useState<Record<string, string>>({});
+  const fieldProps = (name: string) => ({
+    "aria-invalid": Boolean(fieldErrors[name]),
+    "aria-describedby": fieldErrors[name] ? `${errorId}-${name}` : undefined,
+  });
+  const fieldError = (name: string) => fieldErrors[name] ? (
+    <span id={`${errorId}-${name}`} className="text-xs font-medium text-red-600">{fieldErrors[name]}</span>
+  ) : null;
   const [message, setMessage] = useState("");
   const [emailError, setEmailError] = useState("");
   const [consentError, setConsentError] = useState("");
@@ -62,32 +74,7 @@ export function LeadForm({
     setMessage("");
 
     const email = normalizeEmail(formData.get("email"));
-    const nextEmailError = getEmailValidationMessage(email);
-
-    if (nextEmailError) {
-      setEmailError(nextEmailError);
-      setStatus("error");
-      setMessage(nextEmailError);
-      return;
-    }
-
     const marketingConsent = formData.get("marketingConsent") === "on";
-
-    if (!marketingConsent) {
-      const nextConsentError =
-        "Please agree to receive email communication before submitting.";
-
-      setConsentError(nextConsentError);
-      setStatus("error");
-      setMessage(nextConsentError);
-      return;
-    }
-
-    if (process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY && !turnstileToken) {
-      setStatus("error");
-      setMessage("Please complete the verification check.");
-      return;
-    }
 
     const payload = {
       name: formData.get("name"),
@@ -102,19 +89,45 @@ export function LeadForm({
       hubspotTrackingCookie: getBrowserCookie("hubspotutk"),
     };
 
+    const parsed = leadSchema.safeParse(payload);
+    if (!parsed.success) {
+      const details = formErrors(parsed.error.issues);
+      setFieldErrors(details.fieldErrors);
+      setEmailError(details.fieldErrors.email ?? "");
+      setConsentError(details.fieldErrors.marketingConsent ?? "");
+      setStatus("error");
+      setMessage("Please correct the fields marked above and submit again.");
+      const first = formRef.current?.elements.namedItem(Object.keys(details.fieldErrors)[0]);
+      if (first instanceof HTMLElement) first.focus();
+      return;
+    }
+    setFieldErrors({});
+    setEmailError("");
+    setConsentError("");
+    if (process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY && !turnstileToken) {
+      setStatus("error");
+      setMessage("Please complete the verification check before submitting.");
+      return;
+    }
+
+    try {
     const response = await fetch("/api/lead", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(payload),
+      body: JSON.stringify(parsed.data),
     });
 
     if (!response.ok) {
       const data = (await response.json().catch(() => null)) as {
         error?: string;
+        fieldErrors?: Record<string, string>;
       } | null;
       setStatus("error");
+      setFieldErrors(data?.fieldErrors ?? {});
+      setEmailError(data?.fieldErrors?.email ?? "");
+      setConsentError(data?.fieldErrors?.marketingConsent ?? "");
       setMessage(data?.error ?? "Something went wrong. Please try again.");
       setTurnstileResetKey((current) => current + 1);
       return;
@@ -127,6 +140,11 @@ export function LeadForm({
         : "Message received. Ideal Solutions can now review the brief and respond.",
     );
     setTurnstileResetKey((current) => current + 1);
+    } catch {
+      setStatus("error");
+      setMessage("We could not send your request because the connection failed. Your details are still here. Please check your internet connection and try again.");
+      setTurnstileResetKey(current => current + 1);
+    }
   }
 
   return (
@@ -163,28 +181,37 @@ export function LeadForm({
       </div>
 
       <form
-        action={(formData) =>
-          startTransition(() => void handleSubmit(formData))
-        }
+        ref={formRef}
+        noValidate
+        onSubmit={(event) => {
+          event.preventDefault();
+          if (isPending) return;
+          const data = new FormData(event.currentTarget);
+          startTransition(async () => { await handleSubmit(data); });
+        }}
         className="mt-8 grid gap-4 md:grid-cols-2"
       >
         <label className="grid gap-2 text-sm font-medium text-[var(--color-ink)]">
           Full name
           <input
             name="name"
+            {...fieldProps("name")}
             required
             placeholder="Enter your full name"
             className="h-12 rounded-2xl border border-[color:rgba(11,18,32,0.1)] bg-[var(--color-cloud)] px-4 outline-none transition focus:border-[var(--color-electric)]"
           />
+          {fieldError("name")}
         </label>
         <label className="grid gap-2 text-sm font-medium text-[var(--color-ink)]">
           Company
           <input
             name="company"
+            {...fieldProps("company")}
             required
             placeholder="Enter your company name"
             className="h-12 rounded-2xl border border-[color:rgba(11,18,32,0.1)] bg-[var(--color-cloud)] px-4 outline-none transition focus:border-[var(--color-electric)]"
           />
+          {fieldError("company")}
         </label>
         <label className="grid gap-2 text-sm font-medium text-[var(--color-ink)]">
           Email
@@ -225,15 +252,20 @@ export function LeadForm({
           Phone
           <input
             name="phone"
+            type="tel"
+            autoComplete="tel"
+            {...fieldProps("phone")}
             required
             placeholder="Enter your phone number"
             className="h-12 rounded-2xl border border-[color:rgba(11,18,32,0.1)] bg-[var(--color-cloud)] px-4 outline-none transition focus:border-[var(--color-electric)]"
           />
+          {fieldError("phone")}
         </label>
         <label className="grid gap-2 text-sm font-medium text-[var(--color-ink)] md:col-span-2">
           Service focus
           <select
             name="serviceInterest"
+            {...fieldProps("serviceInterest")}
             defaultValue={
               initialService ??
               serviceOptions?.[0] ??
@@ -247,11 +279,13 @@ export function LeadForm({
               </option>
             ))}
           </select>
+          {fieldError("serviceInterest")}
         </label>
         <label className="grid gap-2 text-sm font-medium text-[var(--color-ink)] md:col-span-2">
           Project brief
           <textarea
             name="message"
+            {...fieldProps("message")}
             defaultValue={
               initialSection
                 ? `I would like to discuss ${initialSection.toLowerCase()}.\n\nSite location:\nProject requirements:\nPreferred work window:\n`
@@ -262,6 +296,7 @@ export function LeadForm({
             placeholder="Example: Rack-and-stack deployment for new equipment, fibre and copper cabling remediation, Smart Hands support for a remote team, server installation, access control upgrade, or an infrastructure assessment."
             className="rounded-[1.5rem] border border-[color:rgba(11,18,32,0.1)] bg-[var(--color-cloud)] px-4 py-4 outline-none transition focus:border-[var(--color-electric)]"
           />
+          {fieldError("message")}
         </label>
         <label
           className={cn(
@@ -336,6 +371,7 @@ export function LeadForm({
 
       {message ? (
         <p
+          role={status === "error" ? "alert" : "status"}
           className={cn(
             "mt-5 rounded-2xl px-4 py-3 text-sm",
             status === "success"

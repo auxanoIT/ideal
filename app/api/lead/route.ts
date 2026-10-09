@@ -8,6 +8,7 @@ import {
   verifyTurnstile,
 } from "@/lib/integrations";
 import { leadSchema } from "@/lib/schemas";
+import { formErrors } from "@/lib/form-errors";
 import { consultationHubSpotDestination, consultationHubSpotSubscriptionTypeId } from "@/lib/consultation-hubspot";
 
 export async function POST(request: Request) {
@@ -15,13 +16,8 @@ export async function POST(request: Request) {
   const parsed = leadSchema.safeParse(payload);
 
   if (!parsed.success) {
-    const fieldIssue = parsed.error.issues.find(
-      (issue) =>
-        issue.path[0] === "email" || issue.path[0] === "marketingConsent",
-    );
-
     return NextResponse.json(
-      { error: fieldIssue?.message ?? "Invalid form submission." },
+      formErrors(parsed.error.issues),
       { status: 400 },
     );
   }

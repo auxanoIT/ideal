@@ -6,6 +6,8 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import { TurnstileField } from "@/components/forms/turnstile-field";
 import type { EstimateAnswers, EstimateResult, EstimatorConfig } from "@/lib/types";
 import { cn, formatCurrencyNGN, getBrowserCookie } from "@/lib/utils";
+import { estimateSchema } from "@/lib/schemas";
+import { formErrors } from "@/lib/form-errors";
 
 type EstimateWizardProps = {
   config: EstimatorConfig;
@@ -65,6 +67,13 @@ export function EstimateWizard({ config }: EstimateWizardProps) {
     setSubmitting(true);
     setError("");
 
+    const validation = estimateSchema.safeParse(answers);
+    if (!validation.success) {
+      setError(formErrors(validation.error.issues).error);
+      setSubmitting(false);
+      return;
+    }
+
     if (process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY && !turnstileToken) {
       setError("Please complete the verification check.");
       setSubmitting(false);
@@ -95,7 +104,7 @@ export function EstimateWizard({ config }: EstimateWizardProps) {
 
       setResult(data.result);
     } catch {
-      setError("Unable to generate estimate.");
+      setError("We could not generate your estimate. Please check your connection and try again; your details have been kept.");
     } finally {
       setSubmitting(false);
       setTurnstileResetKey((current) => current + 1);
@@ -296,7 +305,7 @@ export function EstimateWizard({ config }: EstimateWizardProps) {
           ) : (
             <button
               type="button"
-              disabled={!canContinue || submitting}
+              disabled={submitting}
               onClick={() => startTransition(() => void generateEstimate())}
               className="inline-flex h-12 items-center gap-2 rounded-full bg-[linear-gradient(135deg,var(--color-electric),var(--color-cyan))] px-6 text-sm font-semibold text-white disabled:cursor-not-allowed disabled:opacity-60"
             >
@@ -307,7 +316,7 @@ export function EstimateWizard({ config }: EstimateWizardProps) {
         </div>
 
         {error ? (
-          <p className="mt-4 rounded-2xl bg-[color:rgba(239,68,68,0.08)] px-4 py-3 text-sm text-red-600">
+          <p role="alert" className="mt-4 rounded-2xl bg-[color:rgba(239,68,68,0.08)] px-4 py-3 text-sm text-red-600">
             {error}
           </p>
         ) : null}

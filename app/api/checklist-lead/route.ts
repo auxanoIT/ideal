@@ -7,6 +7,7 @@ import {
   submitToHubSpot,
 } from "@/lib/integrations";
 import { checklistLeadSchema } from "@/lib/schemas";
+import { formErrors } from "@/lib/form-errors";
 
 function formatScore(value: number) {
   return Number.isInteger(value) ? String(value) : value.toFixed(1);
@@ -17,13 +18,8 @@ export async function POST(request: Request) {
   const parsed = checklistLeadSchema.safeParse(payload);
 
   if (!parsed.success) {
-    const fieldIssue = parsed.error.issues.find(
-      (issue) =>
-        issue.path[0] === "email" || issue.path[0] === "marketingConsent",
-    );
-
     return NextResponse.json(
-      { error: fieldIssue?.message ?? "Invalid checklist submission." },
+      formErrors(parsed.error.issues),
       { status: 400 },
     );
   }

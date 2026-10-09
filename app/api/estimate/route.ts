@@ -9,6 +9,7 @@ import {
   verifyTurnstile,
 } from "@/lib/integrations";
 import { estimateSchema } from "@/lib/schemas";
+import { formErrors } from "@/lib/form-errors";
 import { formatCurrencyNGN } from "@/lib/utils";
 
 export async function POST(request: Request) {
@@ -16,12 +17,8 @@ export async function POST(request: Request) {
   const parsed = estimateSchema.safeParse(payload);
 
   if (!parsed.success) {
-    const emailIssue = parsed.error.issues.find(
-      (issue) => issue.path[0] === "email",
-    );
-
     return NextResponse.json(
-      { error: emailIssue?.message ?? "Invalid estimate request." },
+      formErrors(parsed.error.issues),
       { status: 400 },
     );
   }
