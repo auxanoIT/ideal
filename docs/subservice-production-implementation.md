@@ -16,7 +16,7 @@ The replacement brief `89be769f-a335-47d1-9869-df6c58dcd884/pasted-text.txt` sup
 
 Unique supplied SEO titles/descriptions, self-referencing canonicals, Service and BreadcrumbList schema. All completed nested pages are indexable and included in the sitemap. FAQ content remains in HTML without FAQPage enhancement claims.
 
-Local `NEXT_PUBLIC_SITE_URL` was still Auxano. It is now `https://idealsolutions.com.ng`; set the same production value in the hosting environment (local environment files are not deployed automatically).
+Set `NEXT_PUBLIC_SITE_URL` to `https://www.idealsolutions.com.ng` locally and in hosting. Local environment files are not deployed automatically.
 
 CTAs use the existing `/contact` flow with validated service and section preselection. Users can change the service. The lead endpoint now returns an error when neither HubSpot nor the email fallback acknowledges delivery. No external delivery destinations or account credentials were changed. Verify the intended Ideal Solutions CRM/email recipients and sender configuration before launch; the existing integrations may still belong to the former brand.
 

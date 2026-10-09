@@ -1,4 +1,4 @@
-# Auxano Solutions Website
+# Ideal Solutions Website
 
 ## Getting Started
 

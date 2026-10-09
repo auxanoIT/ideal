@@ -6,7 +6,7 @@ The document date is not a project completion date. No completion dates, testimo
 
 ## Website and CMS behaviour
 
-The seven records are available through the shared content layer on the index, detail routes, sitemap and navigation. Old local Auxano case studies are no longer used by the content layer. Existing Sanity content is preserved.
+The seven records are available through the shared content layer on the index, detail routes, sitemap and navigation. Superseded local case studies are no longer used by the content layer. Existing Sanity content is preserved.
 
 A Sanity record with the same slug overrides a local record, including its `published` flag. To hide one of these seeded records, retain a Sanity document with that slug and set Published to false; deleting the document restores the bundled record. Alternatively remove the record from the local JSON and redeploy. Editors should not change these slugs without a redirect and updating the bundled record.
 

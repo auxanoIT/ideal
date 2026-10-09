@@ -7,7 +7,7 @@ account `148498868`. Its ID is `1f691f5a-7ade-4a3a-b32c-87b531f0423d`.
 The form and its customer acknowledgement email (ID `478917158133`) are published.
 The simple workflow is ON. The user approved the temporary sender
 `Ideal Solutions <obafemielijahsunday@gmail.com>`. Switch to
-`info@idealsolutions.com` only after that mailbox becomes available and HubSpot
+`info@idealsolutions.com.ng` only after that mailbox becomes available and HubSpot
 sender verification is completed; no code change is required for the sender.
 
 On 2026-09-27, the real integration module submitted labelled test bookings.
@@ -22,7 +22,11 @@ Per the user's request, the shared Primary footer was updated to `I & A Solution
 with both addresses: 26A Adeshina Street, Off Oluwole Phillips, Obafemi Awolowo Way;
 and 21, Abeokuta Street, Off Obasa Street, Oba Akran Avenue; Ikeja, Lagos, Nigeria.
 The existing unsubscribe and preferences links were retained. This footer is
-shared by existing Auxano emails too.
+shared by another business's emails too. This is a historical setup record, not
+confirmation of current branding. Verify a dedicated Ideal Solutions email footer
+with the single Abeokuta Street address and verified info@idealsolutions.com.ng
+sender in HubSpot. Do not change shared account-wide settings without checking
+their impact on other emails.
 
 The consultation endpoint uses this dedicated form. Other enquiry endpoints
 retain their own configuration. All seven booking fields map to HubSpot:

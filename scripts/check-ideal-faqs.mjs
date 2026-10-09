@@ -32,7 +32,7 @@ try {
   page.on("pageerror", error => errors.push(error.message));
   const routes = [...new Set(["/", ...pillars.map(p => "/services/" + p.slug), ...pillars.flatMap(p => p.capabilities.items.map(item => canonicalRoute(item.href))), "/technology-security-checklist"])];
   for (const route of routes) {
-    const response = await page.goto(base + route);
+    const response = await page.goto(base + route, { waitUntil: "domcontentloaded" });
     assert.equal(response.status(), 200, route);
     assert.ok(!/auxano/i.test(await page.locator("body").innerText()), route);
     if (route !== "/technology-security-checklist") {
@@ -41,7 +41,7 @@ try {
   }
   for (const width of [390, 1440]) {
     await page.setViewportSize({ width, height: 900 });
-    await page.goto(base);
+    await page.goto(base, { waitUntil: "domcontentloaded" });
     const summary = page.locator("details summary").filter({ hasText: "Who does Ideal Solutions work with?" });
     await summary.waitFor();
     await summary.scrollIntoViewIfNeeded();

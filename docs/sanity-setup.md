@@ -6,7 +6,7 @@
 - Production editor: https://www.idealsolutions.com.ng/sanity (after deployment).
 - The old `/studio` path redirects to `/sanity`.
 
-Only posts/blog, case studies and careers are managed here. Other website content remains in the existing local files. Existing blog fields, rich text, table paste support, images, callouts and SEO structure are preserved. No Auxano documents are imported.
+Only posts/blog, case studies and careers are managed here. Other website content remains in the existing local files. Existing blog fields, rich text, table paste support, images, callouts and SEO structure are preserved. No documents from other businesses are imported.
 
 ## Configuration
 
@@ -34,7 +34,7 @@ Published queries use the origin API and a 24-hour revalidation interval. This i
 
 ## Optional immediate publish updates / draft preview
 
-Store a new randomly generated `IDEALSOLUTIONS_SANITY_REVALIDATE_SECRET` only in local/deployment secrets. Never reuse an Auxano secret or commit a token.
+Store a new randomly generated `IDEALSOLUTIONS_SANITY_REVALIDATE_SECRET` only in local/deployment secrets. Never reuse another project's secret or commit a token.
 
 For a production webhook in the project's API settings:
 

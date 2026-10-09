@@ -15,9 +15,9 @@ Production origin: **https://www.idealsolutions.com.ng**. Keep NEXT_PUBLIC_SITE_
 
 ## Before launch (owner inputs)
 
-1. Confirm the phone, sales/support WhatsApp and email. `data/site-content.ts` still contains `ask@auxanosolutions.net`; do not guess a replacement.
+1. Business email: `info@idealsolutions.com.ng`. Confirm phone and sales/support WhatsApp details with the client.
 2. Replace/approve About team names, portraits, emails, office labels and metrics (founding date, years, cost savings, 24/7 availability). These are not verified Ideal Solutions claims.
-3. Publish only approved Ideal Solutions posts, jobs and case studies in the new Sanity project. Do not reuse Auxano project results as Ideal Solutions results.
+3. Publish only approved Ideal Solutions posts, jobs and case studies in the dedicated Sanity project. Do not attribute another company's results to Ideal Solutions.
    The Terms page is explicitly placeholder legal copy; it is noindex and excluded from the sitemap until approved wording is supplied.
 4. Set NEXT_PUBLIC_SITE_URL=https://www.idealsolutions.com.ng on the host and redeploy. Add this exact production origin to Sanity CORS with credentials for `/sanity`. Use https://www.idealsolutions.com.ng/api/revalidate as the webhook destination to avoid a redirect.
 5. Verify the domain in Google Search Console and Bing Webmaster Tools. Add verification values if using HTML verification, then submit https://www.idealsolutions.com.ng/sitemap.xml after deployment.

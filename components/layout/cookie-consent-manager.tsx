@@ -5,6 +5,7 @@ import Script from "next/script";
 
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { TawkChat } from "@/components/layout/tawk-chat";
 
 const CONSENT_KEY = "ideal_solutions_cookie_consent";
 const CONSENT_MAX_AGE = 60 * 60 * 24 * 365;
@@ -51,6 +52,7 @@ function TrackingScripts() {
       ) : null}
       <Analytics />
       <SpeedInsights />
+      <TawkChat />
     </>
   );
 }
@@ -77,9 +79,8 @@ export function CookieConsentManager() {
         <div className="max-w-3xl">
           <p className="text-sm font-semibold">Cookie privacy</p>
           <p className="mt-2 text-sm leading-6 text-white/72">
-            We use cookies to improve your experience and help our website work
-            better. You can choose to accept or decline, and we will remember
-            your choice on this device.
+            We use optional cookies for analytics and Tawk.to live chat. Accept
+            to enable these features, or decline to browse without them.
           </p>
         </div>
         <div className="flex shrink-0 gap-3">
