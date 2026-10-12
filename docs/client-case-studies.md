@@ -1,5 +1,7 @@
 # Client-supplied Ideal Solutions project records
 
+The client document gives a short scope list for each project, not a full narrative of site conditions, process, timing and measured results. The seven case study pages now retain every distinct listed system, equipment item or work activity as a separate item. Their project requirement and delivery summary remain short because the source does not supply fuller details. Do not invent timelines, measured outcomes or customer quotes to lengthen the pages.
+
 Source: `Ideal Solutions Case Study and Past Projects.pdf`, supplied by the client, dated 5 October 2026. Seven selected projects are stored in `data/ideal-case-studies.json`; additional experience from pages 6–8 is in `data/ideal-project-experience.ts`.
 
 The document date is not a project completion date. No completion dates, testimonials, performance improvements, commissioning results or project photographs were invented. The 307 sensors, five data halls and ten access points are documented scope quantities, not performance KPIs. Locations are omitted except Ore, which the document explicitly supplies. Client names follow the supplied record; confirm any client confidentiality restrictions before deployment.

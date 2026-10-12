@@ -219,23 +219,18 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
                 Ideal Solutions Response
               </p>
               <h2 className="mt-4 text-4xl font-semibold leading-tight text-[var(--color-ink)]">
-                Scope of work delivered
+                Documented scope of work
               </h2>
-              <div className="mt-7 grid gap-4">
+              <div className="mt-7">
                 {solutionSteps.length ? (
-                  solutionSteps.map((item, index) => (
-                    <div
-                      key={item}
-                      className="grid gap-4 rounded-[1.25rem] border border-[color:rgba(11,18,32,0.08)] bg-white p-5 shadow-[0_16px_42px_rgba(11,18,32,0.05)] sm:grid-cols-[auto_1fr]"
-                    >
-                      <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[var(--color-electric)] text-sm font-semibold text-white">
-                        {index + 1}
-                      </div>
-                      <p className="text-sm leading-7 text-[var(--color-ink)]">
-                        {item}
-                      </p>
-                    </div>
-                  ))
+                  <ul className="grid gap-3">
+                    {solutionSteps.map((item) => (
+                      <li key={item} className="flex items-start gap-4 rounded-xl border border-[color:rgba(11,18,32,0.08)] bg-white px-5 py-4 text-sm leading-7 text-[var(--color-ink)]">
+                        <CheckCircle2 className="mt-1 h-5 w-5 shrink-0 text-[#b37c00]" aria-hidden="true" />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
                 ) : (
                   <p className="rounded-[1.25rem] bg-[var(--color-cloud)] p-5 text-sm leading-7 text-[var(--color-muted)]">
                     Ideal Solutions begins with site context, confirms the
@@ -251,11 +246,11 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
               <div className="flex items-center gap-3">
                 <ShieldCheck className="h-6 w-6 text-[var(--color-cyan)]" />
                 <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[var(--color-cyan)]">
-                  Result
+                  Project summary
                 </p>
               </div>
               <h2 className="mt-5 text-4xl font-semibold leading-tight">
-                Project delivery summary
+                What the documented work covered
               </h2>
               <p className="mt-5 text-base leading-8 text-white/72">
                 {caseStudy.result}
@@ -295,11 +290,10 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
                 Related Capabilities
               </p>
               <h2 className="mt-4 text-4xl font-semibold leading-tight text-[var(--color-ink)]">
-                The service areas behind this outcome
+                Related services for this type of project
               </h2>
               <p className="mt-5 text-base leading-8 text-[var(--color-muted)]">
-                These service areas show the practical delivery capabilities
-                behind the project outcome.
+                Explore the service areas connected to the work described in this project.
               </p>
             </div>
             <div className="grid gap-3 sm:grid-cols-2">
@@ -355,7 +349,7 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
               Next Step
             </p>
             <h2 className="mt-4 max-w-3xl text-4xl font-semibold leading-tight text-[var(--color-ink)]">
-              Need this kind of result in your own environment?
+              Planning similar infrastructure work?
             </h2>
             <p className="mt-5 max-w-2xl text-base leading-8 text-[var(--color-muted)]">
               Share the site, system, or operational challenge and Ideal

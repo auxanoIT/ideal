@@ -8,6 +8,8 @@ const records = require('../data/ideal-case-studies.json');
 const pillars = require('../data/service-pillars-content.json');
 const images = require('../data/ideal-case-study-images.json');
 assert.equal(records.length, 7);
+// Each scope item in the client document should remain visible on its own.
+assert.deepEqual(records.map(record => record.solution.length), [7, 10, 6, 6, 9, 6, 5]);
 assert.equal(new Set(records.map(r => r.slug)).size, 7);
 for (const record of records) {
   assert.match(record.slug, /^[a-z0-9]+(?:-[a-z0-9]+)*$/);
