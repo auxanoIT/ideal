@@ -6,7 +6,7 @@
 - Production editor: https://www.idealsolutions.com.ng/sanity (after deployment).
 - The old `/studio` path redirects to `/sanity`.
 
-Only posts/blog, case studies and careers are managed here. Other website content remains in the existing local files. Existing blog fields, rich text, table paste support, images, callouts and SEO structure are preserved. No documents from other businesses are imported.
+Posts/blog, case studies, careers and Our Work photo albums are managed here. See [Our Work gallery](our-work-gallery.md) for album instructions. Other website content remains in the existing local files. Existing blog fields, rich text, table paste support, images, callouts and SEO structure are preserved. No documents from other businesses are imported.
 
 ## Configuration
 
@@ -40,7 +40,7 @@ For a production webhook in the project's API settings:
 
 - URL: `https://www.idealsolutions.com.ng/api/revalidate` (use the final deployed origin without a redirect)
 - Method: POST; trigger on Create, Update and Delete; dataset production
-- Filter: `coalesce(after()._type, before()._type) in ["post", "caseStudy", "careerOpening"] && !(coalesce(after()._id, before()._id) in path("drafts.**")) && !(coalesce(after()._id, before()._id) in path("versions.**"))`
+- Filter: `coalesce(after()._type, before()._type) in ["post", "caseStudy", "careerOpening", "galleryAlbum"] && !(coalesce(after()._id, before()._id) in path("drafts.**")) && !(coalesce(after()._id, before()._id) in path("versions.**"))`
 - Projection:
 
 ```groq

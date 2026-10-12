@@ -28,6 +28,7 @@ export const resourceGroups: ResourceGroup[] = [
   ]),
   buildGroup("proof-planning", "Proof & Planning", [
     { id: "case-studies", label: "Case Studies", href: "/case-studies" },
+    { id: "our-work", label: "Our Work / Gallery", href: "/our-work" },
     {
       id: "solutions-overview",
       label: "Solutions Overview",

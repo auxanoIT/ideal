@@ -124,6 +124,7 @@ export const footerColumns: FooterColumn[] = [
     title: "Explore",
     links: [
       { label: "Case Studies", href: "/case-studies" },
+      { label: "Our Work / Gallery", href: "/our-work" },
       { label: "Blog", href: "/blog" },
       { label: "Careers", href: "/careers" },
     ],

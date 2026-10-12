@@ -14,6 +14,7 @@ export default defineConfig({
     structure: (S) => S.list().title("Ideal Solutions Content").items([
       S.documentTypeListItem("post").title("Posts / Blog"),
       S.documentTypeListItem("caseStudy").title("Case Studies"),
+      S.documentTypeListItem("galleryAlbum").title("Our Work / Photo Albums"),
       S.documentTypeListItem("careerOpening").title("Careers"),
     ]),
   })],

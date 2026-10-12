@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import { getWorkGallery } from "@/lib/work-gallery";
 
 import {
   getBlogPosts,
@@ -153,18 +154,20 @@ function toSitemapEntry({
 }
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const [services, industries, caseStudies, posts] = await Promise.all([
+  const [services, industries, caseStudies, posts, gallery] = await Promise.all([
     getServices(),
     getIndustries(),
     getCaseStudies(),
     getBlogPosts(),
+    getWorkGallery(),
   ]);
 
   const dynamicRoutes: SitemapEntryInput[] = [
+    { path: "/our-work", imagePaths: gallery.flatMap(album => album.photos.map(photo => photo.src)), changeFrequency: "monthly", priority: 0.6 },
     ...productionServices
       .map((page) => ({
         path: page.href,
-        imagePaths: [page.image.src, ...productionSectionImages(page, services.find(service => `/services/${service.slug}` === page.href)?.capabilitySections?.map(section => section.image)).map(image => image.src)],
+        imagePaths: [page.image.src, ...productionSectionImages(page, services.find(service => `/services/${service.slug}` === page.href)?.capabilitySections?.map(section => section.image)).map(image => image.src), ...(page.href === "/services/data-centre-deployment/rack-and-stack" ? ["/image/our-work/ideal-solutions-data-centre-rack-r07-11-front.webp"] : [])],
         changeFrequency: "monthly" as const,
         priority: 0.85,
       })),

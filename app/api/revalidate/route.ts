@@ -14,6 +14,7 @@ type RevalidateBody = {
 const documentTags: Record<string, string[]> = {
   careerOpening: ["careerOpenings"],
   caseStudy: ["caseStudies"],
+  galleryAlbum: ["galleryAlbums"],
   estimatorConfig: ["estimatorConfig"],
   faq: ["faqs"],
   footer: ["footer"],
@@ -98,6 +99,8 @@ function getPathsForDocument(type?: string, slug?: string) {
   }
 
   switch (type) {
+    case "galleryAlbum":
+      return ["/our-work", "/sitemap.xml"];
     case "careerOpening":
       return ["/careers"];
     case "caseStudy":

@@ -48,6 +48,20 @@ export async function ProductionServicePage({page,images=[]}: {page:ProductionSe
         <div className={styles.copy}><h2 id={`${section.id}-title`}>{section.title}</h2><p className={styles.lead}>{section.lead}</p><Body lines={section.body}/><Link className={styles.button} href={enquiryHref(page.hero.title,section.navLabel)}>{section.cta}<span aria-hidden="true">↗</span></Link></div>
       </section>;
     })}</div>
+    {page.href === '/services/data-centre-deployment/rack-and-stack' &&
+      <section className="bg-[#faf7f0] px-5 py-16 sm:px-8 sm:py-24" aria-labelledby="rack-work-heading">
+        <div className="mx-auto grid max-w-6xl items-center gap-10 md:grid-cols-2 md:gap-16">
+          <div>
+            <h2 id="rack-work-heading" className="max-w-xl text-3xl font-semibold leading-tight tracking-tight text-[#252b33] sm:text-5xl">See the racks behind the work.</h2>
+            <p className="mt-6 max-w-xl text-base leading-8 text-[#5e6267]">Browse front and rear photographs of installed data centre racks, including mounted equipment, network connections and cable routing.</p>
+            <Link href="/our-work#rack-deployment" className="mt-8 inline-flex min-h-12 items-center rounded-full bg-[#f2a900] px-7 font-semibold text-[#252b33] hover:bg-[#ffd16a]">View the rack photo album <span className="ml-3" aria-hidden="true">↗</span></Link>
+          </div>
+          <div className="relative aspect-[3/4] max-h-[640px] overflow-hidden rounded-2xl bg-[#252b33]">
+            <Image src="/image/our-work/ideal-solutions-data-centre-rack-r07-11-front.webp" alt="Front of data centre rack R07-11 with mounted servers and connected equipment" fill sizes="(min-width: 768px) 45vw, 90vw" className="object-contain" />
+          </div>
+        </div>
+      </section>
+    }
     <section className={styles.faq} aria-labelledby="service-faq-title"><div><h2 id="service-faq-title">{page.faq.title}</h2><div>{page.faq.items.map(item=><details key={item.title}><summary>{item.title}<span aria-hidden="true">+</span></summary><div>{item.body.map(line=><p key={line}>{line}</p>)}</div></details>)}</div></div></section>
     {cluster && <RelatedServiceResources title={cluster.title} posts={relatedPosts} />}
     <section className={styles.closing}>

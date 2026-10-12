@@ -1,4 +1,5 @@
 import { createElement } from "react";
+import { galleryAlbum } from "./gallery-album";
 import { serviceResourceClusters } from "../../data/service-resource-clusters";
 import {
   PortableTextInput,
@@ -978,6 +979,7 @@ const careerOpening = defineType({
 
 
 export const schemaTypes = [
+  galleryAlbum,
   metric,
   seo,
   blogHeading,

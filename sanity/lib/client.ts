@@ -39,7 +39,7 @@ export async function sanityFetch<T>({
   preview = false,
 }: SanityFetchOptions) {
   // Only these collections are managed in the Ideal Solutions Studio.
-  if (!tags?.some((tag) => ["posts", "caseStudies", "careerOpenings"].includes(tag))) {
+  if (!tags?.some((tag) => ["posts", "caseStudies", "careerOpenings", "galleryAlbums"].includes(tag))) {
     return null;
   }
   const client = getSanityClient(preview);
