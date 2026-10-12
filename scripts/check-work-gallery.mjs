@@ -52,9 +52,20 @@ try {
   const sitemapText = await sitemap.text();
   assert.ok(sitemapText.includes('/our-work'));
   assert.ok(sitemapText.includes('ideal-solutions-data-centre-rack-r07-11-front.webp'));
+  for (const [album, count] of [['rack-deployment', 18], ['data-centre-work', 3], ['security-access', 6], ['onsite-installations', 9]]) {
+    const url = base + '/our-work/' + album;
+    const response = await page.request.get(url);
+    assert.equal(response.status(), 200, album);
+    const html = await response.text();
+    assert.equal((html.match(/<figure\b/g) || []).length, count, album + ' visible photos');
+    assert.ok(html.includes('rel="canonical"'), album + ' canonical');
+    assert.ok(sitemapText.includes('www.idealsolutions.com.ng/our-work/' + album), album + ' sitemap');
+    assert.ok(html.includes('application/ld+json'), album + ' structured data');
+    assert.ok(html.includes('target="_blank"'), album + ' full image links');
+  }
   const service = await page.goto(base + '/services/data-centre-deployment/rack-and-stack', { waitUntil: 'domcontentloaded' });
   assert.equal(service.status(), 200);
-  assert.equal(await page.getByRole('link', { name: /View the rack photo album/ }).getAttribute('href'), '/our-work#rack-deployment');
+  assert.equal(await page.getByRole('link', { name: /View the rack photo album/ }).getAttribute('href'), '/our-work/rack-deployment');
   const realRack = page.locator('img[alt="Front of data centre rack R07-11 with mounted servers and connected equipment"]');
   await realRack.scrollIntoViewIfNeeded();
   await page.waitForFunction(el => el.complete && el.naturalWidth > 0, await realRack.elementHandle());

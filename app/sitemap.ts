@@ -163,7 +163,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   ]);
 
   const dynamicRoutes: SitemapEntryInput[] = [
-    { path: "/our-work", imagePaths: gallery.flatMap(album => album.photos.map(photo => photo.src)), changeFrequency: "monthly", priority: 0.6 },
+    { path: "/our-work", imagePaths: gallery.map(album => album.photos[0].src), changeFrequency: "monthly", priority: 0.6 },
+    ...gallery.map(album => ({ path: `/our-work/${album.id}`, imagePaths: album.photos.map(photo => photo.src), changeFrequency: "monthly" as const, priority: 0.58 })),
     ...productionServices
       .map((page) => ({
         path: page.href,

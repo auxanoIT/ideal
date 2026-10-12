@@ -54,7 +54,7 @@ export async function ProductionServicePage({page,images=[]}: {page:ProductionSe
           <div>
             <h2 id="rack-work-heading" className="max-w-xl text-3xl font-semibold leading-tight tracking-tight text-[#252b33] sm:text-5xl">See the racks behind the work.</h2>
             <p className="mt-6 max-w-xl text-base leading-8 text-[#5e6267]">Browse front and rear photographs of installed data centre racks, including mounted equipment, network connections and cable routing.</p>
-            <Link href="/our-work#rack-deployment" className="mt-8 inline-flex min-h-12 items-center rounded-full bg-[#f2a900] px-7 font-semibold text-[#252b33] hover:bg-[#ffd16a]">View the rack photo album <span className="ml-3" aria-hidden="true">↗</span></Link>
+            <Link href="/our-work/rack-deployment" className="mt-8 inline-flex min-h-12 items-center rounded-full bg-[#f2a900] px-7 font-semibold text-[#252b33] hover:bg-[#ffd16a]">View the rack photo album <span className="ml-3" aria-hidden="true">↗</span></Link>
           </div>
           <div className="relative aspect-[3/4] max-h-[640px] overflow-hidden rounded-2xl bg-[#252b33]">
             <Image src="/image/our-work/ideal-solutions-data-centre-rack-r07-11-front.webp" alt="Front of data centre rack R07-11 with mounted servers and connected equipment" fill sizes="(min-width: 768px) 45vw, 90vw" className="object-contain" />

@@ -5,6 +5,7 @@ export const galleryAlbum = defineType({
   name: "galleryAlbum", title: "Our Work Album", type: "document",
   fields: [
     defineField({ name: "title", type: "string", validation: r => r.required() }),
+    defineField({ name: "slug", title: "Album URL", type: "slug", options: { source: "title", maxLength: 80 }, description: "Required for new albums. Original albums keep their existing URLs.", validation: r => r.custom((slug, context) => context.document?.starterAlbum || context.document?.hidden || (slug && typeof slug === "object" && "current" in slug && slug.current) ? true : "Add a URL for this new album.") }),
     defineField({ name: "category", type: "string", options: { list: [...galleryCategories] }, validation: r => r.required() }),
     defineField({ name: "description", type: "text", rows: 3, validation: r => r.required().max(300) }),
     defineField({ name: "starterAlbum", title: "Replace an original album (optional)", type: "string", options: { list: starterGallery.map(a => ({ title: a.title, value: a.id })) }, description: "Choose an original album to edit or hide it. Leave blank for a new album. Only create one replacement per original album." }),

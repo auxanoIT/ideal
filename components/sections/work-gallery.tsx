@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useRef, useState } from "react";
 import * as Dialog from "@radix-ui/react-dialog";
 import { ArrowLeft, ArrowRight, Plus, X } from "lucide-react";
@@ -36,6 +37,7 @@ export function WorkGallery({ albums }: { albums: GalleryAlbum[] }) {
             <p className="mt-3 text-sm leading-7 text-[var(--color-muted)]">{album.description}</p>
           </button>
         </Dialog.Trigger>
+        <Link href={`/our-work/${album.id}`} className="mt-3 inline-flex min-h-11 items-center font-semibold text-[#805700] underline decoration-[#f2a900] decoration-2 underline-offset-4">View all {album.photos.length} photos <ArrowRight size={17} className="ml-2" aria-hidden="true" /></Link>
       </article>)}
     </div>
     {!albums.length && <p className="py-12">More moments from our work will be shared here soon.</p>}

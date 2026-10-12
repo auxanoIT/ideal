@@ -100,7 +100,7 @@ function getPathsForDocument(type?: string, slug?: string) {
 
   switch (type) {
     case "galleryAlbum":
-      return ["/our-work", "/sitemap.xml"];
+      return ["/our-work", "/sitemap.xml", ...["data-centre-work", "rack-deployment", "security-access", "onsite-installations", slug].filter((id): id is string => Boolean(id)).map(id => `/our-work/${id}`)];
     case "careerOpening":
       return ["/careers"];
     case "caseStudy":

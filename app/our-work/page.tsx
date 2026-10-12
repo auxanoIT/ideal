@@ -5,7 +5,8 @@ import { getWorkGallery } from "@/lib/work-gallery";
 import { buildMetadata } from "@/lib/seo";
 import { absoluteUrl } from "@/lib/utils";
 
-export const revalidate = false;
+// Request-driven refresh for sites whose Sanity webhook has not yet been updated.
+export const revalidate = 86400;
 export const metadata = buildMetadata({
   title: "Our Work | Ideal Solutions Photo Gallery",
   description: "See the Ideal Solutions team at work: data centre infrastructure, security and access equipment, and onsite installations in our project photo gallery.",
@@ -20,7 +21,7 @@ export default async function OurWorkPage() {
     "@context": "https://schema.org", "@type": "ImageGallery",
     name: "Ideal Solutions — Our Work", url: absoluteUrl("/our-work"),
     description: "Photographs of the Ideal Solutions team carrying out onsite infrastructure work.",
-    image: albums.flatMap(album => album.photos.map(photo => ({ "@type": "ImageObject", contentUrl: absoluteUrl(photo.src), caption: photo.alt }))),
+    image: albums.map(album => ({ "@type": "ImageObject", contentUrl: absoluteUrl(album.photos[0].src), caption: album.photos[0].alt })),
   };
   return <>
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData).replace(/</g, "\\u003c") }} />
