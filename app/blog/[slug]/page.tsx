@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { AlertTriangle, Info, Lightbulb, Quote } from "lucide-react";
@@ -6,6 +7,7 @@ import { PortableText, type PortableTextComponents } from "@portabletext/react";
 import type { PortableTextBlock, TypedObject } from "@portabletext/types";
 
 import { ButtonLink } from "@/components/ui/button-link";
+import { MobileArticleContents } from "@/components/blog/mobile-article-contents";
 import { Container } from "@/components/ui/container";
 import { JsonLd } from "@/components/ui/json-ld";
 import { getBlogPostBySlug, getBlogPostSlugs } from "@/lib/content";
@@ -73,6 +75,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
       Boolean(heading),
     );
   const bodyBlocks = normalizeBlogBody(postBody);
+  const introduction = post.excerpt?.trim() || getOpeningParagraph(postBody);
   const relatedService = serviceResourceClusters.find(
     (service) => service.value === post.relatedService,
   );
@@ -134,41 +137,50 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         ]}
       />
       <article>
-        <header className="bg-[var(--color-cloud)] py-16 sm:py-20">
-          <Container className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-end">
-            <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#ED6B37]">
+        <MobileArticleContents headings={headings} />
+        <header className="bg-[var(--color-cloud)] py-12 sm:py-16 lg:py-20">
+          <Container>
+            <div className="mx-auto max-w-4xl">
+              <nav aria-label="Breadcrumb" className="text-sm text-[var(--color-muted)]">
+                <ol className="flex flex-wrap items-center gap-x-2 gap-y-1">
+                  <li><Link href="/" className="hover:text-[var(--color-ink)]">Home</Link></li>
+                  <li aria-hidden="true">/</li>
+                  <li><Link href="/blog" className="hover:text-[var(--color-ink)]">Blog</Link></li>
+                  <li aria-hidden="true">/</li>
+                  <li aria-current="page" className="min-w-0 truncate text-[var(--color-ink)]">{post.title}</li>
+                </ol>
+              </nav>
+              <p className="mt-8 text-xs font-semibold uppercase tracking-[0.22em] text-[var(--color-electric)]">
                 {post.category}
               </p>
-              <h1 className="mt-6 text-balance text-4xl font-semibold tracking-[-0.06em] text-[var(--color-ink)] sm:text-5xl">
+              <h1 className="mt-5 text-balance break-words text-4xl font-semibold leading-[1.15] tracking-[-0.055em] text-[var(--color-ink)] sm:text-5xl lg:text-6xl">
                 {post.title}
               </h1>
-              <div className="mt-6 flex flex-wrap items-center gap-3 text-sm text-[var(--color-muted)]">
-                <span>{formatDate(post.publishedAt)}</span>
-                <span aria-hidden="true">/</span>
-                <span>{post.readingTime}</span>
-                {post.author ? (
-                  <>
-                    <span aria-hidden="true">/</span>
-                    <span>{post.author}</span>
-                  </>
-                ) : null}
+              <div className="mt-6 flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-[var(--color-muted)]">
+                {post.author ? <span>{post.author}</span> : null}
+                {post.author && post.publishedAt ? <span aria-hidden="true">/</span> : null}
+                {post.publishedAt ? <time dateTime={post.publishedAt}>{formatDate(post.publishedAt)}</time> : null}
+                {post.readingTime && (post.author || post.publishedAt) ? <span aria-hidden="true">/</span> : null}
+                {post.readingTime ? <span>{post.readingTime}</span> : null}
               </div>
-              <p className="mt-8 text-lg leading-8 text-[var(--color-muted)]">
-                {post.excerpt}
-              </p>
+              {introduction ? (
+                <p className="mt-8 max-w-3xl text-lg leading-8 text-[var(--color-muted)] sm:text-xl sm:leading-9">
+                  {introduction}
+                </p>
+              ) : null}
             </div>
-
-            <div className="relative aspect-[16/10] overflow-hidden rounded-[2rem] border border-white bg-white shadow-[0_24px_70px_rgba(11,18,32,0.08)]">
-              <PostImage post={post} priority />
-            </div>
+            {post.coverImage?.src ? (
+              <figure className="mx-auto mt-10 max-w-5xl overflow-hidden rounded-[1.5rem] bg-white shadow-[0_24px_70px_rgba(11,18,32,0.08)] sm:mt-12 sm:rounded-[2rem]">
+                <PostImage post={post} priority />
+              </figure>
+            ) : null}
           </Container>
         </header>
 
         <section className="py-16 sm:py-20">
-          <Container className="grid gap-10 lg:grid-cols-[18rem_minmax(0,1fr)]">
-            <aside className="lg:sticky lg:top-28 lg:self-start">
-              {headings.length ? (
+          <Container className={headings.length ? "grid gap-10 lg:grid-cols-[18rem_minmax(0,1fr)]" : "max-w-4xl"}>
+            {headings.length ? (
+              <aside className="hidden lg:sticky lg:top-28 lg:block lg:self-start">
                 <nav className="rounded-[1.5rem] border border-[color:rgba(11,18,32,0.08)] bg-white p-5 shadow-[0_16px_40px_rgba(11,18,32,0.05)]">
                   <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#ED6B37]">
                     In this article
@@ -185,8 +197,8 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                     ))}
                   </div>
                 </nav>
-              ) : null}
-            </aside>
+              </aside>
+            ) : null}
 
             <div className="min-w-0">
               {takeaways.length ? (
@@ -242,7 +254,8 @@ const blogBodyComponents: PortableTextComponents = {
     h2: ({ children, value }) => (
       <h2
         id={getPortableHeadingId(value)}
-        className="group scroll-mt-28 text-3xl font-semibold tracking-[-0.05em] text-[var(--color-ink)]"
+        tabIndex={-1}
+        className="group scroll-mt-40 text-3xl font-semibold tracking-[-0.05em] text-[var(--color-ink)] lg:scroll-mt-28"
       >
         <a
           href={`#${getPortableHeadingId(value)}`}
@@ -255,7 +268,8 @@ const blogBodyComponents: PortableTextComponents = {
     h3: ({ children, value }) => (
       <h3
         id={getPortableHeadingId(value)}
-        className="group scroll-mt-28 text-2xl font-semibold tracking-[-0.04em] text-[var(--color-ink)]"
+        tabIndex={-1}
+        className="group scroll-mt-40 text-2xl font-semibold tracking-[-0.04em] text-[var(--color-ink)] lg:scroll-mt-28"
       >
         <a
           href={`#${getPortableHeadingId(value)}`}
@@ -337,7 +351,8 @@ const blogBodyComponents: PortableTextComponents = {
       return (
         <HeadingTag
           id={id}
-          className="group scroll-mt-28 text-3xl font-semibold tracking-[-0.05em] text-[var(--color-ink)]"
+          tabIndex={-1}
+          className="group scroll-mt-40 text-3xl font-semibold tracking-[-0.05em] text-[var(--color-ink)] lg:scroll-mt-28"
         >
           <a
             href={`#${id}`}
@@ -532,21 +547,39 @@ function PostImage({
   post: BlogPost;
   priority?: boolean;
 }) {
-  const image = post.coverImage ?? {
-    src: "/image/service-details/network-design-diagrams.webp",
-    alt: post.title,
-  };
+  const image = post.coverImage;
+
+  if (!image?.src) return null;
 
   return (
     <Image
       src={image.src}
-      alt={image.alt}
-      fill
+      alt={image.alt || post.title}
+      width={image.width ?? 1600}
+      height={image.height ?? 900}
       priority={priority}
-      sizes="(min-width: 1024px) 55vw, 100vw"
-      className="object-cover"
+      sizes="(min-width: 1024px) 1024px, (min-width: 640px) 90vw, 100vw"
+      className="h-auto w-full"
     />
   );
+}
+
+function getOpeningParagraph(body: BlogBodyBlock[]) {
+  for (const block of body) {
+    if (typeof block === "string" && block.trim()) return block.trim();
+    if (typeof block === "string") continue;
+    if (
+      (block._type === "blogParagraph" || block._type === "blogPlainText") &&
+      "text" in block && typeof block.text === "string" && block.text.trim()
+    ) {
+      return block.text.trim();
+    }
+    if (isPortableBlock(block) && (!block.style || block.style === "normal")) {
+      const text = getPortableBlockText(block);
+      if (text) return text;
+    }
+  }
+  return "";
 }
 
 function getHeadingId(block: Extract<BlogBodyBlock, { _type: "blogHeading" }>) {
