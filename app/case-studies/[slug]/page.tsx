@@ -6,7 +6,7 @@ import { ButtonLink } from "@/components/ui/button-link";
 import { CaseStudyCard } from "@/components/sections/case-study-card";
 import { Container } from "@/components/ui/container";
 import { JsonLd } from "@/components/ui/json-ld";
-import { getCaseStudyMedia, isIllustrativeCaseStudyImage } from "@/lib/case-study-media";
+import { getCaseStudyMedia } from "@/lib/case-study-media";
 import {
   getCaseStudyBySlug,
   getCaseStudySlugs,
@@ -168,7 +168,6 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
                 className="object-cover object-center"
               />
             </div>
-            {isIllustrativeCaseStudyImage(caseStudy) && <figcaption className="px-4 py-3 text-xs leading-5 text-white/80">AI-generated illustration of the project scope. Not a photograph of the client site or delivered equipment.</figcaption>}
           </figure>}
         </Container>
       </section>
@@ -219,7 +218,7 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
                 Ideal Solutions Response
               </p>
               <h2 className="mt-4 text-4xl font-semibold leading-tight text-[var(--color-ink)]">
-                Documented scope of work
+                Project scope
               </h2>
               <div className="mt-7">
                 {solutionSteps.length ? (
@@ -250,7 +249,7 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
                 </p>
               </div>
               <h2 className="mt-5 text-4xl font-semibold leading-tight">
-                What the documented work covered
+                Work delivered
               </h2>
               <p className="mt-5 text-base leading-8 text-white/72">
                 {caseStudy.result}

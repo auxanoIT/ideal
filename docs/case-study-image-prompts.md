@@ -1,6 +1,6 @@
 # Case study image generation record
 
-Generated with the built-in image-generation tool on 5 October 2026. These are fictional, photorealistic illustrations, not client photographs or evidence of installed equipment. Original PNGs remain in the tool's generated_images directory. Website copies use WebP quality 78, width 1440, without cropping. Captions and alt text identify the images as AI-generated. Real approved CMS photography takes precedence over these defaults.
+Generated with the built-in image-generation tool on 5 October 2026. These are fictional, photorealistic illustrations, not client photographs or evidence of installed equipment. Original PNGs remain in the tool's generated_images directory. Website copies use WebP quality 78, width 1440, without cropping. Public pages have no visible generation labels; alternative text identifies the images as illustrations. Real approved CMS photography takes precedence over these defaults.
 
 ## 1. wiocc-second-floor-office-network-security-systems
 

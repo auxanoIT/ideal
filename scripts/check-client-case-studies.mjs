@@ -22,7 +22,7 @@ for (const record of records) {
   assert.ok(images[record.slug]);
   assert.ok(fs.existsSync(`public${images[record.slug].src}`));
   assert.ok(fs.statSync(`public${images[record.slug].src}`).size < 160 * 1024);
-  assert.match(images[record.slug].alt, /AI-generated illustration/);
+  assert.match(images[record.slug].alt, /^Illustration of /);
 }
 assert.equal(new Set(records.map(r => r.seo.metaTitle)).size, 7);
 assert.equal(new Set(records.map(r => r.seo.metaDescription)).size, 7);
@@ -50,7 +50,8 @@ if (process.argv.includes('--browser')) {
       assert.ok(schemas.some(schema => schema.includes('CreativeWork')));
       assert.ok(await page.locator('main img').count() > 0);
       assert.ok(sitemap.includes(`https://www.idealsolutions.com.ng${images[record.slug].src}</image:loc>`));
-      assert.ok((await page.locator('figure figcaption').innerText()).includes('Not a photograph'));
+      assert.equal(await page.locator('figure figcaption').count(), 0);
+      assert.equal(await page.getByText('AI-generated illustration').count(), 0);
       const heroImage = page.locator('figure img');
       await heroImage.evaluate(image => image.decode());
       assert.ok(await heroImage.evaluate(image => image.naturalWidth > 0));

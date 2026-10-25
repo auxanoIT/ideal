@@ -2,7 +2,7 @@ import Image from "next/image";
 import { ArrowUpRight, BriefcaseBusiness, MapPin } from "lucide-react";
 
 import { ButtonLink } from "@/components/ui/button-link";
-import { getCaseStudyMedia, isIllustrativeCaseStudyImage } from "@/lib/case-study-media";
+import { getCaseStudyMedia } from "@/lib/case-study-media";
 import type { CaseStudy } from "@/lib/types";
 
 type CaseStudyCardProps = {
@@ -31,7 +31,6 @@ export function CaseStudyCard({
           }
           className="object-cover transition duration-500 group-hover:scale-105"
         />
-        {isIllustrativeCaseStudyImage(caseStudy) && <span className="absolute bottom-3 left-3 rounded-full bg-[#252b33]/90 px-3 py-1 text-[10px] font-medium text-white">AI-generated illustration</span>}
       </div>}
       <div className="flex flex-1 flex-col border-t-4 border-[#f2a900] p-6 sm:p-8">
         <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#906300]">

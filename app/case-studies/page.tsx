@@ -155,7 +155,7 @@ export default async function CaseStudiesPage() {
               visibility into an existing environment.
             </p>
             <p className="mt-5 text-base leading-8 text-[var(--color-muted)]">
-              These project records describe work delivered for WIOCC Nigeria,
+              These projects show work delivered for WIOCC Nigeria,
               Open Access Data Centres, South West Bitumen and Deltatek Offshore,
               covering equipment supply, installation, upgrades and relocation.
             </p>

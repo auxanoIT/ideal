@@ -741,8 +741,8 @@ const caseStudy = defineType({
     }),
     defineField({ name: "industry", title: "Industry", type: "string" }),
     defineField({
-      name: "imageIsIllustrative", title: "AI-Generated Illustration", type: "boolean",
-      description: "Enable for an AI-generated case-study image so the website labels it as illustrative rather than actual project photography. Leave off for approved genuine project photos.",
+      name: "imageIsIllustrative", title: "Illustrative Image", type: "boolean",
+      description: "Enable when the image illustrates the project scope rather than showing the actual client site or installed equipment. Leave off for approved genuine project photos.",
       initialValue: false,
     }),
     defineField({ name: "location", title: "Location", type: "string" }),

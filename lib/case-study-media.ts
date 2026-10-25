@@ -3,12 +3,6 @@ import generatedImages from "@/data/ideal-case-study-images.json";
 
 const illustrativeImages: Record<string, ServiceNavMedia> = generatedImages;
 
-export function isIllustrativeCaseStudyImage(caseStudy: CaseStudy): boolean {
-  if (caseStudy.textOnly) return false;
-  if (caseStudy.cardImage?.src || caseStudy.image?.src) return caseStudy.imageIsIllustrative === true;
-  return Boolean(illustrativeImages[caseStudy.slug]);
-}
-
 const defaultCaseStudyMedia: ServiceNavMedia = {
   src: "/image/service-details/door-access-dashboard.webp",
   alt: "Access control dashboard and security operations interface",
