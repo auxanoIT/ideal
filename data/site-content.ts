@@ -22,7 +22,7 @@ export const siteSettings: SiteSettings = {
   shortName: "Ideal Solutions",
   description:
     "Technical execution, infrastructure support and local expertise for reliable, secure and growth-ready data centre environments in Nigeria.",
-  phone: "+234 806 221 8546",
+  phone: "08050274481",
   email: "info@idealsolutions.com.ng",
   address:
     "21, Abeokuta Street, Off Obasa Street, Oba Akran Avenue, Ikeja, Lagos",
@@ -133,7 +133,7 @@ export const footerColumns: FooterColumn[] = [
     title: "Contact",
     links: [
       { label: "info@idealsolutions.com.ng", href: "mailto:info@idealsolutions.com.ng" },
-      { label: "+234 806 221 8546", href: "tel:+2348062218546" },
+      { label: "08050274481", href: "tel:+2348050274481" },
       { label: "Book Consultation", href: "/book-consultation" },
     ],
   },
