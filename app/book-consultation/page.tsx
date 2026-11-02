@@ -48,10 +48,12 @@ const stats = [
   },
 ];
 
-export default async function BookConsultationPage({ searchParams }: { searchParams: Promise<{service?: string; section?: string}> }) {
+export default async function BookConsultationPage({ searchParams }: { searchParams: Promise<Record<string, string | string[] | undefined>> }) {
   const query = await searchParams;
-  const service = productionServices.find(page => page.hero.title === query.service);
-  const section = service?.sections.find(item => item.navLabel === query.section);
+  const serviceName = typeof query.service === "string" ? query.service : undefined;
+  const sectionName = typeof query.section === "string" ? query.section : undefined;
+  const service = productionServices.find(page => page.hero.title === serviceName);
+  const section = service?.sections.find(item => item.navLabel === sectionName);
   return (
     <div className={styles.page}>
       <JsonLd
@@ -151,6 +153,7 @@ export default async function BookConsultationPage({ searchParams }: { searchPar
             <LeadForm
               key={`${service?.hero.title ?? ''}:${section?.navLabel ?? ''}`}
               context="consultation"
+              attributeContactRedirect
               initialService={service?.hero.title}
               initialSection={section?.navLabel}
               title="Talk to an Ideal Solutions Infrastructure Specialist"

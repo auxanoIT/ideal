@@ -11,9 +11,12 @@ import {
 import { cn, getBrowserCookie } from "@/lib/utils";
 import { leadSchema } from "@/lib/schemas";
 import { formErrors } from "@/lib/form-errors";
+import { trackLead } from "@/lib/lead-analytics";
+import { consultationFormName } from "@/lib/lead-attribution";
 
 type LeadFormProps = {
   context: "contact" | "consultation";
+  attributeContactRedirect?: boolean;
   title?: string;
   description?: string;
   className?: string;
@@ -40,6 +43,7 @@ const serviceInterests = [
 
 export function LeadForm({
   context,
+  attributeContactRedirect = false,
   title = "Start the conversation",
   description = "Share the environment, issue, or project goal. Ideal Solutions will review the brief and recommend the right next step.",
   className,
@@ -53,6 +57,7 @@ export function LeadForm({
 }: LeadFormProps) {
   const [status, setStatus] = useState<"idle" | "success" | "error">("idle");
   const formRef = useRef<HTMLFormElement>(null);
+  const submissionInFlight = useRef(false);
   const errorId = useId();
   const [fieldErrors, setFieldErrors] = useState<Record<string, string>>({});
   const fieldProps = (name: string) => ({
@@ -70,6 +75,9 @@ export function LeadForm({
   const [isPending, startTransition] = useTransition();
 
   async function handleSubmit(formData: FormData) {
+    // Capture the origin before awaiting the API; navigation cannot relabel an
+    // in-flight submission or a queued event.
+    const formName = attributeContactRedirect ? consultationFormName() : context;
     setStatus("idle");
     setMessage("");
 
@@ -119,11 +127,13 @@ export function LeadForm({
       body: JSON.stringify(parsed.data),
     });
 
-    if (!response.ok) {
-      const data = (await response.json().catch(() => null)) as {
+    const data = (await response.json().catch(() => null)) as {
+        ok?: boolean;
         error?: string;
         fieldErrors?: Record<string, string>;
       } | null;
+
+    if (!response.ok || data?.ok !== true) {
       setStatus("error");
       setFieldErrors(data?.fieldErrors ?? {});
       setEmailError(data?.fieldErrors?.email ?? "");
@@ -134,6 +144,7 @@ export function LeadForm({
     }
 
     setStatus("success");
+    trackLead(formName);
     setMessage(
       context === "consultation"
         ? "Consultation request received. The team can now coordinate the next discussion."
@@ -185,9 +196,16 @@ export function LeadForm({
         noValidate
         onSubmit={(event) => {
           event.preventDefault();
-          if (isPending) return;
+          if (isPending || submissionInFlight.current) return;
           const data = new FormData(event.currentTarget);
-          startTransition(async () => { await handleSubmit(data); });
+          submissionInFlight.current = true;
+          startTransition(async () => {
+            try {
+              await handleSubmit(data);
+            } finally {
+              submissionInFlight.current = false;
+            }
+          });
         }}
         className="mt-8 grid gap-4 md:grid-cols-2"
       >
