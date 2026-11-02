@@ -40,6 +40,14 @@ export function SiteFooter({ columns, settings }: SiteFooterProps) {
             Onsite technical execution and infrastructure support for teams
             deploying, changing and maintaining IT equipment in Nigeria.
           </p>
+          <div className="flex flex-col items-start gap-2 text-sm text-white/72">
+            <a href={`mailto:${settings.email}`} className="inline-flex min-h-11 items-center transition hover:text-white">
+              {settings.email}
+            </a>
+            <a href={`tel:${settings.phone.replace(/[^+\d]/g, "")}`} className="inline-flex min-h-11 items-center transition hover:text-white">
+              {settings.phone}
+            </a>
+          </div>
           <div className="flex flex-wrap gap-3">
             <ButtonLink href="/book-consultation" className="rounded-none bg-[#F2A900] text-[#252B33] shadow-none">
               Discuss Your Requirements
