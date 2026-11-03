@@ -2,7 +2,7 @@ import { AboutGeneaInspired } from "@/components/sections/about-genea-inspired";
 import { buildMetadata } from "@/lib/seo";
 
 const description =
-  "Learn how Ideal Solutions helps data centre operators, enterprise IT teams and technology partners deploy, support and improve critical infrastructure through skilled onsite execution in Nigeria.";
+  "Meet Ideal Solutions: onsite deployment, technical support and infrastructure expertise for data centre operators and enterprise IT teams in Nigeria.";
 
 const baseMetadata = buildMetadata({
   title: "About Ideal Solutions | Data Centre Infrastructure Services Nigeria",

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 
 import { absoluteUrl } from "@/lib/utils";
+import { resolveSearchCopy } from "@/lib/seo-copy";
 
 type MetadataOptions = {
   title: string;
@@ -25,7 +26,8 @@ const defaultKeywords = [
   "data centre security Nigeria",
 ];
 
-const maxMetaDescriptionLength = 158;
+// Reserve space for the ellipsis so the final string stays within 158 characters.
+const maxMetaDescriptionLength = 155;
 
 function normalizeMetaDescription(description: string) {
   const normalized = description.replace(/\s+/g, " ").trim();
@@ -54,6 +56,7 @@ export function buildMetadata({
   modifiedTime,
   noIndex = false,
 }: MetadataOptions): Metadata {
+  ({ title, description } = resolveSearchCopy(path, title, description));
   const pageUrl = absoluteUrl(path);
   const imageUrl = absoluteUrl(imagePath);
   const metaDescription = normalizeMetaDescription(description);

@@ -96,13 +96,20 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
         data={[
           {
             "@context": "https://schema.org",
-            "@type": "CreativeWork",
+            "@type": "Article",
             headline: caseStudy.title,
             description: caseStudy.summary,
             url: absoluteUrl(`/case-studies/${caseStudy.slug}`),
             about: caseStudy.industry,
             image: caseStudy.textOnly ? undefined : absoluteUrl(media.src),
-            locationCreated: caseStudy.location,
+            contentLocation: caseStudy.location
+              ? { "@type": "Place", name: caseStudy.location }
+              : undefined,
+            author: {
+              "@type": "Organization",
+              "@id": `${absoluteUrl("/")}#organization`,
+              name: "Ideal Solutions",
+            },
             publisher: {
               "@type": "Organization",
               "@id": `${absoluteUrl("/")}#organization`,

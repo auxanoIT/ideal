@@ -6,6 +6,7 @@ import { SubserviceHero } from './subservice-hero';
 import { SubserviceSectionNav } from './subservice-section-nav';
 import { contextualLinks, enquiryHref, productionSectionImages, type ProductionService } from '@/data/subservice-production';
 import { absoluteUrl } from '@/lib/utils';
+import { resolveSearchCopy } from '@/lib/seo-copy';
 import type { ServiceNavMedia } from '@/lib/types';
 import styles from './production-service-page.module.css';
 import { resourceClusterForHref } from '@/data/service-resource-clusters';
@@ -18,7 +19,8 @@ function deliveryBody(lines: string[]) {
 }
 
 export function productionMetadata(page: ProductionService): Metadata {
-  return {title:{absolute:page.seoTitle},description:page.description,alternates:{canonical:absoluteUrl(page.href)},robots:{index:true,follow:true},openGraph:{title:page.seoTitle,description:page.description,url:absoluteUrl(page.href),siteName:'Ideal Solutions',type:'website',images:[{url:absoluteUrl(page.image.src),alt:page.image.alt}]},twitter:{card:'summary_large_image',title:page.seoTitle,description:page.description,images:[absoluteUrl(page.image.src)]}};
+  const { title, description } = resolveSearchCopy(page.href, page.seoTitle, page.description);
+  return {title:{absolute:title},description,alternates:{canonical:absoluteUrl(page.href)},robots:{index:true,follow:true},openGraph:{title,description,url:absoluteUrl(page.href),siteName:'Ideal Solutions',type:'website',images:[{url:absoluteUrl(page.image.src),alt:page.image.alt}]},twitter:{card:'summary_large_image',title,description,images:[absoluteUrl(page.image.src)]}};
 }
 
 function Body({lines}: {lines:string[]}) {
