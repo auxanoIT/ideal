@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { notFound } from "next/navigation";
-import { ArrowRight, CheckCircle2, ShieldCheck } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { ButtonLink } from "@/components/ui/button-link";
 import { CaseStudyCard } from "@/components/sections/case-study-card";
 import { Container } from "@/components/ui/container";
@@ -14,6 +14,7 @@ import {
 } from "@/lib/content";
 import { buildMetadata } from "@/lib/seo";
 import type { CaseStudy } from "@/lib/types";
+import styles from "./case-study.module.css";
 import { absoluteUrl } from "@/lib/utils";
 import { findPillar } from "@/data/service-pillars";
 
@@ -48,9 +49,14 @@ export async function generateMetadata({
 
   return buildMetadata({
     title: caseStudy.seo?.metaTitle || caseStudy.title,
-    description: caseStudy.seo?.metaDescription || buildCaseStudySeoDescription(caseStudy),
-    imagePath: caseStudy.textOnly ? "/opengraph-image" : getCaseStudyMedia(caseStudy).src,
-    imageAlt: caseStudy.textOnly ? "Ideal Solutions" : getCaseStudyMedia(caseStudy).alt,
+    description:
+      caseStudy.seo?.metaDescription || buildCaseStudySeoDescription(caseStudy),
+    imagePath: caseStudy.textOnly
+      ? "/opengraph-image"
+      : getCaseStudyMedia(caseStudy).src,
+    imageAlt: caseStudy.textOnly
+      ? "Ideal Solutions"
+      : getCaseStudyMedia(caseStudy).alt,
     modifiedTime: caseStudy.updatedAt,
     path: `/case-studies/${caseStudy.slug}`,
     type: "article",
@@ -143,9 +149,13 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
         ]}
       />
       <section className="overflow-hidden bg-[var(--color-ink)] text-white">
-        <Container className={`grid items-center gap-12 py-16 lg:py-20 ${caseStudy.textOnly ? "" : "min-h-[640px] lg:grid-cols-[0.92fr_1.08fr]"}`}>
+        <Container
+          className={`grid items-center gap-12 py-16 lg:py-20 ${caseStudy.textOnly ? "" : "min-h-[640px] lg:grid-cols-[0.92fr_1.08fr]"}`}
+        >
           <div className="relative z-10">
-            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#f2a900]">{caseStudy.client} · Case Study</p>
+            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#f2a900]">
+              {caseStudy.client} · Case Study
+            </p>
             <h1 className="mt-5 max-w-5xl text-balance text-3xl font-semibold leading-tight sm:text-4xl lg:text-5xl">
               {caseStudy.title}
             </h1>
@@ -163,164 +173,160 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
               </ButtonLink>
             </div>
           </div>
-          {!caseStudy.textOnly && <figure className="relative overflow-hidden rounded-[1.5rem] border border-white/10 bg-white/8 shadow-[0_32px_90px_rgba(0,0,0,0.28)]">
-            <div className="relative aspect-[16/10]">
-              <Image
-                src={media.src}
-                alt={media.alt}
-                fill
-                priority
-                quality={56}
-                sizes="(min-width: 1024px) 52vw, 100vw"
-                className="object-cover object-center"
-              />
-            </div>
-          </figure>}
+          {!caseStudy.textOnly && (
+            <figure className="relative overflow-hidden rounded-[1.5rem] border border-white/10 bg-white/8 shadow-[0_32px_90px_rgba(0,0,0,0.28)]">
+              <div className="relative aspect-[16/10]">
+                <Image
+                  src={media.src}
+                  alt={media.alt}
+                  fill
+                  priority
+                  quality={56}
+                  sizes="(min-width: 1024px) 52vw, 100vw"
+                  className="object-cover object-center"
+                />
+              </div>
+            </figure>
+          )}
         </Container>
       </section>
 
-      <section className="bg-white py-20 sm:py-24">
-        <Container className="grid gap-12 lg:grid-cols-[0.76fr_1.24fr]">
-          <aside className="lg:sticky lg:top-24 lg:self-start">
-            <div className="rounded-[1.5rem] border border-[color:rgba(11,18,32,0.08)] bg-[var(--color-cloud)] p-6">
-              <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#ED6B37]">
-                Project Snapshot
-              </p>
-              <dl className="mt-6 grid gap-5">
-                {[
-                  ["Client", caseStudy.client],
-                  ["Industry", caseStudy.industry],
-                  ["Location", caseStudy.location],
-                ].map(([label, value]) =>
-                  value ? (
-                    <div key={label}>
-                      <dt className="text-xs font-semibold uppercase tracking-[0.16em] text-[var(--color-muted)]">
-                        {label}
-                      </dt>
-                      <dd className="mt-2 text-sm font-semibold text-[var(--color-ink)]">
-                        {value}
-                      </dd>
-                    </div>
-                  ) : null,
-                )}
-              </dl>
-            </div>
-          </aside>
-
-          <div className="grid gap-14">
-            <section>
-              <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#ED6B37]">
-                Challenge
-              </p>
-              <h2 className="mt-4 text-4xl font-semibold leading-tight text-[var(--color-ink)]">
-                The project requirement
-              </h2>
-              <p className="mt-5 text-base leading-8 text-[var(--color-muted)]">
-                {caseStudy.challenge}
-              </p>
-            </section>
-
-            <section>
-              <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#ED6B37]">
-                Ideal Solutions Response
-              </p>
-              <h2 className="mt-4 text-4xl font-semibold leading-tight text-[var(--color-ink)]">
-                Project scope
-              </h2>
-              <div className="mt-7">
-                {solutionSteps.length ? (
-                  <ul className="grid gap-3">
-                    {solutionSteps.map((item) => (
-                      <li key={item} className="flex items-start gap-4 rounded-xl border border-[color:rgba(11,18,32,0.08)] bg-white px-5 py-4 text-sm leading-7 text-[var(--color-ink)]">
-                        <CheckCircle2 className="mt-1 h-5 w-5 shrink-0 text-[#b37c00]" aria-hidden="true" />
-                        <span>{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                ) : (
-                  <p className="rounded-[1.25rem] bg-[var(--color-cloud)] p-5 text-sm leading-7 text-[var(--color-muted)]">
-                    Ideal Solutions begins with site context, confirms the
-                    technical scope, coordinates delivery, verifies the
-                    installed systems, and hands over documentation for ongoing
-                    support.
+      <article className={styles.story}>
+        <Container>
+          <div className={styles.facts}>
+            {[
+              ["Client", caseStudy.clientDisplayName ?? caseStudy.client],
+              ["Sector", caseStudy.industry],
+              ["Location", caseStudy.location],
+            ].map(([label, value]) =>
+              value ? (
+                <div key={label}>
+                  <p className={styles.factLabel}>{label}</p>
+                  <p className={styles.factValue}>{value}</p>
+                </div>
+              ) : null,
+            )}
+            {metrics.map((metric) => (
+              <div key={metric.label}>
+                <p className={styles.metric}>{metric.value}</p>
+                <p className={styles.factLabel}>{metric.label}</p>
+                {metric.description && (
+                  <p className={styles.metricDescription}>
+                    {metric.description}
                   </p>
                 )}
               </div>
-            </section>
-
-            <section className="rounded-[1.5rem] bg-[var(--color-ink)] p-7 text-white sm:p-9">
-              <div className="flex items-center gap-3">
-                <ShieldCheck className="h-6 w-6 text-[var(--color-cyan)]" />
-                <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[var(--color-cyan)]">
-                  Project summary
-                </p>
-              </div>
-              <h2 className="mt-5 text-4xl font-semibold leading-tight">
-                Work delivered
-              </h2>
-              <p className="mt-5 text-base leading-8 text-white/72">
-                {caseStudy.result}
-              </p>
-              {metrics.length ? (
-                <div className="mt-8 grid gap-4 md:grid-cols-3">
-                  {metrics.slice(0, 3).map((metric) => (
-                    <div
-                      key={metric.label}
-                      className="rounded-[1.25rem] border border-white/10 bg-white/8 p-5"
-                    >
-                      <p className="text-3xl font-semibold text-white">
-                        {metric.value}
-                      </p>
-                      <p className="mt-2 text-xs uppercase tracking-[0.13em] text-white/60">
-                        {metric.label}
-                      </p>
-                      {metric.description ? (
-                        <p className="mt-3 text-xs leading-6 text-white/60">
-                          {metric.description}
-                        </p>
-                      ) : null}
-                    </div>
-                  ))}
-                </div>
-              ) : null}
-            </section>
+            ))}
           </div>
+          <section className={styles.summary} aria-labelledby="project-summary">
+            <h2 id="project-summary">Summary</h2>
+            <p>{caseStudy.summary}</p>
+          </section>
+          {caseStudy.challenge && (
+            <section
+              className={styles.chapter}
+              aria-labelledby="project-challenge"
+            >
+              <h2 id="project-challenge">The Challenge</h2>
+              <p>{caseStudy.challenge}</p>
+            </section>
+          )}
+          <section
+            className={styles.chapter}
+            aria-labelledby="project-solution"
+          >
+            <h2 id="project-solution">Our Solution</h2>
+            {!caseStudy.textOnly && (
+              <figure className={styles.storyImage}>
+                <Image
+                  src={media.src}
+                  alt={media.alt}
+                  width={1200}
+                  height={800}
+                  sizes="(min-width: 1024px) 48vw, 100vw"
+                  quality={80}
+                  className={styles.image}
+                />
+              </figure>
+            )}
+            {solutionSteps.length > 0 && (
+              <>
+                <p>
+                  The project scope for{" "}
+                  {caseStudy.clientDisplayName ??
+                    caseStudy.client ??
+                    "this client"}{" "}
+                  covered the following work.
+                </p>
+                <ul className={styles.scope}>
+                  {solutionSteps.map((item) => (
+                    <li key={item}>{item}</li>
+                  ))}
+                </ul>
+              </>
+            )}
+          </section>
+          {(caseStudy.result || caseStudy.outcome) && (
+            <section
+              className={styles.chapter}
+              aria-labelledby="project-result"
+            >
+              <h2 id="project-result">The Result</h2>
+              <p>{caseStudy.result || caseStudy.outcome}</p>
+            </section>
+          )}
+          {caseStudy.quote?.text && (
+            <figure className={styles.quote}>
+              <blockquote>{caseStudy.quote.text}</blockquote>
+              {(caseStudy.quote.author || caseStudy.quote.role) && (
+                <figcaption>
+                  {[caseStudy.quote.author, caseStudy.quote.role]
+                    .filter(Boolean)
+                    .join(" · ")}
+                </figcaption>
+              )}
+            </figure>
+          )}
+        </Container>
+      </article>
+      <section className={styles.enquiry}>
+        <Container className="grid items-center gap-8 lg:grid-cols-[1fr_auto]">
+          <div>
+            <h2>Let’s talk about your next infrastructure project.</h2>
+            <p>
+              Tell us about your site and requirements. Our team can help you
+              plan the next step.
+            </p>
+          </div>
+          <ButtonLink href="/book-consultation">
+            Make an enquiry
+            <ArrowRight className="ml-2 h-4 w-4" />
+          </ButtonLink>
         </Container>
       </section>
 
       <section className="bg-[var(--color-cloud)] py-20 sm:py-24">
         <Container>
-          <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
-            <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#ED6B37]">
-                Related Capabilities
-              </p>
-              <h2 className="mt-4 text-4xl font-semibold leading-tight text-[var(--color-ink)]">
-                Related services for this type of project
-              </h2>
-              <p className="mt-5 text-base leading-8 text-[var(--color-muted)]">
-                Explore the service areas connected to the work described in this project.
-              </p>
+          {relatedServices.length > 0 && (
+            <div className={styles.services}>
+              <h2>Explore the services behind this project</h2>
+              <div className="flex flex-wrap gap-3">
+                {relatedServices.map((service) => {
+                  const pillar = findPillar(service);
+                  return pillar ? (
+                    <ButtonLink
+                      key={service}
+                      href={`/services/${service}`}
+                      variant="secondary"
+                    >
+                      {pillar.title}
+                      <ArrowRight className="ml-2 h-4 w-4" />
+                    </ButtonLink>
+                  ) : null;
+                })}
+              </div>
             </div>
-            <div className="grid gap-3 sm:grid-cols-2">
-              {(relatedServices.length
-                ? relatedServices
-                : ["Site assessment", "Project deployment", "Support handover"]
-              ).map((service) => (
-                <div
-                  key={service}
-                  className="flex items-start gap-3 rounded-[1.25rem] border border-white bg-white p-5 shadow-[0_14px_35px_rgba(11,18,32,0.05)]"
-                >
-                  <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-[var(--color-success)]" />
-                  {findPillar(service) ? <ButtonLink href={`/services/${service}`} variant="secondary">
-                    {findPillar(service)!.title}
-                  </ButtonLink> : <span className="text-sm font-semibold capitalize text-[var(--color-ink)]">
-                    {service.replaceAll("-", " ")}
-                  </span>}
-                </div>
-              ))}
-            </div>
-          </div>
+          )}
 
           {related.length ? (
             <div className="mt-16">
@@ -345,28 +351,6 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
               </div>
             </div>
           ) : null}
-        </Container>
-      </section>
-
-      <section className="bg-white py-20 sm:py-24">
-        <Container className="grid gap-8 lg:grid-cols-[1fr_auto] lg:items-center">
-          <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#ED6B37]">
-              Next Step
-            </p>
-            <h2 className="mt-4 max-w-3xl text-4xl font-semibold leading-tight text-[var(--color-ink)]">
-              Planning similar infrastructure work?
-            </h2>
-            <p className="mt-5 max-w-2xl text-base leading-8 text-[var(--color-muted)]">
-              Share the site, system, or operational challenge and Ideal
-              Solutions can shape the right assessment, rollout, and support
-              plan.
-            </p>
-          </div>
-          <ButtonLink href="/book-consultation">
-            Book consultation
-            <ArrowRight className="ml-2 h-4 w-4" />
-          </ButtonLink>
         </Container>
       </section>
     </>
