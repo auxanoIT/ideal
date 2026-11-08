@@ -153,3 +153,7 @@
     line-height: 1.85;
   }
 }
+
+.chapter > p + p {
+  margin-top: 24px;
+}

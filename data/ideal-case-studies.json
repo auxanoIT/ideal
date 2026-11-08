@@ -5,7 +5,7 @@
     "client": "WIOCC Nigeria Limited",
     "industry": "Telecommunications",
     "summary": "Ideal Solutions delivered LAN, Wi-Fi, CCTV, access control and safety systems for WIOCC Nigeria Limited's second-floor office setup.",
-    "challenge": "The second-floor office setup required several technology and building-support systems within one project, covering connectivity, surveillance, access and safety infrastructure.",
+    "challenge": "WIOCC Nigeria Limited’s second-floor office setup brought together requirements for connectivity, surveillance, controlled entry and building safety. The scope extended from the network used by office equipment to the systems supporting access, fire detection and electrical protection. Each of these areas formed part of the same office infrastructure project.\n\nThe requirement therefore involved several distinct technical disciplines. Wired LAN and Wi-Fi infrastructure addressed connectivity, while CCTV and door access control addressed surveillance and entry. The brief also included an addressable fire alarm system, earthing and grounding, and lightning protection, giving the project a broader remit than an office networking installation alone.",
     "solution": [
       "Surveillance and CCTV system.",
       "Network LAN infrastructure.",
@@ -15,14 +15,22 @@
       "Earthing and grounding system.",
       "Lightning and thunder arrestor system."
     ],
-    "result": "The project brought multiple technology and safety systems into a single office setup, covering connectivity, electronic security, fire detection and supporting protection systems.",
-    "relatedServices": ["network-infrastructure-connectivity", "data-centre-security-safety"],
+    "result": "The delivered project covered the principal technology and safety systems specified for WIOCC’s second-floor office setup. Its scope joined wired and wireless connectivity with CCTV, access control and fire detection, alongside the supporting earthing, grounding and lightning protection work.\n\nFor WIOCC, the project represented a combined office infrastructure delivery spanning communications, electronic security and protection systems. It illustrates Ideal Solutions’ work across the different technical requirements that sit within a modern office fit-out.",
+    "relatedServices": [
+      "network-infrastructure-connectivity",
+      "data-centre-security-safety"
+    ],
     "seo": {
       "metaTitle": "WIOCC Office Network & Security Case Study | Ideal Solutions",
       "metaDescription": "Explore Ideal Solutions' delivery of LAN, Wi-Fi, CCTV, access control, fire alarm and protection systems for WIOCC's second-floor office setup."
     },
     "published": true,
-    "featured": false
+    "featured": false,
+    "solutionNarrative": [
+      "Ideal Solutions delivered the office connectivity scope through network LAN and Wi-Fi infrastructure. These elements covered the wired and wireless sides of the office setup and formed the communications component of the wider project.",
+      "Alongside this work, the team delivered surveillance and CCTV systems and door access control. This brought the office’s electronic security requirements into the project scope, covering both observation of the environment and control of entry points.",
+      "The safety and protection work included an addressable fire alarm system, earthing and grounding, and a lightning and thunder arrestor system. Together, these work areas brought network, security and building-support infrastructure into one delivery scope."
+    ]
   },
   {
     "slug": "oadc-paxton-access-control-installation",
@@ -30,7 +38,7 @@
     "client": "Open Access Data Centres (OADC)",
     "industry": "Data Centres",
     "summary": "Ideal Solutions installed an access control system for OADC, including Paxton Net2 controllers, readers, electromagnetic locks and supporting cabling.",
-    "challenge": "OADC required an access control installation across its facility, with door-control equipment, power supplies, emergency release components and supporting infrastructure.",
+    "challenge": "Open Access Data Centres required an access-control installation covering the equipment at controlled doors and the infrastructure supporting it. The brief included controllers, readers and electromagnetic locks, together with power supplies, backup batteries and the cabling needed to connect those components.\n\nDoor access also involved exit and emergency-release equipment. Exit buttons, break-glass units and override switches were part of the specified scope, alongside associated civil works. The requirement therefore covered the full physical installation around the access points, from user-facing hardware to power and supporting works.",
     "solution": [
       "Paxton Net2 access-control controllers.",
       "Paxton keypad and proximity readers.",
@@ -43,14 +51,21 @@
       "Power cabling.",
       "Associated civil works."
     ],
-    "result": "The installation covered electronic access control and its supporting infrastructure within a data-centre environment, including readers, locks, backup power and emergency release components.",
-    "relatedServices": ["data-centre-security-safety"],
+    "result": "OADC’s installation brought together Paxton access-control hardware, readers and electromagnetic locks with supporting power, batteries and cabling. The delivered scope also incorporated exit and emergency-release components and the associated civil works.\n\nThe project demonstrates an access-control delivery that encompasses the equipment visible at the door and the supporting infrastructure behind it. For this data-centre environment, Ideal Solutions’ recorded work covered the control hardware, power provision, connection infrastructure and release components within a single installation scope.",
+    "relatedServices": [
+      "data-centre-security-safety"
+    ],
     "seo": {
       "metaTitle": "OADC Paxton Access Control Case Study | Ideal Solutions",
       "metaDescription": "Ideal Solutions installed Paxton Net2 access control, readers, locks, backup power and supporting cabling for Open Access Data Centres."
     },
     "published": true,
-    "featured": true
+    "featured": true,
+    "solutionNarrative": [
+      "Ideal Solutions installed Paxton Net2 controllers with Paxton keypad and proximity readers. The installation also included electromagnetic locks, bringing the control, identification and locking components together within the access-control scope.",
+      "Power supply units and backup batteries formed the power-support element of the work. Access-control cabling and power cabling were also included, covering the connections required by the installed equipment.",
+      "The team’s work extended to exit buttons, emergency break-glass units and emergency override switches. Associated civil works completed the specified installation scope, addressing the physical infrastructure surrounding the door-control equipment."
+    ]
   },
   {
     "slug": "oadc-3dcim-environmental-monitoring-hardware-supply",
@@ -58,7 +73,7 @@
     "client": "Open Access Data Centres (OADC)",
     "industry": "Data Centres",
     "summary": "Ideal Solutions supplied environmental monitoring and network hardware for deployment across five OADC data halls, including 307 wireless temperature and humidity sensors.",
-    "challenge": "The 3DCIM hardware project required specialised environmental monitoring and network equipment for deployment across five data halls.",
+    "challenge": "OADC’s 3DCIM project required environmental monitoring and network hardware for deployment across five data halls. The specified equipment included 307 wireless temperature and humidity sensors, making sensor supply a substantial part of the requirement.\n\nThe wider brief also covered cooling duty meters, wireless receivers, rack equipment and PoE switches. Supplying the sensors was one part of a broader hardware requirement that brought together environmental measurement, wireless data reception and the network and rack equipment supporting the deployment.",
     "solution": [
       "307 wireless temperature and humidity sensors.",
       "Wireless cooling duty meters.",
@@ -67,18 +82,31 @@
       "24-port PoE switches.",
       "Ancillary data-centre items."
     ],
-    "result": "The supply scope provided environmental monitoring and network hardware for the five-hall deployment, combining wireless sensors, cooling duty meters, receivers, rack equipment and PoE switching.",
+    "result": "The completed supply provided environmental monitoring and network hardware for a deployment spanning five OADC data halls. The documented quantities include 307 wireless temperature and humidity sensors, supported by cooling duty meters, wireless receivers, rack equipment and PoE switches.\n\nThe project illustrates Ideal Solutions’ role in supplying specialised data-centre hardware across several related equipment categories. Its recorded output is the provision of the hardware package for the five-hall scope, with both environmental sensing and supporting infrastructure represented in the supply.",
     "metrics": [
-      {"value": "307", "label": "Wireless temperature and humidity sensors supplied"},
-      {"value": "5", "label": "Data halls in the deployment scope"}
+      {
+        "value": "307",
+        "label": "Wireless temperature and humidity sensors supplied"
+      },
+      {
+        "value": "5",
+        "label": "Data halls in the deployment scope"
+      }
     ],
-    "relatedServices": ["server-storage-hardware"],
+    "relatedServices": [
+      "server-storage-hardware"
+    ],
     "seo": {
       "metaTitle": "OADC 3DCIM Monitoring Hardware Supply | Ideal Solutions",
       "metaDescription": "Ideal Solutions supplied 307 wireless temperature and humidity sensors and supporting hardware for deployment across five OADC data halls."
     },
     "published": true,
-    "featured": false
+    "featured": false,
+    "solutionNarrative": [
+      "Ideal Solutions supplied 307 wireless temperature and humidity sensors for the five-hall deployment scope. These devices formed the environmental sensing element of the 3DCIM hardware supply.",
+      "The supply also included wireless cooling duty meters and wireless data receivers. These items addressed further measurement and data-reception requirements within the same project, extending the equipment provision beyond temperature and humidity sensors.",
+      "Data management rack equipment, 24-port PoE switches and ancillary data-centre items completed the recorded hardware scope. The package therefore covered sensing devices as well as the supporting rack and network equipment required for the planned deployment."
+    ]
   },
   {
     "slug": "oadc-medallion-data-centre-equipment-relocation",
@@ -86,7 +114,7 @@
     "client": "Open Access Data Centres (OADC)",
     "industry": "Data Centres",
     "summary": "Ideal Solutions carried out equipment identification, decommissioning, packaging and transportation from Medallion to OADC, with loading, offloading and logistics support.",
-    "challenge": "The relocation required equipment and associated cabling to be identified, removed, packaged and transported from Medallion to OADC within a coordinated physical work scope.",
+    "challenge": "The move from Medallion to OADC required data-centre equipment and associated cabling to pass through several stages of physical relocation. Identification and labelling, removal, packaging and transportation were all part of the brief, alongside loading, offloading and logistics support.\n\nThe work involved handling installed equipment as well as moving it between facilities. Each part of the physical scope needed to account for the equipment and cabling involved, from deinstallation at the originating site through preparation for transit and handling at the destination.",
     "solution": [
       "Equipment and cable identification and labelling.",
       "Deinstallation and decommissioning of data-centre equipment.",
@@ -95,14 +123,21 @@
       "Transportation from Medallion to OADC.",
       "Goods-in-transit logistics support."
     ],
-    "result": "The project covered the coordinated removal, packaging and relocation of data-centre equipment and associated cabling. The work concerned physical equipment relocation, rather than application or data migration.",
-    "relatedServices": ["data-centre-deployment"],
+    "result": "The delivered work covered the physical relocation of data-centre equipment from Medallion to OADC. Equipment identification, cabling labels, decommissioning, packaging, loading, transportation and offloading were all represented within the documented scope.\n\nFor OADC, this brought the practical stages of the equipment move into a coordinated relocation service. The project demonstrates Ideal Solutions’ experience in the physical handling and logistics of data-centre infrastructure, including the preparation and transport activities surrounding a facility move.",
+    "relatedServices": [
+      "data-centre-deployment"
+    ],
     "seo": {
       "metaTitle": "Medallion to OADC Equipment Relocation | Ideal Solutions",
       "metaDescription": "Explore Ideal Solutions' equipment decommissioning, labelling, packaging and transport work for the relocation from Medallion to OADC."
     },
     "published": true,
-    "featured": false
+    "featured": false,
+    "solutionNarrative": [
+      "Ideal Solutions carried out equipment and cable identification and labelling as part of the relocation work. The scope also included deinstallation and decommissioning of the data-centre equipment, addressing its removal from the existing installation.",
+      "Equipment packaging and preparation for transportation formed the next part of the delivery scope. Loading and offloading were included, covering the physical handling required to move the packaged equipment between the facilities.",
+      "Transportation from Medallion to OADC and goods-in-transit logistics support completed the recorded work. Together, these activities covered the relocation chain from equipment identification and removal to packaging, transport and destination handling."
+    ]
   },
   {
     "slug": "south-west-bitumen-ore-network-wireless-deployment",
@@ -111,7 +146,7 @@
     "industry": "Industrial Facilities",
     "location": "Ore",
     "summary": "Ideal Solutions supplied and installed network infrastructure at SWB's Ore facility, covering Cat6 cabling, racks, power support, wireless equipment and configuration.",
-    "challenge": "The revised networking project at the Ore facility required wired and wireless connectivity equipment, together with rack infrastructure, power support and network configuration.",
+    "challenge": "South West Bitumen’s facility in Ore required a revised network deployment covering wired and wireless connectivity. The requirement included network equipment and Cat6 structured cabling, alongside rack infrastructure and power support for the installation.\n\nThe brief also extended to wireless access points, outdoor wireless equipment and network configuration. Delivering the scope involved both the physical network installation and configuration work, with indoor and outdoor wireless elements included in the facility’s connectivity requirements.",
     "solution": [
       "Network equipment supply and installation.",
       "Cat6 structured cabling.",
@@ -123,14 +158,21 @@
       "Rack mounting.",
       "Wireless coverage deployment."
     ],
-    "result": "The delivered scope combined network equipment, structured cabling, rack infrastructure and wireless connectivity for the operational facility. It covered both equipment installation and network configuration.",
-    "relatedServices": ["network-infrastructure-connectivity"],
+    "result": "The delivered scope at SWB’s Ore facility combined network equipment, Cat6 cabling, racks, PDUs and UPS equipment with wireless access points and outdoor wireless infrastructure. Both installation and configuration were included in the work described for the project.\n\nThe result was a network infrastructure delivery spanning the wired, wireless, equipment-mounting and power-support elements of the brief. The project shows how Ideal Solutions brings these related work areas together within an industrial facility’s connectivity deployment.",
+    "relatedServices": [
+      "network-infrastructure-connectivity"
+    ],
     "seo": {
       "metaTitle": "SWB Ore Network & Wi-Fi Deployment | Ideal Solutions",
       "metaDescription": "See Ideal Solutions' network deployment at South West Bitumen's Ore facility: Cat6 cabling, racks, UPS, wireless access points and configuration."
     },
     "published": true,
-    "featured": false
+    "featured": false,
+    "solutionNarrative": [
+      "Ideal Solutions supplied and installed network equipment together with Cat6 structured cabling. Network rack installation and rack mounting formed part of the physical infrastructure work, providing the equipment organisation specified within the project.",
+      "The installation scope included PDUs and UPS equipment for power support. These items sat alongside the network hardware and rack work as part of the infrastructure package for the Ore facility.",
+      "Wireless access points and outdoor wireless equipment were installed within the wireless coverage scope. Network configuration completed the specified work, connecting equipment supply and physical installation with the configuration requirements of the deployment."
+    ]
   },
   {
     "slug": "deltatek-windows-11-desktop-laptop-upgrades",
@@ -138,7 +180,7 @@
     "client": "Deltatek Offshore Limited",
     "industry": "Corporate IT",
     "summary": "Ideal Solutions upgraded and prepared multiple Dell desktops and laptops for Deltatek Offshore, including Windows 11, activation, updates, SSD and RAM upgrades.",
-    "challenge": "Deltatek Offshore required operating system and hardware upgrades across multiple Dell desktop and laptop systems.",
+    "challenge": "Deltatek Offshore Limited required upgrades across multiple Dell desktop and laptop systems. The brief covered Windows 11 preparation as well as hardware work, combining operating-system upgrades, activation and updates with SSD and RAM upgrades.\n\nThe requirement extended across two types of end-user equipment, with desktop system upgrades and laptop hardware support both specified. Addressing the project therefore involved the software environment on the systems as well as the storage and memory components included in the hardware scope.",
     "solution": [
       "Windows 11 upgrades.",
       "Windows activation and updates.",
@@ -147,14 +189,21 @@
       "Desktop system upgrades.",
       "Laptop hardware support."
     ],
-    "result": "The work covered operating system and hardware upgrades across multiple end-user systems, combining Windows preparation with desktop and laptop hardware support.",
-    "relatedServices": ["server-storage-hardware"],
+    "result": "The project delivered operating-system and hardware upgrade work across multiple Dell desktops and laptops for Deltatek Offshore. Windows 11 upgrades, activation and updates were combined with SSD, RAM and desktop upgrade activities and laptop hardware support.\n\nThis brought the client’s software preparation and physical hardware requirements into one end-user computing scope. The work demonstrates Ideal Solutions’ support across desktop and laptop environments, covering both the Windows installation requirements and the specified component upgrades.",
+    "relatedServices": [
+      "server-storage-hardware"
+    ],
     "seo": {
       "metaTitle": "Deltatek Windows 11 & Hardware Upgrades | Ideal Solutions",
       "metaDescription": "Ideal Solutions delivered Windows 11, SSD and RAM upgrades across multiple Dell desktops and laptops for Deltatek Offshore Limited."
     },
     "published": true,
-    "featured": false
+    "featured": false,
+    "solutionNarrative": [
+      "Ideal Solutions carried out Windows 11 upgrades together with Windows activation and updates. This addressed the operating-system preparation described in Deltatek Offshore’s brief across the desktop and laptop work scope.",
+      "SSD upgrades and RAM upgrades formed the hardware component of the project. These activities covered the storage and memory changes specified for the systems, alongside the broader desktop system upgrade work.",
+      "Laptop hardware support was also included, bringing portable systems into the same programme of work. The combined delivery covered Windows preparation and hardware upgrades across multiple Dell end-user devices."
+    ]
   },
   {
     "slug": "oadc-network-security-wireless-equipment-supply",
@@ -162,7 +211,7 @@
     "client": "Open Access Data Centres (OADC)",
     "industry": "Data Centres",
     "summary": "Ideal Solutions supplied a Netgate security gateway, a Ubiquiti PoE switch and 10 Ubiquiti wireless access points for OADC, with cabling and deployment support.",
-    "challenge": "OADC's switches and access points project required network security and wireless infrastructure equipment, together with access-point cabling and delivery support.",
+    "challenge": "OADC required equipment for a network security and wireless infrastructure project. The brief brought together a Netgate security gateway, a Ubiquiti PoE switch and ten Ubiquiti wireless access points, covering several parts of the planned connectivity environment.\n\nThe requirement also included network cabling for the access points and delivery and deployment support. The hardware supply therefore needed to sit alongside the supporting connection and delivery activities specified for the project.",
     "solution": [
       "Netgate security gateway.",
       "Ubiquiti PoE network switch.",
@@ -170,14 +219,27 @@
       "Network cabling for the access points.",
       "Delivery and deployment support."
     ],
-    "result": "The project brought together network security equipment, PoE switching, wireless access points and supporting cabling for data-centre connectivity.",
-    "metrics": [{"value": "10", "label": "Ubiquiti wireless access points supplied"}],
-    "relatedServices": ["network-infrastructure-connectivity", "server-storage-hardware"],
+    "result": "The delivered scope combined a Netgate gateway, a Ubiquiti PoE switch and ten Ubiquiti wireless access points for OADC. Access-point cabling and delivery and deployment support accompanied the equipment supply.\n\nThe project demonstrates Ideal Solutions’ provision of related network hardware within a data-centre connectivity brief. Its documented output spans the gateway, switching and wireless equipment categories, together with the cabling and support activities associated with the supply.",
+    "metrics": [
+      {
+        "value": "10",
+        "label": "Ubiquiti wireless access points supplied"
+      }
+    ],
+    "relatedServices": [
+      "network-infrastructure-connectivity",
+      "server-storage-hardware"
+    ],
     "seo": {
       "metaTitle": "OADC Network & Wireless Equipment Supply | Ideal Solutions",
       "metaDescription": "Ideal Solutions supplied Netgate and Ubiquiti network equipment, including 10 wireless access points, with cabling and deployment support for OADC."
     },
     "published": true,
-    "featured": false
+    "featured": false,
+    "solutionNarrative": [
+      "Ideal Solutions supplied a Netgate security gateway and a Ubiquiti PoE network switch. These items formed the gateway and switching elements of the recorded equipment package.",
+      "The wireless equipment supply included ten Ubiquiti access points. Network cabling for those access points was also included, bringing the devices and their supporting wired connections into the same project scope.",
+      "Delivery and deployment support completed the recorded work. The package brought together security equipment, PoE switching, wireless devices and cabling with the support activities specified around their provision."
+    ]
   }
 ]

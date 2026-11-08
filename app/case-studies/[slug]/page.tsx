@@ -228,7 +228,9 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
               aria-labelledby="project-challenge"
             >
               <h2 id="project-challenge">The Challenge</h2>
-              <p>{caseStudy.challenge}</p>
+              {caseStudy.challenge.split(/\n\s*\n/).map((paragraph) => (
+                <p key={paragraph}>{paragraph}</p>
+              ))}
             </section>
           )}
           <section
@@ -249,7 +251,11 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
                 />
               </figure>
             )}
-            {solutionSteps.length > 0 && (
+            {caseStudy.solutionNarrative?.length ? (
+              caseStudy.solutionNarrative.map((paragraph) => (
+                <p key={paragraph}>{paragraph}</p>
+              ))
+            ) : solutionSteps.length > 0 ? (
               <>
                 <p>
                   The project scope for{" "}
@@ -264,7 +270,7 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
                   ))}
                 </ul>
               </>
-            )}
+            ) : null}
           </section>
           {(caseStudy.result || caseStudy.outcome) && (
             <section
@@ -272,7 +278,9 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
               aria-labelledby="project-result"
             >
               <h2 id="project-result">The Result</h2>
-              <p>{caseStudy.result || caseStudy.outcome}</p>
+              {(caseStudy.result || caseStudy.outcome || "").split(/\n\s*\n/).map((paragraph) => (
+                <p key={paragraph}>{paragraph}</p>
+              ))}
             </section>
           )}
           {caseStudy.quote?.text && (

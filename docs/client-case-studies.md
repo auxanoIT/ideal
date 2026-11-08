@@ -1,6 +1,6 @@
 # Client-supplied Ideal Solutions project records
 
-The client document gives a short scope list for each project, not a full narrative of site conditions, process, timing and measured results. The seven case study pages now retain every distinct listed system, equipment item or work activity as a separate item. Their project requirement and delivery summary remain short because the source does not supply fuller details. Do not invent timelines, measured outcomes or customer quotes to lengthen the pages.
+The client document gives a short scope list for each project. The seven case studies expand those records into challenge, solution and result paragraphs, explaining the relationship between the supplied work items. The original scope lists remain in the data for reference. The narrative uses the documented equipment, quantities and activities. Do not invent timelines, measured outcomes or customer quotes to lengthen the pages.
 
 Source: `Ideal Solutions Case Study and Past Projects.pdf`, supplied by the client, dated 5 October 2026. Seven selected projects are stored in `data/ideal-case-studies.json`; additional experience from pages 6–8 is in `data/ideal-project-experience.ts`.
 

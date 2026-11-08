@@ -222,6 +222,7 @@ export type CaseStudy = {
   summary: string;
   challenge?: string;
   solution?: string[];
+  solutionNarrative?: string[];
   result?: string;
   outcome?: string;
   metrics?: Metric[];
